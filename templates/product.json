@@ -1,0 +1,31 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "show_description": true
+      }
+    },
+    "recipe": {
+      "type": "product-recipe",
+      "settings": {}
+    },
+    "configurator": {
+      "type": "substrate-configurator",
+      "blocks": {
+        "bark": { "type": "ingredient", "settings": { "name": "Pinienrinde", "function": "Struktur und Luftführung", "default_percentage": 30 } },
+        "perlite": { "type": "ingredient", "settings": { "name": "Perlite", "function": "Lockerheit und Drainage", "default_percentage": 20 } },
+        "lava": { "type": "ingredient", "settings": { "name": "Lavagranulat", "function": "Mineralische Stabilität", "default_percentage": 20 } },
+        "clay": { "type": "ingredient", "settings": { "name": "Blähton", "function": "Grobporen und Drainage", "default_percentage": 15 } },
+        "zeolite": { "type": "ingredient", "settings": { "name": "Zeolith", "function": "Wasser- und Nährstoffpuffer", "default_percentage": 15 } }
+      },
+      "block_order": ["bark", "perlite", "lava", "clay", "zeolite"],
+      "settings": { "show_on_all_products": false }
+    },
+    "cross_sell": {
+      "type": "product-cross-sell",
+      "settings": { "heading": "Passt perfekt dazu" }
+    }
+  },
+  "order": ["main", "recipe", "configurator", "cross_sell"]
+}

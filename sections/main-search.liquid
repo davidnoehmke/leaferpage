@@ -1,0 +1,34 @@
+<section class="main-search page-width">
+  <header><h1>{{ 'search.title' | t }}</h1></header>
+  <form action="{{ routes.search_url }}" method="get" role="search">
+    <label for="Search-{{ section.id }}">{{ 'search.label' | t }}</label>
+    <div><input id="Search-{{ section.id }}" type="search" name="q" value="{{ search.terms | escape }}"><button type="submit">{{ 'search.submit' | t }}</button></div>
+  </form>
+  {% if search.performed %}
+    <h2>{{ 'search.results' | t: terms: search.terms }}</h2>
+    {% paginate search.results by 24 %}
+      <div class="main-search__grid">
+        {% for result in search.results %}
+          {% if result.object_type == 'product' %}{% render 'product-card', product: result %}{% endif %}
+        {% else %}<p>{{ 'search.empty' | t }}</p>{% endfor %}
+      </div>
+      {% if paginate.pages > 1 %}<nav aria-label="{{ 'general.pagination' | t }}">{{ paginate | default_pagination }}</nav>{% endif %}
+    {% endpaginate %}
+  {% endif %}
+</section>
+
+{% stylesheet %}
+  .main-search { padding-block: var(--space-section); }
+  .main-search h1 { margin: 0 0 2rem; font-size: clamp(3rem, 8vw, 7rem); line-height: .95; letter-spacing: -.07em; }
+  .main-search form { max-width: 760px; }
+  .main-search form label { display: block; margin-bottom: .5rem; font-weight: 750; }
+  .main-search form > div { display: grid; grid-template-columns: 1fr auto; gap: .5rem; }
+  .main-search input { min-height: 50px; border: 1px solid var(--border); border-radius: 8px; background: var(--background); padding: .75rem 1rem; }
+  .main-search h2 { margin-top: 3rem; }
+  .main-search__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+  @media (max-width: 900px) { .main-search__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+{% endstylesheet %}
+
+{% schema %}
+{ "name": "Suche", "settings": [] }
+{% endschema %}

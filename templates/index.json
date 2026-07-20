@@ -1,0 +1,94 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "shipping": { "type": "benefit", "settings": { "icon": "shipping" } },
+        "quality": { "type": "benefit", "settings": { "icon": "quality" } },
+        "natural": { "type": "benefit", "settings": { "icon": "natural" } }
+      },
+      "block_order": ["shipping", "quality", "natural"],
+      "settings": {
+        "overlay": 80,
+        "primary_link": "shopify://collections/all",
+        "secondary_link": "shopify://collections/all"
+      }
+    },
+    "bestsellers": {
+      "type": "featured-collection",
+      "settings": {
+        "heading_preset": "heading",
+        "products_to_show": 4,
+        "columns": 4,
+        "compact": false
+      }
+    },
+    "categories": {
+      "type": "category-grid",
+      "settings": {
+        "automatic": true,
+        "automatic_limit": 6
+      }
+    },
+    "trust": {
+      "type": "trust-bar",
+      "blocks": {
+        "handmade": { "type": "benefit", "settings": { "icon": "handmade" } },
+        "natural": { "type": "benefit", "settings": { "icon": "natural" } },
+        "small_batches": { "type": "benefit", "settings": { "icon": "small_batches" } },
+        "versatile": { "type": "benefit", "settings": { "icon": "versatile" } }
+      },
+      "block_order": ["handmade", "natural", "small_batches", "versatile"],
+      "settings": {}
+    },
+    "brand_story": {
+      "type": "brand-story",
+      "settings": { "link": "shopify://collections/all" }
+    },
+    "highlights": {
+      "type": "featured-collection",
+      "settings": {
+        "heading_preset": "highlights",
+        "products_to_show": 6,
+        "columns": 6,
+        "compact": true
+      }
+    },
+    "starter": {
+      "type": "starter-showcase",
+      "blocks": {
+        "herbs": { "type": "category", "settings": { "type": "herbs" } },
+        "houseplants": { "type": "category", "settings": { "type": "houseplants" } },
+        "vegetables": { "type": "category", "settings": { "type": "vegetables" } },
+        "exotics": { "type": "category", "settings": { "type": "exotics" } }
+      },
+      "block_order": ["herbs", "houseplants", "vegetables", "exotics"],
+      "settings": { "link": "shopify://collections/all" }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "substrate": { "type": "question", "settings": { "topic": "substrate" } },
+        "application": { "type": "question", "settings": { "topic": "application" } },
+        "plants": { "type": "question", "settings": { "topic": "plants" } },
+        "shipping": { "type": "question", "settings": { "topic": "shipping" } }
+      },
+      "block_order": ["substrate", "application", "plants", "shipping"],
+      "settings": {}
+    },
+    "community": {
+      "type": "community-gallery",
+      "blocks": {
+        "image_1": { "type": "image", "settings": {} },
+        "image_2": { "type": "image", "settings": {} },
+        "image_3": { "type": "image", "settings": {} },
+        "image_4": { "type": "image", "settings": {} },
+        "image_5": { "type": "image", "settings": {} },
+        "image_6": { "type": "image", "settings": {} }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4", "image_5", "image_6"],
+      "settings": {}
+    }
+  },
+  "order": ["hero", "bestsellers", "categories", "trust", "brand_story", "highlights", "starter", "faq", "community"]
+}
