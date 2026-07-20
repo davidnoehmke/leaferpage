@@ -1,0 +1,21 @@
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "newsletter": {
+      "type": "newsletter-services",
+      "blocks": {
+        "shipping": { "type": "service", "settings": { "icon": "shipping" } },
+        "payment": { "type": "service", "settings": { "icon": "payment" } },
+        "support": { "type": "service", "settings": { "icon": "support" } }
+      },
+      "block_order": ["shipping", "payment", "support"],
+      "settings": {}
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {}
+    }
+  },
+  "order": ["newsletter", "footer"]
+}

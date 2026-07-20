@@ -1,0 +1,98 @@
+{% liquid
+  assign show_configurator = section.settings.show_on_all_products
+  if product.handle contains 'substrat-konfigurator'
+    assign show_configurator = true
+  endif
+%}
+{% if show_configurator %}
+  <substrate-configurator class="substrate-configurator page-width" data-total-label="{{ 'configurator.total' | t | escape }}" data-valid-label="{{ 'configurator.valid' | t | escape }}" data-invalid-label="{{ 'configurator.invalid' | t | escape }}">
+    <header>
+      <p>{{ 'configurator.eyebrow' | t }}</p>
+      <h2>{{ 'configurator.heading' | t }}</h2>
+      <div>{{ 'configurator.intro' | t }}</div>
+    </header>
+    <div class="substrate-configurator__grid">
+      {% for block in section.blocks %}
+        <label class="substrate-configurator__item" {{ block.shopify_attributes }}>
+          <span><strong>{{ block.settings.name }}</strong><small>{{ block.settings.function }}</small></span>
+          <output for="Part-{{ block.id }}">{{ block.settings.default_percentage }}%</output>
+          <input id="Part-{{ block.id }}" type="range" min="0" max="100" step="5" value="{{ block.settings.default_percentage }}" data-mix-part data-name="{{ block.settings.name | escape }}">
+        </label>
+      {% endfor %}
+    </div>
+    <div class="substrate-configurator__result" aria-live="polite">
+      <strong data-total></strong>
+      <span data-status></span>
+      <button type="button" class="substrate-configurator__copy" data-copy>{{ 'configurator.copy' | t }}</button>
+    </div>
+    <textarea class="visually-hidden" data-recipe aria-label="{{ 'configurator.recipe' | t }}"></textarea>
+  </substrate-configurator>
+{% endif %}
+
+{% stylesheet %}
+  .substrate-configurator { margin-block: var(--space-section); padding: clamp(1.5rem, 5vw, 4rem); display: block; border-radius: var(--radius-large); background: var(--text); color: var(--background); }
+  .substrate-configurator header { max-width: 800px; }
+  .substrate-configurator header > p { margin: 0; color: var(--accent-soft); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  .substrate-configurator h2 { margin: .4rem 0 1rem; font-size: clamp(2.5rem, 6vw, 5.6rem); line-height: .94; letter-spacing: -.06em; }
+  .substrate-configurator__grid { margin-top: 2.5rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+  .substrate-configurator__item { padding: 1rem; display: grid; grid-template-columns: 1fr auto; gap: .8rem 1rem; border: 1px solid color-mix(in srgb, var(--background), transparent 78%); border-radius: var(--radius); }
+  .substrate-configurator__item span, .substrate-configurator__item small { display: block; }
+  .substrate-configurator__item small { margin-top: .25rem; color: color-mix(in srgb, var(--background), transparent 35%); }
+  .substrate-configurator__item output { color: var(--accent-soft); font-weight: 800; }
+  .substrate-configurator__item input { grid-column: 1 / -1; width: 100%; accent-color: var(--accent-soft); }
+  .substrate-configurator__result { margin-top: 1rem; display: flex; align-items: center; gap: 1rem; padding: 1rem; border-radius: var(--radius); background: color-mix(in srgb, var(--background), transparent 92%); }
+  .substrate-configurator__result strong { font-size: 1.2rem; }
+  .substrate-configurator__result span { flex: 1; }
+  .substrate-configurator__copy { border-color: var(--background); background: transparent; color: var(--background); }
+  @media (max-width: 720px) { .substrate-configurator__grid { grid-template-columns: 1fr; } .substrate-configurator__result { align-items: stretch; flex-direction: column; } }
+{% endstylesheet %}
+
+{% javascript %}
+  class SubstrateConfigurator extends HTMLElement {
+    connectedCallback() {
+      this.parts = [...this.querySelectorAll('[data-mix-part]')];
+      this.parts.forEach((part) => part.addEventListener('input', () => this.update()));
+      this.querySelector('[data-copy]').addEventListener('click', () => this.copy());
+      this.update();
+    }
+    update() {
+      let total = 0;
+      const recipe = [];
+      this.parts.forEach((part) => {
+        const value = Number(part.value);
+        total += value;
+        part.closest('label').querySelector('output').value = `${value}%`;
+        if (value > 0) recipe.push(`${value} % ${part.dataset.name}`);
+      });
+      this.querySelector('[data-total]').textContent = `${this.dataset.totalLabel}: ${total}%`;
+      this.querySelector('[data-status]').textContent = total === 100 ? this.dataset.validLabel : this.dataset.invalidLabel;
+      this.querySelector('[data-recipe]').value = recipe.join(' · ');
+    }
+    async copy() {
+      await navigator.clipboard.writeText(this.querySelector('[data-recipe]').value);
+    }
+  }
+  if (!customElements.get('substrate-configurator')) customElements.define('substrate-configurator', SubstrateConfigurator);
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Substrat-Konfigurator",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "checkbox", "id": "show_on_all_products", "label": "Auf allen Produktseiten anzeigen", "default": false }
+  ],
+  "blocks": [
+    {
+      "type": "ingredient",
+      "name": "Bestandteil",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Name", "default": "Pinienrinde" },
+        { "type": "text", "id": "function", "label": "Funktion", "default": "Struktur und Luftführung" },
+        { "type": "range", "id": "default_percentage", "label": "Startanteil", "min": 0, "max": 100, "step": 5, "default": 20, "unit": "%" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Substrat-Konfigurator", "blocks": [{ "type": "ingredient" }, { "type": "ingredient" }, { "type": "ingredient" }, { "type": "ingredient" }, { "type": "ingredient" }] }]
+}
+{% endschema %}

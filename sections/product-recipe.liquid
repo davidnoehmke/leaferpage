@@ -1,0 +1,53 @@
+{% liquid
+  assign mixing_ratio = product.metafields.leafer.mixing_ratio.value
+  assign ingredients = product.metafields.leafer.ingredients.value
+  assign has_recipe = false
+  if mixing_ratio != blank or ingredients != blank
+    assign has_recipe = true
+  endif
+%}
+{% if has_recipe %}
+  <section class="product-recipe page-width" aria-labelledby="Recipe-{{ section.id }}">
+    <div class="product-recipe__intro">
+      <p class="product-recipe__eyebrow">{{ 'recipe.eyebrow' | t }}</p>
+      <h2 id="Recipe-{{ section.id }}">{{ 'recipe.heading' | t }}</h2>
+      <p>{{ 'recipe.intro' | t }}</p>
+    </div>
+    <div class="product-recipe__data">
+      {% if mixing_ratio != blank %}
+        <article class="product-recipe__ratio">
+          <h3>{{ 'recipe.ratio' | t }}</h3>
+          <p>{{ mixing_ratio | newline_to_br }}</p>
+        </article>
+      {% endif %}
+      {% if ingredients != blank %}
+        <article>
+          <h3>{{ 'recipe.ingredients' | t }}</h3>
+          <ul>
+            {% for ingredient in ingredients %}<li>{{ ingredient }}</li>{% endfor %}
+          </ul>
+        </article>
+      {% endif %}
+    </div>
+    <p class="product-recipe__note">{{ 'recipe.note' | t }}</p>
+  </section>
+{% endif %}
+
+{% stylesheet %}
+  .product-recipe { margin-block: var(--space-section); display: grid; grid-template-columns: minmax(240px, .7fr) minmax(0, 1.3fr); gap: clamp(2rem, 6vw, 7rem); padding-block: clamp(2rem, 5vw, 4.5rem); border-block: 1px solid var(--border); }
+  .product-recipe__eyebrow { margin: 0 0 .6rem; color: var(--accent); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  .product-recipe h2 { margin: 0; font-size: clamp(2.4rem, 5vw, 5rem); line-height: .95; letter-spacing: -.055em; }
+  .product-recipe__intro > p:last-child { max-width: 52ch; color: var(--muted); }
+  .product-recipe__data { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .product-recipe__data article { padding: clamp(1.3rem, 3vw, 2.2rem); border-radius: var(--radius-large); background: var(--surface); }
+  .product-recipe__data h3 { margin-top: 0; font-size: 1.35rem; }
+  .product-recipe__ratio p { color: var(--accent); font-size: clamp(1.1rem, 2vw, 1.45rem); font-weight: 750; line-height: 1.7; }
+  .product-recipe__data ul { margin: 0; padding: 0; display: grid; gap: .6rem; list-style: none; }
+  .product-recipe__data li { padding-bottom: .6rem; border-bottom: 1px solid var(--border); }
+  .product-recipe__note { grid-column: 2; margin: 0; color: var(--muted); font-size: .78rem; }
+  @media (max-width: 760px) { .product-recipe { grid-template-columns: 1fr; } .product-recipe__data { grid-template-columns: 1fr; } .product-recipe__note { grid-column: 1; } }
+{% endstylesheet %}
+
+{% schema %}
+{ "name": "Rezeptur & Bestandteile", "settings": [], "presets": [{ "name": "Rezeptur & Bestandteile" }] }
+{% endschema %}

@@ -1,0 +1,20 @@
+{
+  "current": {
+    "background_color": "#fbfaf6",
+    "surface_color": "#f3f0e9",
+    "text_color": "#171717",
+    "accent_color": "#394f2d",
+    "accent_soft_color": "#dfe8d6",
+    "muted_color": "#6b6a63"
+  },
+  "presets": {
+    "LEAFerservice Growth Theme": {
+      "background_color": "#fbfaf6",
+      "surface_color": "#f3f0e9",
+      "text_color": "#171717",
+      "accent_color": "#394f2d",
+      "accent_soft_color": "#dfe8d6",
+      "muted_color": "#6b6a63"
+    }
+  }
+}

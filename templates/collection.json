@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": { "show_type_filters": true }
+    },
+    "seo_copy": {
+      "type": "collection-seo-copy",
+      "settings": {}
+    }
+  },
+  "order": ["main", "seo_copy"]
+}

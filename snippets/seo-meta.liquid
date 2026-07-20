@@ -1,0 +1,28 @@
+{% doc %}
+Renders Open Graph and social metadata for the current storefront resource.
+{% enddoc %}
+
+{% liquid
+  assign seo_title = page_title
+  assign seo_description = page_description | default: shop.description | strip_html | strip
+  assign seo_image = settings.social_sharing_image
+  if request.page_type == 'product'
+    assign seo_image = product.featured_image
+  elsif request.page_type == 'collection' and collection.image != blank
+    assign seo_image = collection.image
+  elsif request.page_type == 'article' and article.image != blank
+    assign seo_image = article.image
+  endif
+%}
+<meta property="og:site_name" content="{{ shop.name | escape }}">
+<meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:title" content="{{ seo_title | escape }}">
+<meta property="og:type" content="{% if request.page_type == 'product' %}product{% else %}website{% endif %}">
+{% if seo_description != blank %}<meta property="og:description" content="{{ seo_description | escape }}">{% endif %}
+{% if seo_image != blank %}
+  <meta property="og:image" content="https:{{ seo_image | image_url: width: 1200 }}">
+  <meta property="og:image:width" content="1200">
+{% endif %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ seo_title | escape }}">
+{% if seo_description != blank %}<meta name="twitter:description" content="{{ seo_description | escape }}">{% endif %}
