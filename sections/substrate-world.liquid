@@ -39,11 +39,8 @@
       </header>
     {% endif %}
 
-    {% assign current_group = '' %}
     {% for block in section.blocks %}
       {% if block.type == 'heading' %}
-        {% if current_group != '' %}</div></div>{% endif %}
-        {% assign current_group = block.id %}
         <div class="substrate-world__group" {{ block.shopify_attributes }}>
           <header class="substrate-world__group-head">
             {% if block.settings.eyebrow != blank %}<p>{{ block.settings.eyebrow }}</p>{% endif %}
@@ -51,47 +48,57 @@
             {% if block.settings.text != blank %}<div class="rte">{{ block.settings.text }}</div>{% endif %}
           </header>
           <div class="substrate-world__cards substrate-world__cards--{{ block.settings.columns }}">
-      {% elsif block.type == 'mixture' or block.type == 'ingredient' %}
-        {% liquid
-          assign card_product = block.settings.product
-          assign card_image = block.settings.image
-          if card_image == blank and card_product != blank
-            assign card_image = card_product.featured_image
-          endif
-          assign card_link = block.settings.link
-          if card_link == blank and card_product != blank
-            assign card_link = card_product.url
-          endif
-          assign card_title = block.settings.title
-          if card_title == blank and card_product != blank
-            assign card_title = card_product.title
-          endif
-        %}
-        <article class="substrate-world__card substrate-world__card--{{ block.type }}" {{ block.shopify_attributes }}>
-          {% if card_image != blank %}
-            <a class="substrate-world__card-media" href="{{ card_link | default: '#' }}" {% if card_link == blank %}aria-disabled="true"{% endif %}>
-              {{ card_image | image_url: width: 1100 | image_tag: widths: '360, 540, 760, 1100', sizes: '(min-width: 990px) 30vw, (min-width: 650px) 46vw, 92vw', loading: 'lazy', alt: block.settings.image_alt }}
-            </a>
-          {% endif %}
-          <div class="substrate-world__card-copy">
-            <p class="substrate-world__card-type">{% if block.type == 'mixture' %}{{ block.settings.badge | default: 'Spezialmischung' }}{% else %}{{ block.settings.badge | default: 'Bestandteil' }}{% endif %}</p>
-            <h3>{{ card_title }}</h3>
-            {% if block.settings.claim != blank %}<p class="substrate-world__claim">{{ block.settings.claim }}</p>{% endif %}
-            {% if block.settings.ratio != blank %}<p class="substrate-world__ratio"><strong>Mischverhältnis:</strong> {{ block.settings.ratio }}</p>{% endif %}
-            {% if block.settings.text != blank %}<div class="rte">{{ block.settings.text }}</div>{% endif %}
-            {% if card_product != blank and block.settings.show_price %}<p class="substrate-world__price">{{ card_product.price | money }}</p>{% endif %}
-            {% if block.settings.button_label != blank and card_link != blank %}<a class="substrate-world__text-link" href="{{ card_link }}">{{ block.settings.button_label }} <span aria-hidden="true">→</span></a>{% endif %}
+            {% assign render_group_cards = false %}
+            {% for card_block in section.blocks %}
+              {% if card_block.id == block.id %}
+                {% assign render_group_cards = true %}
+              {% elsif render_group_cards %}
+                {% if card_block.type == 'heading' or card_block.type == 'faq' %}
+                  {% break %}
+                {% elsif card_block.type == 'mixture' or card_block.type == 'ingredient' %}
+                  {% liquid
+                    assign card_product = card_block.settings.product
+                    assign card_image = card_block.settings.image
+                    if card_image == blank and card_product != blank
+                      assign card_image = card_product.featured_image
+                    endif
+                    assign card_link = card_block.settings.link
+                    if card_link == blank and card_product != blank
+                      assign card_link = card_product.url
+                    endif
+                    assign card_title = card_block.settings.title
+                    if card_title == blank and card_product != blank
+                      assign card_title = card_product.title
+                    endif
+                  %}
+                  <article class="substrate-world__card substrate-world__card--{{ card_block.type }}" {{ card_block.shopify_attributes }}>
+                    {% if card_image != blank %}
+                      <a class="substrate-world__card-media" href="{{ card_link | default: '#' }}" {% if card_link == blank %}aria-disabled="true"{% endif %}>
+                        {{ card_image | image_url: width: 1100 | image_tag: widths: '360, 540, 760, 1100', sizes: '(min-width: 990px) 30vw, (min-width: 650px) 46vw, 92vw', loading: 'lazy', alt: card_block.settings.image_alt }}
+                      </a>
+                    {% endif %}
+                    <div class="substrate-world__card-copy">
+                      <p class="substrate-world__card-type">{% if card_block.type == 'mixture' %}{{ card_block.settings.badge | default: 'Spezialmischung' }}{% else %}{{ card_block.settings.badge | default: 'Bestandteil' }}{% endif %}</p>
+                      <h3>{{ card_title }}</h3>
+                      {% if card_block.settings.claim != blank %}<p class="substrate-world__claim">{{ card_block.settings.claim }}</p>{% endif %}
+                      {% if card_block.settings.ratio != blank %}<p class="substrate-world__ratio"><strong>Mischverhältnis:</strong> {{ card_block.settings.ratio }}</p>{% endif %}
+                      {% if card_block.settings.text != blank %}<div class="rte">{{ card_block.settings.text }}</div>{% endif %}
+                      {% if card_product != blank and card_block.settings.show_price %}<p class="substrate-world__price">{{ card_product.price | money }}</p>{% endif %}
+                      {% if card_block.settings.button_label != blank and card_link != blank %}<a class="substrate-world__text-link" href="{{ card_link }}">{{ card_block.settings.button_label }} <span aria-hidden="true">→</span></a>{% endif %}
+                    </div>
+                  </article>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
           </div>
-        </article>
+        </div>
       {% elsif block.type == 'faq' %}
-        {% if current_group != '' %}</div></div>{% assign current_group = '' %}{% endif %}
         <details class="substrate-world__faq" {{ block.shopify_attributes }}>
           <summary>{{ block.settings.question }} <span aria-hidden="true">+</span></summary>
           <div class="rte">{{ block.settings.answer }}</div>
         </details>
       {% endif %}
     {% endfor %}
-    {% if current_group != '' %}</div></div>{% endif %}
   </div>
 </section>
 
