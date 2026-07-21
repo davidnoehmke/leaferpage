@@ -1,5 +1,8 @@
 {% liquid
   assign show_configurator = section.settings.show_on_all_products
+  if request.page_type == 'page' and section.settings.show_on_pages
+    assign show_configurator = true
+  endif
   if product.handle contains 'substrat-konfigurator'
     assign show_configurator = true
   endif
@@ -80,6 +83,7 @@
   "name": "Substrat-Konfigurator",
   "max_blocks": 12,
   "settings": [
+    { "type": "checkbox", "id": "show_on_pages", "label": "Auf Seiten anzeigen", "default": true },
     { "type": "checkbox", "id": "show_on_all_products", "label": "Auf allen Produktseiten anzeigen", "default": false }
   ],
   "blocks": [

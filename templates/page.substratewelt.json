@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "substrate_world": {
+      "type": "substrate-world",
+      "settings": {}
+    },
+    "configurator": {
+      "type": "substrate-configurator",
+      "blocks": {
+        "bark": { "type": "ingredient", "settings": { "name": "Pinienrinde", "function": "Grobe Struktur und Luftführung", "default_percentage": 30 } },
+        "pumice": { "type": "ingredient", "settings": { "name": "Bims", "function": "Poren, Drainage und Wasserspeicher", "default_percentage": 25 } },
+        "perlite": { "type": "ingredient", "settings": { "name": "Perlite", "function": "Leichtigkeit und zusätzliche Luftporen", "default_percentage": 20 } },
+        "coco": { "type": "ingredient", "settings": { "name": "Kokos", "function": "Gleichmäßiger Feuchtepuffer", "default_percentage": 25 } }
+      },
+      "block_order": ["bark", "pumice", "perlite", "coco"],
+      "settings": {
+        "show_on_pages": true,
+        "show_on_all_products": false
+      }
+    },
+    "grow_creator": {
+      "type": "custom-grow-creator",
+      "blocks": {
+        "fabric_pot": { "type": "system", "settings": { "title": "Atmungsaktiver Stofftopf", "badge": "Aktive Wurzelzone", "explanation": "<p>Die luftdurchlässige Topfwand unterstützt Sauerstoffaustausch und schnellen Wasserablauf. Ideal, wenn du Gießintervalle aktiv kontrollieren möchtest.</p>" } },
+        "self_watering": { "type": "system", "settings": { "title": "Eigenbewässerung mit Reservoir", "badge": "Konstante Versorgung", "explanation": "<p>Ein Wasserreservoir kann die Versorgung gleichmäßiger machen. Besonders praktisch bei größeren Pflanzen oder unregelmäßigen Gießintervallen.</p>" } },
+        "saucer": { "type": "addon", "settings": { "title": "Passender Untersetzer", "explanation": "Schützt Boden und Regal vor überschüssigem Gießwasser." } },
+        "support": { "type": "addon", "settings": { "title": "Rankhilfe", "explanation": "Gibt kletternden Aroids Halt und unterstützt einen geordneten Wuchs." } },
+        "meter": { "type": "addon", "settings": { "title": "Feuchtigkeitsmesser", "explanation": "Hilft dabei, den richtigen Gießzeitpunkt besser einzuschätzen." } },
+        "light": { "type": "addon", "settings": { "title": "Pflanzenlicht", "explanation": "Ergänzt fehlendes Tageslicht an dunkleren Standorten." } }
+      },
+      "block_order": ["fabric_pot", "self_watering", "saucer", "support", "meter", "light"],
+      "settings": {}
+    }
+  },
+  "order": ["substrate_world", "configurator", "grow_creator"]
+}
