@@ -46,14 +46,13 @@
       <button type="submit" name="add" data-product-submit{% unless selected_variant.available %} disabled{% endunless %}>
         {% if selected_variant.available %}{{ 'product.add_to_cart' | t }}{% else %}{{ 'product.sold_out' | t }}{% endif %}
       </button>
-      {{ form | payment_button }}
     {% endform %}
     <div class="main-product__reassurance" aria-label="{{ 'product.purchase_benefits' | t }}">
       <span>✓ {{ 'services.shipping_title' | t }}</span>
       <span>✓ {{ 'services.payment_title' | t }}</span>
       <span>✓ {{ 'services.support_title' | t }}</span>
     </div>
-    {% if section.settings.show_description and product.description != blank %}<div class="main-product__description rte">{{ product.description }}</div>{% endif %}
+    {% if section.settings.show_description and product.description != blank %}<div class="main-product__description">{{ product.description }}</div>{% endif %}
   </product-purchase>
   <div class="main-product__dock">
     <div><small>{{ product.title | truncate: 42 }}</small><strong data-product-price>{{ selected_variant.price | money }}</strong></div>

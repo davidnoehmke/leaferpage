@@ -1,0 +1,181 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "substrate_world": {
+      "type": "substrate-world",
+      "settings": {
+        "hero_alt": "LEAFerservice Substratmischungen und natürliche Bestandteile",
+        "eyebrow": "Mischen. Verstehen. Wachsen lassen.",
+        "heading": "Substrate, die zu deiner Pflanze passen",
+        "intro": "<p>Starte mit einer erprobten Spezialmischung oder baue dein Substrat aus einzelnen Bestandteilen selbst auf. Jede Rezeptur bleibt transparent und anpassbar.</p>",
+        "button_label": "Mischungen entdecken",
+        "button_link": "",
+        "text_alignment": "left",
+        "overlay": 55,
+        "hero_height": 680,
+        "content_heading": "Deine Pflanze gibt die Richtung vor",
+        "content_text": "<p>Wurzeln brauchen je nach Pflanzenart unterschiedlich viel Luft, Feuchtigkeit und Halt. Deshalb zeigen wir nicht nur fertige Mischungen, sondern auch, welche Aufgabe jeder Bestandteil übernimmt.</p>",
+        "color_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 88
+      }
+    },
+    "configurator": {
+      "type": "substrate-configurator",
+      "blocks": {
+        "bark": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Pinienrinde",
+            "function": "Grobe Struktur und Luftführung",
+            "default_percentage": 30
+          }
+        },
+        "pumice": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Bims",
+            "function": "Poren, Drainage und Wasserspeicher",
+            "default_percentage": 25
+          }
+        },
+        "perlite": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Perlite",
+            "function": "Leichtigkeit und zusätzliche Luftporen",
+            "default_percentage": 20
+          }
+        },
+        "coco": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Kokos",
+            "function": "Gleichmäßiger Feuchtepuffer",
+            "default_percentage": 25
+          }
+        }
+      },
+      "block_order": [
+        "bark",
+        "pumice",
+        "perlite",
+        "coco"
+      ],
+      "settings": {
+        "show_on_pages": true,
+        "show_on_all_products": true
+      }
+    },
+    "grow_creator": {
+      "type": "custom-grow-creator",
+      "blocks": {
+        "fabric_pot": {
+          "type": "system",
+          "settings": {
+            "product": "",
+            "title": "Atmungsaktiver Stofftopf",
+            "badge": "Aktive Wurzelzone",
+            "explanation": "<p>Die luftdurchlässige Topfwand unterstützt Sauerstoffaustausch und schnellen Wasserablauf. Ideal, wenn du Gießintervalle aktiv kontrollieren möchtest.</p>",
+            "variant_label": "Größe und Ausführung",
+            "image_alt": "",
+            "video_placeholder": "Produktvideo im Theme-Editor zuordnen"
+          }
+        },
+        "self_watering": {
+          "type": "system",
+          "settings": {
+            "product": "",
+            "title": "Eigenbewässerung mit Reservoir",
+            "badge": "Konstante Versorgung",
+            "explanation": "<p>Ein Wasserreservoir kann die Versorgung gleichmäßiger machen. Besonders praktisch bei größeren Pflanzen oder unregelmäßigen Gießintervallen.</p>",
+            "variant_label": "Größe und Ausführung",
+            "image_alt": "",
+            "video_placeholder": "Produktvideo im Theme-Editor zuordnen"
+          }
+        },
+        "saucer": {
+          "type": "addon",
+          "settings": {
+            "product": "",
+            "title": "Passender Untersetzer",
+            "explanation": "Schützt Boden und Regal vor überschüssigem Gießwasser."
+          }
+        },
+        "support": {
+          "type": "addon",
+          "settings": {
+            "product": "",
+            "title": "Rankhilfe",
+            "explanation": "Gibt kletternden Aroids Halt und unterstützt einen geordneten Wuchs."
+          }
+        },
+        "meter": {
+          "type": "addon",
+          "settings": {
+            "product": "",
+            "title": "Feuchtigkeitsmesser",
+            "explanation": "Hilft dabei, den richtigen Gießzeitpunkt besser einzuschätzen."
+          }
+        },
+        "light": {
+          "type": "addon",
+          "settings": {
+            "product": "",
+            "title": "Pflanzenlicht",
+            "explanation": "Ergänzt fehlendes Tageslicht an dunkleren Standorten."
+          }
+        }
+      },
+      "block_order": [
+        "fabric_pot",
+        "self_watering",
+        "saucer",
+        "support",
+        "meter",
+        "light"
+      ],
+      "settings": {
+        "eyebrow": "LEAFers CustomGrowCreator",
+        "heading": "Aus einzelnen Entscheidungen wird dein Grow-Setup",
+        "intro": "<p>Kombiniere deine individuelle Substratrezeptur mit einem passenden Topfsystem und sinnvollen Erweiterungen. Jede Auswahl wird erklärt – du behältst jederzeit die Kontrolle.</p>",
+        "mix_product": "",
+        "step_mix_heading": "Rezeptur und Menge übernehmen",
+        "step_mix_text": "Die oben per Slider eingestellte Rezeptur wird automatisch mit deiner Bestellung gespeichert.",
+        "size_label": "Gesamtmenge auswählen",
+        "recipe_waiting": "Stelle oben zunächst deine Mischung auf genau 100 % ein.",
+        "product_missing": "Bitte im Theme-Editor das Shopify-Produkt „Individuelle Substratmischung“ auswählen.",
+        "step_system_heading": "Topfsystem auswählen",
+        "step_system_text": "Wähle einen atmungsaktiven Stofftopf oder ein System mit Wasserreservoir – passend zu Standort und Gießroutine.",
+        "system_label": "Stofftopf oder Eigenbewässerung",
+        "system_placeholder": "Topfsystem auswählen …",
+        "step_addons_heading": "Setup sinnvoll erweitern",
+        "step_addons_text": "Ergänze nur, was dein Projekt wirklich braucht – zum Beispiel Rankhilfe, Untersetzer, Messgerät oder Pflanzenlicht.",
+        "summary_eyebrow": "Dein Setup",
+        "summary_heading": "Bereit zum Wachsen",
+        "summary_mix": "Substratgröße noch auswählen",
+        "summary_system": "Topfsystem noch auswählen",
+        "summary_addons": "Keine Add-ons ausgewählt",
+        "cart_label": "Grow-Setup in den Warenkorb",
+        "valid_message": "Dein individuelles Setup wurde hinzugefügt.",
+        "recipe_missing": "Die Substratanteile müssen zusammen genau 100 % ergeben.",
+        "fineprint": "Alle ausgewählten Produkte werden als einzelne Positionen in den Warenkorb gelegt. Deine Rezeptur bleibt an der Substratposition gespeichert.",
+        "padding_top": 80,
+        "padding_bottom": 96
+      }
+    }
+  },
+  "order": [
+    "substrate_world",
+    "configurator",
+    "grow_creator"
+  ]
+}
