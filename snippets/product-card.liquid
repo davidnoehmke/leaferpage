@@ -7,6 +7,7 @@ Renders a product card with an optional compact layout and variant-safe quick ad
 {% liquid
   assign card_variant = product.selected_or_first_available_variant
   assign formatted_price = product.price | money
+  assign card_image_alt = product.featured_image.alt | default: product.title
   assign can_quick_add = false
 
   if product.has_only_default_variant and card_variant != blank and card_variant.available
@@ -18,7 +19,7 @@ Renders a product card with an optional compact layout and variant-safe quick ad
   <a class="product-card__link" href="{{ product.url }}">
     <div class="product-card__media">
       {% if product.featured_image != blank %}
-        {{ product.featured_image | image_url: width: 900 | image_tag: widths: '260, 420, 640, 900', sizes: '(min-width: 1000px) 20vw, 50vw', loading: 'lazy', alt: product.featured_image.alt | default: product.title }}
+        {{ product.featured_image | image_url: width: 900 | image_tag: widths: '260, 420, 640, 900', sizes: '(min-width: 1000px) 20vw, 50vw', loading: 'lazy', alt: card_image_alt }}
       {% else %}
         {{ 'product-1' | placeholder_svg_tag }}
       {% endif %}
@@ -57,7 +58,7 @@ Renders a product card with an optional compact layout and variant-safe quick ad
   {% if can_quick_add %}
     {% form 'product', product, class: 'product-card__form' %}
       <input type="hidden" name="id" value="{{ card_variant.id }}">
-      <button type="submit" name="add" aria-label="{{ 'product.quick_add' | t: product: product.title }}">
+      <button type="submit" name="add" aria-label="{{ 'product.quick_add' | t: product: product.title | escape }}">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2 12h11l2-9H6M10 10h6M13 7v6M9 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM17 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/></svg>
       </button>
     {% endform %}
