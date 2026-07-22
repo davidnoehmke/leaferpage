@@ -110,10 +110,183 @@
         "padding_top": 80,
         "padding_bottom": 96
       }
+    },
+    "substrate_world_mBf4Cr": {
+      "type": "substrate-world",
+      "blocks": {
+        "heading_RrzpN4": {
+          "type": "heading",
+          "settings": {
+            "eyebrow": "Spezialmischungen",
+            "heading": "Fertig abgestimmt, trotzdem nachvollziehbar",
+            "text": "<p>Wähle eine Mischung als verlässliche Basis. Die Rezeptur zeigt dir, warum sie zur jeweiligen Pflanzengruppe passt.</p>",
+            "columns": "3"
+          }
+        },
+        "mixture_P3GfkE": {
+          "type": "mixture",
+          "settings": {
+            "product": "",
+            "image_alt": "",
+            "badge": "Spezialmischung",
+            "title": "Tropical Mix",
+            "claim": "Luftig und feuchtepuffernd für tropische Zimmerpflanzen",
+            "ratio": "Pinienrinde · Lava · Bims · Perlite · Kokos",
+            "text": "",
+            "show_price": true,
+            "button_label": "Mischung ansehen",
+            "link": ""
+          }
+        },
+        "mixture_DrLnT3": {
+          "type": "mixture",
+          "settings": {
+            "product": "",
+            "image_alt": "",
+            "badge": "Spezialmischung",
+            "title": "Aroid Mix",
+            "claim": "Grobe Wurzelstruktur für Monstera, Philodendron und Alocasia",
+            "ratio": "Pinienrinde · Bims · Perlite · Kokos",
+            "text": "",
+            "show_price": true,
+            "button_label": "Mischung ansehen",
+            "link": ""
+          }
+        },
+        "mixture_UqqfKR": {
+          "type": "mixture",
+          "settings": {
+            "product": "",
+            "image_alt": "",
+            "badge": "Spezialmischung",
+            "title": "Desert Mix",
+            "claim": "Schnelle Drainage für Kakteen und Sukkulenten",
+            "ratio": "Lava · Bims · Perlite · Blähton",
+            "text": "",
+            "show_price": true,
+            "button_label": "Mischung ansehen",
+            "link": ""
+          }
+        },
+        "heading_RDerWq": {
+          "type": "heading",
+          "settings": {
+            "eyebrow": "Bestandteile",
+            "heading": "Baue deine eigene Rezeptur",
+            "text": "<p>Kombiniere mineralische und organische Komponenten gezielt nach Luftführung, Wasserspeicherung und Standfestigkeit.</p>",
+            "columns": "4"
+          }
+        },
+        "ingredient_VjLYRb": {
+          "type": "ingredient",
+          "settings": {
+            "product": "",
+            "image_alt": "",
+            "badge": "Substratbestandteil",
+            "title": "Pinienrinde",
+            "claim": "Grobe organische Struktur",
+            "ratio": "Startbereich: 20–60 Vol.-%",
+            "text": "",
+            "show_price": true,
+            "button_label": "Bestandteil ansehen",
+            "link": ""
+          }
+        },
+        "ingredient_z4BwzN": {
+          "type": "ingredient",
+          "settings": {
+            "product": "",
+            "image_alt": "",
+            "badge": "Substratbestandteil",
+            "title": "Bims",
+            "claim": "Poröse, dauerhafte Mineralstruktur",
+            "ratio": "Startbereich: 15–40 Vol.-%",
+            "text": "",
+            "show_price": true,
+            "button_label": "Bestandteil ansehen",
+            "link": ""
+          }
+        },
+        "ingredient_4QFfwH": {
+          "type": "ingredient",
+          "settings": {
+            "product": "",
+            "image_alt": "",
+            "badge": "Substratbestandteil",
+            "title": "Perlite",
+            "claim": "Leichtigkeit und zusätzliche Luftporen",
+            "ratio": "Startbereich: 10–35 Vol.-%",
+            "text": "",
+            "show_price": true,
+            "button_label": "Bestandteil ansehen",
+            "link": ""
+          }
+        },
+        "ingredient_UxRDAG": {
+          "type": "ingredient",
+          "settings": {
+            "product": "",
+            "image_alt": "",
+            "badge": "Substratbestandteil",
+            "title": "Lava",
+            "claim": "Drainage und Standfestigkeit",
+            "ratio": "Startbereich: 15–40 Vol.-%",
+            "text": "",
+            "show_price": true,
+            "button_label": "Bestandteil ansehen",
+            "link": ""
+          }
+        },
+        "faq_6mUU7j": {
+          "type": "faq",
+          "settings": {
+            "question": "Kann ich die Mischverhältnisse verändern?",
+            "answer": "<p>Ja. Die Rezepturen sind Startpunkte. Passe sie an Pflanzenart, Topf, Standort und deine Gießroutine an.</p>"
+          }
+        },
+        "faq_baUBqK": {
+          "type": "faq",
+          "settings": {
+            "question": "Welche Mischung passt zu meiner Pflanze?",
+            "answer": "<p>Tropische Aroids profitieren meist von einer groben, luftigen Struktur. Sukkulenten und Kakteen benötigen einen höheren Mineralanteil und besonders schnelle Drainage.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RrzpN4",
+        "mixture_P3GfkE",
+        "mixture_DrLnT3",
+        "mixture_UqqfKR",
+        "heading_RDerWq",
+        "ingredient_VjLYRb",
+        "ingredient_z4BwzN",
+        "ingredient_4QFfwH",
+        "ingredient_UxRDAG",
+        "faq_6mUU7j",
+        "faq_baUBqK"
+      ],
+      "name": "LEAFer Substratwelt",
+      "settings": {
+        "hero_alt": "LEAFerservice Substratmischungen und natürliche Bestandteile",
+        "eyebrow": "Mischen. Verstehen. Wachsen lassen.",
+        "heading": "Substrate, die zu deiner Pflanze passen",
+        "intro": "<p>Starte mit einer erprobten Spezialmischung oder baue dein Substrat aus einzelnen Bestandteilen selbst auf. Jede Rezeptur bleibt transparent und anpassbar.</p>",
+        "button_label": "Mischungen entdecken",
+        "button_link": "",
+        "text_alignment": "left",
+        "overlay": 55,
+        "hero_height": 680,
+        "content_heading": "Deine Pflanze gibt die Richtung vor",
+        "content_text": "<p>Wurzeln brauchen je nach Pflanzenart unterschiedlich viel Luft, Feuchtigkeit und Halt. Deshalb zeigen wir nicht nur fertige Mischungen, sondern auch, welche Aufgabe jeder Bestandteil übernimmt.</p>",
+        "color_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 88
+      }
     }
   },
   "order": [
     "main",
+    "substrate_world_mBf4Cr",
     "custom_grow_creator_fdJ8cR"
   ]
 }
