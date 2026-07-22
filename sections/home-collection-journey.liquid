@@ -1,0 +1,124 @@
+{% liquid
+  assign section_heading = section.settings.heading | default: 'Was braucht deine Pflanze wirklich?'
+  assign section_intro = section.settings.intro | default: 'Starte mit dem Bedarf deiner Pflanze – nicht mit einem beliebigen Produkt. Entdecke Substrate, Zusätze, Pflanzgefäße und smartes Zubehör als aufeinander abgestimmtes System.'
+%}
+
+<section class="home-journey" id="HomeJourney-{{ section.id }}">
+  <div class="page-width">
+    <header class="home-journey__header">
+      <p class="home-journey__eyebrow">{{ section.settings.eyebrow | default: 'LEAFers Pflanzenpflege-System' | escape }}</p>
+      <h2>{{ section_heading | escape }}</h2>
+      <div class="home-journey__intro rte">{{ section_intro }}</div>
+    </header>
+
+    <div class="home-journey__grid" role="list">
+      {% for block in section.blocks %}
+        {% liquid
+          assign collection = block.settings.collection
+          assign title = block.settings.title
+          assign copy = block.settings.copy
+          assign cta = block.settings.cta_label
+          if collection != blank
+            if collection.metafields.leafer.homepage_title.value != blank
+              assign title = collection.metafields.leafer.homepage_title.value
+            elsif title == blank
+              assign title = collection.title
+            endif
+            if collection.metafields.leafer.homepage_intro.value != blank
+              assign copy = collection.metafields.leafer.homepage_intro.value
+            elsif copy == blank and collection.description != blank
+              assign copy = collection.description | strip_html | truncate: 180
+            endif
+          endif
+          if title == blank
+            assign title = block.settings.fallback_title
+          endif
+          if copy == blank
+            assign copy = block.settings.fallback_copy
+          endif
+          if cta == blank
+            assign cta = 'Entdecken'
+          endif
+        %}
+        <article class="home-journey__card" role="listitem" {{ block.shopify_attributes }}>
+          <a class="home-journey__media" href="{{ collection.url | default: routes.all_products_collection_url }}" aria-label="{{ title | escape }}">
+            {% if collection.featured_image != blank %}
+              {{ collection.featured_image | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '360, 540, 720, 1000', sizes: '(min-width: 990px) 25vw, (min-width: 600px) 50vw, 100vw', alt: title }}
+            {% elsif block.settings.image != blank %}
+              {{ block.settings.image | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '360, 540, 720, 1000', sizes: '(min-width: 990px) 25vw, (min-width: 600px) 50vw, 100vw', alt: title }}
+            {% else %}
+              <div class="home-journey__placeholder" aria-hidden="true">{{ 'collection-1' | placeholder_svg_tag }}</div>
+            {% endif %}
+          </a>
+          <div class="home-journey__body">
+            <p class="home-journey__step">0{{ forloop.index }}</p>
+            <h3><a href="{{ collection.url | default: routes.all_products_collection_url }}">{{ title | escape }}</a></h3>
+            <p>{{ copy }}</p>
+            <a class="home-journey__link" href="{{ collection.url | default: routes.all_products_collection_url }}">{{ cta | escape }} <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  #HomeJourney-{{ section.id }} { padding: var(--space-section) 0; background: color-mix(in srgb, var(--surface), var(--background) 38%); }
+  #HomeJourney-{{ section.id }} .home-journey__header { max-width: 760px; margin-bottom: clamp(2rem, 5vw, 4rem); }
+  #HomeJourney-{{ section.id }} .home-journey__eyebrow { margin: 0 0 .8rem; color: var(--accent); font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+  #HomeJourney-{{ section.id }} h2 { margin: 0 0 1rem; font-size: clamp(2rem, 5vw, 4.8rem); line-height: .98; }
+  #HomeJourney-{{ section.id }} .home-journey__intro { max-width: 66ch; color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.18rem); }
+  #HomeJourney-{{ section.id }} .home-journey__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+  #HomeJourney-{{ section.id }} .home-journey__card { min-width: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-large); background: var(--background); box-shadow: var(--shadow-soft); }
+  #HomeJourney-{{ section.id }} .home-journey__media { display: block; aspect-ratio: 4 / 5; overflow: hidden; background: var(--accent-soft); }
+  #HomeJourney-{{ section.id }} .home-journey__media img, #HomeJourney-{{ section.id }} .home-journey__placeholder, #HomeJourney-{{ section.id }} .home-journey__placeholder svg { width: 100%; height: 100%; object-fit: cover; transition: transform .55s var(--ease-out); }
+  #HomeJourney-{{ section.id }} .home-journey__card:hover img { transform: scale(1.035); }
+  #HomeJourney-{{ section.id }} .home-journey__body { padding: 1.25rem; }
+  #HomeJourney-{{ section.id }} .home-journey__step { margin: 0 0 .5rem; color: var(--accent); font-size: .75rem; font-weight: 800; letter-spacing: .12em; }
+  #HomeJourney-{{ section.id }} h3 { margin: 0 0 .65rem; font-size: clamp(1.35rem, 2vw, 1.85rem); }
+  #HomeJourney-{{ section.id }} h3 a { text-decoration: none; }
+  #HomeJourney-{{ section.id }} .home-journey__body > p:not(.home-journey__step) { min-height: 4.8em; margin: 0 0 1rem; color: var(--muted); }
+  #HomeJourney-{{ section.id }} .home-journey__link { font-weight: 800; text-decoration: none; }
+  @media (max-width: 990px) { #HomeJourney-{{ section.id }} .home-journey__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 600px) { #HomeJourney-{{ section.id }} .home-journey__grid { grid-template-columns: 1fr; } #HomeJourney-{{ section.id }} .home-journey__media { aspect-ratio: 16 / 10; } #HomeJourney-{{ section.id }} .home-journey__body > p:not(.home-journey__step) { min-height: 0; } }
+  @media (prefers-reduced-motion: reduce) { #HomeJourney-{{ section.id }} .home-journey__media img { transition: none; } }
+</style>
+
+{% schema %}
+{
+  "name": "Home Kollektionen",
+  "tag": "section",
+  "max_blocks": 4,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Kicker" },
+    { "type": "text", "id": "heading", "label": "Überschrift" },
+    { "type": "richtext", "id": "intro", "label": "Einleitung" }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Kollektion",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "Kollektion" },
+        { "type": "image_picker", "id": "image", "label": "Fallback-Bild" },
+        { "type": "text", "id": "title", "label": "Titel-Override" },
+        { "type": "textarea", "id": "copy", "label": "Text-Override" },
+        { "type": "text", "id": "cta_label", "label": "CTA" },
+        { "type": "text", "id": "fallback_title", "label": "Fallback-Titel" },
+        { "type": "textarea", "id": "fallback_copy", "label": "Fallback-Text" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home Kollektionen",
+      "blocks": [
+        { "type": "collection", "settings": { "fallback_title": "Premium Substrate", "fallback_copy": "Ausgewogene Basismischungen für stabile Wurzeln, kontrollierte Feuchtigkeit und eine dauerhaft lockere Struktur." } },
+        { "type": "collection", "settings": { "fallback_title": "Substratzusätze", "fallback_copy": "Gezielte Komponenten für mehr Luft, Drainage, Wasserspeicherung oder Struktur – passend zur Pflanze dosierbar." } },
+        { "type": "collection", "settings": { "fallback_title": "Pflanzgefäße", "fallback_copy": "Gefäße, die Wurzelraum, Wasserführung und Alltagstauglichkeit zusammenbringen." } },
+        { "type": "collection", "settings": { "fallback_title": "SmartGrow & Zubehör", "fallback_copy": "Praktische Helfer für Gießen, Kontrolle und Pflege – sinnvoll ergänzt statt unnötig kompliziert." } }
+      ]
+    }
+  ]
+}
+{% endschema %}
