@@ -243,6 +243,7 @@
         "vegetables",
         "exotics"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Dein nächster sinnvoller Schritt",
         "text": "<p>Beginne mit dem konkreten Pflanzenprojekt. Die vier Einstiege führen direkt zu den passenden Produktbereichen.</p>",
