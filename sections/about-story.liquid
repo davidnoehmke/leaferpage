@@ -1,0 +1,705 @@
+{% liquid
+  assign hero_alt = section.settings.hero_alt | default: section.settings.heading
+  assign nav_count = 0
+
+  for block in section.blocks
+    if block.settings.nav_label != blank
+      assign nav_count = nav_count | plus: 1
+    endif
+  endfor
+%}
+
+<leafer-about-story
+  class="about-story"
+  id="AboutStory-{{ section.id }}"
+  style="--about-sticky-offset: {{ section.settings.sticky_offset }}px;"
+  data-about-story
+>
+  <header class="about-story__hero">
+    <div class="about-story__hero-media">
+      {% if section.settings.hero_image != blank %}
+        {{
+          section.settings.hero_image
+          | image_url: width: 2400
+          | image_tag:
+            widths: '720, 1100, 1500, 1900, 2400',
+            sizes: '(min-width: 900px) 52vw, 100vw',
+            loading: 'eager',
+            fetchpriority: 'high',
+            alt: hero_alt,
+            class: 'about-story__hero-image'
+        }}
+      {% else %}
+        <div class="about-story__hero-placeholder" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      {% endif %}
+      <div class="about-story__hero-shade" aria-hidden="true"></div>
+    </div>
+
+    <div class="page-width about-story__hero-inner">
+      <div class="about-story__hero-copy">
+        {% if section.settings.eyebrow != blank %}
+          <p class="about-story__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {% endif %}
+
+        {% if section.settings.heading != blank %}
+          <h1>{{ section.settings.heading | escape }}</h1>
+        {% elsif page.title != blank %}
+          <h1>{{ page.title | escape }}</h1>
+        {% endif %}
+
+        {% if section.settings.lead != blank %}
+          <div class="about-story__lead rte">{{ section.settings.lead }}</div>
+        {% endif %}
+
+        {% if section.settings.primary_link != blank or section.settings.secondary_link != blank %}
+          <div class="about-story__hero-actions">
+            {% if section.settings.primary_link != blank and section.settings.primary_label != blank %}
+              <a class="button" href="{{ section.settings.primary_link }}">{{ section.settings.primary_label | escape }}</a>
+            {% endif %}
+            {% if section.settings.secondary_link != blank and section.settings.secondary_label != blank %}
+              <a class="button button--secondary" href="{{ section.settings.secondary_link }}">{{ section.settings.secondary_label | escape }}</a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+
+      {% if section.settings.show_scroll_hint and section.blocks.size > 0 %}
+        <a class="about-story__scroll-hint" href="#AboutContent-{{ section.id }}" data-about-jump>
+          <span>{{ section.settings.scroll_hint | escape }}</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6.5 13.5 12 19l5.5-5.5"/></svg>
+        </a>
+      {% endif %}
+    </div>
+  </header>
+
+  {% if nav_count > 1 %}
+    <nav class="about-story__nav" aria-label="{{ section.settings.navigation_label | escape }}" data-about-nav>
+      <div class="page-width about-story__nav-inner">
+        <span class="about-story__nav-label">{{ section.settings.navigation_label | escape }}</span>
+        <div class="about-story__nav-links">
+          {% assign nav_index = 0 %}
+          {% for block in section.blocks %}
+            {% if block.settings.nav_label != blank %}
+              {% assign nav_index = nav_index | plus: 1 %}
+              <a
+                class="about-story__nav-link{% if nav_index == 1 %} is-current{% endif %}"
+                href="#AboutBlock-{{ section.id }}-{{ block.id }}"
+                data-about-link
+                {% if nav_index == 1 %}aria-current="location"{% endif %}
+              >
+                <span aria-hidden="true">{% if nav_index < 10 %}0{% endif %}{{ nav_index }}</span>
+                {{ block.settings.nav_label | escape }}
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <span class="about-story__progress" aria-hidden="true"><span data-about-progress></span></span>
+    </nav>
+  {% endif %}
+
+  <div class="about-story__content" id="AboutContent-{{ section.id }}">
+    {% assign chapter_index = 0 %}
+
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'chapter' %}
+          {% assign chapter_index = chapter_index | plus: 1 %}
+          {% assign chapter_alt = block.settings.image_alt | default: block.settings.heading %}
+          <section
+            class="about-story__chapter about-story__chapter--image-{{ block.settings.image_position }} page-width"
+            id="AboutBlock-{{ section.id }}-{{ block.id }}"
+            data-about-panel
+            {{ block.shopify_attributes }}
+          >
+            <div class="about-story__chapter-media">
+              {% if block.settings.image != blank %}
+                {{
+                  block.settings.image
+                  | image_url: width: 1700
+                  | image_tag:
+                    widths: '480, 720, 1000, 1300, 1700',
+                    sizes: '(min-width: 900px) 48vw, 100vw',
+                    loading: 'lazy',
+                    alt: chapter_alt
+                }}
+              {% else %}
+                <div class="about-story__media-placeholder" aria-hidden="true">
+                  {{ 'lifestyle-1' | placeholder_svg_tag }}
+                </div>
+              {% endif %}
+              {% if block.settings.image_caption != blank %}
+                <p class="about-story__image-caption">{{ block.settings.image_caption | escape }}</p>
+              {% endif %}
+            </div>
+
+            <div class="about-story__chapter-copy">
+              <p class="about-story__chapter-number" aria-hidden="true">{% if chapter_index < 10 %}0{% endif %}{{ chapter_index }}</p>
+              {% if block.settings.eyebrow != blank %}<p class="about-story__eyebrow">{{ block.settings.eyebrow | escape }}</p>{% endif %}
+              {% if block.settings.heading != blank %}<h2>{{ block.settings.heading | escape }}</h2>{% endif %}
+              {% if block.settings.text != blank %}<div class="about-story__chapter-text rte">{{ block.settings.text }}</div>{% endif %}
+              {% if block.settings.tag != blank %}<p class="about-story__tag">{{ block.settings.tag | escape }}</p>{% endif %}
+            </div>
+          </section>
+
+        {% when 'quote' %}
+          {% assign portrait_alt = block.settings.portrait_alt | default: block.settings.author %}
+          <figure
+            class="about-story__quote page-width"
+            id="AboutBlock-{{ section.id }}-{{ block.id }}"
+            data-about-panel
+            {{ block.shopify_attributes }}
+          >
+            {% if block.settings.portrait != blank %}
+              <div class="about-story__quote-portrait">
+                {{
+                  block.settings.portrait
+                  | image_url: width: 700
+                  | image_tag: widths: '240, 420, 700', sizes: '180px', loading: 'lazy', alt: portrait_alt
+                }}
+              </div>
+            {% else %}
+              <div class="about-story__quote-mark" aria-hidden="true">“</div>
+            {% endif %}
+
+            <div class="about-story__quote-copy">
+              {% if block.settings.quote != blank %}<blockquote>{{ block.settings.quote }}</blockquote>{% endif %}
+              {% if block.settings.author != blank or block.settings.role != blank %}
+                <figcaption>
+                  {% if block.settings.author != blank %}<strong>{{ block.settings.author | escape }}</strong>{% endif %}
+                  {% if block.settings.role != blank %}<span>{{ block.settings.role | escape }}</span>{% endif %}
+                </figcaption>
+              {% endif %}
+            </div>
+          </figure>
+
+        {% when 'metrics' %}
+          <section
+            class="about-story__metrics"
+            id="AboutBlock-{{ section.id }}-{{ block.id }}"
+            data-about-panel
+            {{ block.shopify_attributes }}
+          >
+            <div class="page-width">
+              <header class="about-story__section-header">
+                {% if block.settings.eyebrow != blank %}<p class="about-story__eyebrow">{{ block.settings.eyebrow | escape }}</p>{% endif %}
+                {% if block.settings.heading != blank %}<h2>{{ block.settings.heading | escape }}</h2>{% endif %}
+                {% if block.settings.text != blank %}<div class="rte">{{ block.settings.text }}</div>{% endif %}
+              </header>
+
+              <div class="about-story__metric-grid" role="list">
+                {% for metric_number in (1..3) %}
+                  {% liquid
+                    assign value_key = 'metric_' | append: metric_number | append: '_value'
+                    assign label_key = 'metric_' | append: metric_number | append: '_label'
+                    assign detail_key = 'metric_' | append: metric_number | append: '_detail'
+                    assign metric_value = block.settings[value_key]
+                    assign metric_label = block.settings[label_key]
+                    assign metric_detail = block.settings[detail_key]
+                  %}
+                  {% if metric_value != blank or metric_label != blank %}
+                    <article class="about-story__metric" role="listitem">
+                      {% if metric_value != blank %}<strong>{{ metric_value | escape }}</strong>{% endif %}
+                      {% if metric_label != blank %}<h3>{{ metric_label | escape }}</h3>{% endif %}
+                      {% if metric_detail != blank %}<p>{{ metric_detail | escape }}</p>{% endif %}
+                    </article>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          </section>
+
+        {% when 'values' %}
+          <section
+            class="about-story__values page-width"
+            id="AboutBlock-{{ section.id }}-{{ block.id }}"
+            data-about-panel
+            {{ block.shopify_attributes }}
+          >
+            <header class="about-story__section-header">
+              {% if block.settings.eyebrow != blank %}<p class="about-story__eyebrow">{{ block.settings.eyebrow | escape }}</p>{% endif %}
+              {% if block.settings.heading != blank %}<h2>{{ block.settings.heading | escape }}</h2>{% endif %}
+              {% if block.settings.text != blank %}<div class="rte">{{ block.settings.text }}</div>{% endif %}
+            </header>
+
+            <div class="about-story__value-grid" role="list">
+              {% for value_number in (1..3) %}
+                {% liquid
+                  assign title_key = 'value_' | append: value_number | append: '_title'
+                  assign text_key = 'value_' | append: value_number | append: '_text'
+                  assign value_title = block.settings[title_key]
+                  assign value_text = block.settings[text_key]
+                %}
+                {% if value_title != blank or value_text != blank %}
+                  <article class="about-story__value" role="listitem">
+                    <span aria-hidden="true">{% if value_number < 10 %}0{% endif %}{{ value_number }}</span>
+                    {% if value_title != blank %}<h3>{{ value_title | escape }}</h3>{% endif %}
+                    {% if value_text != blank %}<p>{{ value_text | escape }}</p>{% endif %}
+                  </article>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </section>
+
+        {% when 'image_break' %}
+          {% assign break_alt = block.settings.image_alt | default: block.settings.caption %}
+          <figure
+            class="about-story__image-break page-width{% if block.settings.tall %} about-story__image-break--tall{% endif %}"
+            id="AboutBlock-{{ section.id }}-{{ block.id }}"
+            data-about-panel
+            {{ block.shopify_attributes }}
+          >
+            <div class="about-story__image-break-media">
+              {% if block.settings.image != blank %}
+                {{
+                  block.settings.image
+                  | image_url: width: 2400
+                  | image_tag:
+                    widths: '720, 1100, 1500, 1900, 2400',
+                    sizes: '(min-width: 1450px) 1400px, 100vw',
+                    loading: 'lazy',
+                    alt: break_alt
+                }}
+              {% else %}
+                <div class="about-story__media-placeholder" aria-hidden="true">
+                  {{ 'lifestyle-2' | placeholder_svg_tag }}
+                </div>
+              {% endif %}
+            </div>
+            {% if block.settings.caption != blank %}<figcaption>{{ block.settings.caption | escape }}</figcaption>{% endif %}
+          </figure>
+
+        {% when 'cta' %}
+          <section
+            class="about-story__cta page-width"
+            id="AboutBlock-{{ section.id }}-{{ block.id }}"
+            data-about-panel
+            {{ block.shopify_attributes }}
+          >
+            <div class="about-story__cta-mark" aria-hidden="true">L</div>
+            <div class="about-story__cta-copy">
+              {% if block.settings.eyebrow != blank %}<p class="about-story__eyebrow">{{ block.settings.eyebrow | escape }}</p>{% endif %}
+              {% if block.settings.heading != blank %}<h2>{{ block.settings.heading | escape }}</h2>{% endif %}
+              {% if block.settings.text != blank %}<div class="rte">{{ block.settings.text }}</div>{% endif %}
+              {% if block.settings.primary_link != blank or block.settings.secondary_link != blank %}
+                <div class="about-story__cta-actions">
+                  {% if block.settings.primary_link != blank and block.settings.primary_label != blank %}
+                    <a class="button" href="{{ block.settings.primary_link }}">{{ block.settings.primary_label | escape }}</a>
+                  {% endif %}
+                  {% if block.settings.secondary_link != blank and block.settings.secondary_label != blank %}
+                    <a class="button button--secondary" href="{{ block.settings.secondary_link }}">{{ block.settings.secondary_label | escape }}</a>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          </section>
+      {% endcase %}
+    {% else %}
+      <div class="about-story__empty page-width">
+        <h2>Erzähle eure Geschichte</h2>
+        <p>Füge im Theme Editor Kapitel, Werte, Bilder, Kennzahlen oder ein Zitat hinzu.</p>
+      </div>
+    {% endfor %}
+  </div>
+</leafer-about-story>
+
+{% stylesheet %}
+  .about-story { display: block; overflow: clip; background: var(--background); }
+  .about-story__hero { position: relative; min-height: min(860px, calc(100svh - 78px)); display: grid; isolation: isolate; background: var(--surface); }
+  .about-story__hero-media { position: absolute; z-index: -2; inset: 0 0 0 46%; overflow: hidden; background: var(--accent-soft); }
+  .about-story__hero-image, .about-story__hero-placeholder { width: 100%; height: 100%; object-fit: cover; }
+  .about-story__hero-shade { position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, var(--surface) 0%, color-mix(in srgb, var(--surface), transparent 10%) 10%, transparent 58%); }
+  .about-story__hero-placeholder { position: relative; background: linear-gradient(145deg, #d8d1c1, #8fa07d 55%, #394f2d); }
+  .about-story__hero-placeholder span { position: absolute; width: 34%; height: 75%; right: 8%; bottom: -18%; border-radius: 100% 0 100% 0; background: color-mix(in srgb, var(--accent), black 10%); transform: rotate(22deg); opacity: .82; }
+  .about-story__hero-placeholder span:nth-child(2) { right: 35%; bottom: -28%; width: 24%; height: 68%; transform: rotate(-18deg); background: #71865f; }
+  .about-story__hero-placeholder span:nth-child(3) { right: 60%; bottom: 5%; width: 12%; height: 46%; border-radius: 999px 999px 12px 12px; transform: none; background: color-mix(in srgb, var(--background), transparent 12%); }
+  .about-story__hero-inner { min-height: inherit; display: grid; grid-template-columns: minmax(0, 680px) 1fr; align-items: center; padding-block: clamp(4rem, 9vw, 8rem); }
+  .about-story__hero-copy { grid-column: 1; }
+  .about-story__eyebrow { margin: 0 0 .75rem; color: var(--accent); font-size: .75rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+  .about-story__hero h1 { max-width: 780px; margin: 0; font-size: clamp(3.4rem, 7vw, 7rem); line-height: .91; letter-spacing: -.065em; }
+  .about-story__lead { max-width: 610px; margin-top: 1.6rem; color: color-mix(in srgb, var(--text), transparent 18%); font-size: clamp(1.05rem, 1.6vw, 1.28rem); }
+  .about-story__hero-actions, .about-story__cta-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+  .about-story__scroll-hint { position: absolute; left: max(1.5rem, calc((100vw - var(--page-width)) / 2)); bottom: 2rem; display: inline-flex; align-items: center; gap: .7rem; color: var(--text); font-size: .75rem; font-weight: 750; text-decoration: none; }
+  .about-story__scroll-hint svg { width: 22px; fill: none; stroke: currentColor; stroke-width: 1.5; animation: about-story-bob 1.8s ease-in-out infinite; }
+
+  .about-story__nav { position: sticky; z-index: 18; top: var(--about-sticky-offset); border-block: 1px solid var(--border); background: color-mix(in srgb, var(--background), transparent 3%); box-shadow: 0 10px 26px color-mix(in srgb, var(--text), transparent 94%); backdrop-filter: blur(16px); }
+  .about-story__nav-inner { min-height: 68px; display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: clamp(1rem, 4vw, 4rem); }
+  .about-story__nav-label { color: var(--muted); font-size: .69rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; }
+  .about-story__nav-links { min-width: 0; display: flex; gap: clamp(1.1rem, 3vw, 3rem); overflow-x: auto; scrollbar-width: none; }
+  .about-story__nav-links::-webkit-scrollbar { display: none; }
+  .about-story__nav-link { flex: 0 0 auto; display: inline-flex; align-items: center; gap: .45rem; min-height: 68px; border-bottom: 2px solid transparent; color: var(--muted); font-size: .78rem; font-weight: 750; text-decoration: none; transition: color .2s ease, border-color .2s ease; }
+  .about-story__nav-link > span { font-size: .62rem; }
+  .about-story__nav-link.is-current { border-color: var(--accent); color: var(--accent); }
+  .about-story__progress { position: absolute; inset: auto 0 -1px; height: 2px; overflow: hidden; background: transparent; }
+  .about-story__progress > span { width: 100%; height: 100%; display: block; background: var(--accent); transform: scaleX(0); transform-origin: left; will-change: transform; }
+
+  .about-story__content { display: grid; }
+  .about-story__chapter { padding-block: var(--space-section); display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(320px, .75fr); gap: clamp(2.5rem, 8vw, 8rem); align-items: start; scroll-margin-top: calc(var(--about-sticky-offset) + 90px); }
+  .about-story__chapter--image-right .about-story__chapter-media { order: 2; }
+  .about-story__chapter--image-right .about-story__chapter-copy { order: 1; }
+  .about-story__chapter-media { position: sticky; top: calc(var(--about-sticky-offset) + 94px); }
+  .about-story__chapter-media > img, .about-story__media-placeholder { width: 100%; aspect-ratio: 4 / 5; border-radius: var(--radius-large); object-fit: cover; overflow: hidden; background: var(--surface); }
+  .about-story__media-placeholder svg { width: 100%; height: 100%; }
+  .about-story__image-caption { margin: .7rem 0 0; color: var(--muted); font-size: .72rem; }
+  .about-story__chapter-copy { align-self: center; padding-block: clamp(1rem, 7vw, 7rem); }
+  .about-story__chapter-number { margin: 0 0 clamp(2rem, 5vw, 5rem); color: color-mix(in srgb, var(--accent), transparent 48%); font-family: var(--heading-font); font-size: clamp(3rem, 6vw, 6rem); line-height: .8; }
+  .about-story__chapter h2, .about-story__section-header h2, .about-story__cta h2 { margin: 0; font-size: clamp(2.5rem, 5vw, 5.2rem); line-height: .95; letter-spacing: -.055em; }
+  .about-story__chapter-text { max-width: 60ch; margin-top: 1.5rem; color: var(--muted); font-size: clamp(1rem, 1.35vw, 1.14rem); }
+  .about-story__tag { width: fit-content; margin: 1.8rem 0 0; padding: .5rem .8rem; border: 1px solid var(--border); border-radius: 999px; color: var(--accent); font-size: .72rem; font-weight: 800; }
+
+  .about-story__quote { margin-block: var(--space-section); padding: clamp(2rem, 6vw, 6rem); border-radius: var(--radius-large); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; background: var(--accent); color: var(--background); scroll-margin-top: calc(var(--about-sticky-offset) + 90px); }
+  .about-story__quote-portrait { width: clamp(120px, 18vw, 230px); aspect-ratio: 1; border-radius: 50%; overflow: hidden; }
+  .about-story__quote-portrait img { width: 100%; height: 100%; object-fit: cover; }
+  .about-story__quote-mark { align-self: start; color: color-mix(in srgb, var(--background), transparent 18%); font-family: var(--heading-font); font-size: clamp(7rem, 18vw, 16rem); line-height: .58; }
+  .about-story__quote blockquote { max-width: 1000px; margin: 0; font-family: var(--heading-font); font-size: clamp(2rem, 4.5vw, 4.7rem); line-height: 1.02; letter-spacing: -.045em; }
+  .about-story__quote blockquote > * { margin: 0; }
+  .about-story__quote figcaption { margin-top: 2rem; display: grid; gap: .15rem; }
+  .about-story__quote figcaption span { color: color-mix(in srgb, var(--background), transparent 28%); font-size: .8rem; }
+
+  .about-story__metrics { padding-block: var(--space-section); background: var(--surface); scroll-margin-top: calc(var(--about-sticky-offset) + 90px); }
+  .about-story__section-header { max-width: 860px; margin-bottom: clamp(2.5rem, 6vw, 5rem); }
+  .about-story__section-header .rte { max-width: 64ch; margin-top: 1.25rem; color: var(--muted); font-size: 1.05rem; }
+  .about-story__metric-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--border); }
+  .about-story__metric { min-width: 0; padding: clamp(1.5rem, 4vw, 3rem); border-right: 1px solid var(--border); }
+  .about-story__metric:last-child { border-right: 0; }
+  .about-story__metric strong { display: block; color: var(--accent); font-family: var(--heading-font); font-size: clamp(3.3rem, 7vw, 7rem); font-weight: 600; line-height: .9; letter-spacing: -.06em; }
+  .about-story__metric h3 { margin: 1.4rem 0 .45rem; font-family: inherit; font-size: 1rem; }
+  .about-story__metric p { margin: 0; color: var(--muted); font-size: .85rem; }
+
+  .about-story__values { padding-block: var(--space-section); scroll-margin-top: calc(var(--about-sticky-offset) + 90px); }
+  .about-story__value-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  .about-story__value { min-height: 310px; padding: clamp(1.5rem, 3vw, 2.6rem); border: 1px solid var(--border); border-radius: var(--radius-large); display: flex; flex-direction: column; background: color-mix(in srgb, var(--surface), var(--background) 48%); }
+  .about-story__value > span { color: var(--accent); font-size: .7rem; font-weight: 800; letter-spacing: .12em; }
+  .about-story__value h3 { margin: auto 0 .8rem; font-size: clamp(1.6rem, 2.6vw, 2.5rem); line-height: 1; }
+  .about-story__value p { margin: 0; color: var(--muted); }
+
+  .about-story__image-break { margin-block: var(--space-section); scroll-margin-top: calc(var(--about-sticky-offset) + 90px); }
+  .about-story__image-break-media { aspect-ratio: 16 / 8; border-radius: var(--radius-large); overflow: hidden; background: var(--surface); }
+  .about-story__image-break--tall .about-story__image-break-media { aspect-ratio: 16 / 11; }
+  .about-story__image-break img, .about-story__image-break .about-story__media-placeholder { width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; border-radius: 0; }
+  .about-story__image-break figcaption { max-width: 70ch; margin: .85rem 0 0 auto; color: var(--muted); font-size: .75rem; text-align: right; }
+
+  .about-story__cta { margin-block: var(--space-section); padding: clamp(2rem, 6vw, 6rem); border-radius: var(--radius-large); display: grid; grid-template-columns: minmax(120px, .38fr) minmax(0, 1.62fr); gap: clamp(2rem, 7vw, 8rem); align-items: center; background: var(--surface); scroll-margin-top: calc(var(--about-sticky-offset) + 90px); }
+  .about-story__cta-mark { width: min(100%, 230px); aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; background: var(--accent); color: var(--background); font-family: var(--heading-font); font-size: clamp(5rem, 12vw, 10rem); line-height: 1; }
+  .about-story__cta-copy { max-width: 900px; }
+  .about-story__cta-copy > .rte { max-width: 60ch; margin-top: 1.2rem; color: var(--muted); }
+  .about-story__cta .button--secondary { color: var(--text); }
+
+  .about-story__empty { margin-block: var(--space-section); padding: 3rem; border: 1px dashed var(--border); border-radius: var(--radius-large); text-align: center; }
+  .about-story__empty h2 { margin-top: 0; }
+
+  .about-story.is-enhanced [data-about-panel] { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .8s var(--ease-out); }
+  .about-story.is-enhanced [data-about-panel].is-visible { opacity: 1; transform: none; }
+
+  @media (hover: hover) and (pointer: fine) {
+    .about-story__nav-link:hover { color: var(--accent); }
+    .about-story__value { transition: transform .3s var(--ease-out), border-color .2s ease, box-shadow .3s var(--ease-out); }
+    .about-story__value:hover { transform: translateY(-5px); border-color: color-mix(in srgb, var(--accent), transparent 58%); box-shadow: var(--shadow-soft); }
+  }
+
+  @media (max-width: 1050px) {
+    .about-story__hero-media { inset-left: 38%; }
+    .about-story__hero-inner { grid-template-columns: minmax(0, 590px) 1fr; }
+    .about-story__chapter { gap: 3rem; }
+  }
+
+  @media (max-width: 800px) {
+    .about-story__hero { min-height: auto; padding-top: min(58svh, 520px); }
+    .about-story__hero-media { inset: 0 0 auto; height: min(58svh, 520px); }
+    .about-story__hero-shade { background: linear-gradient(0deg, var(--surface), transparent 60%); }
+    .about-story__hero-inner { min-height: auto; display: block; padding-block: 2rem 5rem; }
+    .about-story__hero h1 { font-size: clamp(2.8rem, 12vw, 5rem); }
+    .about-story__scroll-hint { bottom: 1.4rem; }
+    .about-story__nav { top: var(--about-sticky-offset); }
+    .about-story__nav-inner { grid-template-columns: 1fr; gap: 0; padding-top: .65rem; }
+    .about-story__nav-label { display: none; }
+    .about-story__nav-link { min-height: 54px; }
+    .about-story__chapter { grid-template-columns: 1fr; gap: 1.5rem; }
+    .about-story__chapter--image-right .about-story__chapter-media, .about-story__chapter--image-right .about-story__chapter-copy { order: initial; }
+    .about-story__chapter-media { position: static; }
+    .about-story__chapter-media > img, .about-story__media-placeholder { aspect-ratio: 4 / 3; }
+    .about-story__chapter-copy { padding-block: 1rem; }
+    .about-story__chapter-number { margin-bottom: 1.5rem; }
+    .about-story__quote { grid-template-columns: 1fr; }
+    .about-story__quote-portrait { width: 110px; }
+    .about-story__quote-mark { font-size: 8rem; }
+    .about-story__metric-grid, .about-story__value-grid { grid-template-columns: 1fr; }
+    .about-story__metric { border-right: 0; border-bottom: 1px solid var(--border); }
+    .about-story__metric:last-child { border-bottom: 0; }
+    .about-story__value { min-height: 250px; }
+    .about-story__cta { grid-template-columns: 1fr; }
+    .about-story__cta-mark { width: 120px; }
+  }
+
+  @media (max-width: 520px) {
+    .about-story__hero { padding-top: 48svh; }
+    .about-story__hero-media { height: 48svh; }
+    .about-story__hero-actions, .about-story__cta-actions { display: grid; grid-template-columns: 1fr; }
+    .about-story__hero-actions .button, .about-story__cta-actions .button { width: 100%; }
+    .about-story__quote, .about-story__cta { padding: 1.5rem; }
+    .about-story__image-break-media, .about-story__image-break--tall .about-story__image-break-media { aspect-ratio: 4 / 5; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .about-story__scroll-hint svg { animation: none; }
+    .about-story.is-enhanced [data-about-panel] { opacity: 1; transform: none; transition: none; }
+  }
+
+  @keyframes about-story-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  class LeaferAboutStory extends HTMLElement {
+    connectedCallback() {
+      if (this.controller) return;
+
+      this.controller = new AbortController();
+      this.signal = this.controller.signal;
+      this.progress = this.querySelector('[data-about-progress]');
+      this.links = Array.from(this.querySelectorAll('[data-about-link]'));
+      this.panels = Array.from(this.querySelectorAll('[data-about-panel]'));
+      this.prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      this.ticking = false;
+
+      this.classList.add('is-enhanced');
+      this.setupNavigation();
+      this.setupObservers();
+      this.setupEditorEvents();
+      this.updateProgress();
+    }
+
+    disconnectedCallback() {
+      this.panelObserver?.disconnect();
+      this.controller?.abort();
+      this.controller = null;
+    }
+
+    setupNavigation() {
+      this.addEventListener('click', (event) => {
+        const link = event.target.closest('[data-about-link], [data-about-jump]');
+        if (!link || !this.contains(link)) return;
+
+        const targetId = link.getAttribute('href');
+        const target = targetId ? document.querySelector(targetId) : null;
+        if (!target) return;
+
+        event.preventDefault();
+        this.scrollToTarget(target);
+      }, { signal: this.signal });
+
+      const queueProgress = () => {
+        if (this.ticking) return;
+        this.ticking = true;
+        window.requestAnimationFrame(() => {
+          this.updateProgress();
+          this.ticking = false;
+        });
+      };
+
+      window.addEventListener('scroll', queueProgress, { passive: true, signal: this.signal });
+      window.addEventListener('resize', queueProgress, { passive: true, signal: this.signal });
+    }
+
+    setupObservers() {
+      if (!('IntersectionObserver' in window)) {
+        this.panels.forEach((panel) => panel.classList.add('is-visible'));
+        return;
+      }
+
+      this.panelObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            this.activateLink(entry.target.id);
+          }
+        });
+      }, {
+        rootMargin: '-22% 0px -58% 0px',
+        threshold: [0, 0.15, 0.45]
+      });
+
+      this.panels.forEach((panel) => this.panelObserver.observe(panel));
+    }
+
+    setupEditorEvents() {
+      document.addEventListener('shopify:block:select', (event) => {
+        if (!this.contains(event.target)) return;
+        event.target.classList.add('is-visible');
+        this.activateLink(event.target.id);
+        this.scrollToTarget(event.target);
+      }, { signal: this.signal });
+    }
+
+    scrollToTarget(target) {
+      const nav = this.querySelector('[data-about-nav]');
+      const stickyOffset = Number.parseFloat(getComputedStyle(this).getPropertyValue('--about-sticky-offset')) || 0;
+      const offset = stickyOffset + (nav?.offsetHeight || 0) + 16;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+
+      window.scrollTo({
+        top: Math.max(0, top),
+        behavior: this.prefersReducedMotion.matches ? 'auto' : 'smooth'
+      });
+    }
+
+    activateLink(panelId) {
+      if (!panelId) return;
+
+      this.links.forEach((link) => {
+        const isCurrent = link.getAttribute('href') === `#${panelId}`;
+        link.classList.toggle('is-current', isCurrent);
+        if (isCurrent) {
+          link.setAttribute('aria-current', 'location');
+          link.scrollIntoView({ inline: 'nearest', block: 'nearest' });
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+    }
+
+    updateProgress() {
+      if (!this.progress) return;
+
+      const rect = this.getBoundingClientRect();
+      const total = Math.max(1, rect.height - window.innerHeight);
+      const passed = Math.min(total, Math.max(0, -rect.top));
+      this.progress.style.transform = `scaleX(${passed / total})`;
+    }
+  }
+
+  if (!customElements.get('leafer-about-story')) {
+    customElements.define('leafer-about-story', LeaferAboutStory);
+  }
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "LEAFerservice About",
+  "tag": "section",
+  "class": "section-about-story",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Kicker", "default": "Über LEAFerservice" },
+    { "type": "text", "id": "heading", "label": "Hauptüberschrift", "default": "Pflanzenpflege, die an der Wurzel beginnt." },
+    { "type": "richtext", "id": "lead", "label": "Einleitung", "default": "<p>Wir verbinden verständliches Pflanzenwissen mit sorgfältig ausgewählten Substraten, Zusätzen, Gefäßen und Werkzeugen – damit Entscheidungen einfacher und Pflanzen langfristig gesünder werden.</p>" },
+    { "type": "image_picker", "id": "hero_image", "label": "Hero-Bild" },
+    { "type": "text", "id": "hero_alt", "label": "Alternativtext Hero-Bild", "info": "Beschreibt das sichtbare Motiv. Bleibt das Feld leer, wird die Hauptüberschrift verwendet." },
+    { "type": "text", "id": "primary_label", "label": "Primärer Button", "default": "Sortiment entdecken" },
+    { "type": "url", "id": "primary_link", "label": "Link primärer Button" },
+    { "type": "text", "id": "secondary_label", "label": "Sekundärer Button", "default": "Kontakt aufnehmen" },
+    { "type": "url", "id": "secondary_link", "label": "Link sekundärer Button" },
+    { "type": "text", "id": "navigation_label", "label": "Bezeichnung Kapitel-Navigation", "default": "Unsere Geschichte" },
+    { "type": "range", "id": "sticky_offset", "label": "Abstand der Kapitel-Navigation", "min": 66, "max": 140, "step": 2, "default": 90, "unit": "px" },
+    { "type": "checkbox", "id": "show_scroll_hint", "label": "Scroll-Hinweis anzeigen", "default": true },
+    { "type": "text", "id": "scroll_hint", "label": "Text Scroll-Hinweis", "default": "Geschichte lesen" }
+  ],
+  "blocks": [
+    {
+      "type": "chapter",
+      "name": "Kapitel",
+      "settings": [
+        { "type": "text", "id": "nav_label", "label": "Text in Kapitel-Navigation", "default": "Unser Anfang" },
+        { "type": "text", "id": "eyebrow", "label": "Kicker", "default": "Unser Anfang" },
+        { "type": "text", "id": "heading", "label": "Überschrift", "default": "Aus einer Pflanzenfrage wurde eine klare Idee." },
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Erzähle hier, welches Problem am Anfang stand, welche Erfahrung euch geprägt hat und warum LEAFerservice gegründet wurde.</p><p>Nutze konkrete Beobachtungen statt allgemeiner Werbeversprechen.</p>" },
+        { "type": "image_picker", "id": "image", "label": "Bild" },
+        { "type": "text", "id": "image_alt", "label": "Alternativtext Bild" },
+        { "type": "text", "id": "image_caption", "label": "Bildunterschrift" },
+        { "type": "select", "id": "image_position", "label": "Bildposition Desktop", "options": [{ "value": "left", "label": "Links" }, { "value": "right", "label": "Rechts" }], "default": "left" },
+        { "type": "text", "id": "tag", "label": "Kleine Hervorhebung", "default": "Platzhalter: Jahr oder Meilenstein" }
+      ]
+    },
+    {
+      "type": "quote",
+      "name": "Zitat",
+      "settings": [
+        { "type": "text", "id": "nav_label", "label": "Text in Kapitel-Navigation" },
+        { "type": "richtext", "id": "quote", "label": "Zitat", "default": "<p>Gute Pflanzenpflege beginnt nicht mit mehr Produkten, sondern mit der richtigen Entscheidung.</p>" },
+        { "type": "text", "id": "author", "label": "Name", "default": "Name der Gründerperson" },
+        { "type": "text", "id": "role", "label": "Rolle", "default": "Gründung · LEAFerservice" },
+        { "type": "image_picker", "id": "portrait", "label": "Porträt optional" },
+        { "type": "text", "id": "portrait_alt", "label": "Alternativtext Porträt" }
+      ]
+    },
+    {
+      "type": "metrics",
+      "name": "Kennzahlen",
+      "settings": [
+        { "type": "text", "id": "nav_label", "label": "Text in Kapitel-Navigation", "default": "Heute" },
+        { "type": "text", "id": "eyebrow", "label": "Kicker", "default": "LEAFerservice heute" },
+        { "type": "text", "id": "heading", "label": "Überschrift", "default": "Was aus der Idee gewachsen ist." },
+        { "type": "richtext", "id": "text", "label": "Einleitung", "default": "<p>Verwende nur belegbare Kennzahlen. Auch kleine, konkrete Werte wirken stärker als große, unklare Aussagen.</p>" },
+        { "type": "text", "id": "metric_1_value", "label": "Kennzahl 1 – Wert", "default": "00+" },
+        { "type": "text", "id": "metric_1_label", "label": "Kennzahl 1 – Titel", "default": "Ausgewählte Produkte" },
+        { "type": "text", "id": "metric_1_detail", "label": "Kennzahl 1 – Erklärung", "default": "Platzhalter mit kurzer Einordnung" },
+        { "type": "text", "id": "metric_2_value", "label": "Kennzahl 2 – Wert", "default": "00" },
+        { "type": "text", "id": "metric_2_label", "label": "Kennzahl 2 – Titel", "default": "Pflanzenbereiche" },
+        { "type": "text", "id": "metric_2_detail", "label": "Kennzahl 2 – Erklärung", "default": "Platzhalter mit kurzer Einordnung" },
+        { "type": "text", "id": "metric_3_value", "label": "Kennzahl 3 – Wert", "default": "000" },
+        { "type": "text", "id": "metric_3_label", "label": "Kennzahl 3 – Titel", "default": "Beratene Projekte" },
+        { "type": "text", "id": "metric_3_detail", "label": "Kennzahl 3 – Erklärung", "default": "Platzhalter mit kurzer Einordnung" }
+      ]
+    },
+    {
+      "type": "values",
+      "name": "Werte",
+      "settings": [
+        { "type": "text", "id": "nav_label", "label": "Text in Kapitel-Navigation", "default": "Unsere Haltung" },
+        { "type": "text", "id": "eyebrow", "label": "Kicker", "default": "Unsere Haltung" },
+        { "type": "text", "id": "heading", "label": "Überschrift", "default": "Drei Grundsätze für jede Entscheidung." },
+        { "type": "richtext", "id": "text", "label": "Einleitung", "default": "<p>Formuliere hier die Prinzipien, an denen Auswahl, Beratung und Produktentwicklung gemessen werden.</p>" },
+        { "type": "text", "id": "value_1_title", "label": "Wert 1 – Titel", "default": "Bedarf vor Trend" },
+        { "type": "textarea", "id": "value_1_text", "label": "Wert 1 – Text", "default": "Pflanze, Standort und Anwendung geben die Richtung vor." },
+        { "type": "text", "id": "value_2_title", "label": "Wert 2 – Titel", "default": "Verständlich statt kompliziert" },
+        { "type": "textarea", "id": "value_2_text", "label": "Wert 2 – Text", "default": "Wir erklären Funktion, Grenzen und sinnvolle Kombinationen." },
+        { "type": "text", "id": "value_3_title", "label": "Wert 3 – Titel", "default": "Langfristig gedacht" },
+        { "type": "textarea", "id": "value_3_text", "label": "Wert 3 – Text", "default": "Gesunde Wurzeln und belastbare Routinen zählen mehr als kurzfristige Effekte." }
+      ]
+    },
+    {
+      "type": "image_break",
+      "name": "Großes Bild",
+      "settings": [
+        { "type": "text", "id": "nav_label", "label": "Text in Kapitel-Navigation" },
+        { "type": "image_picker", "id": "image", "label": "Bild" },
+        { "type": "text", "id": "image_alt", "label": "Alternativtext Bild" },
+        { "type": "textarea", "id": "caption", "label": "Bildunterschrift", "default": "Platzhalter: Was ist zu sehen und warum ist dieser Moment für die Geschichte relevant?" },
+        { "type": "checkbox", "id": "tall", "label": "Hohes Bildformat verwenden", "default": false }
+      ]
+    },
+    {
+      "type": "cta",
+      "name": "Schluss-CTA",
+      "settings": [
+        { "type": "text", "id": "nav_label", "label": "Text in Kapitel-Navigation" },
+        { "type": "text", "id": "eyebrow", "label": "Kicker", "default": "Gemeinsam weiterwachsen" },
+        { "type": "text", "id": "heading", "label": "Überschrift", "default": "Was braucht deine Pflanze wirklich?" },
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Führe Besucher von der Geschichte zu einem sinnvollen nächsten Schritt – zum Sortiment, zu einer Beratung oder zu einem Kontaktformular.</p>" },
+        { "type": "text", "id": "primary_label", "label": "Primärer Button", "default": "Sortiment entdecken" },
+        { "type": "url", "id": "primary_link", "label": "Link primärer Button" },
+        { "type": "text", "id": "secondary_label", "label": "Sekundärer Button", "default": "Kontakt aufnehmen" },
+        { "type": "url", "id": "secondary_link", "label": "Link sekundärer Button" }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "LEAFerservice About",
+      "blocks": [
+        { "type": "chapter" },
+        { "type": "chapter", "settings": { "nav_label": "Unsere Auswahl", "eyebrow": "Unsere Auswahl", "heading": "Jedes Produkt braucht eine klare Aufgabe.", "image_position": "right", "tag": "Platzhalter: Auswahlprinzip" } },
+        { "type": "quote" },
+        { "type": "metrics" },
+        { "type": "values" },
+        { "type": "image_break" },
+        { "type": "cta" }
+      ]
+    }
+  ]
+}
+{% endschema %}
