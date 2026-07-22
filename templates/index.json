@@ -16,24 +16,24 @@
           "type": "benefit",
           "settings": {
             "icon": "shipping",
-            "heading": "",
-            "text": ""
+            "heading": "Übersichtlich auswählen",
+            "text": "Kollektionen nach Pflanzenbedarf"
           }
         },
         "quality": {
           "type": "benefit",
           "settings": {
             "icon": "quality",
-            "heading": "",
-            "text": ""
+            "heading": "Praxisnah erklärt",
+            "text": "Funktion, Varianten und Anwendung im Blick"
           }
         },
         "natural": {
           "type": "benefit",
           "settings": {
             "icon": "natural",
-            "heading": "",
-            "text": ""
+            "heading": "Als System gedacht",
+            "text": "Substrat, Gefäß und Zubehör kombinieren"
           }
         }
       },
@@ -44,21 +44,21 @@
       ],
       "settings": {
         "overlay": 80,
-        "heading": "",
-        "text": "",
-        "primary_label": "",
-        "primary_link": "shopify://collections/all",
-        "secondary_label": "",
-        "secondary_link": "shopify://collections/all"
+        "heading": "Pflanzenpflege beginnt an der Wurzel.",
+        "text": "<p>Finde strukturstabile Substrate, gezielte Zusätze, passende Pflanzgefäße und smartes Zubehör – verständlich geordnet nach dem Bedarf deiner Pflanze.</p>",
+        "primary_label": "Substrate entdecken",
+        "primary_link": "shopify://collections/fertige-substratmischungen",
+        "secondary_label": "SmartGrow ansehen",
+        "secondary_link": "shopify://collections/smartgrow"
       }
     },
     "bestsellers": {
       "type": "featured-collection",
       "settings": {
-        "heading": "",
+        "heading": "Beliebte Produkte",
         "heading_preset": "heading",
-        "link_label": "",
-        "collection": "",
+        "link_label": "Alle Angebote ansehen",
+        "collection": "shopify://collections/new-arrivals",
         "products_to_show": 4,
         "columns": 4,
         "compact": false
@@ -67,9 +67,9 @@
     "categories": {
       "type": "category-grid",
       "settings": {
-        "heading": "",
+        "heading": "Alle Bereiche entdecken",
         "automatic": true,
-        "automatic_limit": 6
+        "automatic_limit": 5
       }
     },
     "trust": {
@@ -79,32 +79,32 @@
           "type": "benefit",
           "settings": {
             "icon": "handmade",
-            "heading": "",
-            "text": ""
+            "heading": "Nachvollziehbare Auswahl",
+            "text": "Produkte mit klarer Aufgabe"
           }
         },
         "natural": {
           "type": "benefit",
           "settings": {
             "icon": "natural",
-            "heading": "",
-            "text": ""
+            "heading": "Bedarf vor Trend",
+            "text": "Pflanze und Anwendung geben die Richtung vor"
           }
         },
         "small_batches": {
           "type": "benefit",
           "settings": {
             "icon": "small_batches",
-            "heading": "",
-            "text": ""
+            "heading": "Klare Produktdaten",
+            "text": "Varianten, Inhalt und Einsatz im Blick"
           }
         },
         "versatile": {
           "type": "benefit",
           "settings": {
             "icon": "versatile",
-            "heading": "",
-            "text": ""
+            "heading": "Sinnvoll kombinierbar",
+            "text": "Substrat, Gefäß und Pflege als System"
           }
         }
       },
@@ -125,10 +125,10 @@
     "highlights": {
       "type": "featured-collection",
       "settings": {
-        "heading": "",
+        "heading": "Anzucht & SmartGrow",
         "heading_preset": "highlights",
-        "link_label": "",
-        "collection": "",
+        "link_label": "SmartGrow vollständig ansehen",
+        "collection": "shopify://collections/smartgrow",
         "products_to_show": 6,
         "columns": 6,
         "compact": true
@@ -141,32 +141,32 @@
           "type": "category",
           "settings": {
             "type": "herbs",
-            "title": "",
-            "link": ""
+            "title": "Anzucht starten",
+            "link": "shopify://collections/smartgrow"
           }
         },
         "houseplants": {
           "type": "category",
           "settings": {
             "type": "houseplants",
-            "title": "",
-            "link": ""
+            "title": "Substrat auswählen",
+            "link": "shopify://collections/fertige-substratmischungen"
           }
         },
         "vegetables": {
           "type": "category",
           "settings": {
             "type": "vegetables",
-            "title": "",
-            "link": ""
+            "title": "Pflanzgefäß finden",
+            "link": "shopify://collections/leafers-gartenschuppen"
           }
         },
         "exotics": {
           "type": "category",
           "settings": {
             "type": "exotics",
-            "title": "",
-            "link": ""
+            "title": "Mix gezielt ergänzen",
+            "link": "shopify://collections/substrate-zusatze"
           }
         }
       },
@@ -177,9 +177,9 @@
         "exotics"
       ],
       "settings": {
-        "heading": "",
-        "text": "",
-        "link_label": "",
+        "heading": "Dein nächster sinnvoller Schritt",
+        "text": "<p>Beginne mit dem konkreten Pflanzenprojekt. Die vier Einstiege führen direkt zu den passenden Produktbereichen.</p>",
+        "link_label": "Gesamtes Sortiment ansehen",
         "link": "shopify://collections/all"
       }
     },
@@ -190,32 +190,32 @@
           "type": "question",
           "settings": {
             "topic": "substrate",
-            "question": "",
-            "answer": ""
+            "question": "Welches Substrat passt zu meiner Pflanze?",
+            "answer": "<p>Orientiere dich zuerst an Wurzeltyp, Standort und Gießroutine. Tropische Pflanzen benötigen häufig eine luftigere Struktur, während Anzucht und Kräuter meist gleichmäßigere Feuchtigkeit bevorzugen. Die Produktseiten nennen den vorgesehenen Einsatz und die verfügbaren Varianten.</p>"
           }
         },
         "application": {
           "type": "question",
           "settings": {
             "topic": "application",
-            "question": "",
-            "answer": ""
+            "question": "Wann brauche ich einen Substratzusatz?",
+            "answer": "<p>Ein Zusatz ist sinnvoll, wenn du eine konkrete Eigenschaft verändern möchtest – etwa Luftführung, Drainage, Feuchtepuffer oder Struktur. Beginne mit einer klaren Aufgabe pro Komponente und passe Mischungen schrittweise an.</p>"
           }
         },
         "plants": {
           "type": "question",
           "settings": {
             "topic": "plants",
-            "question": "",
-            "answer": ""
+            "question": "Wie finde ich die passende Topfgröße?",
+            "answer": "<p>Wähle die nächste sinnvolle Größe über dem aktuellen Wurzelballen. Ein deutlich zu großes Gefäß trocknet langsamer. Ablauf, Material und Bewässerungssystem sollten zum gewählten Substrat und zu deiner Gießroutine passen.</p>"
           }
         },
         "shipping": {
           "type": "question",
           "settings": {
             "topic": "shipping",
-            "question": "",
-            "answer": ""
+            "question": "Wo sehe ich Preis und Verfügbarkeit?",
+            "answer": "<p>Preis, Varianten und aktuelle Verfügbarkeit werden direkt am jeweiligen Produkt angezeigt. Nicht verfügbare Varianten bleiben klar als solche gekennzeichnet; die konkrete Lieferinformation erscheint im Bestellprozess.</p>"
           }
         }
       },
@@ -226,8 +226,8 @@
         "shipping"
       ],
       "settings": {
-        "heading": "",
-        "text": ""
+        "heading": "Fragen vor der Auswahl",
+        "text": "<p>Kurze Entscheidungshilfen zu Substrat, Zusätzen, Gefäßen und Verfügbarkeit.</p>"
       }
     },
     "community": {
@@ -279,8 +279,8 @@
         "image_6"
       ],
       "settings": {
-        "heading": "",
-        "handle": ""
+        "heading": "Wurzelräume, Setups und Pflanzenideen",
+        "handle": "#LEAFerservice"
       }
     },
     "home_collection_journey_djRzLh": {
@@ -289,10 +289,11 @@
         "collection_DamgpF": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "title": "",
-            "copy": "",
-            "cta_label": "",
+            "collection": "shopify://collections/fertige-substratmischungen",
+            "title": "Premium Substrate",
+            "copy": "Fertige Mischungen als klarer Startpunkt für unterschiedliche Wurzelräume, Standorte und Gießroutinen.",
+            "cta_label": "Substrate entdecken",
+            "fallback_link": "shopify://collections/fertige-substratmischungen",
             "fallback_title": "Premium Substrate",
             "fallback_copy": "Ausgewogene Basismischungen für stabile Wurzeln, kontrollierte Feuchtigkeit und eine dauerhaft lockere Struktur."
           }
@@ -300,10 +301,11 @@
         "collection_UHGiWz": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "title": "",
-            "copy": "",
-            "cta_label": "",
+            "collection": "shopify://collections/substrate-zusatze",
+            "title": "Substratzusätze",
+            "copy": "Komponenten für eine gezielte Veränderung von Luftführung, Drainage, Wasserspeicherung oder Struktur.",
+            "cta_label": "Zusätze vergleichen",
+            "fallback_link": "shopify://collections/substrate-zusatze",
             "fallback_title": "Substratzusätze",
             "fallback_copy": "Gezielte Komponenten für mehr Luft, Drainage, Wasserspeicherung oder Struktur – passend zur Pflanze dosierbar."
           }
@@ -311,10 +313,11 @@
         "collection_yV9NCk": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "title": "",
-            "copy": "",
-            "cta_label": "",
+            "collection": "shopify://collections/leafers-gartenschuppen",
+            "title": "Pflanzgefäße",
+            "copy": "Gefäße und Bewässerungslösungen, bei denen Wurzelraum, Wasserführung und Alltagstauglichkeit zusammenpassen.",
+            "cta_label": "Gefäße ansehen",
+            "fallback_link": "shopify://collections/leafers-gartenschuppen",
             "fallback_title": "Pflanzgefäße",
             "fallback_copy": "Gefäße, die Wurzelraum, Wasserführung und Alltagstauglichkeit zusammenbringen."
           }
@@ -322,10 +325,11 @@
         "collection_BVLyhU": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "title": "",
-            "copy": "",
-            "cta_label": "",
+            "collection": "shopify://collections/smartgrow",
+            "title": "SmartGrow & Zubehör",
+            "copy": "Praktische Helfer für Anzucht, Beleuchtung, Gießen und Kontrolle – nach konkretem Einsatz geordnet.",
+            "cta_label": "SmartGrow entdecken",
+            "fallback_link": "shopify://collections/smartgrow",
             "fallback_title": "SmartGrow & Zubehör",
             "fallback_copy": "Praktische Helfer für Gießen, Kontrolle und Pflege – sinnvoll ergänzt statt unnötig kompliziert."
           }
@@ -339,22 +343,22 @@
       ],
       "name": "Home Kollektionen",
       "settings": {
-        "eyebrow": "",
-        "heading": "",
-        "intro": ""
+        "eyebrow": "LEAFers Pflanzenpflege-System",
+        "heading": "Was braucht deine Pflanze wirklich?",
+        "intro": "<p>Starte mit dem Bedarf deiner Pflanze. Entdecke Substrate, Zusätze, Pflanzgefäße und smartes Zubehör als aufeinander abgestimmtes System.</p>"
       }
     }
   },
   "order": [
     "hero",
+    "home_collection_journey_djRzLh",
     "bestsellers",
-    "categories",
     "trust",
+    "categories",
     "brand_story",
     "highlights",
     "starter",
     "faq",
-    "community",
-    "home_collection_journey_djRzLh"
+    "community"
   ]
 }
