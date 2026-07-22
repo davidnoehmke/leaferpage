@@ -186,7 +186,7 @@
     "brand_story": {
       "type": "brand-story",
       "settings": {
-        "link": "shopify://collections/all"
+        "link": "shopify://pages/faq"
       }
     },
     "highlights": {
