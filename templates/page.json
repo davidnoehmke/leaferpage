@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {}
     },
     "substrate_world_mBf4Cr": {
@@ -185,104 +186,6 @@
         "padding_bottom": 88
       }
     },
-    "custom_grow_creator_fdJ8cR": {
-      "type": "custom-grow-creator",
-      "blocks": {
-        "system_Qptiic": {
-          "type": "system",
-          "settings": {
-            "product": "",
-            "title": "Atmungsaktiver Stofftopf",
-            "badge": "Aktive Wurzelzone",
-            "explanation": "<p>Die luftdurchlässige Topfwand unterstützt Sauerstoffaustausch und schnellen Wasserablauf. Ideal, wenn du Gießintervalle aktiv kontrollieren möchtest.</p>",
-            "variant_label": "Größe und Ausführung",
-            "image_alt": "",
-            "video_placeholder": "Produktvideo im Theme-Editor zuordnen"
-          }
-        },
-        "system_8P8f4J": {
-          "type": "system",
-          "settings": {
-            "product": "",
-            "title": "Eigenbewässerung mit Reservoir",
-            "badge": "Konstante Versorgung",
-            "explanation": "<p>Ein Wasserreservoir kann die Versorgung gleichmäßiger machen. Besonders praktisch bei größeren Pflanzen oder unregelmäßigen Gießintervallen.</p>",
-            "variant_label": "Größe und Ausführung",
-            "image_alt": "",
-            "video_placeholder": "Produktvideo im Theme-Editor zuordnen"
-          }
-        },
-        "addon_kn8a8h": {
-          "type": "addon",
-          "settings": {
-            "product": "",
-            "title": "Passender Untersetzer",
-            "explanation": "Schützt Boden und Regal vor überschüssigem Gießwasser."
-          }
-        },
-        "addon_y6Ax6k": {
-          "type": "addon",
-          "settings": {
-            "product": "",
-            "title": "Rankhilfe",
-            "explanation": "Gibt kletternden Aroids Halt und unterstützt einen geordneten Wuchs."
-          }
-        },
-        "addon_MbKyDJ": {
-          "type": "addon",
-          "settings": {
-            "product": "",
-            "title": "Feuchtigkeitsmesser",
-            "explanation": "Hilft dabei, den richtigen Gießzeitpunkt besser einzuschätzen."
-          }
-        },
-        "addon_CQa3ry": {
-          "type": "addon",
-          "settings": {
-            "product": "",
-            "title": "Pflanzenlicht",
-            "explanation": "Ergänzt fehlendes Tageslicht an dunkleren Standorten."
-          }
-        }
-      },
-      "block_order": [
-        "system_Qptiic",
-        "system_8P8f4J",
-        "addon_kn8a8h",
-        "addon_y6Ax6k",
-        "addon_MbKyDJ",
-        "addon_CQa3ry"
-      ],
-      "name": "LEAFers CustomGrowCreator",
-      "settings": {
-        "eyebrow": "LEAFers CustomGrowCreator",
-        "heading": "Aus einzelnen Entscheidungen wird dein Grow-Setup",
-        "intro": "<p>Kombiniere deine individuelle Substratrezeptur mit einem passenden Topfsystem und sinnvollen Erweiterungen. Jede Auswahl wird erklärt – du behältst jederzeit die Kontrolle.</p>",
-        "mix_product": "",
-        "step_mix_heading": "Rezeptur und Menge übernehmen",
-        "step_mix_text": "Die oben per Slider eingestellte Rezeptur wird automatisch mit deiner Bestellung gespeichert.",
-        "size_label": "Gesamtmenge auswählen",
-        "recipe_waiting": "Stelle oben zunächst deine Mischung auf genau 100 % ein.",
-        "product_missing": "Bitte im Theme-Editor das Shopify-Produkt „Individuelle Substratmischung“ auswählen.",
-        "step_system_heading": "Topfsystem auswählen",
-        "step_system_text": "Wähle einen atmungsaktiven Stofftopf oder ein System mit Wasserreservoir – passend zu Standort und Gießroutine.",
-        "system_label": "Stofftopf oder Eigenbewässerung",
-        "system_placeholder": "Topfsystem auswählen …",
-        "step_addons_heading": "Setup sinnvoll erweitern",
-        "step_addons_text": "Ergänze nur, was dein Projekt wirklich braucht – zum Beispiel Rankhilfe, Untersetzer, Messgerät oder Pflanzenlicht.",
-        "summary_eyebrow": "Dein Setup",
-        "summary_heading": "Bereit zum Wachsen",
-        "summary_mix": "Substratgröße noch auswählen",
-        "summary_system": "Topfsystem noch auswählen",
-        "summary_addons": "Keine Add-ons ausgewählt",
-        "cart_label": "Grow-Setup in den Warenkorb",
-        "valid_message": "Dein individuelles Setup wurde hinzugefügt.",
-        "recipe_missing": "Die Substratanteile müssen zusammen genau 100 % ergeben.",
-        "fineprint": "Alle ausgewählten Produkte werden als einzelne Positionen in den Warenkorb gelegt. Deine Rezeptur bleibt an der Substratposition gespeichert.",
-        "padding_top": 80,
-        "padding_bottom": 96
-      }
-    },
     "custom_grow_creator_feQDMC": {
       "type": "custom-grow-creator",
       "blocks": {
@@ -385,7 +288,6 @@
   "order": [
     "main",
     "substrate_world_mBf4Cr",
-    "custom_grow_creator_fdJ8cR",
     "custom_grow_creator_feQDMC"
   ]
 }
