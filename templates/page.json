@@ -216,7 +216,7 @@
         "addon_BHUiGq": {
           "type": "addon",
           "settings": {
-            "product": "",
+            "product": "leafer-substrat-konfigurator",
             "title": "Passender Untersetzer",
             "explanation": "Schützt Boden und Regal vor überschüssigem Gießwasser."
           }
