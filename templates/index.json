@@ -86,7 +86,7 @@
           "settings": {
             "collection": "leafers-gartenschuppen",
             "title": "moderne Pflanzgefäße",
-            "copy": "Gefäße und Bewässerungslösungen, bei denen Wurzelraum, Wasserführung und Alltagstauglichkeit zusammenpassen.",
+            "copy": "",
             "cta_label": "Pflanzgefäße kennenlernen",
             "fallback_link": "shopify://collections/leafers-gartenschuppen",
             "fallback_title": "Pflanzgefäße",
@@ -97,8 +97,8 @@
           "type": "collection",
           "settings": {
             "collection": "smartgrow",
-            "title": "unterstützendes Zubehör",
-            "copy": "Praktische Helfer für Anzucht, Beleuchtung, Gießen und Kontrolle – nach konkretem Einsatz geordnet.",
+            "title": "Zubehör & Smarte Ergänzungen",
+            "copy": "Praktische Helfer für Anzucht, Beleuchtung, Gießen und Kontrolle.\nNach konkretem Einsatz geordnet.",
             "cta_label": "Basics hinzufügen",
             "fallback_link": "shopify://collections/smartgrow",
             "fallback_title": "SmartGrow & Zubehör",
