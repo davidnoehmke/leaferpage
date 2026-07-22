@@ -1,13 +1,73 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-collection",
-      "settings": { "show_type_filters": true }
+      "settings": {
+        "show_type_filters": true
+      }
     },
     "seo_copy": {
       "type": "collection-seo-copy",
       "settings": {}
+    },
+    "trust_bar_wKpxUq": {
+      "type": "trust-bar",
+      "blocks": {
+        "benefit_W9EdrP": {
+          "type": "benefit",
+          "settings": {
+            "icon": "natural",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "benefit_FUDRMM": {
+          "type": "benefit",
+          "settings": {
+            "icon": "natural",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "benefit_mTwh8Q": {
+          "type": "benefit",
+          "settings": {
+            "icon": "natural",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "benefit_q6VnJm": {
+          "type": "benefit",
+          "settings": {
+            "icon": "natural",
+            "heading": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "benefit_W9EdrP",
+        "benefit_FUDRMM",
+        "benefit_mTwh8Q",
+        "benefit_q6VnJm"
+      ],
+      "name": "t:sections.trust_bar.name",
+      "settings": {}
     }
   },
-  "order": ["main", "seo_copy"]
+  "order": [
+    "trust_bar_wKpxUq",
+    "main",
+    "seo_copy"
+  ]
 }

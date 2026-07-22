@@ -43,6 +43,7 @@
         "natural"
       ],
       "settings": {
+        "image": "shopify://shop_images/5CF53F22-7301-4F3D-8D08-598440AF6290.png",
         "overlay": 80,
         "heading": "Pflanzenpflege beginnt an der Wurzel.",
         "text": "<p>Finde strukturstabile Substrate, gezielte Zusätze, passende Pflanzgefäße und smartes Zubehör – verständlich geordnet nach dem Bedarf deiner Pflanze.</p>",
@@ -52,24 +53,82 @@
         "secondary_link": "shopify://collections/smartgrow"
       }
     },
+    "home_collection_journey_djRzLh": {
+      "type": "home-collection-journey",
+      "blocks": {
+        "collection_DamgpF": {
+          "type": "collection",
+          "settings": {
+            "collection": "shopify://collections/fertige-substratmischungen",
+            "image": "shopify://shop_images/331B5F5C-EB8E-4BF9-A7FF-4720053D40E5.png",
+            "title": "abgestimmte Substrate",
+            "copy": "Fertige Mischungen als klarer Startpunkt für unterschiedliche Wurzelräume, Standorte und Gießroutinen.",
+            "cta_label": "Substrat wählen",
+            "fallback_link": "shopify://collections/fertige-substratmischungen",
+            "fallback_title": "Premium Substrate",
+            "fallback_copy": "Ausgewogene Basismischungen für stabile Wurzeln, kontrollierte Feuchtigkeit und eine dauerhaft lockere Struktur."
+          }
+        },
+        "collection_UHGiWz": {
+          "type": "collection",
+          "settings": {
+            "collection": "substrate-zusatze",
+            "title": "hochwertige Substratzusätze",
+            "copy": "Komponenten für eine gezielte Veränderung von Luftführung, Drainage, Wasserspeicherung oder Struktur.",
+            "cta_label": "Zusatz wählen",
+            "fallback_link": "shopify://collections/substrate-zusatze",
+            "fallback_title": "Substratzusätze",
+            "fallback_copy": "Gezielte Komponenten für mehr Luft, Drainage, Wasserspeicherung oder Struktur – passend zur Pflanze dosierbar."
+          }
+        },
+        "collection_yV9NCk": {
+          "type": "collection",
+          "settings": {
+            "collection": "leafers-gartenschuppen",
+            "title": "moderne Pflanzgefäße",
+            "copy": "",
+            "cta_label": "Pflanzgefäße kennenlernen",
+            "fallback_link": "shopify://collections/leafers-gartenschuppen",
+            "fallback_title": "Pflanzgefäße",
+            "fallback_copy": "Gefäße, die Wurzelraum, Wasserführung und Alltagstauglichkeit zusammenbringen."
+          }
+        },
+        "collection_BVLyhU": {
+          "type": "collection",
+          "settings": {
+            "collection": "smartgrow",
+            "title": "Zubehör & Smarte Ergänzungen",
+            "copy": "Praktische Helfer für Anzucht, Beleuchtung, Gießen und Kontrolle.\nNach konkretem Einsatz geordnet.",
+            "cta_label": "Basics hinzufügen",
+            "fallback_link": "shopify://collections/smartgrow",
+            "fallback_title": "SmartGrow & Zubehör",
+            "fallback_copy": "Praktische Helfer für Gießen, Kontrolle und Pflege – sinnvoll ergänzt statt unnötig kompliziert."
+          }
+        }
+      },
+      "block_order": [
+        "collection_DamgpF",
+        "collection_UHGiWz",
+        "collection_yV9NCk",
+        "collection_BVLyhU"
+      ],
+      "name": "Home Kollektionen",
+      "settings": {
+        "eyebrow": "LEAFers Pflanzenpflege-System",
+        "heading": "Was braucht deine Pflanze wirklich?",
+        "intro": "<p>Starte mit dem Bedarf deiner Pflanze. Entdecke Substrate, Zusätze, Pflanzgefäße und smartes Zubehör als aufeinander abgestimmtes System.</p>"
+      }
+    },
     "bestsellers": {
       "type": "featured-collection",
       "settings": {
-        "heading": "Beliebte Produkte",
+        "heading": "Willkommensangebote %",
         "heading_preset": "heading",
-        "link_label": "Alle Angebote ansehen",
-        "collection": "shopify://collections/new-arrivals",
+        "link_label": "alle Angebote",
+        "collection": "new-arrivals",
         "products_to_show": 4,
         "columns": 4,
         "compact": false
-      }
-    },
-    "categories": {
-      "type": "category-grid",
-      "settings": {
-        "heading": "Alle Bereiche entdecken",
-        "automatic": true,
-        "automatic_limit": 5
       }
     },
     "trust": {
@@ -116,10 +175,18 @@
       ],
       "settings": {}
     },
+    "categories": {
+      "type": "category-grid",
+      "settings": {
+        "heading": "Alle Bereiche entdecken",
+        "automatic": true,
+        "automatic_limit": 5
+      }
+    },
     "brand_story": {
       "type": "brand-story",
       "settings": {
-        "link": "shopify://collections/all"
+        "link": "shopify://pages/faq"
       }
     },
     "highlights": {
@@ -176,6 +243,7 @@
         "vegetables",
         "exotics"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Dein nächster sinnvoller Schritt",
         "text": "<p>Beginne mit dem konkreten Pflanzenprojekt. Die vier Einstiege führen direkt zu den passenden Produktbereichen.</p>",
@@ -233,45 +301,43 @@
     "community": {
       "type": "community-gallery",
       "blocks": {
-        "image_1": {
-          "type": "image",
-          "settings": {
-            "link": ""
-          }
-        },
         "image_2": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/98154BE7-8D71-4BDE-8E7E-DE1C7F267A6E.jpg",
             "link": ""
           }
         },
         "image_3": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/IMG_0717.jpg",
             "link": ""
           }
         },
         "image_4": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/7168J-ylbOS_99c2dfdf-820a-4b9d-9460-09a2151f471e.jpg",
             "link": ""
           }
         },
         "image_5": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/IMG_0722.jpg",
             "link": ""
           }
         },
         "image_6": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/LEAFers_Bl_hton_die_perfekte_Drainage.jpg",
             "link": ""
           }
         }
       },
       "block_order": [
-        "image_1",
         "image_2",
         "image_3",
         "image_4",
@@ -281,71 +347,6 @@
       "settings": {
         "heading": "Wurzelräume, Setups und Pflanzenideen",
         "handle": "#LEAFerservice"
-      }
-    },
-    "home_collection_journey_djRzLh": {
-      "type": "home-collection-journey",
-      "blocks": {
-        "collection_DamgpF": {
-          "type": "collection",
-          "settings": {
-            "collection": "shopify://collections/fertige-substratmischungen",
-            "title": "Premium Substrate",
-            "copy": "Fertige Mischungen als klarer Startpunkt für unterschiedliche Wurzelräume, Standorte und Gießroutinen.",
-            "cta_label": "Substrate entdecken",
-            "fallback_link": "shopify://collections/fertige-substratmischungen",
-            "fallback_title": "Premium Substrate",
-            "fallback_copy": "Ausgewogene Basismischungen für stabile Wurzeln, kontrollierte Feuchtigkeit und eine dauerhaft lockere Struktur."
-          }
-        },
-        "collection_UHGiWz": {
-          "type": "collection",
-          "settings": {
-            "collection": "shopify://collections/substrate-zusatze",
-            "title": "Substratzusätze",
-            "copy": "Komponenten für eine gezielte Veränderung von Luftführung, Drainage, Wasserspeicherung oder Struktur.",
-            "cta_label": "Zusätze vergleichen",
-            "fallback_link": "shopify://collections/substrate-zusatze",
-            "fallback_title": "Substratzusätze",
-            "fallback_copy": "Gezielte Komponenten für mehr Luft, Drainage, Wasserspeicherung oder Struktur – passend zur Pflanze dosierbar."
-          }
-        },
-        "collection_yV9NCk": {
-          "type": "collection",
-          "settings": {
-            "collection": "shopify://collections/leafers-gartenschuppen",
-            "title": "Pflanzgefäße",
-            "copy": "Gefäße und Bewässerungslösungen, bei denen Wurzelraum, Wasserführung und Alltagstauglichkeit zusammenpassen.",
-            "cta_label": "Gefäße ansehen",
-            "fallback_link": "shopify://collections/leafers-gartenschuppen",
-            "fallback_title": "Pflanzgefäße",
-            "fallback_copy": "Gefäße, die Wurzelraum, Wasserführung und Alltagstauglichkeit zusammenbringen."
-          }
-        },
-        "collection_BVLyhU": {
-          "type": "collection",
-          "settings": {
-            "collection": "shopify://collections/smartgrow",
-            "title": "SmartGrow & Zubehör",
-            "copy": "Praktische Helfer für Anzucht, Beleuchtung, Gießen und Kontrolle – nach konkretem Einsatz geordnet.",
-            "cta_label": "SmartGrow entdecken",
-            "fallback_link": "shopify://collections/smartgrow",
-            "fallback_title": "SmartGrow & Zubehör",
-            "fallback_copy": "Praktische Helfer für Gießen, Kontrolle und Pflege – sinnvoll ergänzt statt unnötig kompliziert."
-          }
-        }
-      },
-      "block_order": [
-        "collection_DamgpF",
-        "collection_UHGiWz",
-        "collection_yV9NCk",
-        "collection_BVLyhU"
-      ],
-      "name": "Home Kollektionen",
-      "settings": {
-        "eyebrow": "LEAFers Pflanzenpflege-System",
-        "heading": "Was braucht deine Pflanze wirklich?",
-        "intro": "<p>Starte mit dem Bedarf deiner Pflanze. Entdecke Substrate, Zusätze, Pflanzgefäße und smartes Zubehör als aufeinander abgestimmtes System.</p>"
       }
     }
   },
