@@ -300,52 +300,49 @@
     "community": {
       "type": "community-gallery",
       "blocks": {
-        "image_1": {
-          "type": "image",
-          "settings": {
-            "link": ""
-          }
-        },
         "image_2": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/98154BE7-8D71-4BDE-8E7E-DE1C7F267A6E.jpg",
             "link": ""
           }
         },
         "image_3": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/IMG_0717.jpg",
             "link": ""
           }
         },
         "image_4": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/7168J-ylbOS_99c2dfdf-820a-4b9d-9460-09a2151f471e.jpg",
             "link": ""
           }
         },
         "image_5": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/IMG_0722.jpg",
             "link": ""
           }
         },
         "image_6": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/LEAFers_Bl_hton_die_perfekte_Drainage.jpg",
             "link": ""
           }
         }
       },
       "block_order": [
-        "image_1",
         "image_2",
         "image_3",
         "image_4",
         "image_5",
         "image_6"
       ],
-      "disabled": true,
       "settings": {
         "heading": "Wurzelräume, Setups und Pflanzenideen",
         "handle": "#LEAFerservice"
