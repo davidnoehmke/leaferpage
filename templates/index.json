@@ -345,6 +345,7 @@
         "image_5",
         "image_6"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Wurzelräume, Setups und Pflanzenideen",
         "handle": "#LEAFerservice"
