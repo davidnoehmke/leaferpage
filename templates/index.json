@@ -61,7 +61,7 @@
           "settings": {
             "collection": "shopify://collections/fertige-substratmischungen",
             "image": "shopify://shop_images/331B5F5C-EB8E-4BF9-A7FF-4720053D40E5.png",
-            "title": "Premium Substrate",
+            "title": "abgestimmte Substrate",
             "copy": "Fertige Mischungen als klarer Startpunkt für unterschiedliche Wurzelräume, Standorte und Gießroutinen.",
             "cta_label": "Substrate entdecken",
             "fallback_link": "shopify://collections/fertige-substratmischungen",
@@ -72,8 +72,8 @@
         "collection_UHGiWz": {
           "type": "collection",
           "settings": {
-            "collection": "shopify://collections/substrate-zusatze",
-            "title": "Substratzusätze",
+            "collection": "substrate-zusatze",
+            "title": "hochwertige Substratzusätze",
             "copy": "Komponenten für eine gezielte Veränderung von Luftführung, Drainage, Wasserspeicherung oder Struktur.",
             "cta_label": "Zusätze vergleichen",
             "fallback_link": "shopify://collections/substrate-zusatze",
@@ -84,8 +84,8 @@
         "collection_yV9NCk": {
           "type": "collection",
           "settings": {
-            "collection": "shopify://collections/leafers-gartenschuppen",
-            "title": "Pflanzgefäße",
+            "collection": "leafers-gartenschuppen",
+            "title": "moderne Pflanzgefäße",
             "copy": "Gefäße und Bewässerungslösungen, bei denen Wurzelraum, Wasserführung und Alltagstauglichkeit zusammenpassen.",
             "cta_label": "Gefäße ansehen",
             "fallback_link": "shopify://collections/leafers-gartenschuppen",
@@ -96,7 +96,7 @@
         "collection_BVLyhU": {
           "type": "collection",
           "settings": {
-            "collection": "shopify://collections/smartgrow",
+            "collection": "smartgrow",
             "title": "SmartGrow & Zubehör",
             "copy": "Praktische Helfer für Anzucht, Beleuchtung, Gießen und Kontrolle – nach konkretem Einsatz geordnet.",
             "cta_label": "SmartGrow entdecken",
