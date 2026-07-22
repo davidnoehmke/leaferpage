@@ -63,7 +63,7 @@
             "image": "shopify://shop_images/331B5F5C-EB8E-4BF9-A7FF-4720053D40E5.png",
             "title": "abgestimmte Substrate",
             "copy": "Fertige Mischungen als klarer Startpunkt für unterschiedliche Wurzelräume, Standorte und Gießroutinen.",
-            "cta_label": "Substrate entdecken",
+            "cta_label": "Substrat wählen",
             "fallback_link": "shopify://collections/fertige-substratmischungen",
             "fallback_title": "Premium Substrate",
             "fallback_copy": "Ausgewogene Basismischungen für stabile Wurzeln, kontrollierte Feuchtigkeit und eine dauerhaft lockere Struktur."
@@ -75,7 +75,7 @@
             "collection": "substrate-zusatze",
             "title": "hochwertige Substratzusätze",
             "copy": "Komponenten für eine gezielte Veränderung von Luftführung, Drainage, Wasserspeicherung oder Struktur.",
-            "cta_label": "Zusätze vergleichen",
+            "cta_label": "Zusatz wählen",
             "fallback_link": "shopify://collections/substrate-zusatze",
             "fallback_title": "Substratzusätze",
             "fallback_copy": "Gezielte Komponenten für mehr Luft, Drainage, Wasserspeicherung oder Struktur – passend zur Pflanze dosierbar."
@@ -87,7 +87,7 @@
             "collection": "leafers-gartenschuppen",
             "title": "moderne Pflanzgefäße",
             "copy": "Gefäße und Bewässerungslösungen, bei denen Wurzelraum, Wasserführung und Alltagstauglichkeit zusammenpassen.",
-            "cta_label": "Gefäße ansehen",
+            "cta_label": "Pflanzgefäße kennenlernen",
             "fallback_link": "shopify://collections/leafers-gartenschuppen",
             "fallback_title": "Pflanzgefäße",
             "fallback_copy": "Gefäße, die Wurzelraum, Wasserführung und Alltagstauglichkeit zusammenbringen."
@@ -97,9 +97,9 @@
           "type": "collection",
           "settings": {
             "collection": "smartgrow",
-            "title": "SmartGrow & Zubehör",
+            "title": "unterstützendes Zubehör",
             "copy": "Praktische Helfer für Anzucht, Beleuchtung, Gießen und Kontrolle – nach konkretem Einsatz geordnet.",
-            "cta_label": "SmartGrow entdecken",
+            "cta_label": "Basics hinzufügen",
             "fallback_link": "shopify://collections/smartgrow",
             "fallback_title": "SmartGrow & Zubehör",
             "fallback_copy": "Praktische Helfer für Gießen, Kontrolle und Pflege – sinnvoll ergänzt statt unnötig kompliziert."
