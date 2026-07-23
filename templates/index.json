@@ -42,8 +42,12 @@
         "quality",
         "natural"
       ],
+      "custom_css": [
+        "section {text-align: center}"
+      ],
       "settings": {
-        "overlay": 80,
+        "image": "shopify://shop_images/E662670C-8B20-43D8-A752-2C715E21D45B.png",
+        "overlay": 50,
         "heading": "",
         "text": "",
         "primary_label": "",
@@ -119,7 +123,7 @@
     "brand_story": {
       "type": "brand-story",
       "custom_css": [
-        "section {text-align: center}"
+        "section {text-align: center;}"
       ],
       "settings": {
         "link": "shopify://collections/all"
@@ -184,7 +188,7 @@
         "exotics"
       ],
       "custom_css": [
-        "section {text-align: center}"
+        "section {text-align: center;}"
       ],
       "settings": {
         "heading": "",
