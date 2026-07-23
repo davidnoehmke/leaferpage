@@ -1,31 +1,197 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-product",
+      "disabled": true,
       "settings": {
         "show_description": true
       }
     },
-    "recipe": {
-      "type": "product-recipe",
-      "settings": {}
-    },
-    "configurator": {
-      "type": "substrate-configurator",
-      "blocks": {
-        "bark": { "type": "ingredient", "settings": { "name": "Pinienrinde", "function": "Struktur und Luftführung", "default_percentage": 30 } },
-        "perlite": { "type": "ingredient", "settings": { "name": "Perlite", "function": "Lockerheit und Drainage", "default_percentage": 20 } },
-        "lava": { "type": "ingredient", "settings": { "name": "Lavagranulat", "function": "Mineralische Stabilität", "default_percentage": 20 } },
-        "clay": { "type": "ingredient", "settings": { "name": "Blähton", "function": "Grobporen und Drainage", "default_percentage": 15 } },
-        "zeolite": { "type": "ingredient", "settings": { "name": "Zeolith", "function": "Wasser- und Nährstoffpuffer", "default_percentage": 15 } }
-      },
-      "block_order": ["bark", "perlite", "lava", "clay", "zeolite"],
-      "settings": { "show_on_all_products": false }
-    },
     "cross_sell": {
       "type": "product-cross-sell",
-      "settings": { "heading": "Passt perfekt dazu" }
+      "settings": {
+        "heading": "Passt perfekt dazu",
+        "collection": ""
+      }
+    },
+    "substrate_configurator_eQYXyM": {
+      "type": "substrate-configurator",
+      "blocks": {
+        "ingredient_mXFNKY": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Pinienrinde",
+            "function": "Struktur und Luftführung",
+            "default_percentage": 20
+          }
+        },
+        "ingredient_wT3UfV": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Pinienrinde",
+            "function": "Struktur und Luftführung",
+            "default_percentage": 20
+          }
+        },
+        "ingredient_kBEVeT": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Pinienrinde",
+            "function": "Struktur und Luftführung",
+            "default_percentage": 20
+          }
+        },
+        "ingredient_ABzy49": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Pinienrinde",
+            "function": "Struktur und Luftführung",
+            "default_percentage": 20
+          }
+        },
+        "ingredient_E7ggeh": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Pinienrinde",
+            "function": "Struktur und Luftführung",
+            "default_percentage": 20
+          }
+        },
+        "ingredient_GkMYmk": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Pinienrinde",
+            "function": "Struktur und Luftführung",
+            "default_percentage": 20
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_mXFNKY",
+        "ingredient_wT3UfV",
+        "ingredient_kBEVeT",
+        "ingredient_ABzy49",
+        "ingredient_E7ggeh",
+        "ingredient_GkMYmk"
+      ],
+      "name": "Substrat-Konfigurator",
+      "settings": {
+        "show_on_pages": true,
+        "show_on_all_products": false
+      }
+    },
+    "custom_grow_creator_7iiz3j": {
+      "type": "custom-grow-creator",
+      "blocks": {
+        "system_3QkhxN": {
+          "type": "system",
+          "settings": {
+            "product": "",
+            "title": "Atmungsaktiver Stofftopf",
+            "badge": "Aktive Wurzelzone",
+            "explanation": "<p>Die luftdurchlässige Topfwand unterstützt Sauerstoffaustausch und schnellen Wasserablauf. Ideal, wenn du Gießintervalle aktiv kontrollieren möchtest.</p>",
+            "variant_label": "Größe und Ausführung",
+            "image_alt": "",
+            "video_placeholder": "Produktvideo im Theme-Editor zuordnen"
+          }
+        },
+        "system_tQTAYR": {
+          "type": "system",
+          "settings": {
+            "product": "",
+            "title": "Eigenbewässerung mit Reservoir",
+            "badge": "Konstante Versorgung",
+            "explanation": "<p>Ein Wasserreservoir kann die Versorgung gleichmäßiger machen. Besonders praktisch bei größeren Pflanzen oder unregelmäßigen Gießintervallen.</p>",
+            "variant_label": "Größe und Ausführung",
+            "image_alt": "",
+            "video_placeholder": "Produktvideo im Theme-Editor zuordnen"
+          }
+        },
+        "addon_yVnWnz": {
+          "type": "addon",
+          "settings": {
+            "product": "",
+            "title": "Passender Untersetzer",
+            "explanation": "Schützt Boden und Regal vor überschüssigem Gießwasser."
+          }
+        },
+        "addon_BxLiD6": {
+          "type": "addon",
+          "settings": {
+            "product": "",
+            "title": "Rankhilfe",
+            "explanation": "Gibt kletternden Aroids Halt und unterstützt einen geordneten Wuchs."
+          }
+        },
+        "addon_8yEjke": {
+          "type": "addon",
+          "settings": {
+            "product": "",
+            "title": "Feuchtigkeitsmesser",
+            "explanation": "Hilft dabei, den richtigen Gießzeitpunkt besser einzuschätzen."
+          }
+        },
+        "addon_8X4PLr": {
+          "type": "addon",
+          "settings": {
+            "product": "",
+            "title": "Pflanzenlicht",
+            "explanation": "Ergänzt fehlendes Tageslicht an dunkleren Standorten."
+          }
+        }
+      },
+      "block_order": [
+        "system_3QkhxN",
+        "system_tQTAYR",
+        "addon_yVnWnz",
+        "addon_BxLiD6",
+        "addon_8yEjke",
+        "addon_8X4PLr"
+      ],
+      "name": "LEAFers CustomGrowCreator",
+      "settings": {
+        "eyebrow": "LEAFers CustomGrowCreator",
+        "heading": "Aus einzelnen Entscheidungen wird dein Grow-Setup",
+        "intro": "<p>Kombiniere deine individuelle Substratrezeptur mit einem passenden Topfsystem und sinnvollen Erweiterungen. Jede Auswahl wird erklärt – du behältst jederzeit die Kontrolle.</p>",
+        "mix_product": "",
+        "step_mix_heading": "Rezeptur und Menge übernehmen",
+        "step_mix_text": "Die oben per Slider eingestellte Rezeptur wird automatisch mit deiner Bestellung gespeichert.",
+        "size_label": "Gesamtmenge auswählen",
+        "recipe_waiting": "Stelle oben zunächst deine Mischung auf genau 100 % ein.",
+        "product_missing": "Bitte im Theme-Editor das Shopify-Produkt „Individuelle Substratmischung“ auswählen.",
+        "step_system_heading": "Topfsystem auswählen",
+        "step_system_text": "Wähle einen atmungsaktiven Stofftopf oder ein System mit Wasserreservoir – passend zu Standort und Gießroutine.",
+        "system_label": "Stofftopf oder Eigenbewässerung",
+        "system_placeholder": "Topfsystem auswählen …",
+        "step_addons_heading": "Setup sinnvoll erweitern",
+        "step_addons_text": "Ergänze nur, was dein Projekt wirklich braucht – zum Beispiel Rankhilfe, Untersetzer, Messgerät oder Pflanzenlicht.",
+        "summary_eyebrow": "Dein Setup",
+        "summary_heading": "Bereit zum Wachsen",
+        "summary_mix": "Substratgröße noch auswählen",
+        "summary_system": "Topfsystem noch auswählen",
+        "summary_addons": "Keine Add-ons ausgewählt",
+        "cart_label": "Grow-Setup in den Warenkorb",
+        "valid_message": "Dein individuelles Setup wurde hinzugefügt.",
+        "recipe_missing": "Die Substratanteile müssen zusammen genau 100 % ergeben.",
+        "fineprint": "Alle ausgewählten Produkte werden als einzelne Positionen in den Warenkorb gelegt. Deine Rezeptur bleibt an der Substratposition gespeichert.",
+        "padding_top": 80,
+        "padding_bottom": 96
+      }
     }
   },
-  "order": ["main", "recipe", "configurator", "cross_sell"]
+  "order": [
+    "main",
+    "cross_sell",
+    "substrate_configurator_eQYXyM",
+    "custom_grow_creator_7iiz3j"
+  ]
 }
