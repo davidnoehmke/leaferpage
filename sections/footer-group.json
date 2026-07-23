@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "type": "footer",
   "name": "Footer group",
@@ -5,17 +14,56 @@
     "newsletter": {
       "type": "newsletter-services",
       "blocks": {
-        "shipping": { "type": "service", "settings": { "icon": "shipping" } },
-        "payment": { "type": "service", "settings": { "icon": "payment" } },
-        "support": { "type": "service", "settings": { "icon": "support" } }
+        "shipping": {
+          "type": "service",
+          "settings": {
+            "icon": "shipping",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "payment": {
+          "type": "service",
+          "settings": {
+            "icon": "payment",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "support": {
+          "type": "service",
+          "settings": {
+            "icon": "support",
+            "heading": "",
+            "text": ""
+          }
+        }
       },
-      "block_order": ["shipping", "payment", "support"],
-      "settings": {}
+      "block_order": [
+        "shipping",
+        "payment",
+        "support"
+      ],
+      "custom_css": [
+        "section {background-color: white}"
+      ],
+      "settings": {
+        "heading": ""
+      }
     },
     "footer": {
       "type": "footer",
-      "settings": {}
+      "custom_css": [
+        "footer {text-align: center}"
+      ],
+      "settings": {
+        "menu": "footer",
+        "text": ""
+      }
     }
   },
-  "order": ["newsletter", "footer"]
+  "order": [
+    "newsletter",
+    "footer"
+  ]
 }
