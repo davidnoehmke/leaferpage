@@ -11,6 +11,27 @@
   "sections": {
     "substrate_world": {
       "type": "substrate-world",
+      "blocks": {
+        "mixture_YzVy8Q": {
+          "type": "mixture",
+          "settings": {
+            "product": "leafer-seed-cutting-mix",
+            "image": "shopify://shop_images/gF1eaquSBZaVpMYPhc_FgAM_2_gps_generated.png",
+            "image_alt": "",
+            "badge": "selber mischen",
+            "title": "",
+            "claim": "Luftige Struktur für vitale Wurzeln",
+            "ratio": "",
+            "text": "",
+            "show_price": true,
+            "button_label": "Mischung ansehen",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "mixture_YzVy8Q"
+      ],
       "settings": {
         "hero_alt": "LEAFerservice Substratmischungen und natürliche Bestandteile",
         "eyebrow": "Mischen. Verstehen. Wachsen lassen.",
