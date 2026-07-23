@@ -43,15 +43,15 @@
         "natural"
       ],
       "custom_css": [
-        "section {text-align: center}"
+        "section {text-align: center;}"
       ],
       "settings": {
         "image": "shopify://shop_images/E662670C-8B20-43D8-A752-2C715E21D45B.png",
         "overlay": 50,
         "heading": "",
         "text": "",
-        "primary_label": "",
-        "primary_link": "shopify://collections/all",
+        "primary_label": "Was brauche ich für starke Wurzeln?",
+        "primary_link": "shopify://blogs/leafers-nice2know-blog",
         "secondary_label": "",
         "secondary_link": "shopify://collections/all"
       }
