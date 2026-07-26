@@ -86,8 +86,8 @@
         "saucer": {
           "type": "addon",
           "settings": {
-            "product": "",
-            "title": "Passender Untersetzer",
+            "product": "leafer-kokos-anzuchttabs",
+            "title": "Projektstarter Kokos Quelltabs",
             "explanation": "Schützt Boden und Regal vor überschüssigem Gießwasser."
           }
         },
@@ -103,7 +103,7 @@
           "type": "addon",
           "settings": {
             "product": "lechuza-yula-giesskanne",
-            "title": "Pflabzenbewässerung",
+            "title": "Pflanzenbewässerung",
             "explanation": "Hilft dabei, den richtigen Gießzeitpunkt besser einzuschätzen."
           }
         },
