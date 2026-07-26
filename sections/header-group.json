@@ -20,6 +20,9 @@
     },
     "header": {
       "type": "header",
+      "custom_css": [
+        ".site-header {max-height: 10vh;}"
+      ],
       "settings": {
         "logo": "shopify://shop_images/Leaferservice_logo.png",
         "logo_width": 220,
