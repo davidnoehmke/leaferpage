@@ -45,7 +45,7 @@
         "support"
       ],
       "custom_css": [
-        "section {background-color: white}"
+        "section {background-color: white;}"
       ],
       "settings": {
         "heading": ""
@@ -53,9 +53,7 @@
     },
     "footer": {
       "type": "footer",
-      "custom_css": [
-        "footer {text-align: center}"
-      ],
+      "custom_css": [],
       "settings": {
         "menu": "footer",
         "text": ""
