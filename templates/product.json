@@ -23,72 +23,6 @@
         "collection": ""
       }
     },
-    "substrate_configurator_eQYXyM": {
-      "type": "substrate-configurator",
-      "blocks": {
-        "ingredient_mXFNKY": {
-          "type": "ingredient",
-          "settings": {
-            "name": "Pinienrinde",
-            "function": "Struktur und Luftführung",
-            "default_percentage": 20
-          }
-        },
-        "ingredient_wT3UfV": {
-          "type": "ingredient",
-          "settings": {
-            "name": "Pinienrinde",
-            "function": "Struktur und Luftführung",
-            "default_percentage": 20
-          }
-        },
-        "ingredient_kBEVeT": {
-          "type": "ingredient",
-          "settings": {
-            "name": "Pinienrinde",
-            "function": "Struktur und Luftführung",
-            "default_percentage": 20
-          }
-        },
-        "ingredient_ABzy49": {
-          "type": "ingredient",
-          "settings": {
-            "name": "Pinienrinde",
-            "function": "Struktur und Luftführung",
-            "default_percentage": 20
-          }
-        },
-        "ingredient_E7ggeh": {
-          "type": "ingredient",
-          "settings": {
-            "name": "Pinienrinde",
-            "function": "Struktur und Luftführung",
-            "default_percentage": 20
-          }
-        },
-        "ingredient_GkMYmk": {
-          "type": "ingredient",
-          "settings": {
-            "name": "Pinienrinde",
-            "function": "Struktur und Luftführung",
-            "default_percentage": 20
-          }
-        }
-      },
-      "block_order": [
-        "ingredient_mXFNKY",
-        "ingredient_wT3UfV",
-        "ingredient_kBEVeT",
-        "ingredient_ABzy49",
-        "ingredient_E7ggeh",
-        "ingredient_GkMYmk"
-      ],
-      "name": "Substrat-Konfigurator",
-      "settings": {
-        "show_on_pages": true,
-        "show_on_all_products": false
-      }
-    },
     "custom_grow_creator_7iiz3j": {
       "type": "custom-grow-creator",
       "blocks": {
@@ -191,7 +125,6 @@
   "order": [
     "main",
     "cross_sell",
-    "substrate_configurator_eQYXyM",
     "custom_grow_creator_7iiz3j"
   ]
 }
