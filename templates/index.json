@@ -32,8 +32,8 @@
           "type": "benefit",
           "settings": {
             "icon": "natural",
-            "heading": "",
-            "text": ""
+            "heading": "Strukturstabile Materialien",
+            "text": "grobe Substratbestandteile"
           }
         }
       },
@@ -42,29 +42,78 @@
         "quality",
         "natural"
       ],
-      "custom_css": [
-        "section {text-align: center;}"
-      ],
+      "custom_css": [],
       "settings": {
         "image": "shopify://shop_images/E662670C-8B20-43D8-A752-2C715E21D45B.png",
-        "overlay": 50,
+        "overlay": 75,
         "heading": "",
         "text": "",
         "primary_label": "Was brauche ich für starke Wurzeln?",
         "primary_link": "shopify://blogs/leafers-nice2know-blog",
         "secondary_label": "",
-        "secondary_link": "shopify://collections/all"
+        "secondary_link": "shopify://pages/leafers-konfigurator"
       }
     },
     "bestsellers": {
       "type": "featured-collection",
       "settings": {
-        "heading": "Anzucht vom Pflanzensamen - Grundstein legen",
+        "heading": "Phase 1 - Keimung starten",
         "heading_preset": "heading",
-        "link_label": "Aufzucht Sets & Zubehör",
+        "link_label": "mehr entdecken >",
         "collection": "aufzucht-bewurzelung",
         "products_to_show": 4,
         "columns": 4,
+        "compact": true
+      }
+    },
+    "newsletter_services_8fpWDb": {
+      "type": "newsletter-services",
+      "blocks": {
+        "service_gTEThA": {
+          "type": "service",
+          "settings": {
+            "icon": "shipping",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "service_yFiWXK": {
+          "type": "service",
+          "settings": {
+            "icon": "shipping",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "service_hYfJXp": {
+          "type": "service",
+          "settings": {
+            "icon": "shipping",
+            "heading": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "service_gTEThA",
+        "service_yFiWXK",
+        "service_hYfJXp"
+      ],
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "heading": ""
+      }
+    },
+    "highlights": {
+      "type": "featured-collection",
+      "custom_css": [],
+      "settings": {
+        "heading": "Phase 2 - das richtige Pflanzgefäß finden",
+        "heading_preset": "highlights",
+        "link_label": "mehr entdecken >",
+        "collection": "leafers-gartenschuppen",
+        "products_to_show": 8,
+        "columns": 6,
         "compact": true
       }
     },
@@ -122,23 +171,9 @@
     },
     "brand_story": {
       "type": "brand-story",
-      "custom_css": [
-        "section {text-align: center;}"
-      ],
+      "custom_css": [],
       "settings": {
         "link": "shopify://collections/all"
-      }
-    },
-    "highlights": {
-      "type": "featured-collection",
-      "settings": {
-        "heading": "",
-        "heading_preset": "highlights",
-        "link_label": "",
-        "collection": "",
-        "products_to_show": 6,
-        "columns": 6,
-        "compact": true
       }
     },
     "starter": {
@@ -150,7 +185,7 @@
             "type": "herbs",
             "title": "Kräutergarten",
             "image": "shopify://shop_images/leafer-keimstarter-set.png",
-            "link": ""
+            "link": "shopify://products/leaferkeimstarter-set™-komplettset-fur-12-aussaaten"
           }
         },
         "houseplants": {
@@ -159,7 +194,7 @@
             "type": "houseplants",
             "title": "",
             "image": "shopify://shop_images/LEAFerPot_Edged.png",
-            "link": ""
+            "link": "shopify://products/premium-krauter-samen-set-12-sorten-hohe-keimkraft-kuchenkrauter-saatgut-mischung-fur-indoor-outdoor-basilikum-petersilie-dill-kresse-schnittlauch-mehr"
           }
         },
         "vegetables": {
@@ -187,13 +222,12 @@
         "vegetables",
         "exotics"
       ],
-      "custom_css": [
-        "section {text-align: center;}"
-      ],
+      "disabled": true,
+      "custom_css": [],
       "settings": {
-        "heading": "",
-        "text": "",
-        "link_label": "",
+        "heading": "Unsere vorbereiteten Bundles",
+        "text": "<p>Ausgewählte Kombinationen aus Gefäß, Anzuchttechnik, Substrat und Zubehör – passend zum konkreten Einsatz statt beliebig gebündelt.</p>",
+        "link_label": "Bundles entdecken",
         "link": "shopify://collections/all"
       }
     },
@@ -250,36 +284,42 @@
         "image_1": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/MpBmapKiCpT_pMYPgKCTsAQ_2_gps_generated.png",
             "link": ""
           }
         },
         "image_2": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/instagram-image_4c4d5b3d-b990-4f81-ad63-97891707e2b9.jpg",
             "link": ""
           }
         },
         "image_3": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/IMG_0719.jpg",
             "link": ""
           }
         },
         "image_4": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/image_2.png",
             "link": ""
           }
         },
         "image_5": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/1E6AE3EC-7D02-47E5-95AE-4191FEDC7654.jpg",
             "link": ""
           }
         },
         "image_6": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/71Yy2I7t7EL_6f4d34ed-38c6-40ce-a225-3eb47f10b71c.jpg",
             "link": ""
           }
         }
@@ -296,17 +336,57 @@
         "heading": "",
         "handle": ""
       }
+    },
+    "178510993287403d61": {
+      "type": "apps",
+      "blocks": {
+        "section_store_block_product_addons_tTVNEM": {
+          "type": "shopify://apps/section-store/blocks/block-product-addons/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "products": [],
+            "product_list_style": "stack",
+            "variant_selector": "text_boxed",
+            "show_compare_price": true,
+            "use_discount_tag": false,
+            "discount_tag_background": "#C9FFC9",
+            "switch_style": "toggle",
+            "switch_size": 22,
+            "switch_position": "last",
+            "switch_vertical_position": "center",
+            "switch_color": "#000000",
+            "font_size": 12,
+            "font_weight": "normal",
+            "item_title_color": "#000000",
+            "item_subtitle_color": "#000000",
+            "image_size": 50,
+            "item_border_style": "none",
+            "item_border_width": 1,
+            "item_border_color": "#d7d7d7",
+            "item_border_radius": 16,
+            "item_bg_color": "#f6f6f6",
+            "background_gradient": "",
+            "item_padding_vertical": 12,
+            "item_padding_horizontal": 16
+          }
+        }
+      },
+      "block_order": [
+        "section_store_block_product_addons_tTVNEM"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "hero",
     "bestsellers",
+    "newsletter_services_8fpWDb",
+    "highlights",
     "categories",
     "trust",
     "brand_story",
-    "highlights",
     "starter",
     "faq",
-    "community"
+    "community",
+    "178510993287403d61"
   ]
 }
