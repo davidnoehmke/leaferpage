@@ -9,45 +9,6 @@
  */
 {
   "sections": {
-    "substrate_world": {
-      "type": "substrate-world",
-      "blocks": {
-        "mixture_UKFA4f": {
-          "type": "mixture",
-          "settings": {
-            "product": "substrat",
-            "image_alt": "",
-            "badge": "Spezialmischung",
-            "title": "",
-            "claim": "Luftige Struktur für vitale Wurzeln",
-            "ratio": "",
-            "text": "",
-            "show_price": true,
-            "button_label": "Mischung ansehen",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "mixture_UKFA4f"
-      ],
-      "settings": {
-        "hero_alt": "LEAFerservice Substratmischungen und natürliche Bestandteile",
-        "eyebrow": "Mischen. Verstehen. Wachsen lassen.",
-        "heading": "Substrate, die zu deiner Pflanze passen",
-        "intro": "<p>Starte mit einer erprobten Spezialmischung oder baue dein Substrat aus einzelnen Bestandteilen selbst auf. Jede Rezeptur bleibt transparent und anpassbar.</p>",
-        "button_label": "Mischungen entdecken",
-        "button_link": "",
-        "text_alignment": "left",
-        "overlay": 55,
-        "hero_height": 680,
-        "content_heading": "Deine Pflanze gibt die Richtung vor",
-        "content_text": "<p>Wurzeln brauchen je nach Pflanzenart unterschiedlich viel Luft, Feuchtigkeit und Halt. Deshalb zeigen wir nicht nur fertige Mischungen, sondern auch, welche Aufgabe jeder Bestandteil übernimmt.</p>",
-        "color_scheme": "default",
-        "padding_top": 72,
-        "padding_bottom": 88
-      }
-    },
     "configurator": {
       "type": "substrate-configurator",
       "blocks": {
@@ -133,7 +94,7 @@
         "support": {
           "type": "addon",
           "settings": {
-            "product": "",
+            "product": "leafer-moosstab-basic",
             "title": "Rankhilfe",
             "explanation": "Gibt kletternden Aroids Halt und unterstützt einen geordneten Wuchs."
           }
@@ -141,8 +102,8 @@
         "meter": {
           "type": "addon",
           "settings": {
-            "product": "",
-            "title": "Feuchtigkeitsmesser",
+            "product": "lechuza-yula-giesskanne",
+            "title": "Pflabzenbewässerung",
             "explanation": "Hilft dabei, den richtigen Gießzeitpunkt besser einzuschätzen."
           }
         },
@@ -194,7 +155,6 @@
     }
   },
   "order": [
-    "substrate_world",
     "configurator",
     "grow_creator"
   ]
