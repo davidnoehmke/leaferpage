@@ -110,7 +110,7 @@
         "light": {
           "type": "addon",
           "settings": {
-            "product": "",
+            "product": "vivosun-led-pflanzenlampen",
             "title": "Pflanzenlicht",
             "explanation": "Ergänzt fehlendes Tageslicht an dunkleren Standorten."
           }
