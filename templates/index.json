@@ -43,14 +43,14 @@
         "natural"
       ],
       "settings": {
-        "image": "shopify://shop_images/5CF53F22-7301-4F3D-8D08-598440AF6290.png",
+        "image": "shopify://shop_images/FEAFer_Hero-img.png",
         "overlay": 75,
         "heading": "Pflanzenpflege beginnt an der Wurzel",
-        "text": "<p>Finde strukturstabile Substrate, gezielte Zusätze, passende Pflanzgefäße und smartes Zubehör – verständlich geordnet nach dem Bedarf deiner Pflanze.</p>",
+        "text": "<p>Finde strukturstabile Substrate, gezielte Zusätze, passende Pflanzgefäße und smartes Zubehör – wir können nur die Umgebung deiner Pflanze optimieren, der Rest ist steckt im Wunder des Pflanzenreiches </p>",
         "primary_label": "Substrate entdecken",
         "primary_link": "shopify://collections/fertige-substratmischungen",
-        "secondary_label": "SmartGrow ansehen",
-        "secondary_link": "shopify://collections/smartgrow"
+        "secondary_label": "Wissenwertes & Ratgeber",
+        "secondary_link": "shopify://blogs/leafers-nice2know-blog"
       }
     },
     "home_collection_journey_djRzLh": {
