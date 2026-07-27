@@ -107,6 +107,12 @@
     "bestseller": "Bestseller",
     "special_mix": "Spezialmischung"
   },
+  "product_variant_guide": {
+    "steps_heading": "So gelingt die Aussaat",
+    "facts_heading": "Produktdetails",
+    "faq_heading": "Gut zu wissen",
+    "notice_label": "Hinweis:"
+  },
   "collection": {
     "products_count": "{{ count }} Produkte",
     "sort_by": "Sortieren nach",

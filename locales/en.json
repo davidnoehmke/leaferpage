@@ -107,6 +107,12 @@
     "bestseller": "Bestseller",
     "special_mix": "Special mix"
   },
+  "product_variant_guide": {
+    "steps_heading": "How to sow successfully",
+    "facts_heading": "Product details",
+    "faq_heading": "Good to know",
+    "notice_label": "Note:"
+  },
   "collection": {
     "products_count": "{{ count }} products",
     "sort_by": "Sort by",

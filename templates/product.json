@@ -6,6 +6,10 @@
         "show_description": true
       }
     },
+    "variant_guide": {
+      "type": "product-variant-description",
+      "settings": {}
+    },
     "recipe": {
       "type": "product-recipe",
       "settings": {}
@@ -27,5 +31,5 @@
       "settings": { "heading": "Passt perfekt dazu" }
     }
   },
-  "order": ["main", "recipe", "configurator", "cross_sell"]
+  "order": ["main", "variant_guide", "recipe", "configurator", "cross_sell"]
 }
