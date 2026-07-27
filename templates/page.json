@@ -46,15 +46,15 @@
         "addon_LQxFLX": {
           "type": "addon",
           "settings": {
-            "product": "",
-            "title": "Passender Untersetzer",
-            "explanation": "Schützt Boden und Regal vor überschüssigem Gießwasser."
+            "product": "haengeampel-wasserhyazinthe",
+            "title": "Hänge-Ampel aus Wasserhyazinthe",
+            "explanation": "Eine Hänge-Ampel aus Wasserhyazinthe ist ein geflochtener, natürlicher Pflanzenhalter für Blumentöpfe."
           }
         },
         "addon_YHEtha": {
           "type": "addon",
           "settings": {
-            "product": "",
+            "product": "leafer-moosstab-basic",
             "title": "Rankhilfe",
             "explanation": "Gibt kletternden Aroids Halt und unterstützt einen geordneten Wuchs."
           }
@@ -62,15 +62,15 @@
         "addon_hrqxQa": {
           "type": "addon",
           "settings": {
-            "product": "",
-            "title": "Feuchtigkeitsmesser",
-            "explanation": "Hilft dabei, den richtigen Gießzeitpunkt besser einzuschätzen."
+            "product": "vivosun-anzucht-heizmatte",
+            "title": "Heizmatte",
+            "explanation": "Eine Heizmatte für Pflanzen kannst du kurzzeitig nutzen, um Aussaaten, Rhizome oder Stecklinge schneller zu bewurzeln."
           }
         },
         "addon_zcTgwy": {
           "type": "addon",
           "settings": {
-            "product": "",
+            "product": "vivosun-led-pflanzenlampen",
             "title": "Pflanzenlicht",
             "explanation": "Ergänzt fehlendes Tageslicht an dunkleren Standorten."
           }
