@@ -117,6 +117,14 @@
     "substrate_configurator_XqTGAX": {
       "type": "substrate-configurator",
       "blocks": {
+        "ingredient_Jty7mG": {
+          "type": "ingredient",
+          "settings": {
+            "name": "",
+            "function": "Struktur und Luftführung",
+            "default_percentage": 20
+          }
+        },
         "ingredient_hndcNA": {
           "type": "ingredient",
           "settings": {
@@ -159,6 +167,7 @@
         }
       },
       "block_order": [
+        "ingredient_Jty7mG",
         "ingredient_hndcNA",
         "ingredient_3MabHE",
         "ingredient_cwptLU",
