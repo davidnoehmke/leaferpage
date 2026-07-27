@@ -1,9 +1,181 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {}
+    },
+    "custom_grow_creator_pbRRDT": {
+      "type": "custom-grow-creator",
+      "blocks": {
+        "system_twgwXB": {
+          "type": "system",
+          "settings": {
+            "product": "",
+            "title": "Atmungsaktiver Stofftopf",
+            "badge": "Aktive Wurzelzone",
+            "explanation": "<p>Die luftdurchlässige Topfwand unterstützt Sauerstoffaustausch und schnellen Wasserablauf. Ideal, wenn du Gießintervalle aktiv kontrollieren möchtest.</p>",
+            "variant_label": "Größe und Ausführung",
+            "image": "shopify://shop_images/MpBmapKiCpT_pMYPgKCTsAQ_0_gps_generated.png",
+            "image_alt": "",
+            "video": "shopify://files/videos/MultiDomestics.mp4",
+            "video_placeholder": "Produktvideo im Theme-Editor zuordnen"
+          }
+        },
+        "system_8xFDPh": {
+          "type": "system",
+          "settings": {
+            "product": "leafer-pot",
+            "title": "Eigenbewässerung mit Reservoir",
+            "badge": "Konstante Versorgung",
+            "explanation": "<p>Ein Wasserreservoir kann die Versorgung gleichmäßiger machen. Besonders praktisch bei größeren Pflanzen oder unregelmäßigen Gießintervallen.</p>",
+            "variant_label": "Größe und Ausführung",
+            "image_alt": "",
+            "video": "shopify://files/videos/254112.mp4",
+            "video_placeholder": "Produktvideo im Theme-Editor zuordnen"
+          }
+        },
+        "addon_LQxFLX": {
+          "type": "addon",
+          "settings": {
+            "product": "",
+            "title": "Passender Untersetzer",
+            "explanation": "Schützt Boden und Regal vor überschüssigem Gießwasser."
+          }
+        },
+        "addon_YHEtha": {
+          "type": "addon",
+          "settings": {
+            "product": "",
+            "title": "Rankhilfe",
+            "explanation": "Gibt kletternden Aroids Halt und unterstützt einen geordneten Wuchs."
+          }
+        },
+        "addon_hrqxQa": {
+          "type": "addon",
+          "settings": {
+            "product": "",
+            "title": "Feuchtigkeitsmesser",
+            "explanation": "Hilft dabei, den richtigen Gießzeitpunkt besser einzuschätzen."
+          }
+        },
+        "addon_zcTgwy": {
+          "type": "addon",
+          "settings": {
+            "product": "",
+            "title": "Pflanzenlicht",
+            "explanation": "Ergänzt fehlendes Tageslicht an dunkleren Standorten."
+          }
+        }
+      },
+      "block_order": [
+        "system_twgwXB",
+        "system_8xFDPh",
+        "addon_LQxFLX",
+        "addon_YHEtha",
+        "addon_hrqxQa",
+        "addon_zcTgwy"
+      ],
+      "name": "LEAFers CustomGrowCreator",
+      "settings": {
+        "eyebrow": "LEAFers CustomGrowCreator",
+        "heading": "Aus einzelnen Entscheidungen wird dein Grow-Setup",
+        "intro": "<p>Kombiniere deine individuelle Substratrezeptur mit einem passenden Topfsystem und sinnvollen Erweiterungen. Jede Auswahl wird erklärt – du behältst jederzeit die Kontrolle.</p>",
+        "mix_product": "substrat",
+        "step_mix_heading": "Rezeptur und Menge übernehmen",
+        "step_mix_text": "Die oben per Slider eingestellte Rezeptur wird automatisch mit deiner Bestellung gespeichert.",
+        "size_label": "Gesamtmenge auswählen",
+        "recipe_waiting": "Stelle oben zunächst deine Mischung auf genau 100 % ein.",
+        "product_missing": "Bitte im Theme-Editor das Shopify-Produkt „Individuelle Substratmischung“ auswählen.",
+        "step_system_heading": "Topfsystem auswählen",
+        "step_system_text": "Wähle einen atmungsaktiven Stofftopf oder ein System mit Wasserreservoir – passend zu Standort und Gießroutine.",
+        "system_label": "Stofftopf oder Eigenbewässerung",
+        "system_placeholder": "Topfsystem auswählen …",
+        "step_addons_heading": "Setup sinnvoll erweitern",
+        "step_addons_text": "Ergänze nur, was dein Projekt wirklich braucht – zum Beispiel Rankhilfe, Untersetzer, Messgerät oder Pflanzenlicht.",
+        "summary_eyebrow": "Dein Setup",
+        "summary_heading": "Bereit zum Wachsen",
+        "summary_mix": "Substratgröße noch auswählen",
+        "summary_system": "Topfsystem noch auswählen",
+        "summary_addons": "Keine Add-ons ausgewählt",
+        "cart_label": "Grow-Setup in den Warenkorb",
+        "valid_message": "Dein individuelles Setup wurde hinzugefügt.",
+        "recipe_missing": "Die Substratanteile müssen zusammen genau 100 % ergeben.",
+        "fineprint": "Alle ausgewählten Produkte werden als einzelne Positionen in den Warenkorb gelegt. Deine Rezeptur bleibt an der Substratposition gespeichert.",
+        "padding_top": 80,
+        "padding_bottom": 96
+      }
+    },
+    "substrate_configurator_XqTGAX": {
+      "type": "substrate-configurator",
+      "blocks": {
+        "ingredient_hndcNA": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Pinienrinde",
+            "function": "Struktur und Luftführung",
+            "default_percentage": 20
+          }
+        },
+        "ingredient_3MabHE": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Pinienrinde",
+            "function": "Struktur und Luftführung",
+            "default_percentage": 20
+          }
+        },
+        "ingredient_cwptLU": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Pinienrinde",
+            "function": "Struktur und Luftführung",
+            "default_percentage": 20
+          }
+        },
+        "ingredient_hLphjm": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Pinienrinde",
+            "function": "Struktur und Luftführung",
+            "default_percentage": 20
+          }
+        },
+        "ingredient_c6t3dJ": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Pinienrinde",
+            "function": "Struktur und Luftführung",
+            "default_percentage": 20
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_hndcNA",
+        "ingredient_3MabHE",
+        "ingredient_cwptLU",
+        "ingredient_hLphjm",
+        "ingredient_c6t3dJ"
+      ],
+      "name": "Substrat-Konfigurator",
+      "settings": {
+        "show_on_pages": true,
+        "show_on_all_products": false
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "custom_grow_creator_pbRRDT",
+    "substrate_configurator_XqTGAX"
+  ]
 }
