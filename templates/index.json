@@ -110,7 +110,7 @@
       "settings": {
         "heading": "Phase 2 - das richtige Pflanzgefäß finden",
         "heading_preset": "highlights",
-        "link_label": "mehr entdecken >",
+        "link_label": "mehr >",
         "collection": "leafers-gartenschuppen",
         "products_to_show": 8,
         "columns": 6,
@@ -348,7 +348,7 @@
             "variant_selector": "text_boxed",
             "show_compare_price": true,
             "use_discount_tag": false,
-            "discount_tag_background": "#C9FFC9",
+            "discount_tag_background": "#c9ffc9",
             "switch_style": "toggle",
             "switch_size": 22,
             "switch_position": "last",
