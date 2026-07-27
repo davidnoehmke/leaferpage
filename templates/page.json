@@ -20,14 +20,13 @@
         "system_twgwXB": {
           "type": "system",
           "settings": {
-            "product": "",
+            "product": "gronest-stofftopf-pflanzsack",
             "title": "Atmungsaktiver Stofftopf",
             "badge": "Aktive Wurzelzone",
             "explanation": "<p>Die luftdurchlässige Topfwand unterstützt Sauerstoffaustausch und schnellen Wasserablauf. Ideal, wenn du Gießintervalle aktiv kontrollieren möchtest.</p>",
             "variant_label": "Größe und Ausführung",
-            "image": "shopify://shop_images/MpBmapKiCpT_pMYPgKCTsAQ_0_gps_generated.png",
             "image_alt": "",
-            "video": "shopify://files/videos/MultiDomestics.mp4",
+            "video": "shopify://files/videos/47551-451623797.mp4",
             "video_placeholder": "Produktvideo im Theme-Editor zuordnen"
           }
         },
