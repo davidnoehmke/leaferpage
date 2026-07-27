@@ -19,10 +19,291 @@
       "settings": {
         "link": "shopify://pages/faq"
       }
+    },
+    "obstgenerator_p3EhcV": {
+      "type": "obstgenerator",
+      "blocks": {
+        "variety_7HURHg": {
+          "type": "variety",
+          "settings": {
+            "variant_title": "Trauben - Pinot Noir",
+            "badge": "Keltertraube",
+            "heading": "Pinot-Noir-Fruchttyp",
+            "botanical_name": "Vitis vinifera",
+            "description": "<p>Ein langfristiges Weinreben-Projekt mit kräftigem Kletterwuchs. Aus dem Saatgut wächst eine genetisch eigenständige Rebe – nicht automatisch eine sortenechte Pinot-Noir-Pflanze.</p>",
+            "prep": "Kühle Vorbehandlung",
+            "location": "Sonnig mit Rankhilfe",
+            "level": "Geduldiges Projekt"
+          }
+        },
+        "variety_QkXFtW": {
+          "type": "variety",
+          "settings": {
+            "variant_title": "Trauben - weiße Riesentraube",
+            "badge": "Helle Traube",
+            "heading": "Weiße Riesentraube",
+            "botanical_name": "Vitis vinifera",
+            "description": "<p>Eine wüchsige Weinreben-Idee für sonnige Plätze und stabile Rankhilfen. Fruchtfarbe, Größe und Geschmack können bei einer Anzucht aus Samen variieren.</p>",
+            "prep": "Kühle Vorbehandlung",
+            "location": "Sonnig und rankend",
+            "level": "Langfristig"
+          }
+        },
+        "variety_K3iJc4": {
+          "type": "variety",
+          "settings": {
+            "variant_title": "Maracuja - Passi Flora",
+            "badge": "Tropischer Kletterer",
+            "heading": "Maracuja",
+            "botanical_name": "Passiflora edulis",
+            "description": "<p>Schnellwachsende Kletterpflanze mit markantem Laub und exotischem Charakter. Ideal für einen hellen, warmen Start und später mit ausreichend Platz zum Ranken.</p>",
+            "prep": "Warm und gleichmäßig feucht",
+            "location": "Sehr hell mit Rankhilfe",
+            "level": "Tropisches Projekt"
+          }
+        },
+        "variety_pKbz7G": {
+          "type": "variety",
+          "settings": {
+            "variant_title": "Zitronenbaum",
+            "badge": "Zitruspflanze",
+            "heading": "Zitronenbaum",
+            "botanical_name": "Citrus limon",
+            "description": "<p>Ein immergrünes Zitrusprojekt für helle Standorte. Die Keimlinge entwickeln sich individuell; bis zu einer möglichen Blüte oder Frucht ist viel Geduld nötig.</p>",
+            "prep": "Warm und hell",
+            "location": "Hell, später frostfrei",
+            "level": "Ruhiges Langzeitprojekt"
+          }
+        },
+        "variety_VgzQWg": {
+          "type": "variety",
+          "settings": {
+            "variant_title": "Apfelbaum - Pink Lady",
+            "badge": "Apfelprojekt",
+            "heading": "Apfel aus Pink-Lady-Frucht",
+            "botanical_name": "Malus domestica",
+            "description": "<p>Ein robustes Langzeitprojekt vom Kern bis zum eigenen Sämlingsbaum. Der daraus wachsende Apfelbaum ist genetisch neu und trägt nicht automatisch Pink-Lady-Äpfel.</p>",
+            "prep": "Kühle Vorbehandlung",
+            "location": "Später sonnig im Freien",
+            "level": "Für Geduldige"
+          }
+        },
+        "included_JzjKLk": {
+          "type": "included",
+          "settings": {
+            "heading": "Deine gewählte Saatgutvariante",
+            "text": "<p>Ein Saatgutbeutel der im Produktformular ausgewählten Obstart. Die jeweilige Füllmenge steht an der Variante beziehungsweise auf der Verpackung.</p>"
+          }
+        },
+        "included_DdtF4P": {
+          "type": "included",
+          "settings": {
+            "heading": "Artgerechter Start",
+            "text": "<p>Die Übersicht zeigt dir, ob deine Auswahl Wärme oder zunächst eine kühle Vorbehandlung benötigt.</p>"
+          }
+        },
+        "included_8mthHW": {
+          "type": "included",
+          "settings": {
+            "heading": "Ehrliche Erwartungen",
+            "text": "<p>Klare Hinweise zu genetischer Vielfalt, Keimdauer und möglicher Fruchtbildung statt unrealistischer Ernteversprechen.</p>"
+          }
+        },
+        "included_gw3hFq": {
+          "type": "included",
+          "settings": {
+            "heading": "Passend erweiterbar",
+            "text": "<p>Mit Anzuchttopf, luftigem Seed Mix, feinem Sprüher und Rankhilfe lässt sich dein Setup gezielt ergänzen.</p>"
+          }
+        },
+        "step_N7zhHM": {
+          "type": "step",
+          "settings": {
+            "heading": "Saatgut vorbereiten",
+            "text": "<p>Orientiere dich an der gewählten Art. Entferne mögliche Fruchtreste und nutze nur sauberes Saatgut für die weitere Vorbehandlung.</p>"
+          }
+        },
+        "step_cdNTiK": {
+          "type": "step",
+          "settings": {
+            "heading": "Warmstart oder Kühlphase",
+            "text": "<p>Maracuja und Zitrone starten warm. Apfel und Weinrebe benötigen für einen natürlichen Keimimpuls meist zunächst eine kontrollierte kühle, feuchte Phase.</p>"
+          }
+        },
+        "step_kkz9EC": {
+          "type": "step",
+          "settings": {
+            "heading": "Luftig aussäen",
+            "text": "<p>Setze das Saatgut in ein feines, strukturstabiles Anzuchtmedium. Halte es gleichmäßig leicht feucht, aber niemals dauerhaft nass.</p>"
+          }
+        },
+        "step_Xpdkct": {
+          "type": "step",
+          "settings": {
+            "heading": "Beobachten und umtopfen",
+            "text": "<p>Sorge nach der Keimung für viel Licht. Topfe erst um, wenn der Jungtrieb stabil ist und sich ein belastbares Wurzelsystem gebildet hat.</p>"
+          }
+        },
+        "benefit_krU3Kz": {
+          "type": "benefit",
+          "settings": {
+            "heading": "Wachstum von Anfang an",
+            "text": "<p>Du lernst deine Pflanze nicht erst als fertige Jungpflanze kennen, sondern begleitest jeden Entwicklungsschritt selbst.</p>"
+          }
+        },
+        "benefit_BMMjcm": {
+          "type": "benefit",
+          "settings": {
+            "heading": "Tropisch oder winterhart",
+            "text": "<p>Die Auswahl verbindet exotische Kletter- und Zitruspflanzen mit Apfel- und Weinrebenprojekten für draußen.</p>"
+          }
+        },
+        "benefit_bQ77Lk": {
+          "type": "benefit",
+          "settings": {
+            "heading": "Ein Produkt, klare Varianten",
+            "text": "<p>Alle Obstsorten bleiben übersichtlich in einem Variantenprodukt gebündelt, statt den Shop mit Einzelartikeln zu überladen.</p>"
+          }
+        },
+        "benefit_UFGenY": {
+          "type": "benefit",
+          "settings": {
+            "heading": "Ohne falsches Ernteversprechen",
+            "text": "<p>Die Section erklärt offen, dass Sämlinge genetisch variieren und Fruchtbildung Zeit, passende Bedingungen und Geduld braucht.</p>"
+          }
+        },
+        "faq_rYhgyd": {
+          "type": "faq",
+          "settings": {
+            "question": "Wächst aus dem Saatgut genau dieselbe Obstsorte?",
+            "answer": "<p>Nein. Durch Bestäubung und Samenbildung entsteht eine neue genetische Kombination. Ein Sämling aus einer Pink-Lady-Frucht ist daher kein sortenechter Pink-Lady-Baum; Gleiches gilt für benannte Weintrauben. Wuchs und spätere Früchte können deutlich abweichen.</p>"
+          }
+        },
+        "faq_pnhDLx": {
+          "type": "faq",
+          "settings": {
+            "question": "Wie lange dauert die Keimung?",
+            "answer": "<p>Das hängt von Art, Saatgut, Vorbehandlung, Temperatur und Feuchtigkeit ab. Manche Samen reagieren zügig, andere erst nach einer längeren Ruhe- oder Kühlphase. Eine feste Keimzeit oder Keimquote kann bei Naturprodukten nicht zugesichert werden.</p>"
+          }
+        },
+        "faq_AmUAJU": {
+          "type": "faq",
+          "settings": {
+            "question": "Brauchen alle Sorten eine Kühlphase?",
+            "answer": "<p>Nein. Maracuja und Zitrone werden warm angezogen. Apfel- und Traubensaat benötigen für einen zuverlässigen Keimimpuls in der Regel eine feuchte kühle Vorbehandlung. Beachte immer die sortenspezifischen Hinweise.</p>"
+          }
+        },
+        "faq_gh3yqf": {
+          "type": "faq",
+          "settings": {
+            "question": "Kann ich die Pflanzen dauerhaft in der Wohnung halten?",
+            "answer": "<p>Die Anzucht kann geschützt und hell im Haus beginnen. Maracuja und Zitrone brauchen dauerhaft Wärme beziehungsweise einen frostfreien Winterplatz. Apfel und Weinrebe entwickeln sich langfristig im Freien am besten.</p>"
+          }
+        },
+        "faq_4a6FHx": {
+          "type": "faq",
+          "settings": {
+            "question": "Ist das Saatgut zum Verzehr geeignet?",
+            "answer": "<p>Nein. Das angebotene Saatgut ist ausschließlich zur Aussaat bestimmt und nicht als Lebensmittel vorgesehen. Bewahre es außerhalb der Reichweite kleiner Kinder und Haustiere auf.</p>"
+          }
+        },
+        "faq_w6J3na": {
+          "type": "faq",
+          "settings": {
+            "question": "Ist eine spätere Ernte garantiert?",
+            "answer": "<p>Nein. Ob und wann eine Pflanze blüht oder Früchte trägt, hängt unter anderem von Genetik, Alter, Standort, Bestäubung, Pflege und Klima ab. Im Mittelpunkt steht das Anzucht- und Pflanzenprojekt.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "variety_7HURHg",
+        "variety_QkXFtW",
+        "variety_K3iJc4",
+        "variety_pKbz7G",
+        "variety_VgzQWg",
+        "included_JzjKLk",
+        "included_DdtF4P",
+        "included_8mthHW",
+        "included_gw3hFq",
+        "step_N7zhHM",
+        "step_cdNTiK",
+        "step_kkz9EC",
+        "step_Xpdkct",
+        "benefit_krU3Kz",
+        "benefit_BMMjcm",
+        "benefit_bQ77Lk",
+        "benefit_UFGenY",
+        "faq_rYhgyd",
+        "faq_pnhDLx",
+        "faq_AmUAJU",
+        "faq_gh3yqf",
+        "faq_4a6FHx",
+        "faq_w6J3na"
+      ],
+      "name": "LEAFer Obstsaatgut",
+      "settings": {
+        "product": "obstsaatgut",
+        "image_alt": "Obstsaatgut und junge Obstpflanzen für die Anzucht",
+        "image_note": "Abbildung beispielhaft. Wuchs und Erscheinungsbild entwickeln sich bei jeder Pflanze individuell.",
+        "eyebrow": "LEAFerservice · Obstsaatgut",
+        "heading": "Obst aus Samen. <em>Von Anfang an deins.</em>",
+        "intro": "<p>Wähle zwischen Maracuja, Zitrone, Apfel und zwei Traubenformen und begleite deine eigene Obstpflanze vom ersten Keim bis zum kräftigen Jungtrieb. Ein langfristiges Pflanzenprojekt für alle, die Wachstum wirklich erleben möchten.</p>",
+        "trust_aria_label": "Produktmerkmale",
+        "trust_1": "5 Obstideen",
+        "trust_2": "Anzuchtwissen inklusive",
+        "trust_3": "Für langfristige Pflanzenprojekte",
+        "product_label": "Deine Auswahl",
+        "price_label": "Preis",
+        "variant_legend": "Obstsorte wählen",
+        "quantity_label": "Menge",
+        "quantity_minus_label": "Menge um eins reduzieren",
+        "quantity_plus_label": "Menge um eins erhöhen",
+        "add_to_cart_label": "In den Warenkorb",
+        "available_label": "Verfügbar · Versand nach aktueller Shopangabe",
+        "sold_out_label": "Derzeit nicht verfügbar",
+        "empty_title": "Produkt im Theme-Editor auswählen",
+        "empty_text": "Wähle das Variantenprodukt „Obstsaatgut“, damit Preis, Bestand und Warenkorb funktionieren.",
+        "varieties_eyebrow": "Fünf Wege zum eigenen Obstprojekt",
+        "varieties_heading": "Welche Pflanze möchtest du wachsen sehen?",
+        "varieties_intro": "<p>Jede Art bringt ihren eigenen Rhythmus mit. Tropische Samen mögen Wärme, Apfel und Weinrebe profitieren von einer kühlen Vorbehandlung. Wähle nach Standort, Geduld und Pflanzenziel.</p>",
+        "select_cue": "Auswählen",
+        "prep_label": "Start",
+        "location_label": "Später",
+        "level_label": "Projekt",
+        "notice_aria_label": "Wichtiger Hinweis zur Sortenechtheit",
+        "notice_heading": "Aus Samen entsteht ein Unikat – keine Sortenkopie",
+        "notice_text": "<p>Obstpflanzen aus Samen sind genetisch eigenständig. Namen wie „Pinot Noir“ oder „Pink Lady“ beschreiben die Herkunft beziehungsweise den Fruchttyp des Saatguts; Wuchs, Blüte und spätere Früchte können von der Mutterpflanze abweichen. Eine bestimmte Fruchtqualität oder Ernte wird nicht zugesichert.</p>",
+        "included_eyebrow": "Klar statt überladen",
+        "included_heading": "Was du für deinen Start bekommst",
+        "included_intro": "<p>Du wählst genau die Obstidee, die zu deinem Platz und deiner Geduld passt. Die Section verbindet Auswahl, Erwartungsmanagement und Anzuchtwissen an einem Ort.</p>",
+        "steps_eyebrow": "Vom Saatkorn zum Jungtrieb",
+        "steps_heading": "So beginnt dein Obstprojekt",
+        "steps_intro": "<p>Die genaue Keimdauer ist naturbedingt verschieden. Entscheidend sind die passende Vorbehandlung, ein luftiges Anzuchtmedium und gleichmäßige Bedingungen ohne Staunässe.</p>",
+        "benefits_eyebrow": "Für neugierige Pflanzenmenschen",
+        "benefits_heading": "Mehr als nur ein Saatbeutel",
+        "faq_eyebrow": "Gut zu wissen",
+        "faq_heading": "Fragen vor der Aussaat",
+        "faq_intro": "<p>Obstsaatgut ist ein Naturprodukt und kein fertiger Obstbaum. Diese Antworten setzen realistische Erwartungen und helfen beim richtigen Start.</p>",
+        "closing_eyebrow": "Bereit für den ersten Keim?",
+        "closing_heading": "Wähle dein Obstprojekt.",
+        "closing_text": "<p>Maracuja, Zitrone, Apfel oder Weinrebe: Entscheide dich für die Pflanze, deren Entwicklung du von Anfang an begleiten möchtest.</p>",
+        "closing_button": "Zur Sortenauswahl",
+        "background": "#f4f1e9",
+        "surface": "#fffdf8",
+        "text_color": "#203126",
+        "muted_color": "#637066",
+        "accent": "#56704e",
+        "accent_contrast": "#ffffff",
+        "border_color": "#dcd9cf",
+        "radius": 20,
+        "max_width": 1400,
+        "padding_y": 72
+      }
     }
   },
   "order": [
     "main",
-    "brand_story_hd6W8y"
+    "brand_story_hd6W8y",
+    "obstgenerator_p3EhcV"
   ]
 }
