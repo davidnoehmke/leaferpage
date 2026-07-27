@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "background_color": "#fbfaf6",
@@ -5,7 +14,25 @@
     "text_color": "#171717",
     "accent_color": "#394f2d",
     "accent_soft_color": "#dfe8d6",
-    "muted_color": "#6b6a63"
+    "muted_color": "#6b6a63",
+    "content_for_index": [],
+    "blocks": {
+      "3427999465559522060": {
+        "type": "shopify://apps/theme-sections/blocks/debutify-head-widget/16fcee8f-c23c-4a0e-b916-39c05c4bef69",
+        "disabled": false,
+        "settings": {}
+      },
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "15079184273603081885": {
+        "type": "shopify://apps/essential-free-shipping/blocks/app_embed/4125375e-37c8-4137-949d-c4e1a3aac572",
+        "disabled": false,
+        "settings": {}
+      }
+    }
   },
   "presets": {
     "LEAFerservice Growth Theme": {
