@@ -73,9 +73,10 @@
           "type": "collection",
           "settings": {
             "collection": "substrate-zusatze",
+            "image": "shopify://shop_images/20587884-FE99-4A1A-B914-EA451C3BAFA7_558e69a0-90d6-4312-805d-433cea1184d5.png",
             "title": "hochwertige Substratzusätze",
             "copy": "Komponenten für eine gezielte Veränderung von Luftführung, Drainage, Wasserspeicherung oder Struktur.",
-            "cta_label": "Zusatz wählen",
+            "cta_label": "Set ergänzen >",
             "fallback_link": "shopify://collections/substrate-zusatze",
             "fallback_title": "Substratzusätze",
             "fallback_copy": "Gezielte Komponenten für mehr Luft, Drainage, Wasserspeicherung oder Struktur – passend zur Pflanze dosierbar."
