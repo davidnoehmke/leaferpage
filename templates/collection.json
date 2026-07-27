@@ -9,6 +9,12 @@
  */
 {
   "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "show_type_filters": true
+      }
+    },
     "trust_bar_wKpxUq": {
       "type": "trust-bar",
       "blocks": {
@@ -51,24 +57,20 @@
         "benefit_mTwh8Q",
         "benefit_q6VnJm"
       ],
-      "disabled": true,
       "name": "t:sections.trust_bar.name",
       "settings": {}
     },
-    "main": {
-      "type": "main-collection",
-      "settings": {
-        "show_type_filters": true
-      }
-    },
     "seo_copy": {
       "type": "collection-seo-copy",
+      "custom_css": [
+        "section {padding: 0}"
+      ],
       "settings": {}
     }
   },
   "order": [
-    "trust_bar_wKpxUq",
     "main",
+    "trust_bar_wKpxUq",
     "seo_copy"
   ]
 }
