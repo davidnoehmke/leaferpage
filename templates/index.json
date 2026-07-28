@@ -62,9 +62,9 @@
         "collection_DamgpF": {
           "type": "collection",
           "settings": {
-            "collection": "fertige-substratmischungen",
+            "collection": "aufzucht-bewurzelung",
             "image": "shopify://shop_images/orientier-dich-an-den-pflanzgef-en-und-substratbestandteilen-bildern.png",
-            "title": "Substrate - abgestimmt für anspruchsvolle Pflanzen",
+            "title": "Step 1: Wie können wir helfen?",
             "copy": "Fertige Mischungen als klarer Startpunkt für unterschiedliche Wurzelräume, Standorte und Gießroutinen.",
             "cta_label": "Substrat wählen",
             "fallback_link": "shopify://collections/fertige-substratmischungen",
@@ -118,9 +118,9 @@
       ],
       "name": "Home Kollektionen",
       "settings": {
-        "eyebrow": "Natürliche Materialien",
-        "heading": "Was braucht deine Pflanze wirklich?",
-        "intro": "<p>Starte mit dem Bedarf deiner Pflanze. Finde heraus welches Substrat, Zusätze, Pflanzgefäße und smartes Zubehör integrierbar sind.</p>"
+        "eyebrow": "Finde dich zurecht bei uns",
+        "heading": "schnelle Lösungen & Anbau Ratgeber und Entscheidungshilfen",
+        "intro": "<p>Für Neulinge & Interessierte haben wir einen roten Faden gelegt, dem du chronologisch folgen kannst. <br/></p><p>Profis & Kenner können direkt zum passenden Produkt springen.</p>"
       }
     },
     "bestsellers": {
