@@ -81,7 +81,7 @@
         "fabric_pot": {
           "type": "system",
           "settings": {
-            "product": "",
+            "product": "gronest-stofftopf-pflanzsack",
             "title": "Atmungsaktiver Stofftopf",
             "badge": "Aktive Wurzelzone",
             "explanation": "<p>Die luftdurchlässige Topfwand unterstützt Sauerstoffaustausch und schnellen Wasserablauf. Ideal, wenn du Gießintervalle aktiv kontrollieren möchtest.</p>",
@@ -93,7 +93,7 @@
         "self_watering": {
           "type": "system",
           "settings": {
-            "product": "",
+            "product": "leafer-pot",
             "title": "Eigenbewässerung mit Reservoir",
             "badge": "Konstante Versorgung",
             "explanation": "<p>Ein Wasserreservoir kann die Versorgung gleichmäßiger machen. Besonders praktisch bei größeren Pflanzen oder unregelmäßigen Gießintervallen.</p>",
