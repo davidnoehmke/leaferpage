@@ -91,6 +91,64 @@
         "type": "shopify://apps/essential-announcer/blocks/app-embed/93b5429f-c8d6-4c33-ae14-250fd84f361b",
         "disabled": false,
         "settings": {}
+      },
+      "12687935322400196279": {
+        "type": "shopify://apps/trooix/blocks/app-embed/019e739d-5be2-7d8c-85c5-c892f50dae37",
+        "disabled": false,
+        "settings": {
+          "enabled": true
+        }
+      },
+      "3427999465559522060": {
+        "type": "shopify://apps/theme-sections/blocks/debutify-head-widget/16fcee8f-c23c-4a0e-b916-39c05c4bef69",
+        "disabled": false,
+        "settings": {}
+      },
+      "13768625480086291342": {
+        "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "disabled": false,
+        "settings": {}
+      },
+      "15079184273603081885": {
+        "type": "shopify://apps/essential-free-shipping/blocks/app_embed/4125375e-37c8-4137-949d-c4e1a3aac572",
+        "disabled": true,
+        "settings": {}
+      },
+      "11531005611096603357": {
+        "type": "shopify://apps/zalify-pixel-popups-emails/blocks/popup-embed/0f5e9b69-424e-42a3-8bd7-8d5b75dd8130",
+        "disabled": false,
+        "settings": {}
+      },
+      "16278478101612877664": {
+        "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
+        "disabled": false,
+        "settings": {}
+      },
+      "2118589882331710876": {
+        "type": "shopify://apps/essential-trust-badges/blocks/app-embed/0ff65b25-07e1-408e-950f-f54dd3d1751b",
+        "disabled": false,
+        "settings": {}
+      },
+      "17957211177097890867": {
+        "type": "shopify://apps/protectify/blocks/protectify-cart/5fc19a33-9eee-4b3d-a5ea-5150881a50e8",
+        "disabled": false,
+        "settings": {}
+      },
+      "6159598353363395418": {
+        "type": "shopify://apps/google-youtube/blocks/store_widget/14ec7bd0-ac77-49a9-9417-90752398bdff",
+        "disabled": false,
+        "settings": {
+          "widget_position": "LEFT_BOTTOM",
+          "side_margin": 36,
+          "bottom_margin": 36,
+          "mobile_side_margin": 16,
+          "mobile_bottom_margin": 46
+        }
+      },
+      "9139608461449719892": {
+        "type": "shopify://apps/cwill-ai-chat/blocks/aichatbot/e7b73941-aea6-4bde-bb29-6e9e414581d0",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
