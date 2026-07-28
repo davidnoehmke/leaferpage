@@ -17,7 +17,7 @@
           "settings": {
             "icon": "shipping",
             "heading": "Weltweiter Versand",
-            "text": "Wir beleafern unsere Kunden global"
+            "text": "Wir beleafern unsere Kunden global <br>#plantcareglobally"
           }
         },
         "quality": {
@@ -25,15 +25,15 @@
           "settings": {
             "icon": "quality",
             "heading": "nachhaltiges Wachstum",
-            "text": "Von der Idee bis zur Umsetzung<br> #selfmade"
+            "text": "Von der Idee bis zur Umsetzung #headlesscodedknowledgebase"
           }
         },
         "natural": {
           "type": "benefit",
           "settings": {
             "icon": "natural",
-            "heading": "Als System gedacht",
-            "text": "Substrat, Gefäß und Zubehör kombinieren"
+            "heading": "Als System mit Sicherheit gemacht",
+            "text": "Wir garantieren eine sichere Zahlungsabwicklung über über alle gängigen Zahlungsoptionen <br>#nomattercurrencypolicy"
           }
         }
       },
