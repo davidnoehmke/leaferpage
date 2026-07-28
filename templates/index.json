@@ -43,12 +43,12 @@
         "natural"
       ],
       "custom_css": [
-        "section {align-items: center;}"
+        "section {align-items: center; font-style: italic;}"
       ],
       "settings": {
         "image": "shopify://shop_images/gF1eaquSBZaVpMYPhc_FgAM_2_gps_generated.png",
         "overlay": 30,
-        "heading": "Glückliche Pflanzen machen glücklich. Eine These - aber eine schöne 🌿",
+        "heading": "Glückliche Pflanzen machen glücklich. <br><br>Eine These - aber eine schöne 🌿",
         "text": "<p>Ein abgestimmtes Pflanzsystem ist wie dein Zuhause für dich. Ein Ort der Ruhe und ein Ort an dem man sich heimlich fühlt. Jede Pflanze hat auch ihr angestammtes globales Zuhause</p>",
         "primary_label": "Bodenbestandteile kennenlernen",
         "primary_link": "shopify://pages/leafers-substratbestandteile",
