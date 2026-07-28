@@ -43,7 +43,7 @@
         "natural"
       ],
       "custom_css": [
-        "section {align-items: center; font-style: italic;}"
+        "section {align-items: center; font-style: italic; text-align: center}"
       ],
       "settings": {
         "image": "shopify://shop_images/gF1eaquSBZaVpMYPhc_FgAM_2_gps_generated.png",
