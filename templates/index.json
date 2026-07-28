@@ -42,15 +42,18 @@
         "quality",
         "natural"
       ],
+      "custom_css": [
+        "section {align-items: center;}"
+      ],
       "settings": {
         "image": "shopify://shop_images/gF1eaquSBZaVpMYPhc_FgAM_2_gps_generated.png",
-        "overlay": 75,
-        "heading": "Pflanzenpflege beginnt an der Wurzel",
-        "text": "<p>Finde strukturstabile Substrate, gezielte Zusätze, passende Pflanzgefäße und smartes Zubehör – wir können nur die Umgebung deiner Pflanze optimieren, der Rest ist steckt im Wunder des Pflanzenreiches </p>",
-        "primary_label": "Grow-Set konfigurieren",
-        "primary_link": "shopify://pages/leafers-konfigurator",
-        "secondary_label": "",
-        "secondary_link": "shopify://blogs/leafers-nice2know-blog"
+        "overlay": 30,
+        "heading": "Glückliche Pflanzen machen glücklich. Eine These - aber eine schöne 🌿",
+        "text": "<p>Ein abgestimmtes Pflanzsystem ist wie dein Zuhause für dich. Ein Ort der Ruhe und ein Ort an dem man sich heimlich fühlt. Jede Pflanze hat auch ihr angestammtes globales Zuhause</p>",
+        "primary_label": "Bodenbestandteile kennenlernen",
+        "primary_link": "shopify://pages/leafers-substratbestandteile",
+        "secondary_label": "Substrate für anspruchsvolle Pflanzen",
+        "secondary_link": "shopify://collections/fertige-substratmischungen"
       }
     },
     "home_collection_journey_djRzLh": {
@@ -59,9 +62,9 @@
         "collection_DamgpF": {
           "type": "collection",
           "settings": {
-            "collection": "shopify://collections/fertige-substratmischungen",
-            "image": "shopify://shop_images/331B5F5C-EB8E-4BF9-A7FF-4720053D40E5.png",
-            "title": "abgestimmte Substrate",
+            "collection": "fertige-substratmischungen",
+            "image": "shopify://shop_images/orientier-dich-an-den-pflanzgef-en-und-substratbestandteilen-bildern.png",
+            "title": "Substrate - abgestimmt für anspruchsvolle Pflanzen",
             "copy": "Fertige Mischungen als klarer Startpunkt für unterschiedliche Wurzelräume, Standorte und Gießroutinen.",
             "cta_label": "Substrat wählen",
             "fallback_link": "shopify://collections/fertige-substratmischungen",
