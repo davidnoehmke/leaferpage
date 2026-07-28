@@ -17,7 +17,7 @@
           "settings": {
             "icon": "shipping",
             "heading": "Weltweiter Versand",
-            "text": "Wir beleafern unsere Kunden global und beachten dabei alle gültigen Importbestimmungen. Individuelle Anfrage über Formular <br>#plantcareglobally"
+            "text": "Wir beleafern unsere Kunden global"
           }
         },
         "quality": {
@@ -25,15 +25,15 @@
           "settings": {
             "icon": "quality",
             "heading": "nachhaltiges Wachstum",
-            "text": "Von der Idee bis zur Umsetzung #headlesscodedknowledgebase"
+            "text": "Von der Idee bis zur Umsetzung"
           }
         },
         "natural": {
           "type": "benefit",
           "settings": {
             "icon": "natural",
-            "heading": "Als System mit Sicherheit gemacht",
-            "text": "Wir garantieren eine sichere Zahlungsabwicklung über über alle gängigen Zahlungsoptionen <br>#nomattercurrencypolicy"
+            "heading": "Secure Check-out",
+            "text": "Wir garantieren eine sichere Zahlungsabwicklung"
           }
         }
       },
@@ -43,11 +43,11 @@
         "natural"
       ],
       "custom_css": [
-        "section {font-style: italic; text-align: center; background: rgba(255,255,0,0.1);}"
+        "section {font-style: italic; text-align: center; background: rgba(255, 255, 0, 0.1);}"
       ],
       "settings": {
         "image": "shopify://shop_images/F1B9D8D3-2CB8-4AFD-8EE1-DCE71F33BC5A.png",
-        "overlay": 50,
+        "overlay": 80,
         "heading": "Glückliche Pflanzen machen glücklich. Eine These - aber eine schöne 🌿",
         "text": "<p><strong>Ein abgestimmtes Pflanzsystem ist wie dein Zuhause für dich. Ein Ort der Ruhe und ein Ort an dem man sich heimlich fühlt. Jede Pflanze hat auch ihr angestammtes globales Zuhause. </strong></p>",
         "primary_label": "Bodenbestandteile kennenlernen",
