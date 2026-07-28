@@ -82,22 +82,10 @@
         "disabled": false,
         "settings": {}
       },
-      "15620043091132039688": {
-        "type": "shopify://apps/hoppy-trust-badges/blocks/trust_badges_icon/6e9703d9-56af-47d9-80bb-0abc8eb8c38b",
-        "disabled": false,
-        "settings": {}
-      },
       "5460033060862993441": {
         "type": "shopify://apps/essential-announcer/blocks/app-embed/93b5429f-c8d6-4c33-ae14-250fd84f361b",
         "disabled": false,
         "settings": {}
-      },
-      "12687935322400196279": {
-        "type": "shopify://apps/trooix/blocks/app-embed/019e739d-5be2-7d8c-85c5-c892f50dae37",
-        "disabled": false,
-        "settings": {
-          "enabled": true
-        }
       },
       "3427999465559522060": {
         "type": "shopify://apps/theme-sections/blocks/debutify-head-widget/16fcee8f-c23c-4a0e-b916-39c05c4bef69",
