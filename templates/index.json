@@ -112,6 +112,9 @@
         "collection_yV9NCk",
         "collection_BVLyhU"
       ],
+      "custom_css": [
+        ".home-journey__card {background-color: rgba(0, 0, 0, 0.19); padding: 11px; margin: 10px}"
+      ],
       "name": "Home Kollektionen",
       "settings": {
         "eyebrow": "LEAFers Pflanzenpflege-System",
