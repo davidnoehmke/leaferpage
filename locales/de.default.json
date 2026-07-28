@@ -99,11 +99,11 @@
     "quantity": "Anzahl",
     "variant": "Variante",
     "add_to_cart": "In den Warenkorb",
-    "quick_add": "{{ product }} in den Warenkorb legen",
+    "quick_add": "In den Warenkorb legen",
     "sold_out": "Ausverkauft",
     "unavailable": "Nicht verfügbar",
     "purchase_benefits": "Vorteile beim Einkauf",
-    "breadcrumbs": "Brotkrümelnavigation",
+    "breadcrumbs": "LinkList",
     "bestseller": "Bestseller",
     "special_mix": "Spezialmischung"
   },
