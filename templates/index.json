@@ -17,7 +17,7 @@
           "settings": {
             "icon": "shipping",
             "heading": "Weltweiter Versand",
-            "text": "Wir beleafern unsere Kunden global und beachten dabei alle gültigen Importbestimmungen. Individuelle Anfrage über Formular #plantcareglobally"
+            "text": "Wir beleafern unsere Kunden global und beachten dabei alle gültigen Importbestimmungen. Individuelle Anfrage über Formular <br>#plantcareglobally"
           }
         },
         "quality": {
@@ -43,17 +43,17 @@
         "natural"
       ],
       "custom_css": [
-        "section {font-style: italic; text-align: center; background: none;}"
+        "section {font-style: italic; text-align: center; background: rgba(255,255,0,0.1);}"
       ],
       "settings": {
         "image": "shopify://shop_images/F1B9D8D3-2CB8-4AFD-8EE1-DCE71F33BC5A.png",
-        "overlay": 30,
+        "overlay": 50,
         "heading": "Glückliche Pflanzen machen glücklich. Eine These - aber eine schöne 🌿",
-        "text": "<p>Ein abgestimmtes Pflanzsystem ist wie dein Zuhause für dich. Ein Ort der Ruhe und ein Ort an dem man sich heimlich fühlt. Jede Pflanze hat auch ihr angestammtes globales Zuhause. </p>",
+        "text": "<p><strong>Ein abgestimmtes Pflanzsystem ist wie dein Zuhause für dich. Ein Ort der Ruhe und ein Ort an dem man sich heimlich fühlt. Jede Pflanze hat auch ihr angestammtes globales Zuhause. </strong></p>",
         "primary_label": "Bodenbestandteile kennenlernen",
         "primary_link": "shopify://pages/leafers-substratbestandteile",
-        "secondary_label": "Ratgeber für anspruchsvolle Pflanzen",
-        "secondary_link": "shopify://blogs/leafers-nice2know-blog/leafers-substrate-nice2know"
+        "secondary_label": "Pflanzensystem zusammenstellen",
+        "secondary_link": "shopify://pages/individuelles-substrat"
       }
     },
     "home_collection_journey_djRzLh": {

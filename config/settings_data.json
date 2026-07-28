@@ -184,6 +184,29 @@
           "agent_font": "system_ui_n4",
           "agent_border_radius": 16
         }
+      },
+      "13047258039897440615": {
+        "type": "shopify://apps/judge-me-reviews/blocks/cart_drawer_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {
+          "widget_type": "review-widget"
+        }
+      },
+      "12366796244750993390": {
+        "type": "shopify://apps/amazon-reviews/blocks/sticky-compact-widget-block-embed/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+        "disabled": false,
+        "settings": {
+          "font": "default",
+          "variant": "trust",
+          "themeId": "light",
+          "verticalPositionId": "top",
+          "horizontalPositionId": "right",
+          "minimize": false,
+          "slideType": "rating",
+          "showDate": true,
+          "message": "Our customers have rated us",
+          "transparent": 1
+        }
       }
     }
   },
