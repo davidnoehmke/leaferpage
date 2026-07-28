@@ -9,6 +9,13 @@
  */
 {
   "sections": {
+    "seo_copy": {
+      "type": "collection-seo-copy",
+      "custom_css": [
+        "section {padding: 0;}"
+      ],
+      "settings": {}
+    },
     "main": {
       "type": "main-collection",
       "settings": {
@@ -59,18 +66,11 @@
       ],
       "name": "t:sections.trust_bar.name",
       "settings": {}
-    },
-    "seo_copy": {
-      "type": "collection-seo-copy",
-      "custom_css": [
-        "section {padding: 0}"
-      ],
-      "settings": {}
     }
   },
   "order": [
+    "seo_copy",
     "main",
-    "trust_bar_wKpxUq",
-    "seo_copy"
+    "trust_bar_wKpxUq"
   ]
 }
