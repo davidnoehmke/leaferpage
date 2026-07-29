@@ -128,12 +128,14 @@
     "bestsellers": {
       "type": "featured-collection",
       "custom_css": [
-        "text {margin: 0;}"
+        "text {margin: 0;}",
+        "cards {padding: 5px}",
+        ".product-card__options{}"
       ],
       "settings": {
-        "heading": "DIY Bundles & Testmengen",
+        "heading": "Unboxing-Set Anfrage & Testmengen",
         "heading_preset": "heading",
-        "link_label": ">",
+        "link_label": "unboxing Anfrage mit 25% Rabatt",
         "collection": "new-arrivals",
         "products_to_show": 4,
         "columns": 4,
