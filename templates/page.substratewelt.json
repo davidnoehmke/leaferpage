@@ -533,6 +533,9 @@
         "addon_6QK7x3",
         "addon_EirpLx"
       ],
+      "custom_css": [
+        ".grow-creator__layout{background: none}"
+      ],
       "name": "LEAFers CustomGrowCreator",
       "settings": {
         "eyebrow": "LEAFers CustomGrowCreator",
@@ -560,7 +563,7 @@
         "recipe_missing": "Die Substratanteile müssen zusammen genau 100 % ergeben.",
         "fineprint": "Alle ausgewählten Produkte werden als einzelne Positionen in den Warenkorb gelegt. Deine Rezeptur bleibt an der Substratposition gespeichert.",
         "padding_top": 80,
-        "padding_bottom": 96
+        "padding_bottom": 72
       }
     }
   },
