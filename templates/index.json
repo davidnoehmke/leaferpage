@@ -16,24 +16,24 @@
           "type": "benefit",
           "settings": {
             "icon": "shipping",
-            "heading": "Weltweiter Versand",
-            "text": "Wir beleafern unsere Kunden global"
+            "heading": "",
+            "text": ""
           }
         },
         "quality": {
           "type": "benefit",
           "settings": {
             "icon": "quality",
-            "heading": "nachhaltiges Wachstum",
-            "text": "Von der Idee bis zur Umsetzung"
+            "heading": "",
+            "text": ""
           }
         },
         "natural": {
           "type": "benefit",
           "settings": {
             "icon": "natural",
-            "heading": "Secure Check-out",
-            "text": "Wir garantieren eine sichere Zahlungsabwicklung"
+            "heading": "",
+            "text": ""
           }
         }
       },
@@ -125,7 +125,7 @@
       "settings": {
         "eyebrow": "Finde dich zurecht bei uns",
         "heading": "schnelle Lösungen & Anbau Ratgeber und Entscheidungshilfen",
-        "intro": "<p>Für Neulinge & Interessierte haben wir einen roten Faden gelegt, dem du chronologisch folgen kannst. <br/>———————————————————————<br/>Profis & Kenner können direkt zum passenden Produkt springen.</p>"
+        "intro": "<p>Für Neulinge & Interessierte haben wir einen roten Faden gelegt, dem du chronologisch folgen kannst. <br/>Profis & Kenner können direkt zum passenden Produkt springen.</p>"
       }
     },
     "bestsellers": {
