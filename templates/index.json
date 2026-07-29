@@ -101,9 +101,10 @@
           "type": "collection",
           "settings": {
             "collection": "smartgrow",
-            "title": "Zubehör & Smarte Ergänzungen",
-            "copy": "Praktische Helfer für Anzucht, Beleuchtung, Gießen und Kontrolle.\nNach konkretem Einsatz geordnet.",
-            "cta_label": "Basics hinzufügen",
+            "image": "shopify://shop_images/orientier-dich-an-den-pflanzgef-en-und-substratbestandteilen-bildern.png",
+            "title": "Nährstoffe & Ergänzungen",
+            "copy": "Mit zunehmendem Wachstum steigt der Nährstoffbedarf. Gezielt eingesetzte Substratzusätze stärken Wurzeln, verbessern die Struktur und fördern gesundes Wachstum.",
+            "cta_label": "Substrat sinnvoll ergänzen",
             "fallback_link": "shopify://collections/smartgrow",
             "fallback_title": "SmartGrow & Zubehör",
             "fallback_copy": "Praktische Helfer für Gießen, Kontrolle und Pflege – sinnvoll ergänzt statt unnötig kompliziert."
