@@ -119,7 +119,7 @@
         "collection_BVLyhU"
       ],
       "custom_css": [
-        "section {background: none; margin-bottom: 5px; padding: 5px;}"
+        "section {background: none; margin: 15px; padding: 5px;}"
       ],
       "name": "Home Kollektionen",
       "settings": {
@@ -131,8 +131,8 @@
     "bestsellers": {
       "type": "featured-collection",
       "custom_css": [
-        ".featured__header{margin: 0; font-family: asterisks}",
-        ".product-card{padding: 15px;}",
+        ".featured__header {margin: 0; font-family: asterisks;}",
+        ".product-card {padding: 15px;}",
         "a {background: none;}"
       ],
       "settings": {
@@ -201,18 +201,6 @@
       "type": "brand-story",
       "settings": {
         "link": "shopify://pages/faq"
-      }
-    },
-    "highlights": {
-      "type": "featured-collection",
-      "settings": {
-        "heading": "Anzucht & SmartGrow",
-        "heading_preset": "highlights",
-        "link_label": "SmartGrow vollständig ansehen",
-        "collection": "shopify://collections/smartgrow",
-        "products_to_show": 6,
-        "columns": 6,
-        "compact": false
       }
     },
     "starter": {
@@ -362,6 +350,39 @@
         "heading": "Wurzelräume, Setups und Pflanzenideen",
         "handle": "#LEAFerservice"
       }
+    },
+    "1785287783ec760fcd": {
+      "type": "apps",
+      "blocks": {
+        "section_store_block_product_info_wrapper_76Cepi": {
+          "type": "shopify://apps/section-store/blocks/block-product-info-wrapper/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "auto_detect_product_info_container": true,
+            "product_info_container_selector": "",
+            "use_on_mobile": true,
+            "use_header": true,
+            "header_font_size": 16,
+            "header_bg_color": "#405937",
+            "header_text_color": "#FFFFFF",
+            "header_text_align": "center",
+            "header_text": "♥︎ 7 von 10 empfehlen es weiter",
+            "border_style": "dotted",
+            "border_width": 1,
+            "border_color": "#DFDFDF",
+            "border_radius": 12,
+            "background_color": "",
+            "shadow": "none",
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "padding_left": 18,
+            "padding_right": 18
+          }
+        }
+      },
+      "block_order": [
+        "section_store_block_product_info_wrapper_76Cepi"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -370,8 +391,8 @@
     "bestsellers",
     "trust",
     "categories",
+    "1785287783ec760fcd",
     "brand_story",
-    "highlights",
     "starter",
     "faq",
     "community"
