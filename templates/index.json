@@ -130,7 +130,7 @@
       "settings": {
         "heading": "DIY Bundles & Testmengen",
         "heading_preset": "heading",
-        "link_label": "entdecken",
+        "link_label": ">",
         "collection": "new-arrivals",
         "products_to_show": 4,
         "columns": 4,
