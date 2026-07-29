@@ -119,7 +119,7 @@
         "collection_BVLyhU"
       ],
       "custom_css": [
-        "section {background: none; margin-bottom: 5px;padding: 5px;}"
+        "section {background: none; margin-bottom: 5px; padding: 5px;}"
       ],
       "name": "Home Kollektionen",
       "settings": {
@@ -132,11 +132,11 @@
       "type": "featured-collection",
       "custom_css": [
         "text {margin: 0;}",
-        "cards {padding: 5px;}",
-        ".product-card__options {}"
+        "cards {padding: 15px;}",
+        "a{background: none}"
       ],
       "settings": {
-        "heading": "Unboxing-Set Anfrage & Testmengen",
+        "heading": "Unboxing-Set Anfrage & inklusive Testpaket",
         "heading_preset": "heading",
         "link_label": "unboxing Anfrage mit 25% Rabatt",
         "collection": "new-arrivals",
