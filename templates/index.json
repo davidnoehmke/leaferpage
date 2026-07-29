@@ -62,7 +62,7 @@
         "collection_DamgpF": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "aufzucht-bewurzelung",
             "image": "shopify://shop_images/orientier-dich-an-den-pflanzgef-en-und-substratbestandteilen-bildern.png",
             "title": "Anzucht & Wurzelbildung",
             "copy": "Eine erfolgreiche Anzucht beginnt mit passenden Bedingungen. Anzuchtsubstrat, gleichmäßige Feuchtigkeit und Wärme fördern die Keimung und kräftige Wurzeln",
@@ -127,6 +127,9 @@
     },
     "bestsellers": {
       "type": "featured-collection",
+      "custom_css": [
+        "text {margin: 0}"
+      ],
       "settings": {
         "heading": "DIY Bundles & Testmengen",
         "heading_preset": "heading",
