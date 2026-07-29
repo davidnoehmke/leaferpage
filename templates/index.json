@@ -64,9 +64,9 @@
           "settings": {
             "collection": "aufzucht-bewurzelung",
             "image": "shopify://shop_images/orientier-dich-an-den-pflanzgef-en-und-substratbestandteilen-bildern.png",
-            "title": "Step 1: Wie können wir helfen?",
-            "copy": "Fertige Mischungen als klarer Startpunkt für unterschiedliche Wurzelräume, Standorte und Gießroutinen.",
-            "cta_label": "Substrat wählen",
+            "title": "{{ block.settings.collection.title }}",
+            "copy": "Oft passieren hier die meisten Fehler. Beim Keimvorgang muss man sehr vorsichtig sein - entscheidend ist es, nicht nur eine extravagante zu nehmen und diesen in eine Standarderde zu setzen. Pflanzen haben ein angestammtes Zuhause, und das ist leider nicht dein Wohnzimmer. Aber mit ein paar Anpassungen und Ergänzungen werden sich viele Pflanzen schon mehr als zufrieden geben.",
+            "cta_label": "S",
             "fallback_link": "shopify://collections/fertige-substratmischungen",
             "fallback_title": "Premium Substrate",
             "fallback_copy": "Ausgewogene Basismischungen für stabile Wurzeln, kontrollierte Feuchtigkeit und eine dauerhaft lockere Struktur."
