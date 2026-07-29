@@ -9,20 +9,6 @@
  */
 {
   "sections": {
-    "featured_collection_fF7F3a": {
-      "type": "featured-collection",
-      "disabled": true,
-      "name": "t:sections.featured_collection.name",
-      "settings": {
-        "heading": "",
-        "heading_preset": "heading",
-        "link_label": "",
-        "collection": "",
-        "products_to_show": 4,
-        "columns": 4,
-        "compact": false
-      }
-    },
     "obstgenerator_zDjGB9": {
       "type": "obstgenerator",
       "blocks": {
@@ -496,12 +482,13 @@
         "system_QiqHgm": {
           "type": "system",
           "settings": {
-            "product": "",
+            "product": "lechuza-classico-color",
             "title": "Eigenbewässerung mit Reservoir",
             "badge": "Konstante Versorgung",
             "explanation": "<p>Ein Wasserreservoir kann die Versorgung gleichmäßiger machen. Besonders praktisch bei größeren Pflanzen oder unregelmäßigen Gießintervallen.</p>",
             "variant_label": "Größe und Ausführung",
             "image_alt": "",
+            "video": "shopify://files/videos/47551-451623797.mp4",
             "video_placeholder": "Produktvideo im Theme-Editor zuordnen"
           }
         },
@@ -578,7 +565,6 @@
     }
   },
   "order": [
-    "featured_collection_fF7F3a",
     "obstgenerator_zDjGB9",
     "substrate_world_XmFjWQ",
     "custom_grow_creator_XiGBAW"
