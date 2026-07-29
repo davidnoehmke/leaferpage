@@ -53,11 +53,6 @@
         "disabled": false,
         "settings": {}
       },
-      "15620043091132039688": {
-        "type": "shopify://apps/hoppy-trust-badges/blocks/trust_badges_icon/6e9703d9-56af-47d9-80bb-0abc8eb8c38b",
-        "disabled": false,
-        "settings": {}
-      },
       "5460033060862993441": {
         "type": "shopify://apps/essential-announcer/blocks/app-embed/93b5429f-c8d6-4c33-ae14-250fd84f361b",
         "disabled": false,
@@ -98,13 +93,6 @@
         "type": "shopify://apps/essential-trust-badges/blocks/app-embed/0ff65b25-07e1-408e-950f-f54dd3d1751b",
         "disabled": false,
         "settings": {}
-      },
-      "12687935322400196279": {
-        "type": "shopify://apps/trooix/blocks/app-embed/019e739d-5be2-7d8c-85c5-c892f50dae37",
-        "disabled": false,
-        "settings": {
-          "enabled": true
-        }
       },
       "15079184273603081885": {
         "type": "shopify://apps/essential-free-shipping/blocks/app_embed/4125375e-37c8-4137-949d-c4e1a3aac572",
@@ -206,6 +194,44 @@
           "style_colors_cta_text": "#ffffff",
           "style_colors_cta_button": "#000000",
           "style_colors_text": "#000000"
+        }
+      },
+      "9139608461449719892": {
+        "type": "shopify://apps/cwill-ai-chat/blocks/aichatbot/e7b73941-aea6-4bde-bb29-6e9e414581d0",
+        "disabled": false,
+        "settings": {}
+      },
+      "6603664506335945664": {
+        "type": "shopify://apps/transtore/blocks/switcher_embed_block/afeffe82-e563-4f78-90f4-f1e3d96286c3",
+        "disabled": false,
+        "settings": {}
+      },
+      "1232542678405107163": {
+        "type": "shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5",
+        "disabled": false,
+        "settings": {}
+      },
+      "2680175748099902610": {
+        "type": "shopify://apps/amazon-reviews/blocks/product-rating-snippet-embed/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+        "disabled": false,
+        "settings": {}
+      },
+      "13851756539466573627": {
+        "type": "shopify://apps/gelato-print-on-demand/blocks/product-personalizer/9f8f1130-ec83-4e2f-a417-5e69fb8f6e45",
+        "disabled": false,
+        "settings": {
+          "hidden-selector": "",
+          "in-page-personalization-preview-selector": "",
+          "cart-edit-selector": "",
+          "cart-item-info-selector": "",
+          "personalized-cart-preview-selector": "",
+          "dropdown-selectors-desktop": "None",
+          "dropdown-selectors-mobile": "None",
+          "show-personalize-tab": true,
+          "hide-preview-button": false,
+          "hide-preview-scroll-bar": false,
+          "zoom-in-preview": false,
+          "enable-manual-save-draft": false
         }
       }
     }
