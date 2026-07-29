@@ -207,7 +207,7 @@
         "collection": "shopify://collections/smartgrow",
         "products_to_show": 6,
         "columns": 6,
-        "compact": true
+        "compact": false
       }
     },
     "starter": {
