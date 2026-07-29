@@ -484,8 +484,8 @@
           "type": "system",
           "settings": {
             "product": "growpro-stofftopf-mit-untersetzer",
-            "title": "Atmungsaktiver Stofftopf",
-            "badge": "Aktive Wurzelzone",
+            "title": "{{ block.settings.product.title }}",
+            "badge": "A{{ block.settings.product.metafields.leafer.water_storage.value }}",
             "explanation": "<p>Die luftdurchlässige Topfwand unterstützt Sauerstoffaustausch und schnellen Wasserablauf. Ideal, wenn du Gießintervalle aktiv kontrollieren möchtest.</p>",
             "variant_label": "Größe und Ausführung",
             "image_alt": "",
