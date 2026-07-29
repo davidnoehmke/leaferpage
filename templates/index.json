@@ -103,12 +103,12 @@
           "settings": {
             "collection": "",
             "image": "shopify://shop_images/orientier-dich-an-den-pflanzgef-en-und-substratbestandteilen-bildern.png",
-            "title": "Nährstoffe & Ergänzungen",
-            "copy": "Mit zunehmendem Wachstum steigt der Nährstoffbedarf. Gezielt eingesetzte Substratzusätze stärken Wurzeln, verbessern die Struktur und fördern gesundes Wachstum.",
-            "cta_label": "Substrat sinnvoll ergänzen",
+            "title": "Hilfsmittel & Ergänzungen",
+            "copy": "Licht, Temperatur und Luftfeuchtigkeit bestimmen, wie kräftig eine Pflanze wächst. Smarte Grow-Hilfen schaffen auch zu Hause verlässlich gute Bedingungen.",
+            "cta_label": "Hilfsmittel & Ergänzungen",
             "fallback_link": "shopify://collections/smartgrow",
-            "fallback_title": "SmartGrow & Zubehör",
-            "fallback_copy": "Praktische Helfer für Gießen, Kontrolle und Pflege – sinnvoll ergänzt statt unnötig kompliziert."
+            "fallback_title": "Hilfsmittel & Hilfen ergänzen",
+            "fallback_copy": "Licht, Temperatur und Luftfeuchtigkeit bestimmen, wie kräftig eine Pflanze wächst. Smarte Grow-Hilfen schaffen auch zu Hause verlässlich gute Bedingungen."
           }
         }
       },
@@ -122,7 +122,7 @@
       "settings": {
         "eyebrow": "Finde dich zurecht bei uns",
         "heading": "schnelle Lösungen & Anbau Ratgeber und Entscheidungshilfen",
-        "intro": "<p>Für Neulinge & Interessierte haben wir einen roten Faden gelegt, dem du chronologisch folgen kannst. <br/></p><p>Profis & Kenner können direkt zum passenden Produkt springen.</p>"
+        "intro": "<p>Für Neulinge & Interessierte haben wir einen roten Faden gelegt, dem du chronologisch folgen kannst. <br/>———————————————————————<br/>Profis & Kenner können direkt zum passenden Produkt springen.</p>"
       }
     },
     "bestsellers": {
