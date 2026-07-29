@@ -47,9 +47,9 @@
       ],
       "settings": {
         "image": "shopify://shop_images/F1B9D8D3-2CB8-4AFD-8EE1-DCE71F33BC5A.png",
-        "overlay": 45,
+        "overlay": 100,
         "heading": "Glückliche Pflanzen machen glücklich. Eine These - aber eine schöne 🌿",
-        "text": "<p><strong>Ein abgestimmtes Pflanzsystem ist wie dein Zuhause für dich. Ein Ort der Ruhe und ein Ort an dem man sich heimlich fühlt. Jede Pflanze hat auch ihr angestammtes globales Zuhause. </strong></p>",
+        "text": "<p><a href=\"/collections/fertige-substratmischungen\" title=\"LEAFers Premium Substrate\">Ein abgestimmtes Pflanzsystem ist wie dein Zuhause für dich. Ein Ort der Ruhe und ein Ort an dem man sich heimlich fühlt. Jede Pflanze hat auch ihr angestammtes globales Zuhause. </a></p>",
         "primary_label": "Bodenbestandteile kennenlernen",
         "primary_link": "shopify://pages/leafers-substratbestandteile",
         "secondary_label": "Pflanzensystem zusammenstellen",
@@ -196,6 +196,39 @@
         "automatic": true,
         "automatic_limit": 5
       }
+    },
+    "1785287783ec760fcd": {
+      "type": "apps",
+      "blocks": {
+        "section_store_block_product_info_wrapper_76Cepi": {
+          "type": "shopify://apps/section-store/blocks/block-product-info-wrapper/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "auto_detect_product_info_container": true,
+            "product_info_container_selector": "",
+            "use_on_mobile": true,
+            "use_header": true,
+            "header_font_size": 16,
+            "header_bg_color": "#405937",
+            "header_text_color": "#ffffff",
+            "header_text_align": "center",
+            "header_text": "♥︎ 7 von 10 empfehlen es weiter",
+            "border_style": "dotted",
+            "border_width": 1,
+            "border_color": "#dfdfdf",
+            "border_radius": 12,
+            "background_color": "",
+            "shadow": "none",
+            "padding_top": 20,
+            "padding_bottom": 20,
+            "padding_left": 18,
+            "padding_right": 18
+          }
+        }
+      },
+      "block_order": [
+        "section_store_block_product_info_wrapper_76Cepi"
+      ],
+      "settings": {}
     },
     "brand_story": {
       "type": "brand-story",
@@ -350,39 +383,6 @@
         "heading": "Wurzelräume, Setups und Pflanzenideen",
         "handle": "#LEAFerservice"
       }
-    },
-    "1785287783ec760fcd": {
-      "type": "apps",
-      "blocks": {
-        "section_store_block_product_info_wrapper_76Cepi": {
-          "type": "shopify://apps/section-store/blocks/block-product-info-wrapper/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
-          "settings": {
-            "auto_detect_product_info_container": true,
-            "product_info_container_selector": "",
-            "use_on_mobile": true,
-            "use_header": true,
-            "header_font_size": 16,
-            "header_bg_color": "#405937",
-            "header_text_color": "#FFFFFF",
-            "header_text_align": "center",
-            "header_text": "♥︎ 7 von 10 empfehlen es weiter",
-            "border_style": "dotted",
-            "border_width": 1,
-            "border_color": "#DFDFDF",
-            "border_radius": 12,
-            "background_color": "",
-            "shadow": "none",
-            "padding_top": 20,
-            "padding_bottom": 20,
-            "padding_left": 18,
-            "padding_right": 18
-          }
-        }
-      },
-      "block_order": [
-        "section_store_block_product_info_wrapper_76Cepi"
-      ],
-      "settings": {}
     }
   },
   "order": [
