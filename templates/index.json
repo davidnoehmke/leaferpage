@@ -65,8 +65,8 @@
             "collection": "aufzucht-bewurzelung",
             "image": "shopify://shop_images/orientier-dich-an-den-pflanzgef-en-und-substratbestandteilen-bildern.png",
             "title": "{{ block.settings.collection.title }}",
-            "copy": "Beim Keimen entscheidet die richtige Umgebung über den Erfolg. Exotische Samen benötigen ein passendes Anzuchtsubstrat, gleichmäßige Feuchtigkeit und ausreichend Wärme. Wer die natürlichen Bedingungen der Pflanze nachbildet, verbessert die Keimrate und schafft die Grundlage für gesundes Wachstum.",
-            "cta_label": "Ratgeber hinzuziehen",
+            "copy": "Eine erfolgreiche Anzucht beginnt mit passenden Bedingungen. Anzuchtsubstrat, gleichmäßige Feuchtigkeit und Wärme fördern die Keimung und kräftige Wurzeln",
+            "cta_label": "Anzucht richtig starten",
             "fallback_link": "shopify://blogs/leafers-nice2know-blog/leafers-substrate-nice2know",
             "fallback_title": "Premium Substrate",
             "fallback_copy": "Ausgewogene Basismischungen für stabile Wurzeln, kontrollierte Feuchtigkeit und eine dauerhaft lockere Struktur."
