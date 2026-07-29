@@ -43,11 +43,11 @@
         "natural"
       ],
       "custom_css": [
-        "section {font-style: italic; text-align: center; background: rgba(255, 255, 0, 0.1);}"
+        "section {font-style: italic; text-align: center;}"
       ],
       "settings": {
         "image": "shopify://shop_images/F1B9D8D3-2CB8-4AFD-8EE1-DCE71F33BC5A.png",
-        "overlay": 80,
+        "overlay": 45,
         "heading": "Glückliche Pflanzen machen glücklich. Eine These - aber eine schöne 🌿",
         "text": "<p><strong>Ein abgestimmtes Pflanzsystem ist wie dein Zuhause für dich. Ein Ort der Ruhe und ein Ort an dem man sich heimlich fühlt. Jede Pflanze hat auch ihr angestammtes globales Zuhause. </strong></p>",
         "primary_label": "Bodenbestandteile kennenlernen",
@@ -118,6 +118,9 @@
         "collection_yV9NCk",
         "collection_BVLyhU"
       ],
+      "custom_css": [
+        "section {background: none; margin-bottom: 5px;padding: 5px;}"
+      ],
       "name": "Home Kollektionen",
       "settings": {
         "eyebrow": "Finde dich zurecht bei uns",
@@ -129,8 +132,8 @@
       "type": "featured-collection",
       "custom_css": [
         "text {margin: 0;}",
-        "cards {padding: 5px}",
-        ".product-card__options{}"
+        "cards {padding: 5px;}",
+        ".product-card__options {}"
       ],
       "settings": {
         "heading": "Unboxing-Set Anfrage & Testmengen",
