@@ -495,9 +495,9 @@
         "addon_YAYpmL": {
           "type": "addon",
           "settings": {
-            "product": "",
-            "title": "Passender Untersetzer",
-            "explanation": "Schützt Boden und Regal vor überschüssigem Gießwasser."
+            "product": "garden-highpro-ghp-profan-clip-ventilator-20-cm-12-w",
+            "title": "{{ block.settings.product.title }}",
+            "explanation": ""
           }
         },
         "addon_DfYGj8": {
