@@ -1,0 +1,10 @@
+{
+  "name": "leafer-knowledge-homepage",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static LEAFerservice knowledge homepage with structured content exports.",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "check:json": "node -e \"JSON.parse(require('fs').readFileSync('data/knowledge-content.json','utf8')); JSON.parse(require('fs').readFileSync('data/products.seed.json','utf8')); console.log('JSON OK')\""
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "updated_at": "2026-07-24",
+  "blogs": [
+    {
+      "slug": "luft-im-wurzelraum",
+      "title": "Warum Luft im Wurzelraum wichtiger ist als möglichst viel Wasser",
+      "primary_keyword": "Luft im Wurzelraum",
+      "path": "blogs/luft-im-wurzelraum.md"
+    },
+    {
+      "slug": "bims-lava-perlite-vergleich",
+      "title": "Bims, Lava oder Perlite: welcher Zuschlag passt zu welchem Ziel?",
+      "primary_keyword": "Bims Lava Perlite Vergleich",
+      "path": "blogs/bims-lava-perlite-vergleich.md"
+    },
+    {
+      "slug": "aroid-mix-alocasia-monstera-philodendron",
+      "title": "Aroid-Mix für Alocasia, Monstera und Philodendron",
+      "primary_keyword": "Aroid Mix",
+      "path": "blogs/aroid-mix-alocasia-monstera-philodendron.md"
+    },
+    {
+      "slug": "substrat-finder-zimmerpflanzen",
+      "title": "Substrat-Finder für Zimmerpflanzen: Luft, Wasser, Struktur oder Pufferung?",
+      "primary_keyword": "Substrat Finder Zimmerpflanzen",
+      "path": "blogs/substrat-finder-zimmerpflanzen.md"
+    }
+  ]
+}
