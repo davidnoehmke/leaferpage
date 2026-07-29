@@ -131,9 +131,9 @@
     "bestsellers": {
       "type": "featured-collection",
       "custom_css": [
-        "text {margin: 0;}",
-        "cards {padding: 15px;}",
-        "a{background: none}"
+        ".featured__header{margin: 0; font-family: asterisks}",
+        ".product-card{padding: 15px;}",
+        "a {background: none;}"
       ],
       "settings": {
         "heading": "Unboxing-Set Anfrage & inklusive Testpaket",
