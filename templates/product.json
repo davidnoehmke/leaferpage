@@ -1,5 +1,59 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "trust_bar_aQMfw3": {
+      "type": "trust-bar",
+      "blocks": {
+        "benefit_zdqNRF": {
+          "type": "benefit",
+          "settings": {
+            "icon": "natural",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "benefit_PegDH7": {
+          "type": "benefit",
+          "settings": {
+            "icon": "natural",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "benefit_qyGT9c": {
+          "type": "benefit",
+          "settings": {
+            "icon": "natural",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "benefit_dqKziW": {
+          "type": "benefit",
+          "settings": {
+            "icon": "natural",
+            "heading": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "benefit_zdqNRF",
+        "benefit_PegDH7",
+        "benefit_qyGT9c",
+        "benefit_dqKziW"
+      ],
+      "name": "t:sections.trust_bar.name",
+      "settings": {}
+    },
     "main": {
       "type": "main-product",
       "settings": {
@@ -17,19 +71,119 @@
     "configurator": {
       "type": "substrate-configurator",
       "blocks": {
-        "bark": { "type": "ingredient", "settings": { "name": "Pinienrinde", "function": "Struktur und Luftführung", "default_percentage": 30 } },
-        "perlite": { "type": "ingredient", "settings": { "name": "Perlite", "function": "Lockerheit und Drainage", "default_percentage": 20 } },
-        "lava": { "type": "ingredient", "settings": { "name": "Lavagranulat", "function": "Mineralische Stabilität", "default_percentage": 20 } },
-        "clay": { "type": "ingredient", "settings": { "name": "Blähton", "function": "Grobporen und Drainage", "default_percentage": 15 } },
-        "zeolite": { "type": "ingredient", "settings": { "name": "Zeolith", "function": "Wasser- und Nährstoffpuffer", "default_percentage": 15 } }
+        "bark": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Pinienrinde",
+            "function": "Struktur und Luftführung",
+            "default_percentage": 30
+          }
+        },
+        "perlite": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Perlite",
+            "function": "Lockerheit und Drainage",
+            "default_percentage": 20
+          }
+        },
+        "lava": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Lavagranulat",
+            "function": "Mineralische Stabilität",
+            "default_percentage": 20
+          }
+        },
+        "clay": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Blähton",
+            "function": "Grobporen und Drainage",
+            "default_percentage": 15
+          }
+        },
+        "zeolite": {
+          "type": "ingredient",
+          "settings": {
+            "name": "Zeolith",
+            "function": "Wasser- und Nährstoffpuffer",
+            "default_percentage": 15
+          }
+        }
       },
-      "block_order": ["bark", "perlite", "lava", "clay", "zeolite"],
-      "settings": { "show_on_all_products": false }
+      "block_order": [
+        "bark",
+        "perlite",
+        "lava",
+        "clay",
+        "zeolite"
+      ],
+      "settings": {
+        "show_on_pages": true,
+        "show_on_all_products": false
+      }
     },
     "cross_sell": {
       "type": "product-cross-sell",
-      "settings": { "heading": "Passt perfekt dazu" }
+      "settings": {
+        "heading": "Passt perfekt dazu",
+        "collection": ""
+      }
+    },
+    "hero_FrcM8x": {
+      "type": "hero",
+      "blocks": {
+        "benefit_qViyex": {
+          "type": "benefit",
+          "settings": {
+            "icon": "natural",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "benefit_H7cWkf": {
+          "type": "benefit",
+          "settings": {
+            "icon": "natural",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "benefit_VR7Rq7": {
+          "type": "benefit",
+          "settings": {
+            "icon": "natural",
+            "heading": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "benefit_qViyex",
+        "benefit_H7cWkf",
+        "benefit_VR7Rq7"
+      ],
+      "name": "t:sections.hero.name",
+      "settings": {
+        "image": "shopify://shop_images/lifestyle-anwendungabild.png",
+        "overlay": 80,
+        "heading": "",
+        "text": "",
+        "primary_label": "",
+        "primary_link": "",
+        "secondary_label": "",
+        "secondary_link": ""
+      }
     }
   },
-  "order": ["main", "variant_guide", "recipe", "configurator", "cross_sell"]
+  "order": [
+    "hero_FrcM8x",
+    "trust_bar_aQMfw3",
+    "main",
+    "variant_guide",
+    "recipe",
+    "configurator",
+    "cross_sell"
+  ]
 }
