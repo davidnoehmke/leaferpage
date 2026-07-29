@@ -65,7 +65,7 @@
             "collection": "aufzucht-bewurzelung",
             "image": "shopify://shop_images/orientier-dich-an-den-pflanzgef-en-und-substratbestandteilen-bildern.png",
             "title": "{{ block.settings.collection.title }}",
-            "copy": "Oft passieren hier die meisten Fehler. Beim Keimvorgang muss man sehr vorsichtig sein - entscheidend ist es, nicht nur eine extravagante zu nehmen und diesen in eine Standarderde zu setzen. Pflanzen haben ein angestammtes Zuhause, und das ist leider nicht dein Wohnzimmer. Aber mit ein paar Anpassungen und Ergänzungen werden sich viele Pflanzen schon mehr als zufrieden geben.",
+            "copy": "Beim Keimen entscheidet die richtige Umgebung über den Erfolg. Exotische Samen benötigen ein passendes Anzuchtsubstrat, gleichmäßige Feuchtigkeit und ausreichend Wärme. Wer die natürlichen Bedingungen der Pflanze nachbildet, verbessert die Keimrate und schafft die Grundlage für gesundes Wachstum.",
             "cta_label": "Ratgeber hinzuziehen",
             "fallback_link": "shopify://blogs/leafers-nice2know-blog/leafers-substrate-nice2know",
             "fallback_title": "Premium Substrate",
