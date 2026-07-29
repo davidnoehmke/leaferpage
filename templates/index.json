@@ -62,9 +62,9 @@
         "collection_DamgpF": {
           "type": "collection",
           "settings": {
-            "collection": "aufzucht-bewurzelung",
+            "collection": "",
             "image": "shopify://shop_images/orientier-dich-an-den-pflanzgef-en-und-substratbestandteilen-bildern.png",
-            "title": "{{ block.settings.collection.title }}",
+            "title": "Anzucht & Wurzelbildung",
             "copy": "Eine erfolgreiche Anzucht beginnt mit passenden Bedingungen. Anzuchtsubstrat, gleichmäßige Feuchtigkeit und Wärme fördern die Keimung und kräftige Wurzeln",
             "cta_label": "Anzucht richtig starten",
             "fallback_link": "shopify://blogs/leafers-nice2know-blog/leafers-substrate-nice2know",
@@ -88,7 +88,8 @@
         "collection_yV9NCk": {
           "type": "collection",
           "settings": {
-            "collection": "leafers-gartenschuppen",
+            "collection": "",
+            "image": "shopify://shop_images/9D2F7D50-6655-4DAC-8887-298F2C877A0D.png",
             "title": "Topf & Bewässerung",
             "copy": "Topfgröße, Drainage und Bewässerung müssen zusammenpassen. Das richtige Pflanzgefäß schützt vor Staunässe und unterstützt eine gleichmäßige Versorgung.",
             "cta_label": "Pflanzgefäße kennenlernen",
@@ -100,7 +101,7 @@
         "collection_BVLyhU": {
           "type": "collection",
           "settings": {
-            "collection": "smartgrow",
+            "collection": "",
             "image": "shopify://shop_images/orientier-dich-an-den-pflanzgef-en-und-substratbestandteilen-bildern.png",
             "title": "Nährstoffe & Ergänzungen",
             "copy": "Mit zunehmendem Wachstum steigt der Nährstoffbedarf. Gezielt eingesetzte Substratzusätze stärken Wurzeln, verbessern die Struktur und fördern gesundes Wachstum.",
