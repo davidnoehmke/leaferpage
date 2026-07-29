@@ -306,7 +306,7 @@
         "mixture_8QKek7": {
           "type": "mixture",
           "settings": {
-            "product": "",
+            "product": "leafer-tropical-mix",
             "image_alt": "",
             "badge": "Spezialmischung",
             "title": "Tropical Mix",
@@ -321,7 +321,7 @@
         "mixture_6BkkMV": {
           "type": "mixture",
           "settings": {
-            "product": "",
+            "product": "leafer-alocasia-mix",
             "image_alt": "",
             "badge": "Spezialmischung",
             "title": "Aroid Mix",
@@ -336,10 +336,10 @@
         "mixture_tGXPN3": {
           "type": "mixture",
           "settings": {
-            "product": "",
+            "product": "leafer-palm-green-mix",
             "image_alt": "",
             "badge": "Spezialmischung",
-            "title": "Desert Mix",
+            "title": "{{ block.settings.product.title }}",
             "claim": "Schnelle Drainage für Kakteen und Sukkulenten",
             "ratio": "Lava · Bims · Perlite · Blähton",
             "text": "",
