@@ -79,7 +79,7 @@
             "image": "shopify://shop_images/20587884-FE99-4A1A-B914-EA451C3BAFA7_558e69a0-90d6-4312-805d-433cea1184d5.png",
             "title": "Das passende Substrat",
             "copy": "Sobald die ersten Wurzeln wachsen, braucht jede Pflanze die richtige Grundlage. Luftige, strukturstabile Mischungen versorgen die Wurzeln mit Wasser und Sauerstoff.",
-            "cta_label": "Passendes Substrat finden>",
+            "cta_label": "Passendes Substrat finden",
             "fallback_link": "shopify://collections/substrate-zusatze",
             "fallback_title": "Substratzusätze",
             "fallback_copy": "Gezielte Komponenten für mehr Luft, Drainage, Wasserspeicherung oder Struktur – passend zur Pflanze dosierbar."
@@ -128,7 +128,7 @@
     "bestsellers": {
       "type": "featured-collection",
       "custom_css": [
-        "text {margin: 0}"
+        "text {margin: 0;}"
       ],
       "settings": {
         "heading": "DIY Bundles & Testmengen",
