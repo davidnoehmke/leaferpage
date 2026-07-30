@@ -165,10 +165,16 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "collection_seo_copy_Ld7pVR": {
+      "type": "collection-seo-copy",
+      "name": "SEO-Kollektionstext",
+      "settings": {}
     }
   },
   "order": [
     "configurator",
-    "grow_creator"
+    "grow_creator",
+    "collection_seo_copy_Ld7pVR"
   ]
 }
