@@ -9,62 +9,6 @@
  */
 {
   "sections": {
-    "substrate_world": {
-      "type": "substrate-world",
-      "blocks": {
-        "faq_nje8az": {
-          "type": "faq",
-          "settings": {
-            "question": "Kann ich die Mischverhältnisse verändern?",
-            "answer": "<p>Ja. Die Rezepturen sind Startpunkte. Passe sie an Pflanzenart, Topf, Standort und deine Gießroutine an.</p>"
-          }
-        },
-        "faq_peGEta": {
-          "type": "faq",
-          "settings": {
-            "question": "Kann ich die Mischverhältnisse verändern?",
-            "answer": "<p>Ja. Die Rezepturen sind Startpunkte. Passe sie an Pflanzenart, Topf, Standort und deine Gießroutine an.</p>"
-          }
-        },
-        "mixture_YzVy8Q": {
-          "type": "mixture",
-          "settings": {
-            "product": "leafer-tropical-mix",
-            "image": "shopify://shop_images/gF1eaquSBZaVpMYPhc_FgAM_2_gps_generated.png",
-            "image_alt": "Substrate selber konfigurieren",
-            "badge": "selber mischen",
-            "title": "",
-            "claim": "Substrate selber konfigurieren",
-            "ratio": "",
-            "text": "",
-            "show_price": true,
-            "button_label": "Zum Produkt",
-            "link": "{{ block.settings.product.url }}"
-          }
-        }
-      },
-      "block_order": [
-        "faq_nje8az",
-        "faq_peGEta",
-        "mixture_YzVy8Q"
-      ],
-      "settings": {
-        "hero_alt": "LEAFerservice Substratmischungen und natürliche Bestandteile",
-        "eyebrow": "Mischen. Verstehen. Wachsen lassen.",
-        "heading": "Substrate, die zu deiner Pflanze passen",
-        "intro": "<p>Starte mit einer erprobten Spezialmischung oder baue dein Substrat aus einzelnen Bestandteilen selbst auf. Jede Rezeptur bleibt transparent und anpassbar.</p>",
-        "button_label": "Mischungen entdecken",
-        "button_link": "",
-        "text_alignment": "left",
-        "overlay": 55,
-        "hero_height": 680,
-        "content_heading": "Deine Pflanze gibt die Richtung vor",
-        "content_text": "<p>Wurzeln brauchen je nach Pflanzenart unterschiedlich viel Luft, Feuchtigkeit und Halt. Deshalb zeigen wir nicht nur fertige Mischungen, sondern auch, welche Aufgabe jeder Bestandteil übernimmt.</p>",
-        "color_scheme": "default",
-        "padding_top": 72,
-        "padding_bottom": 88
-      }
-    },
     "configurator": {
       "type": "substrate-configurator",
       "blocks": {
@@ -142,17 +86,17 @@
         "saucer": {
           "type": "addon",
           "settings": {
-            "product": "",
-            "title": "Passender Untersetzer",
-            "explanation": "Schützt Boden und Regal vor überschüssigem Gießwasser."
+            "product": "garden-highpro-ghp-profan-clip-ventilator-20-cm-12-w",
+            "title": "{{ block.settings.product.metafields.custom.seo_title.value }}",
+            "explanation": ""
           }
         },
         "support": {
           "type": "addon",
           "settings": {
-            "product": "",
-            "title": "Rankhilfe",
-            "explanation": "Gibt kletternden Aroids Halt und unterstützt einen geordneten Wuchs."
+            "product": "kokos-quelltabletten",
+            "title": "{{ block.settings.product.title }}",
+            "explanation": ""
           }
         },
         "meter": {
@@ -211,7 +155,6 @@
     }
   },
   "order": [
-    "substrate_world",
     "configurator",
     "grow_creator"
   ]
