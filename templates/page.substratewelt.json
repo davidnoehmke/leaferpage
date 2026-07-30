@@ -12,10 +12,17 @@
     "substrate_world": {
       "type": "substrate-world",
       "blocks": {
+        "faq_peGEta": {
+          "type": "faq",
+          "settings": {
+            "question": "Kann ich die Mischverhältnisse verändern?",
+            "answer": "<p>Ja. Die Rezepturen sind Startpunkte. Passe sie an Pflanzenart, Topf, Standort und deine Gießroutine an.</p>"
+          }
+        },
         "mixture_YzVy8Q": {
           "type": "mixture",
           "settings": {
-            "product": "leafer-substrat-konfigurator",
+            "product": "leafer-tropical-mix",
             "image": "shopify://shop_images/gF1eaquSBZaVpMYPhc_FgAM_2_gps_generated.png",
             "image_alt": "Substrate selber konfigurieren",
             "badge": "selber mischen",
@@ -24,12 +31,13 @@
             "ratio": "",
             "text": "",
             "show_price": true,
-            "button_label": "Nicht anpassen",
+            "button_label": "Zum Produkt",
             "link": "{{ block.settings.product.url }}"
           }
         }
       },
       "block_order": [
+        "faq_peGEta",
         "mixture_YzVy8Q"
       ],
       "settings": {
@@ -168,7 +176,7 @@
         "eyebrow": "LEAFers CustomGrowCreator",
         "heading": "Aus einzelnen Entscheidungen wird dein Grow-Setup",
         "intro": "<p>Kombiniere deine individuelle Substratrezeptur mit einem passenden Topfsystem und sinnvollen Erweiterungen. Jede Auswahl wird erklärt – du behältst jederzeit die Kontrolle.</p>",
-        "mix_product": "",
+        "mix_product": "leafer-tropical-mix",
         "step_mix_heading": "Rezeptur und Menge übernehmen",
         "step_mix_text": "Die oben per Slider eingestellte Rezeptur wird automatisch mit deiner Bestellung gespeichert.",
         "size_label": "Gesamtmenge auswählen",
