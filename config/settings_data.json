@@ -233,6 +233,21 @@
           "zoom-in-preview": false,
           "enable-manual-save-draft": false
         }
+      },
+      "12994730151769110984": {
+        "type": "shopify://apps/atlas-ai-store-builder/blocks/atlas-cart-upsells-app-embed/ff382ac5-0af5-4ea9-a13a-234e8976ca8b",
+        "disabled": false,
+        "settings": {}
+      },
+      "17358671006927775310": {
+        "type": "shopify://apps/atlas-ai-store-builder/blocks/atlas-dependencies/ff382ac5-0af5-4ea9-a13a-234e8976ca8b",
+        "disabled": false,
+        "settings": {}
+      },
+      "15709271889847974563": {
+        "type": "shopify://apps/cx-elevate-date-time-picker/blocks/embed_script/3613d08c-d180-43c4-8f66-9aca9e0d28fc",
+        "disabled": true,
+        "settings": {}
       }
     }
   },
