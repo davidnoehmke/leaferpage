@@ -113,7 +113,7 @@
         "collection_BVLyhU"
       ],
       "custom_css": [
-        ".home-journey__card {background-color: rgba(0, 0, 0, 0.19); padding: 11px; margin: 10px}"
+        ".home-journey__card {background-color: rgba(0, 0, 0, 0.19); padding: 11px; margin: 10px;}"
       ],
       "name": "Home Kollektionen",
       "settings": {
@@ -125,13 +125,13 @@
     "bestsellers": {
       "type": "featured-collection",
       "settings": {
-        "heading": "Willkommensangebote %",
+        "heading": "Unsere Spezials",
         "heading_preset": "heading",
-        "link_label": "alle Angebote",
+        "link_label": "mehr ->",
         "collection": "new-arrivals",
         "products_to_show": 4,
         "columns": 4,
-        "compact": false
+        "compact": true
       }
     },
     "trust": {
@@ -189,7 +189,7 @@
     "brand_story": {
       "type": "brand-story",
       "settings": {
-        "link": "shopify://pages/faq"
+        "link": "shopify://pages/individuelles-substrat"
       }
     },
     "highlights": {

@@ -15,17 +15,17 @@
         "mixture_YzVy8Q": {
           "type": "mixture",
           "settings": {
-            "product": "leafer-seed-cutting-mix",
+            "product": "leafer-substrat-konfigurator",
             "image": "shopify://shop_images/gF1eaquSBZaVpMYPhc_FgAM_2_gps_generated.png",
-            "image_alt": "",
+            "image_alt": "Substrate selber konfigurieren",
             "badge": "selber mischen",
             "title": "",
-            "claim": "Luftige Struktur für vitale Wurzeln",
+            "claim": "Substrate selber konfigurieren",
             "ratio": "",
             "text": "",
             "show_price": true,
-            "button_label": "Mischung ansehen",
-            "link": ""
+            "button_label": "Nicht anpassen",
+            "link": "{{ block.settings.product.url }}"
           }
         }
       },
@@ -102,9 +102,9 @@
         "fabric_pot": {
           "type": "system",
           "settings": {
-            "product": "",
-            "title": "Atmungsaktiver Stofftopf",
-            "badge": "Aktive Wurzelzone",
+            "product": "gronest-stofftopf-pflanzsack",
+            "title": "{{ block.settings.product.title }}",
+            "badge": "{{ block.settings.product.metafields.leafer.usp_1.value }}",
             "explanation": "<p>Die luftdurchlässige Topfwand unterstützt Sauerstoffaustausch und schnellen Wasserablauf. Ideal, wenn du Gießintervalle aktiv kontrollieren möchtest.</p>",
             "variant_label": "Größe und Ausführung",
             "image_alt": "",
