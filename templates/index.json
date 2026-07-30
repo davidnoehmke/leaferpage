@@ -42,6 +42,9 @@
         "quality",
         "natural"
       ],
+      "custom_css": [
+        "hero {height: 100vh}"
+      ],
       "settings": {
         "image": "shopify://shop_images/5CF53F22-7301-4F3D-8D08-598440AF6290.png",
         "overlay": 80,
