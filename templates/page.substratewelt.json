@@ -86,8 +86,8 @@
         "saucer": {
           "type": "addon",
           "settings": {
-            "product": "garden-highpro-ghp-profan-clip-ventilator-20-cm-12-w",
-            "title": "{{ block.settings.product.metafields.custom.seo_title.value }}",
+            "product": "kokosstab-1",
+            "title": "",
             "explanation": ""
           }
         },
@@ -102,17 +102,17 @@
         "meter": {
           "type": "addon",
           "settings": {
-            "product": "",
-            "title": "Feuchtigkeitsmesser",
-            "explanation": "Hilft dabei, den richtigen Gießzeitpunkt besser einzuschätzen."
+            "product": "leafer-rock-cubes",
+            "title": "",
+            "explanation": ""
           }
         },
         "light": {
           "type": "addon",
           "settings": {
-            "product": "",
-            "title": "Pflanzenlicht",
-            "explanation": "Ergänzt fehlendes Tageslicht an dunkleren Standorten."
+            "product": "leaferseeddial™-dosier-sahelfer-fur-feines-saatgut",
+            "title": "",
+            "explanation": ""
           }
         }
       },
