@@ -97,11 +97,6 @@
         "disabled": false,
         "settings": {}
       },
-      "15079184273603081885": {
-        "type": "shopify://apps/essential-free-shipping/blocks/app_embed/4125375e-37c8-4137-949d-c4e1a3aac572",
-        "disabled": true,
-        "settings": {}
-      },
       "11531005611096603357": {
         "type": "shopify://apps/zalify-pixel-popups-emails/blocks/popup-embed/0f5e9b69-424e-42a3-8bd7-8d5b75dd8130",
         "disabled": false,
@@ -135,6 +130,21 @@
       },
       "9139608461449719892": {
         "type": "shopify://apps/cwill-ai-chat/blocks/aichatbot/e7b73941-aea6-4bde-bb29-6e9e414581d0",
+        "disabled": false,
+        "settings": {}
+      },
+      "12994730151769110984": {
+        "type": "shopify://apps/atlas-ai-store-builder/blocks/atlas-cart-upsells-app-embed/ff382ac5-0af5-4ea9-a13a-234e8976ca8b",
+        "disabled": false,
+        "settings": {}
+      },
+      "17358671006927775310": {
+        "type": "shopify://apps/atlas-ai-store-builder/blocks/atlas-dependencies/ff382ac5-0af5-4ea9-a13a-234e8976ca8b",
+        "disabled": false,
+        "settings": {}
+      },
+      "15079184273603081885": {
+        "type": "shopify://apps/essential-free-shipping/blocks/app_embed/4125375e-37c8-4137-949d-c4e1a3aac572",
         "disabled": false,
         "settings": {}
       }
