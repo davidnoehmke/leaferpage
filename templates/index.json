@@ -43,7 +43,7 @@
         "natural"
       ],
       "custom_css": [
-        "hero {position: absolute; background-size: cover;}"
+        "section {background: none}"
       ],
       "settings": {
         "image": "shopify://shop_images/lifestyle-anwendungabild.png",
@@ -116,7 +116,7 @@
         "collection_BVLyhU"
       ],
       "custom_css": [
-        "section {background: none}"
+        "section {background: none;}"
       ],
       "name": "Home Kollektionen",
       "settings": {
