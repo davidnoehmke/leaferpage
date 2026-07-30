@@ -59,6 +59,18 @@
     "grow_creator": {
       "type": "custom-grow-creator",
       "blocks": {
+        "system_aiLhGa": {
+          "type": "system",
+          "settings": {
+            "product": "leafer-pot",
+            "title": "",
+            "badge": "Topfsystem",
+            "explanation": "",
+            "variant_label": "Größe und Ausführung",
+            "image_alt": "",
+            "video_placeholder": "Produktvideo im Theme-Editor zuordnen"
+          }
+        },
         "fabric_pot": {
           "type": "system",
           "settings": {
@@ -117,6 +129,7 @@
         }
       },
       "block_order": [
+        "system_aiLhGa",
         "fabric_pot",
         "self_watering",
         "saucer",
