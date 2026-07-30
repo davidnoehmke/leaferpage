@@ -9,51 +9,6 @@
  */
 {
   "sections": {
-    "hero_FrcM8x": {
-      "type": "hero",
-      "blocks": {
-        "benefit_qViyex": {
-          "type": "benefit",
-          "settings": {
-            "icon": "natural",
-            "heading": "",
-            "text": ""
-          }
-        },
-        "benefit_H7cWkf": {
-          "type": "benefit",
-          "settings": {
-            "icon": "natural",
-            "heading": "",
-            "text": ""
-          }
-        },
-        "benefit_VR7Rq7": {
-          "type": "benefit",
-          "settings": {
-            "icon": "natural",
-            "heading": "",
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "benefit_qViyex",
-        "benefit_H7cWkf",
-        "benefit_VR7Rq7"
-      ],
-      "name": "t:sections.hero.name",
-      "settings": {
-        "image": "shopify://shop_images/lifestyle-anwendungabild.png",
-        "overlay": 80,
-        "heading": "",
-        "text": "",
-        "primary_label": "",
-        "primary_link": "",
-        "secondary_label": "",
-        "secondary_link": ""
-      }
-    },
     "main": {
       "type": "main-product",
       "settings": {
@@ -133,7 +88,6 @@
     }
   },
   "order": [
-    "hero_FrcM8x",
     "main",
     "variant_guide",
     "recipe",
