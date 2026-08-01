@@ -42,9 +42,7 @@
         "quality",
         "natural"
       ],
-      "custom_css": [
-        "section {font-style: italic; text-align: center;}"
-      ],
+      "custom_css": [],
       "settings": {
         "image": "shopify://shop_images/F1B9D8D3-2CB8-4AFD-8EE1-DCE71F33BC5A.png",
         "overlay": 100,
