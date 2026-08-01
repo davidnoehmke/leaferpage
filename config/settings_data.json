@@ -123,48 +123,11 @@
         "disabled": false,
         "settings": {}
       },
-      "15683396631634586217": {
-        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
-        "disabled": false,
-        "settings": {
-          "greeting_message": "",
-          "show_featured_products": true,
-          "featured_products": [],
-          "background_color": "#FFFFFF",
-          "font_color": "#000000",
-          "button_color": "#000000",
-          "secondary_color": "#FFFFFF",
-          "ternary_color": "#6A6A6A",
-          "button_icon": "chat_bubble",
-          "button_text": "chat_with_us",
-          "button_horizontal_position": "bottom_right",
-          "button_vertical_position": "lowest",
-          "agent_inherit_fonts": true,
-          "agent_font": "system_ui_n4",
-          "agent_border_radius": 16
-        }
-      },
       "13047258039897440615": {
         "type": "shopify://apps/judge-me-reviews/blocks/cart_drawer_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {
           "widget_type": "review-widget"
-        }
-      },
-      "12366796244750993390": {
-        "type": "shopify://apps/amazon-reviews/blocks/sticky-compact-widget-block-embed/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
-        "disabled": false,
-        "settings": {
-          "font": "default",
-          "variant": "trust",
-          "themeId": "light",
-          "verticalPositionId": "top",
-          "horizontalPositionId": "right",
-          "minimize": false,
-          "slideType": "rating",
-          "showDate": true,
-          "message": "Our customers have rated us",
-          "transparent": 1
         }
       },
       "15912215999290715800": {
@@ -206,16 +169,6 @@
         "disabled": false,
         "settings": {}
       },
-      "1232542678405107163": {
-        "type": "shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5",
-        "disabled": false,
-        "settings": {}
-      },
-      "2680175748099902610": {
-        "type": "shopify://apps/amazon-reviews/blocks/product-rating-snippet-embed/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
-        "disabled": false,
-        "settings": {}
-      },
       "13851756539466573627": {
         "type": "shopify://apps/gelato-print-on-demand/blocks/product-personalizer/9f8f1130-ec83-4e2f-a417-5e69fb8f6e45",
         "disabled": false,
@@ -248,6 +201,58 @@
         "type": "shopify://apps/cx-elevate-date-time-picker/blocks/embed_script/3613d08c-d180-43c4-8f66-9aca9e0d28fc",
         "disabled": true,
         "settings": {}
+      },
+      "1232542678405107163": {
+        "type": "shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5",
+        "disabled": true,
+        "settings": {}
+      },
+      "12366796244750993390": {
+        "type": "shopify://apps/amazon-reviews/blocks/sticky-compact-widget-block-embed/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+        "disabled": true,
+        "settings": {
+          "font": "default",
+          "variant": "trust",
+          "themeId": "light",
+          "verticalPositionId": "top",
+          "horizontalPositionId": "right",
+          "minimize": false,
+          "slideType": "rating",
+          "showDate": true,
+          "message": "Our customers have rated us",
+          "transparent": 1
+        }
+      },
+      "2680175748099902610": {
+        "type": "shopify://apps/amazon-reviews/blocks/product-rating-snippet-embed/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+        "disabled": true,
+        "settings": {}
+      },
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": false,
+        "settings": {
+          "greeting_message": "",
+          "show_featured_products": true,
+          "featured_products": [
+            "alocasia-black-velvet",
+            "anzucht-stecklings-bundle",
+            "anzuchttopf5-12cm"
+          ],
+          "background_color": "#ffffff",
+          "font_color": "#000000",
+          "agent_invert_activator_colors": true,
+          "button_color": "#000000",
+          "secondary_color": "#ffffff",
+          "ternary_color": "#6a6a6a",
+          "button_icon": "chat_bubble",
+          "button_text": "chat_with_us",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest",
+          "agent_inherit_fonts": true,
+          "agent_font": "system_ui_n4",
+          "agent_border_radius": 16
+        }
       }
     }
   },
