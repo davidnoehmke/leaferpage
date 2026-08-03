@@ -42,7 +42,9 @@
         "quality",
         "natural"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".button{width: auto}"
+      ],
       "settings": {
         "image": "shopify://shop_images/ftpnasXHK7LHpMYPtY6aiQ0_3_gps_generated.png",
         "overlay": 100,
