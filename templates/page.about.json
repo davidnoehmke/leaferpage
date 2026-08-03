@@ -1,0 +1,110 @@
+{
+  "sections": {
+    "main": {
+      "type": "about-story",
+      "settings": {
+        "eyebrow": "Über LEAFerservice",
+        "heading": "Pflanzenpflege, die an der Wurzel beginnt.",
+        "lead": "<p>Wir verbinden verständliches Pflanzenwissen mit sorgfältig ausgewählten Substraten, Zusätzen, Gefäßen und Werkzeugen – damit Entscheidungen einfacher und Pflanzen langfristig gesünder werden.</p>",
+        "primary_label": "Sortiment entdecken",
+        "secondary_label": "Kontakt aufnehmen",
+        "navigation_label": "Unsere Geschichte",
+        "sticky_offset": 90,
+        "show_scroll_hint": true,
+        "scroll_hint": "Geschichte lesen"
+      },
+      "blocks": {
+        "chapter_origin": {
+          "type": "chapter",
+          "settings": {
+            "nav_label": "Unser Anfang",
+            "eyebrow": "Unser Anfang",
+            "heading": "Aus einer Pflanzenfrage wurde eine klare Idee.",
+            "text": "<p>Erzähle hier, welches Problem am Anfang stand, welche Erfahrung euch geprägt hat und warum LEAFerservice gegründet wurde.</p><p>Nutze konkrete Beobachtungen statt allgemeiner Werbeversprechen.</p>",
+            "image_position": "left",
+            "tag": "Platzhalter: Jahr oder Meilenstein"
+          }
+        },
+        "chapter_selection": {
+          "type": "chapter",
+          "settings": {
+            "nav_label": "Unsere Auswahl",
+            "eyebrow": "Unsere Auswahl",
+            "heading": "Jedes Produkt braucht eine klare Aufgabe.",
+            "text": "<p>Beschreibe hier, wie Produkte geprüft, ausgewählt und miteinander kombiniert werden. Erkläre auch, welche Kriterien gegen eine Aufnahme ins Sortiment sprechen.</p>",
+            "image_position": "right",
+            "tag": "Platzhalter: Auswahlprinzip"
+          }
+        },
+        "founder_quote": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>Gute Pflanzenpflege beginnt nicht mit mehr Produkten, sondern mit der richtigen Entscheidung.</p>",
+            "author": "Name der Gründerperson",
+            "role": "Gründung · LEAFerservice"
+          }
+        },
+        "metrics_today": {
+          "type": "metrics",
+          "settings": {
+            "nav_label": "Heute",
+            "eyebrow": "LEAFerservice heute",
+            "heading": "Was aus der Idee gewachsen ist.",
+            "text": "<p>Verwende nur belegbare Kennzahlen. Auch kleine, konkrete Werte wirken stärker als große, unklare Aussagen.</p>",
+            "metric_1_value": "00+",
+            "metric_1_label": "Ausgewählte Produkte",
+            "metric_1_detail": "Platzhalter mit kurzer Einordnung",
+            "metric_2_value": "00",
+            "metric_2_label": "Pflanzenbereiche",
+            "metric_2_detail": "Platzhalter mit kurzer Einordnung",
+            "metric_3_value": "000",
+            "metric_3_label": "Beratene Projekte",
+            "metric_3_detail": "Platzhalter mit kurzer Einordnung"
+          }
+        },
+        "values_principles": {
+          "type": "values",
+          "settings": {
+            "nav_label": "Unsere Haltung",
+            "eyebrow": "Unsere Haltung",
+            "heading": "Drei Grundsätze für jede Entscheidung.",
+            "text": "<p>Formuliere hier die Prinzipien, an denen Auswahl, Beratung und Produktentwicklung gemessen werden.</p>",
+            "value_1_title": "Bedarf vor Trend",
+            "value_1_text": "Pflanze, Standort und Anwendung geben die Richtung vor.",
+            "value_2_title": "Verständlich statt kompliziert",
+            "value_2_text": "Wir erklären Funktion, Grenzen und sinnvolle Kombinationen.",
+            "value_3_title": "Langfristig gedacht",
+            "value_3_text": "Gesunde Wurzeln und belastbare Routinen zählen mehr als kurzfristige Effekte."
+          }
+        },
+        "image_context": {
+          "type": "image_break",
+          "settings": {
+            "caption": "Platzhalter: Was ist zu sehen und warum ist dieser Moment für die Geschichte relevant?",
+            "tall": false
+          }
+        },
+        "cta_next": {
+          "type": "cta",
+          "settings": {
+            "eyebrow": "Gemeinsam weiterwachsen",
+            "heading": "Was braucht deine Pflanze wirklich?",
+            "text": "<p>Führe Besucher von der Geschichte zu einem sinnvollen nächsten Schritt – zum Sortiment, zu einer Beratung oder zu einem Kontaktformular.</p>",
+            "primary_label": "Sortiment entdecken",
+            "secondary_label": "Kontakt aufnehmen"
+          }
+        }
+      },
+      "block_order": [
+        "chapter_origin",
+        "chapter_selection",
+        "founder_quote",
+        "metrics_today",
+        "values_principles",
+        "image_context",
+        "cta_next"
+      ]
+    }
+  },
+  "order": ["main"]
+}

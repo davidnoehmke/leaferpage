@@ -1,54 +1,178 @@
-{
+/*\n * Shopify homepage template. Managed by the theme editor.\n */\n{
   "sections": {
-    "hero": {
-      "type": "hero",
+    "leaf_home": {
+      "type": "leaf-home",
       "blocks": {
-        "shipping": { "type": "benefit", "settings": { "icon": "shipping" } },
-        "quality": { "type": "benefit", "settings": { "icon": "quality" } },
-        "natural": { "type": "benefit", "settings": { "icon": "natural" } }
+        "substrates": {"type":"card","settings":{"icon":"◌","heading":"Substrate","text":"Strukturstabile Mischungen für unterschiedliche Wurzelräume.","link_label":"Substrate entdecken","link":"shopify://collections/fertige-substratmischungen"}},
+        "components": {"type":"card","settings":{"icon":"✦","heading":"Bestandteile","text":"Gezielte Zusätze für Luft, Drainage, Feuchte und Struktur.","link_label":"Zusätze ansehen","link":"shopify://collections/substrate-zusatze"}},
+        "pots": {"type":"card","settings":{"icon":"◫","heading":"Pflanzgefäße","text":"Stofftöpfe und klassische Gefäße passend zum Setup.","link_label":"Gefäße ansehen","link":"shopify://collections/leafers-gartenschuppen"}},
+        "smart": {"type":"card","settings":{"icon":"⌁","heading":"Smart Grow","text":"Smarte Helfer für Anzucht, Licht, Gießen und Kontrolle.","link_label":"Smart Grow ansehen","link":"shopify://collections/smartgrow"}}
       },
-      "block_order": ["shipping", "quality", "natural"],
+      "block_order": [
+        "shipping",
+        "quality",
+        "natural"
+      ],
+      "custom_css": [
+        "section {background: none}"
+      ],
       "settings": {
-        "overlay": 80,
+        "image": "shopify://shop_images/lifestyle-anwendungabild.png",
+        "overlay": 20,
+        "heading": "Pflanzenpflege beginnt an der Wurzel.",
+        "text": "<p>Hängende Bläter bei einer Alocasia oder ein Wachstumsstörung bei einer Monstera oder einfach trauermücken oder tribse? Wir finden gemeinsam die Lösing </p>",
+        "primary_label": "Sortiment entdecken",
         "primary_link": "shopify://collections/all",
-        "secondary_link": "shopify://collections/all"
+        "secondary_label": "bekannte Probleme durchsuchen",
+        "secondary_link": "shopify://pages/individuelles-substrat"
+      }
+    },
+    "home_collection_journey_djRzLh": {
+      "type": "home-collection-journey",
+      "blocks": {
+        "collection_DamgpF": {
+          "type": "collection",
+          "settings": {
+            "collection": "shopify://collections/fertige-substratmischungen",
+            "image": "shopify://shop_images/331B5F5C-EB8E-4BF9-A7FF-4720053D40E5.png",
+            "title": "abgestimmte Substrate",
+            "copy": "Fertige Mischungen als klarer Startpunkt für unterschiedliche Wurzelräume, Standorte und Gießroutinen.",
+            "cta_label": "Substrat wählen",
+            "fallback_link": "shopify://collections/fertige-substratmischungen",
+            "fallback_title": "Premium Substrate",
+            "fallback_copy": "Ausgewogene Basismischungen für stabile Wurzeln, kontrollierte Feuchtigkeit und eine dauerhaft lockere Struktur."
+          }
+        },
+        "collection_UHGiWz": {
+          "type": "collection",
+          "settings": {
+            "collection": "substrate-zusatze",
+            "title": "hochwertige Substratzusätze",
+            "copy": "Komponenten für eine gezielte Veränderung von Luftführung, Drainage, Wasserspeicherung oder Struktur.",
+            "cta_label": "Zusatz wählen",
+            "fallback_link": "shopify://collections/substrate-zusatze",
+            "fallback_title": "Substratzusätze",
+            "fallback_copy": "Gezielte Komponenten für mehr Luft, Drainage, Wasserspeicherung oder Struktur – passend zur Pflanze dosierbar."
+          }
+        },
+        "collection_yV9NCk": {
+          "type": "collection",
+          "settings": {
+            "collection": "leafers-gartenschuppen",
+            "title": "moderne Pflanzgefäße",
+            "copy": "",
+            "cta_label": "Pflanzgefäße kennenlernen",
+            "fallback_link": "shopify://collections/leafers-gartenschuppen",
+            "fallback_title": "Pflanzgefäße",
+            "fallback_copy": "Gefäße, die Wurzelraum, Wasserführung und Alltagstauglichkeit zusammenbringen."
+          }
+        },
+        "collection_BVLyhU": {
+          "type": "collection",
+          "settings": {
+            "collection": "smartgrow",
+            "title": "Zubehör & Smarte Ergänzungen",
+            "copy": "Praktische Helfer für Anzucht, Beleuchtung, Gießen und Kontrolle.\nNach konkretem Einsatz geordnet.",
+            "cta_label": "Basics hinzufügen",
+            "fallback_link": "shopify://collections/smartgrow",
+            "fallback_title": "SmartGrow & Zubehör",
+            "fallback_copy": "Praktische Helfer für Gießen, Kontrolle und Pflege – sinnvoll ergänzt statt unnötig kompliziert."
+          }
+        }
+      },
+      "block_order": [
+        "collection_DamgpF",
+        "collection_UHGiWz",
+        "collection_yV9NCk",
+        "collection_BVLyhU"
+      ],
+      "custom_css": [
+        "section {background: none;}"
+      ],
+      "name": "Home Kollektionen",
+      "settings": {
+        "eyebrow": "LEAFers Pflanzenpflege-System",
+        "heading": "Was braucht deine Pflanze wirklich?",
+        "intro": "<p>Starte mit dem Bedarf deiner Pflanze. Entdecke Substrate, Zusätze, Pflanzgefäße und smartes Zubehör als aufeinander abgestimmtes System.</p>"
       }
     },
     "bestsellers": {
       "type": "featured-collection",
       "settings": {
+        "heading": "Unsere Spezials",
         "heading_preset": "heading",
+        "link_label": "mehr ->",
+        "collection": "new-arrivals",
         "products_to_show": 4,
         "columns": 4,
-        "compact": false
-      }
-    },
-    "categories": {
-      "type": "category-grid",
-      "settings": {
-        "automatic": true,
-        "automatic_limit": 6
+        "compact": true
       }
     },
     "trust": {
       "type": "trust-bar",
       "blocks": {
-        "handmade": { "type": "benefit", "settings": { "icon": "handmade" } },
-        "natural": { "type": "benefit", "settings": { "icon": "natural" } },
-        "small_batches": { "type": "benefit", "settings": { "icon": "small_batches" } },
-        "versatile": { "type": "benefit", "settings": { "icon": "versatile" } }
+        "handmade": {
+          "type": "benefit",
+          "settings": {
+            "icon": "handmade",
+            "heading": "Nachvollziehbare Auswahl",
+            "text": "Produkte mit klarer Aufgabe"
+          }
+        },
+        "natural": {
+          "type": "benefit",
+          "settings": {
+            "icon": "natural",
+            "heading": "Bedarf vor Trend",
+            "text": "Pflanze und Anwendung geben die Richtung vor"
+          }
+        },
+        "small_batches": {
+          "type": "benefit",
+          "settings": {
+            "icon": "small_batches",
+            "heading": "Klare Produktdaten",
+            "text": "Varianten, Inhalt und Einsatz im Blick"
+          }
+        },
+        "versatile": {
+          "type": "benefit",
+          "settings": {
+            "icon": "versatile",
+            "heading": "Sinnvoll kombinierbar",
+            "text": "Substrat, Gefäß und Pflege als System"
+          }
+        }
       },
-      "block_order": ["handmade", "natural", "small_batches", "versatile"],
+      "block_order": [
+        "handmade",
+        "natural",
+        "small_batches",
+        "versatile"
+      ],
       "settings": {}
+    },
+    "categories": {
+      "type": "category-grid",
+      "settings": {
+        "heading": "Alle Bereiche entdecken",
+        "automatic": true,
+        "automatic_limit": 5
+      }
     },
     "brand_story": {
       "type": "brand-story",
-      "settings": { "link": "shopify://collections/all" }
+      "settings": {
+        "link": "shopify://pages/individuelles-substrat"
+      }
     },
     "highlights": {
       "type": "featured-collection",
       "settings": {
+        "heading": "Anzucht & SmartGrow",
         "heading_preset": "highlights",
+        "link_label": "SmartGrow vollständig ansehen",
+        "collection": "shopify://collections/smartgrow",
         "products_to_show": 6,
         "columns": 6,
         "compact": true
@@ -57,38 +181,336 @@
     "starter": {
       "type": "starter-showcase",
       "blocks": {
-        "herbs": { "type": "category", "settings": { "type": "herbs" } },
-        "houseplants": { "type": "category", "settings": { "type": "houseplants" } },
-        "vegetables": { "type": "category", "settings": { "type": "vegetables" } },
-        "exotics": { "type": "category", "settings": { "type": "exotics" } }
+        "herbs": {
+          "type": "category",
+          "settings": {
+            "type": "herbs",
+            "title": "Anzucht starten",
+            "link": "shopify://collections/smartgrow"
+          }
+        },
+        "houseplants": {
+          "type": "category",
+          "settings": {
+            "type": "houseplants",
+            "title": "Substrat auswählen",
+            "link": "shopify://collections/fertige-substratmischungen"
+          }
+        },
+        "vegetables": {
+          "type": "category",
+          "settings": {
+            "type": "vegetables",
+            "title": "Pflanzgefäß finden",
+            "link": "shopify://collections/leafers-gartenschuppen"
+          }
+        },
+        "exotics": {
+          "type": "category",
+          "settings": {
+            "type": "exotics",
+            "title": "Mix gezielt ergänzen",
+            "link": "shopify://collections/substrate-zusatze"
+          }
+        }
       },
-      "block_order": ["herbs", "houseplants", "vegetables", "exotics"],
-      "settings": { "link": "shopify://collections/all" }
+      "block_order": [
+        "herbs",
+        "houseplants",
+        "vegetables",
+        "exotics"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Dein nächster sinnvoller Schritt",
+        "text": "<p>Beginne mit dem konkreten Pflanzenprojekt. Die vier Einstiege führen direkt zu den passenden Produktbereichen.</p>",
+        "link_label": "Gesamtes Sortiment ansehen",
+        "link": "shopify://collections/all"
+      }
     },
     "faq": {
       "type": "faq",
       "blocks": {
-        "substrate": { "type": "question", "settings": { "topic": "substrate" } },
-        "application": { "type": "question", "settings": { "topic": "application" } },
-        "plants": { "type": "question", "settings": { "topic": "plants" } },
-        "shipping": { "type": "question", "settings": { "topic": "shipping" } }
+        "substrate": {
+          "type": "question",
+          "settings": {
+            "topic": "substrate",
+            "question": "Welches Substrat passt zu meiner Pflanze?",
+            "answer": "<p>Orientiere dich zuerst an Wurzeltyp, Standort und Gießroutine. Tropische Pflanzen benötigen häufig eine luftigere Struktur, während Anzucht und Kräuter meist gleichmäßigere Feuchtigkeit bevorzugen. Die Produktseiten nennen den vorgesehenen Einsatz und die verfügbaren Varianten.</p>"
+          }
+        },
+        "application": {
+          "type": "question",
+          "settings": {
+            "topic": "application",
+            "question": "Wann brauche ich einen Substratzusatz?",
+            "answer": "<p>Ein Zusatz ist sinnvoll, wenn du eine konkrete Eigenschaft verändern möchtest – etwa Luftführung, Drainage, Feuchtepuffer oder Struktur. Beginne mit einer klaren Aufgabe pro Komponente und passe Mischungen schrittweise an.</p>"
+          }
+        },
+        "plants": {
+          "type": "question",
+          "settings": {
+            "topic": "plants",
+            "question": "Wie finde ich die passende Topfgröße?",
+            "answer": "<p>Wähle die nächste sinnvolle Größe über dem aktuellen Wurzelballen. Ein deutlich zu großes Gefäß trocknet langsamer. Ablauf, Material und Bewässerungssystem sollten zum gewählten Substrat und zu deiner Gießroutine passen.</p>"
+          }
+        },
+        "shipping": {
+          "type": "question",
+          "settings": {
+            "topic": "shipping",
+            "question": "Wo sehe ich Preis und Verfügbarkeit?",
+            "answer": "<p>Preis, Varianten und aktuelle Verfügbarkeit werden direkt am jeweiligen Produkt angezeigt. Nicht verfügbare Varianten bleiben klar als solche gekennzeichnet; die konkrete Lieferinformation erscheint im Bestellprozess.</p>"
+          }
+        }
       },
-      "block_order": ["substrate", "application", "plants", "shipping"],
-      "settings": {}
+      "block_order": [
+        "substrate",
+        "application",
+        "plants",
+        "shipping"
+      ],
+      "settings": {
+        "heading": "Fragen vor der Auswahl",
+        "text": "<p>Kurze Entscheidungshilfen zu Substrat, Zusätzen, Gefäßen und Verfügbarkeit.</p>"
+      }
     },
     "community": {
       "type": "community-gallery",
       "blocks": {
-        "image_1": { "type": "image", "settings": {} },
-        "image_2": { "type": "image", "settings": {} },
-        "image_3": { "type": "image", "settings": {} },
-        "image_4": { "type": "image", "settings": {} },
-        "image_5": { "type": "image", "settings": {} },
-        "image_6": { "type": "image", "settings": {} }
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/98154BE7-8D71-4BDE-8E7E-DE1C7F267A6E.jpg",
+            "link": ""
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_0717.jpg",
+            "link": ""
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7168J-ylbOS_99c2dfdf-820a-4b9d-9460-09a2151f471e.jpg",
+            "link": ""
+          }
+        },
+        "image_5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_0722.jpg",
+            "link": ""
+          }
+        },
+        "image_6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LEAFers_Bl_hton_die_perfekte_Drainage.jpg",
+            "link": ""
+          }
+        }
       },
-      "block_order": ["image_1", "image_2", "image_3", "image_4", "image_5", "image_6"],
-      "settings": {}
+      "block_order": [
+        "image_2",
+        "image_3",
+        "image_4",
+        "image_5",
+        "image_6"
+      ],
+      "settings": {
+        "heading": "Wurzelräume, Setups und Pflanzenideen",
+        "handle": "#LEAFerservice"
+      }
+    },
+    "substrate_world_nTLVeC": {
+      "type": "substrate-world",
+      "blocks": {
+        "heading_QjJzHB": {
+          "type": "heading",
+          "settings": {
+            "eyebrow": "Spezialmischungen",
+            "heading": "Fertig abgestimmt, trotzdem nachvollziehbar",
+            "text": "<p>Wähle eine Mischung als verlässliche Basis. Die Rezeptur zeigt dir, warum sie zur jeweiligen Pflanzengruppe passt.</p>",
+            "columns": "3"
+          }
+        },
+        "mixture_PgBPbf": {
+          "type": "mixture",
+          "settings": {
+            "product": "",
+            "image_alt": "",
+            "badge": "Spezialmischung",
+            "title": "Tropical Mix",
+            "claim": "Luftig und feuchtepuffernd für tropische Zimmerpflanzen",
+            "ratio": "Pinienrinde · Lava · Bims · Perlite · Kokos",
+            "text": "",
+            "show_price": true,
+            "button_label": "Mischung ansehen",
+            "link": ""
+          }
+        },
+        "mixture_qJFYn6": {
+          "type": "mixture",
+          "settings": {
+            "product": "kokos-quelltabletten",
+            "image_alt": "",
+            "badge": "{{ block.settings.product.metafields.leafer.usp_1.value }}",
+            "title": "{{ block.settings.product.title }}",
+            "claim": "{{ block.settings.product.metafields.leafer.primary_function.value }}",
+            "ratio": "",
+            "text": "",
+            "show_price": true,
+            "button_label": "Mischung ansehen",
+            "link": ""
+          }
+        },
+        "mixture_ekkFXz": {
+          "type": "mixture",
+          "settings": {
+            "product": "",
+            "image_alt": "",
+            "badge": "Spezialmischung",
+            "title": "Desert Mix",
+            "claim": "Schnelle Drainage für Kakteen und Sukkulenten",
+            "ratio": "Lava · Bims · Perlite · Blähton",
+            "text": "",
+            "show_price": true,
+            "button_label": "Mischung ansehen",
+            "link": ""
+          }
+        },
+        "heading_jywkH7": {
+          "type": "heading",
+          "settings": {
+            "eyebrow": "Bestandteile",
+            "heading": "Baue deine eigene Rezeptur",
+            "text": "<p>Kombiniere mineralische und organische Komponenten gezielt nach Luftführung, Wasserspeicherung und Standfestigkeit.</p>",
+            "columns": "4"
+          }
+        },
+        "ingredient_NVYGGp": {
+          "type": "ingredient",
+          "settings": {
+            "product": "",
+            "image_alt": "",
+            "badge": "Substratbestandteil",
+            "title": "Pinienrinde",
+            "claim": "Grobe organische Struktur",
+            "ratio": "Startbereich: 20–60 Vol.-%",
+            "text": "",
+            "show_price": true,
+            "button_label": "Bestandteil ansehen",
+            "link": ""
+          }
+        },
+        "ingredient_yj4ynC": {
+          "type": "ingredient",
+          "settings": {
+            "product": "",
+            "image_alt": "",
+            "badge": "Substratbestandteil",
+            "title": "Bims",
+            "claim": "Poröse, dauerhafte Mineralstruktur",
+            "ratio": "Startbereich: 15–40 Vol.-%",
+            "text": "",
+            "show_price": true,
+            "button_label": "Bestandteil ansehen",
+            "link": ""
+          }
+        },
+        "ingredient_RGkNjj": {
+          "type": "ingredient",
+          "settings": {
+            "product": "",
+            "image_alt": "",
+            "badge": "Substratbestandteil",
+            "title": "Perlite",
+            "claim": "Leichtigkeit und zusätzliche Luftporen",
+            "ratio": "Startbereich: 10–35 Vol.-%",
+            "text": "",
+            "show_price": true,
+            "button_label": "Bestandteil ansehen",
+            "link": ""
+          }
+        },
+        "ingredient_aCezbh": {
+          "type": "ingredient",
+          "settings": {
+            "product": "",
+            "image_alt": "",
+            "badge": "Substratbestandteil",
+            "title": "Lava",
+            "claim": "Drainage und Standfestigkeit",
+            "ratio": "Startbereich: 15–40 Vol.-%",
+            "text": "",
+            "show_price": true,
+            "button_label": "Bestandteil ansehen",
+            "link": ""
+          }
+        },
+        "faq_mrhRMA": {
+          "type": "faq",
+          "settings": {
+            "question": "Kann ich die Mischverhältnisse verändern?",
+            "answer": "<p>Ja. Die Rezepturen sind Startpunkte. Passe sie an Pflanzenart, Topf, Standort und deine Gießroutine an.</p>"
+          }
+        },
+        "faq_nWz3iK": {
+          "type": "faq",
+          "settings": {
+            "question": "Welche Mischung passt zu meiner Pflanze?",
+            "answer": "<p>Tropische Aroids profitieren meist von einer groben, luftigen Struktur. Sukkulenten und Kakteen benötigen einen höheren Mineralanteil und besonders schnelle Drainage.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QjJzHB",
+        "mixture_PgBPbf",
+        "mixture_qJFYn6",
+        "mixture_ekkFXz",
+        "heading_jywkH7",
+        "ingredient_NVYGGp",
+        "ingredient_yj4ynC",
+        "ingredient_RGkNjj",
+        "ingredient_aCezbh",
+        "faq_mrhRMA",
+        "faq_nWz3iK"
+      ],
+      "name": "LEAFer Substratwelt",
+      "settings": {
+        "hero_image": "shopify://shop_images/leafs-configurator-room-bg-large.jpg",
+        "hero_alt": "LEAFerservice Substratmischungen und natürliche Bestandteile",
+        "eyebrow": "Mischen. Verstehen. Wachsen lassen.",
+        "heading": "Substrate, die zu deiner Pflanze passen",
+        "intro": "",
+        "button_label": "",
+        "button_link": "",
+        "text_alignment": "center",
+        "overlay": 55,
+        "hero_height": 680,
+        "content_heading": "Deine Pflanze gibt die Richtung vor",
+        "content_text": "<p>Wurzeln brauchen je nach Pflanzenart unterschiedlich viel Luft, Feuchtigkeit und Halt. Deshalb zeigen wir nicht nur fertige Mischungen, sondern auch, welche Aufgabe jeder Bestandteil übernimmt.</p>",
+        "color_scheme": "default",
+        "padding_top": 72,
+        "padding_bottom": 88
+      }
     }
   },
-  "order": ["hero", "bestsellers", "categories", "trust", "brand_story", "highlights", "starter", "faq", "community"]
+  "order": [
+    "hero",
+    "home_collection_journey_djRzLh",
+    "bestsellers",
+    "trust",
+    "categories",
+    "brand_story",
+    "highlights",
+    "starter",
+    "faq",
+    "community",
+    "substrate_world_nTLVeC"
+  ]
 }
