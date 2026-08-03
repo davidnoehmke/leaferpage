@@ -1,41 +1,12 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
-{
+/*\n * Shopify homepage template. Managed by the theme editor.\n */\n{
   "sections": {
-    "hero": {
-      "type": "hero",
+    "leaf_home": {
+      "type": "leaf-home",
       "blocks": {
-        "shipping": {
-          "type": "benefit",
-          "settings": {
-            "icon": "shipping",
-            "heading": "Übersichtlich auswählen",
-            "text": "Kollektionen nach Pflanzenbedarf"
-          }
-        },
-        "quality": {
-          "type": "benefit",
-          "settings": {
-            "icon": "quality",
-            "heading": "Praxisnah erklärt",
-            "text": "Funktion, Varianten und Anwendung im Blick"
-          }
-        },
-        "natural": {
-          "type": "benefit",
-          "settings": {
-            "icon": "natural",
-            "heading": "Als System gedacht",
-            "text": "Substrat, Gefäß und Zubehör kombinieren"
-          }
-        }
+        "substrates": {"type":"card","settings":{"icon":"◌","heading":"Substrate","text":"Strukturstabile Mischungen für unterschiedliche Wurzelräume.","link_label":"Substrate entdecken","link":"shopify://collections/fertige-substratmischungen"}},
+        "components": {"type":"card","settings":{"icon":"✦","heading":"Bestandteile","text":"Gezielte Zusätze für Luft, Drainage, Feuchte und Struktur.","link_label":"Zusätze ansehen","link":"shopify://collections/substrate-zusatze"}},
+        "pots": {"type":"card","settings":{"icon":"◫","heading":"Pflanzgefäße","text":"Stofftöpfe und klassische Gefäße passend zum Setup.","link_label":"Gefäße ansehen","link":"shopify://collections/leafers-gartenschuppen"}},
+        "smart": {"type":"card","settings":{"icon":"⌁","heading":"Smart Grow","text":"Smarte Helfer für Anzucht, Licht, Gießen und Kontrolle.","link_label":"Smart Grow ansehen","link":"shopify://collections/smartgrow"}}
       },
       "block_order": [
         "shipping",
