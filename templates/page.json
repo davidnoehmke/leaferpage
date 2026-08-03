@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {}
     },
     "substrate_world_mBf4Cr": {
@@ -191,7 +192,7 @@
         "ingredient_qc3BrE": {
           "type": "ingredient",
           "settings": {
-            "name": "Pinienrinde",
+            "name": "Pinienrinde{{ page.title }}",
             "function": "Struktur und Luftführung",
             "default_percentage": 20
           }
@@ -238,8 +239,8 @@
       ],
       "name": "Substrat-Konfigurator",
       "settings": {
-        "show_on_pages": true,
-        "show_on_all_products": true
+        "show_on_pages": false,
+        "show_on_all_products": false
       }
     },
     "custom_grow_creator_feQDMC": {
@@ -339,12 +340,18 @@
         "padding_top": 80,
         "padding_bottom": 96
       }
+    },
+    "product_recipe_LRNeRf": {
+      "type": "product-recipe",
+      "name": "Rezeptur & Bestandteile",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "substrate_world_mBf4Cr",
     "substrate_configurator_JC6KmK",
-    "custom_grow_creator_feQDMC"
+    "custom_grow_creator_feQDMC",
+    "product_recipe_LRNeRf"
   ]
 }
