@@ -43,7 +43,7 @@
         "natural"
       ],
       "custom_css": [
-        ".button{width: auto}"
+        ".button {width: auto;}"
       ],
       "settings": {
         "image": "shopify://shop_images/ftpnasXHK7LHpMYPtY6aiQ0_3_gps_generated.png",
@@ -119,7 +119,7 @@
         "collection_BVLyhU"
       ],
       "custom_css": [
-        "section {background: none; margin: 15px; padding: 5px;}"
+        "section {background: transparent; margin: 15px; padding: 5px;}"
       ],
       "name": "Home Kollektionen",
       "settings": {
