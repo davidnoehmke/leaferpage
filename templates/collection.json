@@ -9,16 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-collection",
-      "settings": {
-        "show_type_filters": true
-      }
-    },
-    "seo_copy": {
-      "type": "collection-seo-copy",
-      "settings": {}
-    },
     "trust_bar_wKpxUq": {
       "type": "trust-bar",
       "blocks": {
@@ -62,6 +52,16 @@
         "benefit_q6VnJm"
       ],
       "name": "t:sections.trust_bar.name",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "show_type_filters": false
+      }
+    },
+    "seo_copy": {
+      "type": "collection-seo-copy",
       "settings": {}
     }
   },
