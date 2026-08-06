@@ -46,10 +46,10 @@
         ".button {width: auto;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/ftpnasXHK7LHpMYPtY6aiQ0_3_gps_generated.png",
+        "image": "shopify://shop_images/20587884-FE99-4A1A-B914-EA451C3BAFA7_558e69a0-90d6-4312-805d-433cea1184d5.png",
         "overlay": 100,
-        "heading": "Leaferservice Shop",
-        "text": "<p>Ein durchdachtes Pflanzsystem schafft Harmonie zwischen dir und der Natur. Substrat, Gefäß und Pflanze bilden eine Einheit – optimiert für Wachstum und Wohlbefinden. Wir verstehen die Bedürfnisse jeder Pflanze und gestalten Systeme, die funktionieren.</p>",
+        "heading": "Jede Pflanze ist nur so stark wie ihre Wurzeln.",
+        "text": "<p>Hochwertiges Substrat ist die Grundlage für gesundes Pflanzenwachstum. Unsere abgestimmten Substrate sind speziell formuliert, um Wasserspeicherung, Drainage und Nährstoffverfügbarkeit optimal zu balancieren – für kräftige Pflanzen und langfristigen Erfolg.</p>",
         "primary_label": "Bodenbestandteile kennenlernen",
         "primary_link": "shopify://pages/leafers-substratbestandteile",
         "secondary_label": "Pflanzensystem zusammenstellen",
@@ -130,11 +130,7 @@
     },
     "bestsellers": {
       "type": "featured-collection",
-      "custom_css": [
-        ".featured__header {margin: 0; font-family: asterisks;}",
-        ".product-card {padding: 15px;}",
-        "a {background: none;}"
-      ],
+      "custom_css": [],
       "settings": {
         "heading": "Unboxing-Set Anfrage & inklusive Testpaket",
         "heading_preset": "heading",

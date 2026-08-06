@@ -23,8 +23,8 @@
       "type": "header",
       "custom_css": [],
       "settings": {
-        "logo": "shopify://shop_images/Leaferservice.com_Logo.png",
-        "logo_width": 170,
+        "logo": "shopify://shop_images/icon-personalisierbsr.png",
+        "logo_width": 130,
         "menu": "main-menu"
       }
     }
