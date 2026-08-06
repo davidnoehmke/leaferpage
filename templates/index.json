@@ -188,6 +188,15 @@
     "categories": {
       "type": "category-grid",
       "blocks": {
+        "category_EeREKD": {
+          "type": "category",
+          "settings": {
+            "icon": "accessories",
+            "title": "{{ block.settings.collection.title }}",
+            "image": "{{ block.settings.collection.image }}",
+            "collection": "smartgrow"
+          }
+        },
         "category_xbiJag": {
           "type": "category",
           "settings": {
@@ -199,6 +208,7 @@
         }
       },
       "block_order": [
+        "category_EeREKD",
         "category_xbiJag"
       ],
       "custom_css": [
