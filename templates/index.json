@@ -187,6 +187,23 @@
     },
     "categories": {
       "type": "category-grid",
+      "blocks": {
+        "category_xbiJag": {
+          "type": "category",
+          "settings": {
+            "icon": "seeds",
+            "title": "{{ block.settings.collection.title }}",
+            "image": "shopify://shop_images/49F87E05-4D3E-4994-96F4-85E7A66130DC.png",
+            "collection": "aufzucht-bewurzelung"
+          }
+        }
+      },
+      "block_order": [
+        "category_xbiJag"
+      ],
+      "custom_css": [
+        ".category-grid {justify-content: center;}"
+      ],
       "settings": {
         "heading": "Alle Bereiche entdecken",
         "automatic": true,
