@@ -23,18 +23,25 @@
       "type": "product-recipe",
       "settings": {}
     },
-    "cross_sell": {
+    "product_cross_sell_dPUR8N": {
       "type": "product-cross-sell",
+      "name": "Cross-Selling",
       "settings": {
         "heading": "Passt perfekt dazu",
-        "collection": "smartgrow"
+        "collection": ""
       }
+    },
+    "collection_seo_copy_gRwYXf": {
+      "type": "collection-seo-copy",
+      "name": "SEO-Kollektionstext",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "variant_guide",
     "recipe",
-    "cross_sell"
+    "product_cross_sell_dPUR8N",
+    "collection_seo_copy_gRwYXf"
   ]
 }
