@@ -11,19 +11,13 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "custom_css": [
+        ".main-page__content{font-size: 5px}"
+      ],
       "settings": {}
-    },
-    "brand_story_hd6W8y": {
-      "type": "brand-story",
-      "disabled": true,
-      "name": "LEAFerservice Markenstory",
-      "settings": {
-        "link": "shopify://pages/faq"
-      }
     }
   },
   "order": [
-    "main",
-    "brand_story_hd6W8y"
+    "main"
   ]
 }
