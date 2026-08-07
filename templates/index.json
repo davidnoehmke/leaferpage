@@ -43,16 +43,17 @@
         "natural"
       ],
       "custom_css": [
-        ".button {width: auto;}"
+        "h1 {font-size: 50px;}",
+        "p {font-size: 15px; padding: 10px 0;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/20587884-FE99-4A1A-B914-EA451C3BAFA7_558e69a0-90d6-4312-805d-433cea1184d5.png",
-        "overlay": 100,
-        "heading": "Jede Pflanze ist nur so stark wie ihre Wurzeln.",
-        "text": "<p>Hochwertiges Substrat ist die Grundlage für gesundes Pflanzenwachstum. Unsere abgestimmten Substrate sind speziell formuliert, um Wasserspeicherung, Drainage und Nährstoffverfügbarkeit optimal zu balancieren – für kräftige Pflanzen und langfristigen Erfolg.</p>",
-        "primary_label": "Bodenbestandteile kennenlernen",
+        "image": "shopify://shop_images/substratbestandteile.png",
+        "overlay": 90,
+        "heading": "Jede Pflanze wächst nur so stark wie ihre Wurzeln sich entwickeln.",
+        "text": "<p>Hochwertiges Substrat für gesundes Pflanzenwachstum. Unsere abgestimmten Substrate zielen auf Wasserspeicherung, Drainage und Nährstoffverfügbarkeit</p><p><em> -&gt;    optimal für kräftige Pflanzen und langfristigen Erfolg</em></p>",
+        "primary_label": "Starter Sets entdecken",
         "primary_link": "shopify://pages/leafers-substratbestandteile",
-        "secondary_label": "Pflanzensystem zusammenstellen",
+        "secondary_label": "Individuelles Set konfigurieren",
         "secondary_link": "shopify://pages/individuelles-substrat"
       }
     },
@@ -66,7 +67,7 @@
             "image": "shopify://shop_images/orientier-dich-an-den-pflanzgef-en-und-substratbestandteilen-bildern.png",
             "title": "Anzucht & Wurzelbildung",
             "copy": "Eine erfolgreiche Anzucht beginnt mit passenden Bedingungen. Anzuchtsubstrat, gleichmäßige Feuchtigkeit und Wärme fördern die Keimung und kräftige Wurzeln",
-            "cta_label": "Anzucht richtig starten",
+            "cta_label": "direkt starten",
             "fallback_link": "shopify://blogs/leafers-nice2know-blog/leafers-substrate-nice2know",
             "fallback_title": "Premium Substrate",
             "fallback_copy": "Ausgewogene Basismischungen für stabile Wurzeln, kontrollierte Feuchtigkeit und eine dauerhaft lockere Struktur."
@@ -76,10 +77,9 @@
           "type": "collection",
           "settings": {
             "collection": "substrate-zusatze",
-            "image": "shopify://shop_images/20587884-FE99-4A1A-B914-EA451C3BAFA7_558e69a0-90d6-4312-805d-433cea1184d5.png",
             "title": "Das passende Substrat",
             "copy": "Sobald die ersten Wurzeln wachsen, braucht jede Pflanze die richtige Grundlage. Luftige, strukturstabile Mischungen versorgen die Wurzeln mit Wasser und Sauerstoff.",
-            "cta_label": "Passendes Substrat finden",
+            "cta_label": "Substrat finden",
             "fallback_link": "shopify://collections/substrate-zusatze",
             "fallback_title": "Substratzusätze",
             "fallback_copy": "Gezielte Komponenten für mehr Luft, Drainage, Wasserspeicherung oder Struktur – passend zur Pflanze dosierbar."
@@ -92,7 +92,7 @@
             "image": "shopify://shop_images/9D2F7D50-6655-4DAC-8887-298F2C877A0D.png",
             "title": "Topf & Bewässerung",
             "copy": "Topfgröße, Drainage und Bewässerung müssen zusammenpassen. Das richtige Pflanzgefäß schützt vor Staunässe und unterstützt eine gleichmäßige Versorgung.",
-            "cta_label": "Pflanzgefäße kennenlernen",
+            "cta_label": "Anbau upgraden",
             "fallback_link": "shopify://collections/leafers-gartenschuppen",
             "fallback_title": "Pflanzgefäße",
             "fallback_copy": "Gefäße, die Wurzelraum, Wasserführung und Alltagstauglichkeit zusammenbringen."
@@ -105,7 +105,7 @@
             "image": "shopify://shop_images/orientier-dich-an-den-pflanzgef-en-und-substratbestandteilen-bildern.png",
             "title": "Hilfsmittel & Ergänzungen",
             "copy": "Licht, Temperatur und Luftfeuchtigkeit bestimmen, wie kräftig eine Pflanze wächst. Smarte Grow-Hilfen schaffen auch zu Hause verlässlich gute Bedingungen.",
-            "cta_label": "Hilfsmittel & Ergänzungen",
+            "cta_label": "Basics nicht vergessen",
             "fallback_link": "shopify://collections/smartgrow",
             "fallback_title": "Hilfsmittel & Hilfen ergänzen",
             "fallback_copy": "Licht, Temperatur und Luftfeuchtigkeit bestimmen, wie kräftig eine Pflanze wächst. Smarte Grow-Hilfen schaffen auch zu Hause verlässlich gute Bedingungen."
@@ -119,7 +119,9 @@
         "collection_BVLyhU"
       ],
       "custom_css": [
-        "section {background: transparent; margin: 15px; padding: 5px;}"
+        "h2 {font-size: 30px;}",
+        "p {font-size: 14px;}",
+        "a {justify-content: center; font-size: 17px;}"
       ],
       "name": "Home Kollektionen",
       "settings": {
@@ -128,18 +130,82 @@
         "intro": "<p>Für Neulinge & Interessierte haben wir einen roten Faden gelegt, dem du chronologisch folgen kannst. <br/>Profis & Kenner können direkt zum passenden Produkt springen.</p>"
       }
     },
-    "bestsellers": {
+    "featured_collection_VCnp9C": {
       "type": "featured-collection",
-      "custom_css": [],
+      "name": "t:sections.featured_collection.name",
       "settings": {
-        "heading": "Anzucht leicht gemacht - unsere Starter Bundles",
+        "heading": "",
         "heading_preset": "heading",
-        "link_label": "alle entdecken >",
-        "collection": "substrate-zusatze",
+        "link_label": "",
+        "collection": "",
         "products_to_show": 4,
         "columns": 4,
         "compact": true
       }
+    },
+    "1786143119f1cbcdb5": {
+      "type": "apps",
+      "blocks": {
+        "section_store_block_space_divide_qpeBdh": {
+          "type": "shopify://apps/section-store/blocks/block-space-divide/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "height": 38,
+            "background_color": "rgba(0,0,0,0)",
+            "show_line": true,
+            "line_style": "solid",
+            "line_width": 25,
+            "line_thickness": 1,
+            "line_roundness": 0,
+            "line_color": "#e0e0e0"
+          }
+        },
+        "section_store_block_video_carousel_8BPtKg": {
+          "type": "shopify://apps/section-store/blocks/block-video-carousel/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "video_1": "shopify://files/videos/47551-451623797.mp4",
+            "video_2": "shopify://files/videos/instagram-video_34ae078c-ab95-4320-9d44-48b3b3ed5d95.mp4",
+            "video_4": "shopify://files/videos/254112.mp4",
+            "slider_style": "none",
+            "modal_style": "side",
+            "video_autoplay": "true",
+            "play_button_position": "none",
+            "play_button_size": "small",
+            "item_border_style": "none",
+            "item_border_width": 1,
+            "item_border_color": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+            "item_border_radius": 96,
+            "item_padding": 0,
+            "grid_items": "3",
+            "thumbnail_shape": "rectangle",
+            "block_border_style": "none",
+            "block_border_width": 1,
+            "block_border_color": "#d7d7d7",
+            "block_border_radius": 16,
+            "block_bg_color": "",
+            "block_padding_vertical": 8,
+            "block_padding_horizontal": 0
+          }
+        },
+        "section_store_block_space_divide_YaF7j4": {
+          "type": "shopify://apps/section-store/blocks/block-space-divide/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "height": 84,
+            "background_color": "rgba(0,0,0,0)",
+            "show_line": true,
+            "line_style": "solid",
+            "line_width": 70,
+            "line_thickness": 1,
+            "line_roundness": 0,
+            "line_color": "#e0e0e0"
+          }
+        }
+      },
+      "block_order": [
+        "section_store_block_space_divide_qpeBdh",
+        "section_store_block_video_carousel_8BPtKg",
+        "section_store_block_space_divide_YaF7j4"
+      ],
+      "settings": {}
     },
     "trust": {
       "type": "trust-bar",
@@ -185,76 +251,12 @@
       ],
       "settings": {}
     },
-    "categories": {
-      "type": "category-grid",
-      "blocks": {
-        "category_EeREKD": {
-          "type": "category",
-          "settings": {
-            "icon": "accessories",
-            "title": "{{ block.settings.collection.title }}",
-            "image": "{{ block.settings.collection.image }}",
-            "collection": "smartgrow"
-          }
-        },
-        "category_xbiJag": {
-          "type": "category",
-          "settings": {
-            "icon": "seeds",
-            "title": "{{ block.settings.collection.title }}",
-            "image": "shopify://shop_images/49F87E05-4D3E-4994-96F4-85E7A66130DC.png",
-            "collection": "aufzucht-bewurzelung"
-          }
-        }
-      },
-      "block_order": [
-        "category_EeREKD",
-        "category_xbiJag"
-      ],
-      "custom_css": [
-        ".category-grid {justify-content: center;}"
-      ],
-      "settings": {
-        "heading": "Alle Bereiche entdecken",
-        "automatic": true,
-        "automatic_limit": 4
-      }
-    },
-    "1785287783ec760fcd": {
-      "type": "apps",
-      "blocks": {
-        "section_store_block_product_info_wrapper_76Cepi": {
-          "type": "shopify://apps/section-store/blocks/block-product-info-wrapper/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
-          "settings": {
-            "auto_detect_product_info_container": true,
-            "product_info_container_selector": "",
-            "use_on_mobile": true,
-            "use_header": true,
-            "header_font_size": 16,
-            "header_bg_color": "#405937",
-            "header_text_color": "#ffffff",
-            "header_text_align": "center",
-            "header_text": "♥︎ 7 von 10 empfehlen es weiter",
-            "border_style": "dotted",
-            "border_width": 1,
-            "border_color": "#dfdfdf",
-            "border_radius": 12,
-            "background_color": "",
-            "shadow": "none",
-            "padding_top": 20,
-            "padding_bottom": 20,
-            "padding_left": 18,
-            "padding_right": 18
-          }
-        }
-      },
-      "block_order": [
-        "section_store_block_product_info_wrapper_76Cepi"
-      ],
-      "settings": {}
-    },
     "brand_story": {
       "type": "brand-story",
+      "custom_css": [
+        "h2 {font-size: 35px;}",
+        "p {font-size: 15px;}"
+      ],
       "settings": {
         "link": "shopify://pages/faq"
       }
@@ -406,18 +408,56 @@
         "heading": "Wurzelräume, Setups und Pflanzenideen",
         "handle": "#LEAFerservice"
       }
+    },
+    "17861449209e6f8483": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_f003a75_hy3gTQ": {
+          "type": "ai_gen_block_f003a75",
+          "settings": {
+            "show_header": true,
+            "title": "Produktinformationen",
+            "description": "Alle Metafelder für dieses Produkt",
+            "desktop_width_percent": 100,
+            "columns_desktop": 2,
+            "columns_mobile": "1",
+            "spacing": 16,
+            "padding": 24,
+            "item_padding": 16,
+            "show_technical_info": true,
+            "background_color": "#f3f0e9",
+            "item_background_color": "#ffffff",
+            "item_border_color": "#e0e0e0",
+            "surface_color": "#f9f9f9",
+            "title_color": "#171717",
+            "label_color": "#394f2d",
+            "text_color": "#171717",
+            "muted_color": "#6b6a63",
+            "title_size": 24,
+            "label_size": 14,
+            "text_size": 14,
+            "border_radius": 8,
+            "item_border_radius": 6
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_f003a75_hy3gTQ"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "hero",
     "home_collection_journey_djRzLh",
-    "bestsellers",
+    "featured_collection_VCnp9C",
+    "1786143119f1cbcdb5",
     "trust",
-    "categories",
-    "1785287783ec760fcd",
     "brand_story",
     "starter",
     "faq",
-    "community"
+    "community",
+    "17861449209e6f8483"
   ]
 }
