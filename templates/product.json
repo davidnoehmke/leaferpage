@@ -15,6 +15,72 @@
         "show_description": true
       }
     },
+    "metafield_details": {
+      "type": "product-metafield-details",
+      "settings": {
+        "eyebrow": "Produktdetails",
+        "heading": "Alles auf einen Blick",
+        "intro": ""
+      },
+      "blocks": {
+        "short_description": {
+          "type": "metafield",
+          "settings": {
+            "heading": "Kurzbeschreibung",
+            "namespace": "leafer_content",
+            "key": "short_description"
+          }
+        },
+        "ideal_for": {
+          "type": "metafield",
+          "settings": {
+            "heading": "Ideal für",
+            "namespace": "leafer_usage",
+            "key": "ideal_for"
+          }
+        },
+        "application": {
+          "type": "metafield",
+          "settings": {
+            "heading": "Anwendung",
+            "namespace": "leafer_usage",
+            "key": "application"
+          }
+        },
+        "material": {
+          "type": "metafield",
+          "settings": {
+            "heading": "Material",
+            "namespace": "leafer_catalog",
+            "key": "material"
+          }
+        },
+        "mix_ratio": {
+          "type": "metafield",
+          "settings": {
+            "heading": "Mischanteil",
+            "namespace": "leafer_usage",
+            "key": "mix_ratio"
+          }
+        },
+        "usp_1": {
+          "type": "metafield",
+          "settings": {
+            "heading": "Vorteil",
+            "namespace": "leafer_usps",
+            "key": "usp_1"
+          }
+        }
+      },
+      "block_order": [
+        "short_description",
+        "ideal_for",
+        "application",
+        "material",
+        "mix_ratio",
+        "usp_1"
+      ]
+    },
     "variant_guide": {
       "type": "product-variant-description",
       "settings": {}
@@ -39,6 +105,7 @@
   },
   "order": [
     "main",
+    "metafield_details",
     "variant_guide",
     "recipe",
     "product_cross_sell_dPUR8N",
