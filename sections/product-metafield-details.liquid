@@ -1,10 +1,8 @@
 {% liquid
   assign has_content = false
-
   for block in section.blocks
     assign namespace = block.settings.namespace | strip
     assign key = block.settings.key | strip
-
     if namespace != blank and key != blank
       assign field = product.metafields[namespace][key]
       if field != blank and field.value != blank
@@ -13,3 +11,85 @@
       endif
     endif
   endfor
+%}
+
+{% if has_content %}
+<section class="product-meta page-width" aria-labelledby="ProductMeta-{{ section.id }}">
+  <header class="product-meta__header">
+    {% if section.settings.eyebrow != blank %}<p class="product-meta__eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}
+    <h2 id="ProductMeta-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+    {% if section.settings.intro != blank %}<p>{{ section.settings.intro | escape }}</p>{% endif %}
+  </header>
+  <div class="product-meta__grid">
+    {% for block in section.blocks %}
+      {% liquid
+        assign namespace = block.settings.namespace | strip
+        assign key = block.settings.key | strip
+        assign field = product.metafields[namespace][key]
+      %}
+      {% if field != blank and field.value != blank %}
+        <article class="product-meta__card" {{ block.shopify_attributes }}>
+          {% if block.settings.heading != blank %}<h3>{{ block.settings.heading | escape }}</h3>{% endif %}
+          <div class="product-meta__value">
+            {% case field.type %}
+              {% when 'rich_text_field' %}
+                {{ field | metafield_tag }}
+              {% when 'list.single_line_text_field' %}
+                <ul>{% for item in field.value %}<li>{{ item | escape }}</li>{% endfor %}</ul>
+              {% when 'file_reference' %}
+                {% if field.value.media_type == 'image' %}{{ field.value | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '480, 720, 960, 1200' }}{% else %}{{ field | metafield_tag }}{% endif %}
+              {% when 'product_reference' %}
+                <a href="{{ field.value.url }}">{{ field.value.title | escape }}</a>
+              {% when 'list.product_reference' %}
+                <ul>{% for item in field.value %}<li><a href="{{ item.url }}">{{ item.title | escape }}</a></li>{% endfor %}</ul>
+              {% else %}
+                {{ field | metafield_tag }}
+            {% endcase %}
+          </div>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% stylesheet %}
+.product-meta { padding-block: clamp(2.5rem, 7vw, 6rem); }
+.product-meta__header { max-width: 720px; margin-bottom: clamp(1.5rem, 4vw, 3rem); }
+.product-meta__eyebrow { margin: 0 0 .6rem; color: var(--accent); font-size: .72rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.product-meta__header h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.8rem); line-height: 1; letter-spacing: -.045em; }
+.product-meta__header p:last-child { color: var(--muted); line-height: 1.65; }
+.product-meta__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+.product-meta__card { padding: clamp(1.2rem, 3vw, 2rem); border: 1px solid var(--border); border-radius: var(--radius); background: color-mix(in srgb, var(--background), var(--text) 2%); }
+.product-meta__card h3 { margin: 0 0 .8rem; font-size: 1rem; }
+.product-meta__value { color: var(--muted); line-height: 1.65; }
+.product-meta__value > *:first-child { margin-top: 0; }
+.product-meta__value > *:last-child { margin-bottom: 0; }
+.product-meta__value ul { padding-left: 1.2rem; }
+.product-meta__value img { width: 100%; height: auto; border-radius: calc(var(--radius) * .75); }
+@media (max-width: 700px) { .product-meta__grid { grid-template-columns: 1fr; } }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Produkt-Metafelder",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Kicker", "default": "Details" },
+    { "type": "text", "id": "heading", "label": "Überschrift", "default": "Alles auf einen Blick" },
+    { "type": "textarea", "id": "intro", "label": "Einleitung" }
+  ],
+  "blocks": [
+    {
+      "type": "metafield",
+      "name": "Metafeld",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Überschrift" },
+        { "type": "text", "id": "namespace", "label": "Namespace", "default": "leafer" },
+        { "type": "text", "id": "key", "label": "Key", "info": "Zum Beispiel care, usp oder faq." }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [{ "name": "Produkt-Metafelder" }]
+}
+{% endschema %}
