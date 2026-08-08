@@ -1,0 +1,14 @@
+# Oxygen-managed storefront variables
+# Never commit real values. After linking the Hydrogen storefront, pull local
+# values with: npx shopify hydrogen env pull
+
+PRIVATE_STOREFRONT_API_TOKEN=
+PUBLIC_CUSTOMER_ACCOUNT_API_CLIENT_ID=
+PUBLIC_CUSTOMER_ACCOUNT_API_URL=
+PUBLIC_STORE_DOMAIN=rxpzut-qm.myshopify.com
+PUBLIC_STOREFRONT_API_TOKEN=
+PUBLIC_STOREFRONT_ID=
+SESSION_SECRET=
+
+# Project-owned optional variables must be documented before use.
+# Do not place Admin API access tokens in the storefront runtime.
