@@ -1,0 +1,33 @@
+{% liquid
+  assign selected_variant = product.selected_or_first_available_variant
+  assign variant_description = selected_variant.metafields.leafer.description.value
+  assign variant_ideal_for = selected_variant.metafields.leafer.ideal_for.value
+  assign variant_notes = selected_variant.metafields.leafer.notes.value
+  assign has_variant_content = false
+  if variant_description != blank or variant_ideal_for != blank or variant_notes != blank
+    assign has_variant_content = true
+  endif
+%}
+{% if has_variant_content %}
+<section class="product-variant-description page-width" aria-labelledby="VariantGuide-{{ section.id }}">
+  <p class="product-variant-description__eyebrow">Varianten-Guide</p>
+  <h2 id="VariantGuide-{{ section.id }}">Welche Variante passt zu dir?</h2>
+  <div class="product-variant-description__grid">
+    {% if variant_description != blank %}
+      <article><h3>{{ selected_variant.title }}</h3><div>{{ variant_description | metafield_tag }}</div></article>
+    {% endif %}
+    {% if variant_ideal_for != blank %}
+      <article><h3>Ideal für</h3><div>{{ variant_ideal_for | metafield_tag }}</div></article>
+    {% endif %}
+    {% if variant_notes != blank %}
+      <article><h3>Hinweise</h3><div>{{ variant_notes | metafield_tag }}</div></article>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+{% stylesheet %}
+.product-variant-description{margin-block:var(--space-section);padding-block:clamp(2rem,5vw,4.5rem);border-block:1px solid var(--border)}.product-variant-description__eyebrow{margin:0 0 .6rem;color:var(--accent);font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.product-variant-description h2{margin:0 0 2rem;font-size:clamp(2.2rem,5vw,4.4rem);line-height:.98;letter-spacing:-.05em}.product-variant-description__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.product-variant-description article{padding:clamp(1.2rem,3vw,2rem);border:1px solid var(--border);border-radius:var(--radius)}.product-variant-description h3{margin-top:0}@media(max-width:800px){.product-variant-description__grid{grid-template-columns:1fr}}
+{% endstylesheet %}
+{% schema %}
+{"name":"Varianten-Guide","settings":[],"presets":[{"name":"Varianten-Guide"}]}
+{% endschema %}
