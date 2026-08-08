@@ -1,0 +1,15 @@
+{% liquid
+  assign has_content = false
+
+  for block in section.blocks
+    assign namespace = block.settings.namespace | strip
+    assign key = block.settings.key | strip
+
+    if namespace != blank and key != blank
+      assign field = product.metafields[namespace][key]
+      if field != blank and field.value != blank
+        assign has_content = true
+        break
+      endif
+    endif
+  endfor
