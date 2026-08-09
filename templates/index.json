@@ -1,12 +1,41 @@
-/*\n * Shopify homepage template. Managed by the theme editor.\n */\n{
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
   "sections": {
-    "leaf_home": {
-      "type": "leaf-home",
+    "hero": {
+      "type": "hero",
       "blocks": {
-        "substrates": {"type":"card","settings":{"icon":"◌","heading":"Substrate","text":"Strukturstabile Mischungen für unterschiedliche Wurzelräume.","link_label":"Substrate entdecken","link":"shopify://collections/fertige-substratmischungen"}},
-        "components": {"type":"card","settings":{"icon":"✦","heading":"Bestandteile","text":"Gezielte Zusätze für Luft, Drainage, Feuchte und Struktur.","link_label":"Zusätze ansehen","link":"shopify://collections/substrate-zusatze"}},
-        "pots": {"type":"card","settings":{"icon":"◫","heading":"Pflanzgefäße","text":"Stofftöpfe und klassische Gefäße passend zum Setup.","link_label":"Gefäße ansehen","link":"shopify://collections/leafers-gartenschuppen"}},
-        "smart": {"type":"card","settings":{"icon":"⌁","heading":"Smart Grow","text":"Smarte Helfer für Anzucht, Licht, Gießen und Kontrolle.","link_label":"Smart Grow ansehen","link":"shopify://collections/smartgrow"}}
+        "shipping": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shipping",
+            "heading": "Übersichtlich auswählen",
+            "text": "Kollektionen nach Pflanzenbedarf"
+          }
+        },
+        "quality": {
+          "type": "benefit",
+          "settings": {
+            "icon": "quality",
+            "heading": "Praxisnah erklärt",
+            "text": "Funktion, Varianten und Anwendung im Blick"
+          }
+        },
+        "natural": {
+          "type": "benefit",
+          "settings": {
+            "icon": "natural",
+            "heading": "Als System gedacht",
+            "text": "Substrat, Gefäß und Zubehör kombinieren"
+          }
+        }
       },
       "block_order": [
         "shipping",
@@ -46,11 +75,11 @@
         "collection_UHGiWz": {
           "type": "collection",
           "settings": {
-            "collection": "substrate-zusatze",
+            "collection": "substrate-verbesserer",
             "title": "hochwertige Substratzusätze",
             "copy": "Komponenten für eine gezielte Veränderung von Luftführung, Drainage, Wasserspeicherung oder Struktur.",
             "cta_label": "Zusatz wählen",
-            "fallback_link": "shopify://collections/substrate-zusatze",
+            "fallback_link": "shopify://collections/substrate-verbesserer",
             "fallback_title": "Substratzusätze",
             "fallback_copy": "Gezielte Komponenten für mehr Luft, Drainage, Wasserspeicherung oder Struktur – passend zur Pflanze dosierbar."
           }
@@ -210,7 +239,7 @@
           "settings": {
             "type": "exotics",
             "title": "Mix gezielt ergänzen",
-            "link": "shopify://collections/substrate-zusatze"
+            "link": "shopify://collections/substrate-verbesserer"
           }
         }
       },
