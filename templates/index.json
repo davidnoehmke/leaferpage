@@ -76,11 +76,11 @@
         "collection_UHGiWz": {
           "type": "collection",
           "settings": {
-            "collection": "substrate-zusatze",
+            "collection": "substrate-verbesserer",
             "title": "Das passende Substrat",
             "copy": "Sobald die ersten Wurzeln wachsen, braucht jede Pflanze die richtige Grundlage. Luftige, strukturstabile Mischungen versorgen die Wurzeln mit Wasser und Sauerstoff.",
             "cta_label": "Substrat finden",
-            "fallback_link": "shopify://collections/substrate-zusatze",
+            "fallback_link": "shopify://collections/substrate-verbesserer",
             "fallback_title": "Substratzusätze",
             "fallback_copy": "Gezielte Komponenten für mehr Luft, Drainage, Wasserspeicherung oder Struktur – passend zur Pflanze dosierbar."
           }
@@ -293,7 +293,7 @@
           "settings": {
             "type": "exotics",
             "title": "Mix gezielt ergänzen",
-            "link": "shopify://collections/substrate-zusatze"
+            "link": "shopify://collections/substrate-verbesserer"
           }
         }
       },
