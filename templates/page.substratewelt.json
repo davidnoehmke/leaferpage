@@ -445,22 +445,27 @@
         "faq_enFUfY",
         "faq_Jfrkan"
       ],
+      "custom_css": [
+        ".substrate-world__title {font-family: cortana; font-size: 50px;}",
+        ".substrate-world__card-media{}"
+      ],
       "name": "LEAFer Substratwelt",
       "settings": {
+        "hero_image": "shopify://shop_images/20587884-FE99-4A1A-B914-EA451C3BAFA7_b1e270cc-e2a0-47f8-8435-150c565769af.png",
         "hero_alt": "LEAFerservice Substratmischungen und natürliche Bestandteile",
         "eyebrow": "Mischen. Verstehen. Wachsen lassen.",
-        "heading": "Substrate, die zu deiner Pflanze passen",
+        "heading": "Die Kraft von Pflanzen entsteht durch natürliche Strukturen, robuste Wurzeln und biochemische Prozesse.",
         "intro": "<p>Starte mit einer erprobten Spezialmischung oder baue dein Substrat aus einzelnen Bestandteilen selbst auf. Jede Rezeptur bleibt transparent und anpassbar.</p>",
         "button_label": "Mischungen entdecken",
         "button_link": "",
         "text_alignment": "left",
-        "overlay": 55,
-        "hero_height": 680,
+        "overlay": 90,
+        "hero_height": 540,
         "content_heading": "Deine Pflanze gibt die Richtung vor",
-        "content_text": "<p>Wurzeln brauchen je nach Pflanzenart unterschiedlich viel Luft, Feuchtigkeit und Halt. Deshalb zeigen wir nicht nur fertige Mischungen, sondern auch, welche Aufgabe jeder Bestandteil übernimmt.</p>",
-        "color_scheme": "default",
-        "padding_top": 72,
-        "padding_bottom": 88
+        "content_text": "<p>Wurzeln brauchen je nach Pflanze unterschiedlich viel Luft, Feuchtigkeit und Halt. Wir zeigen dir, welche Aufgabe jeder Bestandteil erfüllt.</p>",
+        "color_scheme": "soft",
+        "padding_top": 56,
+        "padding_bottom": 40
       }
     },
     "custom_grow_creator_XiGBAW": {
@@ -534,7 +539,7 @@
         "addon_EirpLx"
       ],
       "custom_css": [
-        ".grow-creator__layout{background: none}"
+        ".grow-creator__layout {background: none;}"
       ],
       "name": "LEAFers CustomGrowCreator",
       "settings": {
