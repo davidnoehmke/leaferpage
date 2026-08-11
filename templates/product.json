@@ -12,7 +12,7 @@
     "main": {
       "type": "main-product",
       "custom_css": [
-        "h1 {font-size: 30px;}"
+        "h1 {font-size: 30px; text-align: center;}"
       ],
       "settings": {
         "show_description": true
