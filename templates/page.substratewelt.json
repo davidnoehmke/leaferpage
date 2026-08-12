@@ -447,7 +447,7 @@
       ],
       "custom_css": [
         ".substrate-world__title {font-family: cortana; font-size: 50px;}",
-        ".substrate-world__card-media{}"
+        ".substrate-world__card-media {}"
       ],
       "name": "LEAFer Substratwelt",
       "settings": {
@@ -457,7 +457,7 @@
         "heading": "Die Kraft von Pflanzen entsteht durch natürliche Strukturen, robuste Wurzeln und biochemische Prozesse.",
         "intro": "<p>Starte mit einer erprobten Spezialmischung oder baue dein Substrat aus einzelnen Bestandteilen selbst auf. Jede Rezeptur bleibt transparent und anpassbar.</p>",
         "button_label": "Mischungen entdecken",
-        "button_link": "",
+        "button_link": "shopify://pages/individuelles-substrat",
         "text_alignment": "left",
         "overlay": 90,
         "hero_height": 540,
