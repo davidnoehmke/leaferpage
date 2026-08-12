@@ -17,50 +17,6 @@
       ],
       "settings": {}
     },
-    "hero_VCg389": {
-      "type": "hero",
-      "blocks": {
-        "benefit_7QPfpq": {
-          "type": "benefit",
-          "settings": {
-            "icon": "natural",
-            "heading": "",
-            "text": ""
-          }
-        },
-        "benefit_qqf7zL": {
-          "type": "benefit",
-          "settings": {
-            "icon": "natural",
-            "heading": "",
-            "text": ""
-          }
-        },
-        "benefit_3FWpd7": {
-          "type": "benefit",
-          "settings": {
-            "icon": "natural",
-            "heading": "",
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "benefit_7QPfpq",
-        "benefit_qqf7zL",
-        "benefit_3FWpd7"
-      ],
-      "name": "t:sections.hero.name",
-      "settings": {
-        "overlay": 80,
-        "heading": "",
-        "text": "",
-        "primary_label": "",
-        "primary_link": "",
-        "secondary_label": "",
-        "secondary_link": ""
-      }
-    },
     "leaf_home_grKDik": {
       "type": "leaf-home",
       "blocks": {
@@ -122,11 +78,55 @@
         "secondary_label": "Bestandteile bestellenu",
         "secondary_link": "shopify://pages/individuelles-substrat"
       }
+    },
+    "hero_VCg389": {
+      "type": "hero",
+      "blocks": {
+        "benefit_7QPfpq": {
+          "type": "benefit",
+          "settings": {
+            "icon": "natural",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "benefit_qqf7zL": {
+          "type": "benefit",
+          "settings": {
+            "icon": "natural",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "benefit_3FWpd7": {
+          "type": "benefit",
+          "settings": {
+            "icon": "natural",
+            "heading": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "benefit_7QPfpq",
+        "benefit_qqf7zL",
+        "benefit_3FWpd7"
+      ],
+      "name": "t:sections.hero.name",
+      "settings": {
+        "overlay": 80,
+        "heading": "",
+        "text": "",
+        "primary_label": "",
+        "primary_link": "",
+        "secondary_label": "",
+        "secondary_link": ""
+      }
     }
   },
   "order": [
     "main",
-    "hero_VCg389",
-    "leaf_home_grKDik"
+    "leaf_home_grKDik",
+    "hero_VCg389"
   ]
 }
