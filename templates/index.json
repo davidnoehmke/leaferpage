@@ -43,12 +43,12 @@
         "natural"
       ],
       "custom_css": [
-        "h1 {font-size: 50px;}",
+        "h1 {font-size: 35px;}",
         "p {font-size: 15px; padding: 10px 0;}"
       ],
       "settings": {
         "image": "shopify://shop_images/substratbestandteile.png",
-        "overlay": 90,
+        "overlay": 75,
         "heading": "Jede Pflanze wächst nur so stark wie ihre Wurzeln sich entwickeln.",
         "text": "<p>Hochwertiges Substrat für gesundes Pflanzenwachstum. Unsere abgestimmten Substrate zielen auf Wasserspeicherung, Drainage und Nährstoffverfügbarkeit</p><p><em> -&gt;    optimal für kräftige Pflanzen und langfristigen Erfolg</em></p>",
         "primary_label": "Starter Sets entdecken",
