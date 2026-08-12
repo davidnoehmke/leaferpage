@@ -116,10 +116,11 @@
         "eyebrow": "LEAFers Pflanzenpflege-System",
         "heading": "Pflanzenpflege beginnt an der Wurzel.",
         "text": "<p>Finde Substrate, Gefäße und smarte Helfer, die zu deinem Pflanzenprojekt passen.</p>",
+        "image": "shopify://shop_images/Zitronen_Starter_Set.png",
         "primary_label": "Sortiment entdecken",
-        "primary_link": "",
-        "secondary_label": "Substrat konfigurieren",
-        "secondary_link": ""
+        "primary_link": "shopify://collections/substrate-verbesserer",
+        "secondary_label": "Bestandteile bestellenu",
+        "secondary_link": "shopify://pages/individuelles-substrat"
       }
     }
   },
