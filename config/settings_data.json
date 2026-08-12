@@ -17,32 +17,6 @@
     "muted_color": "#6b6a63",
     "content_for_index": [],
     "blocks": {
-      "5858961087409699889": {
-        "type": "shopify://apps/orbe-geolocation/blocks/app-embed-footer-selector/7cb09287-cd2b-4646-837c-f1f9b6ea703e",
-        "disabled": false,
-        "settings": {
-          "footer_ui_type": "selector",
-          "block_position": "",
-          "option_language": true,
-          "style_corners": "square",
-          "style_dropdown": "outlined",
-          "option_classic_flag_style": "square",
-          "option_classic_currency_type": "none",
-          "search_country": true,
-          "option_modal_continent": false,
-          "option_flag_style": "square",
-          "option_currency_type": "iso",
-          "option_modal_language": true,
-          "title": "Select Your Region",
-          "language_title": "Preferred Language",
-          "helper_text": "Changing language will not affect your selected region",
-          "block_background": "#fff",
-          "style_colors_background": "#fff",
-          "style_colors_border": "#000",
-          "style_colors_text": "#000",
-          "block_alignement": "center"
-        }
-      },
       "14421132865913305101": {
         "type": "shopify://apps/ab-google-analytics/blocks/analytics/2fc433fa-79f5-4d1d-bab2-983d42099561",
         "disabled": false,
@@ -114,35 +88,6 @@
         "disabled": false,
         "settings": {
           "widget_type": "review-widget"
-        }
-      },
-      "15912215999290715800": {
-        "type": "shopify://apps/orbe-geolocation/blocks/app-embed-modal/7cb09287-cd2b-4646-837c-f1f9b6ea703e",
-        "disabled": false,
-        "settings": {
-          "test_mode": false,
-          "modal_closeButton": false,
-          "option_flag_style": "none",
-          "option_currency_type": "none",
-          "option_language": true,
-          "option_search_country": false,
-          "title": "Are you in the right place?",
-          "text": "Please select your shipping country.",
-          "helper_text": "<p>Buy from the country of your choice. Remember that we can only ship your order to addresses located in the chosen country.</p>",
-          "cta_text": "Shop now",
-          "fallback_text": "We don’t ship to {country}",
-          "alignment_image": "right",
-          "style_corners": "square",
-          "style_dropdown": "outlined",
-          "modal_button_align": "right",
-          "title_font_size": 20,
-          "text_font_size": 14,
-          "show_blurred_background": false,
-          "style_colors_background": "#ffffff",
-          "style_colors_closeButton": "#5c5f62",
-          "style_colors_cta_text": "#ffffff",
-          "style_colors_cta_button": "#000000",
-          "style_colors_text": "#000000"
         }
       },
       "9139608461449719892": {
@@ -229,8 +174,6 @@
           "font_color": "#000000",
           "agent_invert_activator_colors": true,
           "button_color": "#000000",
-          "secondary_color": "#ffffff",
-          "ternary_color": "#6a6a6a",
           "button_icon": "chat_bubble",
           "button_text": "chat_with_us",
           "button_horizontal_position": "bottom_right",
@@ -252,6 +195,67 @@
           "minimize": false,
           "slideType": "rating",
           "showDate": true
+        }
+      },
+      "11556762269829088362": {
+        "type": "shopify://apps/indexgpt/blocks/schema_markup/019ff2af-aa2f-763f-82f0-dea6ed984c56",
+        "disabled": false,
+        "settings": {}
+      },
+      "15912215999290715800": {
+        "type": "shopify://apps/orbe-geolocation/blocks/app-embed-modal/7cb09287-cd2b-4646-837c-f1f9b6ea703e",
+        "disabled": false,
+        "settings": {
+          "test_mode": false,
+          "modal_closeButton": false,
+          "option_flag_style": "none",
+          "option_currency_type": "none",
+          "option_language": true,
+          "option_search_country": false,
+          "title": "Are you in the right place?",
+          "text": "Please select your shipping country.",
+          "helper_text": "<p>Buy from the country of your choice. Remember that we can only ship your order to addresses located in the chosen country.</p>",
+          "cta_text": "Shop now",
+          "fallback_text": "We don’t ship to {country}",
+          "alignment_image": "right",
+          "style_corners": "square",
+          "style_dropdown": "outlined",
+          "modal_button_align": "right",
+          "title_font_size": 20,
+          "text_font_size": 14,
+          "show_blurred_background": false,
+          "style_colors_background": "#ffffff",
+          "style_colors_closeButton": "#5c5f62",
+          "style_colors_cta_text": "#ffffff",
+          "style_colors_cta_button": "#000000",
+          "style_colors_text": "#000000"
+        }
+      },
+      "5858961087409699889": {
+        "type": "shopify://apps/orbe-geolocation/blocks/app-embed-footer-selector/7cb09287-cd2b-4646-837c-f1f9b6ea703e",
+        "disabled": true,
+        "settings": {
+          "footer_ui_type": "geolocation",
+          "block_position": "",
+          "option_language": true,
+          "style_corners": "square",
+          "style_dropdown": "outlined",
+          "option_classic_flag_style": "square",
+          "option_classic_currency_type": "none",
+          "open_direction": "upwards",
+          "search_country": true,
+          "option_modal_continent": false,
+          "option_flag_style": "square",
+          "option_currency_type": "iso",
+          "option_modal_language": true,
+          "title": "Select Your Region",
+          "language_title": "Preferred Language",
+          "helper_text": "Changing language will not affect your selected region",
+          "block_background": "#ffffff",
+          "style_colors_background": "#ffffff",
+          "style_colors_border": "#000000",
+          "style_colors_text": "#000000",
+          "block_alignement": "center"
         }
       }
     }
