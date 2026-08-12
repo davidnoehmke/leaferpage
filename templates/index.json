@@ -42,17 +42,14 @@
         "quality",
         "natural"
       ],
-      "custom_css": [
-        "h1 {font-size: 35px;}",
-        "p {font-size: 15px; padding: 10px 0;}"
-      ],
+      "custom_css": [],
       "settings": {
         "image": "shopify://shop_images/substratbestandteile.png",
-        "overlay": 75,
+        "overlay": 70,
         "heading": "Jede Pflanze wächst nur so stark wie ihre Wurzeln sich entwickeln.",
-        "text": "<p>Hochwertiges Substrat für gesundes Pflanzenwachstum. Unsere abgestimmten Substrate zielen auf Wasserspeicherung, Drainage und Nährstoffverfügbarkeit</p><p><em> -&gt;    optimal für kräftige Pflanzen und langfristigen Erfolg</em></p>",
+        "text": "<p>Hochwertiges Substrat für gesundes Pflanzenwachstum. Unsere abgestimmten Substrate zielen auf Wasserspeicherung, Drainage und Nährstoffverfügbarkeit.</p><p></p><ul><li><em> optimal für kräftige Pflanzen und langfristigen Erfolg</em></li></ul>",
         "primary_label": "Starter Sets entdecken",
-        "primary_link": "shopify://pages/leafers-substratbestandteile",
+        "primary_link": "shopify://collections/saatgut",
         "secondary_label": "Individuelles Set konfigurieren",
         "secondary_link": "shopify://pages/individuelles-substrat"
       }
