@@ -9,6 +9,43 @@
  */
 {
   "sections": {
+    "1786554575a46b016e": {
+      "type": "apps",
+      "blocks": {
+        "section_store_block_banner_UMVQg9": {
+          "type": "shopify://apps/section-store/blocks/block-banner/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "gap": 0,
+            "text_align": "center",
+            "link": "",
+            "use_image": false,
+            "icon": "rocket",
+            "image_size": 30,
+            "image_position": "left",
+            "icon_color": "#B82020",
+            "title_text": "<p>🚨 Don't be <strong>the last one</strong> to upgrade</p>",
+            "title_size": 14,
+            "title_color": "#B82020",
+            "body_text": "<p>Last 8 restocks sold out in less than a week. Act fast.</p>",
+            "body_size": 11,
+            "body_color": "#B82020",
+            "border": "dotted",
+            "border_thickness": 1,
+            "border_color": "#305E40",
+            "radius": 16,
+            "background": "#DEEDE0",
+            "background_gradient": "",
+            "shadow": "none",
+            "padding_vertical": 12,
+            "padding_horizontal": 16
+          }
+        }
+      },
+      "block_order": [
+        "section_store_block_banner_UMVQg9"
+      ],
+      "settings": {}
+    },
     "hero": {
       "type": "hero",
       "blocks": {
@@ -44,12 +81,12 @@
       ],
       "custom_css": [],
       "settings": {
-        "image": "shopify://shop_images/substratbestandteile.png",
+        "image": "shopify://shop_images/IMG-2217.png",
         "overlay": 70,
         "heading": "Jede Pflanze wächst nur so stark wie ihre Wurzeln sich entwickeln.",
         "text": "<p>Hochwertiges Substrat für gesundes Pflanzenwachstum. Unsere abgestimmten Substrate zielen auf Wasserspeicherung, Drainage und Nährstoffverfügbarkeit.</p><p></p><ul><li><em> optimal für kräftige Pflanzen und langfristigen Erfolg</em></li></ul>",
-        "primary_label": "Starter Sets entdecken",
-        "primary_link": "shopify://pages/leafs-tropical-mix",
+        "primary_label": "Ergänzung auswählen",
+        "primary_link": "shopify://collections/substrate-verbesserer",
         "secondary_label": "Individuelles Set konfigurieren",
         "secondary_link": "shopify://pages/individuelles-substrat"
       }
@@ -446,6 +483,7 @@
     }
   },
   "order": [
+    "1786554575a46b016e",
     "hero",
     "home_collection_journey_djRzLh",
     "featured_collection_VCnp9C",
