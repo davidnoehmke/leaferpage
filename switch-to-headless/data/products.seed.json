@@ -1,0 +1,61 @@
+{
+  "source": "LEAFerservice Produktdatenbank - public content seed",
+  "updated_at": "2026-07-24",
+  "note": "Public-tauglicher Produktcontent-Seed fuer Frontend, WordPress und Shopify-Content. Interne Prioritaeten, Lieferanten-, Fulfillment-, EK- und Statusfelder sind bewusst nicht enthalten.",
+  "products": [
+    {
+      "name": "Kulturtopf 9 cm",
+      "category": "Pflanzgefaesse",
+      "subcategory": "Kulturtoepfe",
+      "collection": "LEAFersPot",
+      "variants": "9 cm",
+      "colors": "Schwarz / transparent",
+      "use_case": "Standard-Innentopf fuer Zimmerpflanzen"
+    },
+    {
+      "name": "Transparenter Orchideentopf mit seitlicher Belueftung",
+      "category": "Pflanzgefaesse",
+      "subcategory": "Orchideentoepfe",
+      "collection": "LEAFersPot",
+      "variants": "12 / 15 / 18 cm",
+      "colors": "Transparent",
+      "use_case": "Orchideen und luftige Wurzelzonen"
+    },
+    {
+      "name": "Netztopf fuer Semi-Hydro",
+      "category": "Pflanzgefaesse",
+      "subcategory": "Semi-Hydro",
+      "collection": "LEAFersPot",
+      "variants": "8 / 12 / 15 cm",
+      "colors": "Schwarz / Weiss",
+      "use_case": "LECA, Pon und Semi-Hydro"
+    },
+    {
+      "name": "Geflochtener Pflanzenkorb 24 cm",
+      "category": "Pflanzgefaesse",
+      "subcategory": "Naturkoerbe",
+      "collection": "Pflanzgefaesse & Wohnaccessoires",
+      "variants": "24 cm",
+      "colors": "Natur",
+      "use_case": "Dekorativer Uebertopf fuer grosse Pflanzen"
+    },
+    {
+      "name": "Kokos-Quelltabletten",
+      "category": "Anzucht",
+      "subcategory": "Keim- und Anzuchtmedien",
+      "collection": "Anzucht & Vermehrung",
+      "variants": "20 / 50 / 100 Stueck",
+      "colors": "Natur",
+      "use_case": "Keimung, Wurzelbildung und Jungpflanzen"
+    },
+    {
+      "name": "Modularer D-foermiger Moosstab",
+      "category": "Pflanzenfuehrung",
+      "subcategory": "Moos- und Kokosstaebe",
+      "collection": "Rankhilfen",
+      "variants": "30 / 45 / 60 cm",
+      "colors": "Schwarz / Weiss / Transparent",
+      "use_case": "Kletterpflanzen, Monstera und Epipremnum"
+    }
+  ]
+}

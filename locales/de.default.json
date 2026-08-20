@@ -99,13 +99,19 @@
     "quantity": "Anzahl",
     "variant": "Variante",
     "add_to_cart": "In den Warenkorb",
-    "quick_add": "{{ product }} in den Warenkorb legen",
+    "quick_add": "In den Warenkorb legen",
     "sold_out": "Ausverkauft",
     "unavailable": "Nicht verfügbar",
     "purchase_benefits": "Vorteile beim Einkauf",
-    "breadcrumbs": "Brotkrümelnavigation",
+    "breadcrumbs": "LinkList",
     "bestseller": "Bestseller",
     "special_mix": "Spezialmischung"
+  },
+  "product_variant_guide": {
+    "steps_heading": "So gelingt die Aussaat",
+    "facts_heading": "Produktdetails",
+    "faq_heading": "Gut zu wissen",
+    "notice_label": "Hinweis:"
   },
   "collection": {
     "products_count": "{{ count }} Produkte",

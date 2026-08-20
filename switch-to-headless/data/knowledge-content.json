@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "title": "LEAFerservice - Pflanzenwissen, Substrate & Grow-Systeme",
+    "description": "LEAFerservice verbindet Substrate, Pflanzenwissen und passende Pflanzgefaesse in einer strukturierten Knowledge Base.",
+    "language": "de-DE",
+    "source": "leafer-homepage(2).zip",
+    "updated_at": "2026-07-24"
+  },
+  "page": {
+    "entity_id": "page_knowledge_homepage",
+    "slug": "knowledge-homepage",
+    "status": "draft"
+  },
+  "sections": [
+    {
+      "entity_id": "section_home_hero",
+      "slug": "hero",
+      "eyebrow": "Pflanzenwissen, das zusammenhaengt",
+      "headline": "Das richtige Substrat beginnt mit den richtigen Bestandteilen.",
+      "body": "LEAFerservice verbindet Materialeigenschaften, Pflanzenbeduerfnisse, Gefaesse und Pflegewissen zu einem nachvollziehbaren System - statt einzelne Produkte ohne Zusammenhang zu zeigen.",
+      "ctas": [
+        { "label": "Substrat-Finder starten", "href": "#finder" },
+        { "label": "Bestandteile entdecken", "href": "#bestandteile" }
+      ],
+      "proof_points": ["Quellenbasiert", "Praxisnah", "Modular"]
+    },
+    {
+      "entity_id": "section_home_wissen",
+      "slug": "wissen",
+      "eyebrow": "Nicht nur ein Shop",
+      "headline": "Ein System fuer bessere Pflanzenentscheidungen",
+      "body": "Jeder Inhalt wird mit passenden Pflanzen, Materialien, Problemen, Massnahmen und Produkten verknuepft.",
+      "features": [
+        {
+          "title": "Material verstehen",
+          "text": "Wasserspeicherung, Belueftung, pH-Einfluss, Koernung und Langzeitstabilitaet werden getrennt bewertet."
+        },
+        {
+          "title": "Passend kombinieren",
+          "text": "Bestandteile werden nicht isoliert, sondern als Mischung fuer konkrete Pflanzen und Kulturziele betrachtet."
+        },
+        {
+          "title": "Pflege ableiten",
+          "text": "Aus Material und Gefaess ergeben sich klare Hinweise fuer Giessen, Duengen, Umtopfen und Standort."
+        }
+      ]
+    },
+    {
+      "entity_id": "module_substrate_finder",
+      "slug": "substrat-finder",
+      "eyebrow": "Interaktiver Einstieg",
+      "headline": "Welche Eigenschaft soll dein Substrat verbessern?",
+      "body": "Waehle dein Ziel. Die Seite filtert passende Bestandteile und erklaert ihre Rolle im Mix.",
+      "filters": [
+        { "label": "Alle", "value": "all" },
+        { "label": "Mehr Luft", "value": "air" },
+        { "label": "Mehr Wasser", "value": "water" },
+        { "label": "Mehr Struktur", "value": "structure" },
+        { "label": "Mehr Pufferung", "value": "buffer" }
+      ]
+    },
+    {
+      "entity_id": "section_home_system",
+      "slug": "system",
+      "eyebrow": "Von Wissen zu Anwendung",
+      "headline": "Ein Datensatz. Viele sinnvolle Ausgaben.",
+      "body": "Die Knowledge Base trennt Fachwissen von Darstellung. Dadurch kann derselbe Inhalt als Produktseite, Vergleich, Ratgeber, FAQ oder Assistenz-Antwort ausgespielt werden.",
+      "outputs": ["Produktseite", "Ratgeber", "FAQ", "Finder"]
+    }
+  ],
+  "components": [
+    {
+      "entity_id": "sub_perlite",
+      "name": "Perlite",
+      "material": "Mineralisch",
+      "summary": "Leichtes Vulkanglas fuer mehr Luft, Struktur und eine bessere Wiederbenetzung.",
+      "tags": ["air", "structure"],
+      "scores": { "air": 92, "water": 44, "structure": 76 }
+    },
+    {
+      "entity_id": "sub_pine_bark",
+      "name": "Pinienrinde",
+      "material": "Organisch",
+      "summary": "Grobe, langlebige Strukturkomponente fuer Aroiden, Orchideen und Epiphyten.",
+      "tags": ["air", "structure"],
+      "scores": { "air": 88, "water": 38, "structure": 90 }
+    },
+    {
+      "entity_id": "sub_pumice",
+      "name": "Bims",
+      "material": "Mineralisch",
+      "summary": "Poroeses Naturgestein, das Wasser und Luft besonders ausgewogen verbindet.",
+      "tags": ["air", "water", "structure"],
+      "scores": { "air": 82, "water": 72, "structure": 86 }
+    },
+    {
+      "entity_id": "sub_lava",
+      "name": "Lavagranulat",
+      "material": "Mineralisch",
+      "summary": "Schweres, formstabiles Granulat fuer Drainage und dauerhaft offene Mischungen.",
+      "tags": ["air", "structure"],
+      "scores": { "air": 80, "water": 30, "structure": 94 }
+    },
+    {
+      "entity_id": "sub_leca",
+      "name": "Tongranulat",
+      "material": "Mineralisch",
+      "summary": "Offenporiges Granulat zur Wasser- und Naehrstoffspeicherung in stabilen Kulturen.",
+      "tags": ["water", "buffer"],
+      "scores": { "air": 68, "water": 78, "structure": 82 }
+    },
+    {
+      "entity_id": "sub_coco_coir",
+      "name": "Kokosmark",
+      "material": "Organisch",
+      "summary": "Torffreie Grundkomponente mit hoher Wasserspeicherung und guter Wiederbenetzung.",
+      "tags": ["water"],
+      "scores": { "air": 58, "water": 88, "structure": 60 }
+    }
+  ],
+  "articles": [
+    {
+      "entity_id": "article_air_rootspace",
+      "type": "Guide",
+      "category": "Substrate verstehen",
+      "title": "Warum Luft im Wurzelraum wichtiger ist als moeglichst viel Wasser"
+    },
+    {
+      "entity_id": "article_pumice_lava_perlite",
+      "type": "Vergleich",
+      "category": "Materialvergleich",
+      "title": "Bims, Lava oder Perlite: Welcher Zuschlag passt zu welchem Ziel?"
+    },
+    {
+      "entity_id": "article_aroid_mix",
+      "type": "Praxis",
+      "category": "Aroid-Mischungen",
+      "title": "Eine ausgewogene Mischung fuer Alocasia, Monstera und Philodendron"
+    }
+  ]
+}

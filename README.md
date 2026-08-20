@@ -21,6 +21,8 @@ The product template reads these optional metafields:
 - `leafer.ingredients`
 - `leafer.cross_selling`
 - `leafer.short_claim`
+- Variant: `leafer.variant_content` (`json`) for selection-specific guides,
+  benefits, sowing steps, facts and FAQs.
 
 ## Validation
 
