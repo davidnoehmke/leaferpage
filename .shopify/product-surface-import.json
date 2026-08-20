@@ -1,0 +1,37 @@
+{
+  "purpose": "LEAFerservice product and collection Online Store 2.0 surface import",
+  "source": {
+    "repository": "davidnoehmke/leaferpage",
+    "branch": "agent/product-metafield-sections"
+  },
+  "public_brand": {
+    "name": "LEAFerservice",
+    "domain": "leaferservice.com"
+  },
+  "target": {
+    "theme": "leaferpage/switch-to-headless",
+    "role": "UNPUBLISHED"
+  },
+  "files": [
+    "templates/product.json",
+    "templates/collection.json",
+    "sections/main-product.liquid",
+    "sections/product-metafield-details.liquid",
+    "sections/product-variant-description.liquid",
+    "sections/product-recipe.liquid",
+    "sections/product-cross-sell.liquid",
+    "sections/main-collection.liquid",
+    "sections/featured-collection.liquid",
+    "snippets/product-card.liquid",
+    "assets/cart-forms.js",
+    "assets/leafglobal.css"
+  ],
+  "data_policy": {
+    "missing_metafields": "hide-empty-content",
+    "invent_values": false
+  },
+  "safety": {
+    "publish": false,
+    "overwrite_main_theme": false
+  }
+}
