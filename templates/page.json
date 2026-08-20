@@ -11,73 +11,10 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "disabled": true,
       "custom_css": [
         ".main-page {font-size: 5px;}"
       ],
       "settings": {}
-    },
-    "leaf_home_grKDik": {
-      "type": "leaf-home",
-      "blocks": {
-        "card_axp8UP": {
-          "type": "card",
-          "settings": {
-            "icon": "✦",
-            "heading": "Substrate",
-            "text": "Strukturstabile Mischungen für unterschiedliche Wurzelräume.",
-            "link_label": "Bereich ansehen",
-            "link": ""
-          }
-        },
-        "card_DeYmXN": {
-          "type": "card",
-          "settings": {
-            "icon": "✦",
-            "heading": "Substrate",
-            "text": "Strukturstabile Mischungen für unterschiedliche Wurzelräume.",
-            "link_label": "Bereich ansehen",
-            "link": ""
-          }
-        },
-        "card_N986c6": {
-          "type": "card",
-          "settings": {
-            "icon": "✦",
-            "heading": "Substrate",
-            "text": "Strukturstabile Mischungen für unterschiedliche Wurzelräume.",
-            "link_label": "Bereich ansehen",
-            "link": ""
-          }
-        },
-        "card_gz4FWc": {
-          "type": "card",
-          "settings": {
-            "icon": "✦",
-            "heading": "Substrate",
-            "text": "Strukturstabile Mischungen für unterschiedliche Wurzelräume.",
-            "link_label": "Bereich ansehen",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "card_axp8UP",
-        "card_DeYmXN",
-        "card_N986c6",
-        "card_gz4FWc"
-      ],
-      "name": "LEAFer Startseite",
-      "settings": {
-        "eyebrow": "LEAFers Pflanzenpflege-System",
-        "heading": "Pflanzenpflege beginnt an der Wurzel.",
-        "text": "<p>Finde Substrate, Gefäße und smarte Helfer, die zu deinem Pflanzenprojekt passen.</p>",
-        "image": "shopify://shop_images/Zitronen_Starter_Set.png",
-        "primary_label": "Sortiment entdecken",
-        "primary_link": "shopify://collections/substrate-verbesserer",
-        "secondary_label": "Bestandteile bestellenu",
-        "secondary_link": "shopify://pages/individuelles-substrat"
-      }
     },
     "hero_VCg389": {
       "type": "hero",
@@ -122,11 +59,59 @@
         "secondary_label": "",
         "secondary_link": ""
       }
+    },
+    "faq_8Qx7T4": {
+      "type": "faq",
+      "blocks": {
+        "question_FQhD8j": {
+          "type": "question",
+          "settings": {
+            "topic": "substrate",
+            "question": "Finde das passende Substra",
+            "answer": ""
+          }
+        },
+        "question_GhEzGP": {
+          "type": "question",
+          "settings": {
+            "topic": "substrate",
+            "question": "",
+            "answer": ""
+          }
+        },
+        "question_XL6kJe": {
+          "type": "question",
+          "settings": {
+            "topic": "substrate",
+            "question": "",
+            "answer": ""
+          }
+        },
+        "question_L9iBeQ": {
+          "type": "question",
+          "settings": {
+            "topic": "substrate",
+            "question": "",
+            "answer": ""
+          }
+        }
+      },
+      "block_order": [
+        "question_FQhD8j",
+        "question_GhEzGP",
+        "question_XL6kJe",
+        "question_L9iBeQ"
+      ],
+      "name": "t:sections.faq.name",
+      "settings": {
+        "heading": "",
+        "text": ""
+      }
     }
   },
   "order": [
     "main",
-    "leaf_home_grKDik",
-    "hero_VCg389"
+    "hero_VCg389",
+    "faq_8Qx7T4"
   ]
 }
