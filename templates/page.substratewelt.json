@@ -421,14 +421,14 @@
           "type": "faq",
           "settings": {
             "question": "Kann ich die Mischverhältnisse verändern?",
-            "answer": "<p>Ja. Die Rezepturen sind Startpunkte. Passe sie an Pflanzenart, Topf, Standort und deine Gießroutine an.</p>"
+            "answer": "<p>Ja. <br/></p><p>Die Rezepturen sind Startpunkte. Passe diese mit den Slidern an Pflanzenart, Topf, Standort und deine Gießroutine an.</p>"
           }
         },
         "faq_Jfrkan": {
           "type": "faq",
           "settings": {
             "question": "Welche Mischung passt zu meiner Pflanze?",
-            "answer": "<p>Tropische Aroids profitieren meist von einer groben, luftigen Struktur. Sukkulenten und Kakteen benötigen einen höheren Mineralanteil und besonders schnelle Drainage.</p>"
+            "answer": "<p>Total unterschiedlich…</p><p>Diese Frage kannst leider nur du herausfinden. Schau doch in unserem Blog vorbei, dort ist ein ausführlicher Ratgeber zu finden.</p>"
           }
         }
       },
@@ -500,15 +500,15 @@
         "addon_YAYpmL": {
           "type": "addon",
           "settings": {
-            "product": "garden-highpro-ghp-profan-clip-ventilator-20-cm-12-w",
-            "title": "{{ block.settings.product.title }}",
-            "explanation": ""
+            "product": "alocasia-cuprea-red-secret-jungpflanze",
+            "title": "Alocasia cuprea 'Red Secret‘",
+            "explanation": "Ergänze dein Set durch diese seltene, exotische Schönheit."
           }
         },
         "addon_DfYGj8": {
           "type": "addon",
           "settings": {
-            "product": "kokosstab-1",
+            "product": "rankhilfe-modular-schwarz",
             "title": "Rankhilfe",
             "explanation": "Gibt kletternden Aroids Halt und unterstützt einen geordneten Wuchs."
           }
@@ -516,9 +516,9 @@
         "addon_6QK7x3": {
           "type": "addon",
           "settings": {
-            "product": "leaferrootmist™-fein-spruher-fur-keimlinge-300-ml",
-            "title": "Feuchtigkeitsmesser",
-            "explanation": "Hilft dabei, den richtigen Gießzeitpunkt besser einzuschätzen."
+            "product": "runder-steintopf-matt-taupe",
+            "title": "{{ block.settings.product.title }}",
+            "explanation": "Mit diesem Pflanzgefäß aus Stein kannst du dein Set komplettieren. Es besitzt ein Ablaufloch am Topfboden, ist aus Stein und hat 37 cm Durchmesser."
           }
         },
         "addon_EirpLx": {
@@ -531,13 +531,6 @@
         }
       },
       "block_order": [
-        "system_aiLhGa",
-        "fabric_pot",
-        "self_watering",
-        "saucer",
-        "support",
-        "meter",
-        "light"
         "system_ARBfL9",
         "system_QiqHgm",
         "addon_YAYpmL",
@@ -546,7 +539,7 @@
         "addon_EirpLx"
       ],
       "custom_css": [
-        ".grow-creator__layout {background: none;}"
+        "content {align-items: center;}"
       ],
       "name": "LEAFers CustomGrowCreator",
       "settings": {
@@ -554,7 +547,6 @@
         "heading": "Aus einzelnen Entscheidungen wird dein Grow-Setup",
         "intro": "<p>Kombiniere deine individuelle Substratrezeptur mit einem passenden Topfsystem und sinnvollen Erweiterungen. Jede Auswahl wird erklärt – du behältst jederzeit die Kontrolle.</p>",
         "mix_product": "leafer-tropical-mix",
-        "mix_product": "substrat",
         "step_mix_heading": "Rezeptur und Menge übernehmen",
         "step_mix_text": "Die oben per Slider eingestellte Rezeptur wird automatisch mit deiner Bestellung gespeichert.",
         "size_label": "Gesamtmenge auswählen",
@@ -563,8 +555,8 @@
         "step_system_heading": "Topfsystem auswählen",
         "step_system_text": "Wähle einen atmungsaktiven Stofftopf oder ein System mit Wasserreservoir – passend zu Standort und Gießroutine.",
         "system_label": "Stofftopf oder Eigenbewässerung",
-        "system_placeholder": "Gefäßdesign festlegen …",
-        "step_addons_heading": "perfekte letzte Ergänzungen",
+        "system_placeholder": "Topfsystem auswählen …",
+        "step_addons_heading": "Setup sinnvoll erweitern",
         "step_addons_text": "Ergänze nur, was dein Projekt wirklich braucht – zum Beispiel Rankhilfe, Untersetzer, Messgerät oder Pflanzenlicht.",
         "summary_eyebrow": "Dein Setup",
         "summary_heading": "Bereit zum Wachsen",
@@ -575,22 +567,12 @@
         "valid_message": "Dein individuelles Setup wurde hinzugefügt.",
         "recipe_missing": "Die Substratanteile müssen zusammen genau 100 % ergeben.",
         "fineprint": "Alle ausgewählten Produkte werden als einzelne Positionen in den Warenkorb gelegt. Deine Rezeptur bleibt an der Substratposition gespeichert.",
-        "padding_top": 40,
-        "padding_bottom": 40
-        "padding_top": 80,
-        "padding_bottom": 72
+        "padding_top": 48,
+        "padding_bottom": 48
       }
-    },
-    "collection_seo_copy_Ld7pVR": {
-      "type": "collection-seo-copy",
-      "name": "SEO-Kollektionstext",
-      "settings": {}
     }
   },
   "order": [
-    "configurator",
-    "grow_creator",
-    "collection_seo_copy_Ld7pVR"
     "obstgenerator_zDjGB9",
     "substrate_world_XmFjWQ",
     "custom_grow_creator_XiGBAW"
