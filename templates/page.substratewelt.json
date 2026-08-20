@@ -524,9 +524,9 @@
         "addon_EirpLx": {
           "type": "addon",
           "settings": {
-            "product": "vivosun-anzucht-heizmatte",
-            "title": "Pflanzenlicht",
-            "explanation": "Ergänzt fehlendes Tageslicht an dunkleren Standorten."
+            "product": "leaferclay-premium-blahton",
+            "title": "{{ block.settings.product.title }}",
+            "explanation": "Für den Steintopf die passende Drainage-Schicht. Sorge für luftige Wurzeln und verhindere Staunässe."
           }
         }
       },
