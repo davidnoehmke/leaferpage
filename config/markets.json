@@ -9,7 +9,7 @@
  */
 {
   "markets": {
-    "european-union": {
+    "european-union-leaferservice": {
       "parent": "@default"
     }
   }
