@@ -1,0 +1,30 @@
+# Hydrogen / Node
+node_modules/
+hydrogen/node_modules/
+hydrogen/dist/
+hydrogen/build/
+hydrogen/.react-router/
+hydrogen/.cache/
+hydrogen/.shopify/
+hydrogen/.oxygen/
+hydrogen/coverage/
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+hydrogen/.env
+hydrogen/.env.*
+!hydrogen/.env.example
+
+# Editors / operating systems
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
