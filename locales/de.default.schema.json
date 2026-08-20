@@ -95,6 +95,7 @@
       "answer": "Antwort"
     },
     "main_product": { "name": "Produkt", "show_description": "Beschreibung anzeigen" },
+    "product_variant_description": { "name": "Varianten-Ratgeber" },
     "main_collection": { "name": "Kollektion" },
     "main_cart": { "name": "Warenkorb" },
     "main_page": { "name": "Seite" },

@@ -17,35 +17,194 @@
     "muted_color": "#6b6a63",
     "content_for_index": [],
     "blocks": {
-      "5858961087409699889": {
-        "type": "shopify://apps/orbe-geolocation/blocks/app-embed-footer-selector/7cb09287-cd2b-4646-837c-f1f9b6ea703e",
+      "14421132865913305101": {
+        "type": "shopify://apps/ab-google-analytics/blocks/analytics/2fc433fa-79f5-4d1d-bab2-983d42099561",
+        "disabled": false,
+        "settings": {}
+      },
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "5460033060862993441": {
+        "type": "shopify://apps/essential-announcer/blocks/app-embed/93b5429f-c8d6-4c33-ae14-250fd84f361b",
+        "disabled": false,
+        "settings": {}
+      },
+      "3427999465559522060": {
+        "type": "shopify://apps/theme-sections/blocks/debutify-head-widget/16fcee8f-c23c-4a0e-b916-39c05c4bef69",
+        "disabled": false,
+        "settings": {}
+      },
+      "17957211177097890867": {
+        "type": "shopify://apps/protectify/blocks/protectify-cart/5fc19a33-9eee-4b3d-a5ea-5150881a50e8",
+        "disabled": false,
+        "settings": {}
+      },
+      "16278478101612877664": {
+        "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
+        "disabled": false,
+        "settings": {}
+      },
+      "6159598353363395418": {
+        "type": "shopify://apps/google-youtube/blocks/store_widget/14ec7bd0-ac77-49a9-9417-90752398bdff",
         "disabled": false,
         "settings": {
-          "footer_ui_type": "selector",
-          "block_position": "",
-          "option_language": true,
-          "style_corners": "square",
-          "style_dropdown": "outlined",
-          "option_classic_flag_style": "square",
-          "option_classic_currency_type": "none",
-          "search_country": true,
-          "option_modal_continent": false,
-          "option_flag_style": "square",
-          "option_currency_type": "iso",
-          "option_modal_language": true,
-          "title": "Select Your Region",
-          "language_title": "Preferred Language",
-          "helper_text": "Changing language will not affect your selected region",
-          "block_background": "#fff",
-          "style_colors_background": "#fff",
-          "style_colors_border": "#000",
-          "style_colors_text": "#000",
-          "block_alignement": "center"
+          "widget_position": "LEFT_BOTTOM",
+          "side_margin": 36,
+          "bottom_margin": 36,
+          "mobile_side_margin": 16,
+          "mobile_bottom_margin": 46
         }
+      },
+      "11531005611096603357": {
+        "type": "shopify://apps/zalify-pixel-popups-emails/blocks/popup-embed/0f5e9b69-424e-42a3-8bd7-8d5b75dd8130",
+        "disabled": false,
+        "settings": {}
+      },
+      "2118589882331710876": {
+        "type": "shopify://apps/essential-trust-badges/blocks/app-embed/0ff65b25-07e1-408e-950f-f54dd3d1751b",
+        "disabled": false,
+        "settings": {}
+      },
+      "15079184273603081885": {
+        "type": "shopify://apps/essential-free-shipping/blocks/app_embed/4125375e-37c8-4137-949d-c4e1a3aac572",
+        "disabled": false,
+        "settings": {}
+      },
+      "13768625480086291342": {
+        "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "disabled": false,
+        "settings": {}
+      },
+      "14152569897387207382": {
+        "type": "shopify://apps/section-store/blocks/block-cart/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+        "disabled": false,
+        "settings": {}
+      },
+      "13047258039897440615": {
+        "type": "shopify://apps/judge-me-reviews/blocks/cart_drawer_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {
+          "widget_type": "review-widget"
+        }
+      },
+      "9139608461449719892": {
+        "type": "shopify://apps/cwill-ai-chat/blocks/aichatbot/e7b73941-aea6-4bde-bb29-6e9e414581d0",
+        "disabled": false,
+        "settings": {}
+      },
+      "6603664506335945664": {
+        "type": "shopify://apps/transtore/blocks/switcher_embed_block/afeffe82-e563-4f78-90f4-f1e3d96286c3",
+        "disabled": false,
+        "settings": {}
+      },
+      "13851756539466573627": {
+        "type": "shopify://apps/gelato-print-on-demand/blocks/product-personalizer/9f8f1130-ec83-4e2f-a417-5e69fb8f6e45",
+        "disabled": false,
+        "settings": {
+          "hidden-selector": "",
+          "in-page-personalization-preview-selector": "",
+          "cart-edit-selector": "",
+          "cart-item-info-selector": "",
+          "personalized-cart-preview-selector": "",
+          "dropdown-selectors-desktop": "None",
+          "dropdown-selectors-mobile": "None",
+          "show-personalize-tab": true,
+          "hide-preview-button": false,
+          "hide-preview-scroll-bar": false,
+          "zoom-in-preview": false,
+          "enable-manual-save-draft": false
+        }
+      },
+      "12994730151769110984": {
+        "type": "shopify://apps/atlas-ai-store-builder/blocks/atlas-cart-upsells-app-embed/ff382ac5-0af5-4ea9-a13a-234e8976ca8b",
+        "disabled": false,
+        "settings": {}
+      },
+      "17358671006927775310": {
+        "type": "shopify://apps/atlas-ai-store-builder/blocks/atlas-dependencies/ff382ac5-0af5-4ea9-a13a-234e8976ca8b",
+        "disabled": false,
+        "settings": {}
+      },
+      "15709271889847974563": {
+        "type": "shopify://apps/cx-elevate-date-time-picker/blocks/embed_script/3613d08c-d180-43c4-8f66-9aca9e0d28fc",
+        "disabled": true,
+        "settings": {}
+      },
+      "1232542678405107163": {
+        "type": "shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5",
+        "disabled": true,
+        "settings": {}
+      },
+      "12366796244750993390": {
+        "type": "shopify://apps/amazon-reviews/blocks/sticky-compact-widget-block-embed/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+        "disabled": true,
+        "settings": {
+          "font": "default",
+          "variant": "trust",
+          "themeId": "light",
+          "verticalPositionId": "top",
+          "horizontalPositionId": "right",
+          "minimize": false,
+          "slideType": "rating",
+          "showDate": true,
+          "message": "Our customers have rated us",
+          "transparent": 1
+        }
+      },
+      "2680175748099902610": {
+        "type": "shopify://apps/amazon-reviews/blocks/product-rating-snippet-embed/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+        "disabled": true,
+        "settings": {}
+      },
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": true,
+        "settings": {
+          "greeting_message": "",
+          "show_featured_products": true,
+          "featured_products": [
+            "alocasia-black-velvet",
+            "anzucht-stecklings-bundle",
+            "anzuchttopf5-12cm"
+          ],
+          "background_color": "#ffffff",
+          "font_color": "#000000",
+          "agent_invert_activator_colors": true,
+          "button_color": "#000000",
+          "button_icon": "chat_bubble",
+          "button_text": "chat_with_us",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest",
+          "agent_inherit_fonts": true,
+          "agent_font": "system_ui_n4",
+          "agent_border_radius": 16
+        }
+      },
+      "16475345141933610880": {
+        "type": "shopify://apps/amazon-reviews/blocks/sticky-compact-widget-block-embed.product/88ab28f3-a438-4eb3-a83e-f1a9c62c5069",
+        "disabled": true,
+        "settings": {
+          "font": "default",
+          "variant": "basic",
+          "themeId": "light",
+          "verticalPositionId": "top",
+          "horizontalPositionId": "right",
+          "minimize": false,
+          "slideType": "rating",
+          "showDate": true
+        }
+      },
+      "11556762269829088362": {
+        "type": "shopify://apps/indexgpt/blocks/schema_markup/019ff2af-aa2f-763f-82f0-dea6ed984c56",
+        "disabled": false,
+        "settings": {}
       },
       "15912215999290715800": {
         "type": "shopify://apps/orbe-geolocation/blocks/app-embed-modal/7cb09287-cd2b-4646-837c-f1f9b6ea703e",
-        "disabled": true,
+        "disabled": false,
         "settings": {
           "test_mode": false,
           "modal_closeButton": false,
@@ -65,11 +224,11 @@
           "title_font_size": 20,
           "text_font_size": 14,
           "show_blurred_background": false,
-          "style_colors_background": "#FFF",
-          "style_colors_closeButton": "#5C5F62",
-          "style_colors_cta_text": "#fff",
-          "style_colors_cta_button": "#000",
-          "style_colors_text": "#000"
+          "style_colors_background": "#ffffff",
+          "style_colors_closeButton": "#5c5f62",
+          "style_colors_cta_text": "#ffffff",
+          "style_colors_cta_button": "#000000",
+          "style_colors_text": "#000000"
         }
       },
       "14421132865913305101": {
@@ -82,13 +241,69 @@
         "disabled": false,
         "settings": {}
       },
-      "15620043091132039688": {
-        "type": "shopify://apps/hoppy-trust-badges/blocks/trust_badges_icon/6e9703d9-56af-47d9-80bb-0abc8eb8c38b",
+      "5460033060862993441": {
+        "type": "shopify://apps/essential-announcer/blocks/app-embed/93b5429f-c8d6-4c33-ae14-250fd84f361b",
         "disabled": false,
         "settings": {}
       },
-      "5460033060862993441": {
-        "type": "shopify://apps/essential-announcer/blocks/app-embed/93b5429f-c8d6-4c33-ae14-250fd84f361b",
+      "3427999465559522060": {
+        "type": "shopify://apps/theme-sections/blocks/debutify-head-widget/16fcee8f-c23c-4a0e-b916-39c05c4bef69",
+        "disabled": false,
+        "settings": {}
+      },
+      "13768625480086291342": {
+        "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "disabled": false,
+        "settings": {}
+      },
+      "11531005611096603357": {
+        "type": "shopify://apps/zalify-pixel-popups-emails/blocks/popup-embed/0f5e9b69-424e-42a3-8bd7-8d5b75dd8130",
+        "disabled": false,
+        "settings": {}
+      },
+      "16278478101612877664": {
+        "type": "shopify://apps/pagefly-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200",
+        "disabled": false,
+        "settings": {}
+      },
+      "2118589882331710876": {
+        "type": "shopify://apps/essential-trust-badges/blocks/app-embed/0ff65b25-07e1-408e-950f-f54dd3d1751b",
+        "disabled": false,
+        "settings": {}
+      },
+      "17957211177097890867": {
+        "type": "shopify://apps/protectify/blocks/protectify-cart/5fc19a33-9eee-4b3d-a5ea-5150881a50e8",
+        "disabled": false,
+        "settings": {}
+      },
+      "6159598353363395418": {
+        "type": "shopify://apps/google-youtube/blocks/store_widget/14ec7bd0-ac77-49a9-9417-90752398bdff",
+        "disabled": false,
+        "settings": {
+          "widget_position": "LEFT_BOTTOM",
+          "side_margin": 36,
+          "bottom_margin": 36,
+          "mobile_side_margin": 16,
+          "mobile_bottom_margin": 46
+        }
+      },
+      "9139608461449719892": {
+        "type": "shopify://apps/cwill-ai-chat/blocks/aichatbot/e7b73941-aea6-4bde-bb29-6e9e414581d0",
+        "disabled": false,
+        "settings": {}
+      },
+      "12994730151769110984": {
+        "type": "shopify://apps/atlas-ai-store-builder/blocks/atlas-cart-upsells-app-embed/ff382ac5-0af5-4ea9-a13a-234e8976ca8b",
+        "disabled": false,
+        "settings": {}
+      },
+      "17358671006927775310": {
+        "type": "shopify://apps/atlas-ai-store-builder/blocks/atlas-dependencies/ff382ac5-0af5-4ea9-a13a-234e8976ca8b",
+        "disabled": false,
+        "settings": {}
+      },
+      "15079184273603081885": {
+        "type": "shopify://apps/essential-free-shipping/blocks/app_embed/4125375e-37c8-4137-949d-c4e1a3aac572",
         "disabled": false,
         "settings": {}
       }

@@ -9,16 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-collection",
-      "settings": {
-        "show_type_filters": true
-      }
-    },
-    "seo_copy": {
-      "type": "collection-seo-copy",
-      "settings": {}
-    },
     "trust_bar_wKpxUq": {
       "type": "trust-bar",
       "blocks": {
@@ -63,11 +53,18 @@
       ],
       "name": "t:sections.trust_bar.name",
       "settings": {}
+    },
+    "seo_copy": {
+      "type": "collection-seo-copy",
+      "custom_css": [
+        "section {padding: 0;}"
+      ],
+      "settings": {}
     }
   },
   "order": [
-    "trust_bar_wKpxUq",
     "main",
+    "trust_bar_wKpxUq",
     "seo_copy"
   ]
 }
