@@ -1,0 +1,101 @@
+{% liquid
+  assign anzucht_collection = section.settings.collection
+%}
+
+<section class="home-anzucht" id="HomeAnzucht-{{ section.id }}" aria-labelledby="HomeAnzuchtHeading-{{ section.id }}">
+  <div class="page-width">
+    <header class="home-anzucht__header">
+      {% if section.settings.eyebrow != blank %}<p class="home-anzucht__eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}
+      <div class="home-anzucht__heading-row">
+        <div>
+          <h2 id="HomeAnzuchtHeading-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+          {% if section.settings.text != blank %}<div class="home-anzucht__intro rte">{{ section.settings.text }}</div>{% endif %}
+        </div>
+        {% if anzucht_collection != blank %}<a class="home-anzucht__all" href="{{ anzucht_collection.url }}">{{ section.settings.link_label | escape }} <span aria-hidden="true">→</span></a>{% endif %}
+      </div>
+    </header>
+
+    {% if anzucht_collection != blank and anzucht_collection.products_count > 0 %}
+      <div class="home-anzucht__grid" role="list">
+        {% for product in anzucht_collection.products limit: section.settings.products_to_show %}
+          <article class="home-anzucht__card" role="listitem">
+            <a class="home-anzucht__media" href="{{ product.url }}" aria-label="{{ product.title | escape }}">
+              {% if product.featured_image != blank %}
+                {{ product.featured_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '320, 480, 640, 900', sizes: '(min-width: 990px) 25vw, (min-width: 600px) 50vw, 82vw', alt: product.featured_image.alt | default: product.title }}
+              {% else %}
+                <span class="home-anzucht__placeholder" aria-hidden="true">{{ 'product-1' | placeholder_svg_tag }}</span>
+              {% endif %}
+            </a>
+            <div class="home-anzucht__body">
+              <p class="home-anzucht__type">{{ product.type | default: 'Anzucht' | escape }}</p>
+              <h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
+              <div class="home-anzucht__meta">
+                <span>{% if product.price_varies %}ab {% endif %}{{ product.price_min | money }}</span>
+                {% if product.available %}<span class="home-anzucht__status">Verfügbar</span>{% else %}<span class="home-anzucht__status home-anzucht__status--muted">Derzeit nicht verfügbar</span>{% endif %}
+              </div>
+              <a class="home-anzucht__cta" href="{{ product.url }}">Produkt ansehen <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="home-anzucht__empty">
+        <p>{{ section.settings.empty_text | escape }}</p>
+        {% if section.settings.fallback_link != blank %}<a class="button" href="{{ section.settings.fallback_link }}">{{ section.settings.fallback_label | escape }}</a>{% endif %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% stylesheet %}
+  .home-anzucht { padding: var(--space-section) 0; background: var(--background); }
+  .home-anzucht__header { margin-bottom: clamp(1.8rem, 4vw, 3rem); }
+  .home-anzucht__eyebrow { margin: 0 0 .65rem; color: var(--accent); font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+  .home-anzucht__heading-row { display: flex; align-items: end; justify-content: space-between; gap: 2rem; }
+  .home-anzucht h2 { max-width: 780px; margin: 0 0 .8rem; font-size: clamp(2rem, 4.5vw, 4.2rem); line-height: 1; }
+  .home-anzucht__intro { max-width: 66ch; color: var(--muted); }
+  .home-anzucht__all, .home-anzucht__cta { color: var(--accent); font-weight: 800; text-decoration: none; }
+  .home-anzucht__all { flex: 0 0 auto; padding-bottom: .3rem; }
+  .home-anzucht__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+  .home-anzucht__card { min-width: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-large); background: var(--surface); }
+  .home-anzucht__media { display: block; aspect-ratio: 1 / 1; overflow: hidden; background: var(--accent-soft); }
+  .home-anzucht__media img, .home-anzucht__placeholder, .home-anzucht__placeholder svg { width: 100%; height: 100%; object-fit: cover; }
+  .home-anzucht__media img { transition: transform .4s var(--ease-out); }
+  .home-anzucht__card:hover .home-anzucht__media img { transform: scale(1.025); }
+  .home-anzucht__body { padding: 1.1rem; }
+  .home-anzucht__type { margin: 0 0 .35rem; color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+  .home-anzucht h3 { margin: 0 0 .85rem; font-size: clamp(1.05rem, 1.5vw, 1.3rem); line-height: 1.2; }
+  .home-anzucht h3 a { color: inherit; text-decoration: none; }
+  .home-anzucht__meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .45rem 1rem; margin-bottom: 1rem; font-size: .9rem; }
+  .home-anzucht__status { color: var(--accent); }
+  .home-anzucht__status--muted { color: var(--muted); }
+  .home-anzucht__empty { padding: 2rem; border: 1px solid var(--border); border-radius: var(--radius-large); background: var(--surface); text-align: center; }
+  @media (max-width: 990px) { .home-anzucht__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 600px) {
+    .home-anzucht__heading-row { display: block; }
+    .home-anzucht__all { display: inline-flex; margin-top: 1rem; }
+    .home-anzucht__grid { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(78vw, 1fr); grid-template-columns: none; gap: .8rem; overflow-x: auto; padding: 0 1px .6rem; scroll-snap-type: x proximity; scrollbar-width: thin; }
+    .home-anzucht__card { scroll-snap-align: start; }
+    .home-anzucht__media { aspect-ratio: 4 / 3; }
+  }
+  @media (prefers-reduced-motion: reduce) { .home-anzucht__media img { transition: none; } }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Home Anzucht",
+  "tag": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Kicker", "default": "Vom Samen zur Jungpflanze" },
+    { "type": "text", "id": "heading", "label": "Überschrift", "default": "Anzucht ohne Rätselraten" },
+    { "type": "richtext", "id": "text", "label": "Einleitung", "default": "<p>Keimung braucht vor allem passende Feuchtigkeit, Wärme und Licht. Hier findest du die Werkzeuge für einen kontrollierten Start – vom Anzuchtmedium bis zur Keimlingspflege.</p>" },
+    { "type": "collection", "id": "collection", "label": "Anzucht-Kollektion" },
+    { "type": "range", "id": "products_to_show", "label": "Produkte", "min": 2, "max": 8, "step": 1, "default": 4 },
+    { "type": "text", "id": "link_label", "label": "Link zur Kollektion", "default": "Alle Anzuchtprodukte" },
+    { "type": "text", "id": "empty_text", "label": "Leerzustand", "default": "Anzuchtprodukte werden gerade vorbereitet." },
+    { "type": "url", "id": "fallback_link", "label": "Fallback-Link" },
+    { "type": "text", "id": "fallback_label", "label": "Fallback-CTA", "default": "Sortiment ansehen" }
+  ],
+  "presets": [{ "name": "Home Anzucht" }]
+}
+{% endschema %}
