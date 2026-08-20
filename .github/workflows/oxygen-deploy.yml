@@ -1,0 +1,56 @@
+name: Hydrogen Oxygen Deploy
+
+on:
+  push:
+    branches:
+      - switch-to-headless
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  deployments: write
+
+jobs:
+  build:
+    name: Build Hydrogen storefront
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+  deploy:
+    name: Deploy to Oxygen
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SHOPIFY_HYDROGEN_DEPLOYMENT_TOKEN: ${{ secrets.OXYGEN_DEPLOYMENT_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Deploy
+        if: ${{ env.SHOPIFY_HYDROGEN_DEPLOYMENT_TOKEN != '' }}
+        run: npx shopify hydrogen deploy
