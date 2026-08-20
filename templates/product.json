@@ -12,7 +12,8 @@
     "main": {
       "type": "main-product",
       "custom_css": [
-        "h1 {font-size: 31px; text-align: center; padding: 10px}"
+        "h1 {font-size: 31px; text-align: center; max-width: 100vh;}",
+        "img {background-color: white; padding-left: 1vh;}"
       ],
       "settings": {
         "show_description": true
@@ -20,17 +21,12 @@
     },
     "metafield_details": {
       "type": "product-metafield-details",
-      "settings": {
-        "eyebrow": "Produktdetails",
-        "heading": "Alles auf einen Blick",
-        "intro": ""
-      },
       "blocks": {
         "short_description": {
           "type": "metafield",
           "settings": {
             "heading": "Kurzbeschreibung",
-            "namespace": "leafer_content",
+            "namespace": "{{ product.metafields.leafer.subtitle.value }}",
             "key": "short_description"
           }
         },
@@ -82,7 +78,12 @@
         "material",
         "mix_ratio",
         "usp_1"
-      ]
+      ],
+      "settings": {
+        "eyebrow": "Produktdetails",
+        "heading": "Alles auf einen Blick",
+        "intro": ""
+      }
     },
     "variant_guide": {
       "type": "product-variant-description",
