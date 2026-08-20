@@ -44,52 +44,21 @@
         }
       },
       "block_order": [
-        "section_store_block_banner_UMVQg9"
-      ],
-      "settings": {}
-    },
-    "hero": {
-      "type": "hero",
-      "blocks": {
-        "shipping": {
-          "type": "benefit",
-          "settings": {
-            "icon": "shipping",
-            "heading": "",
-            "text": ""
-          }
-        },
-        "quality": {
-          "type": "benefit",
-          "settings": {
-            "icon": "quality",
-            "heading": "",
-            "text": ""
-          }
-        },
-        "natural": {
-          "type": "benefit",
-          "settings": {
-            "icon": "natural",
-            "heading": "",
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
         "shipping",
         "quality",
         "natural"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "section {background: none}"
+      ],
       "settings": {
-        "image": "shopify://shop_images/IMG-2217.png",
-        "overlay": 70,
-        "heading": "Jede Pflanze wächst nur so stark wie ihre Wurzeln sich entwickeln.",
-        "text": "<p>Hochwertiges Substrat für gesundes Pflanzenwachstum. Unsere abgestimmten Substrate zielen auf Wasserspeicherung, Drainage und Nährstoffverfügbarkeit.</p><p></p><ul><li><em> optimal für kräftige Pflanzen und langfristigen Erfolg</em></li></ul>",
-        "primary_label": "Ergänzung auswählen",
-        "primary_link": "shopify://collections/substrate-verbesserer",
-        "secondary_label": "Individuelles Set konfigurieren",
+        "image": "shopify://shop_images/lifestyle-anwendungabild.png",
+        "overlay": 20,
+        "heading": "Pflanzenpflege beginnt an der Wurzel.",
+        "text": "<p>Hängende Bläter bei einer Alocasia oder ein Wachstumsstörung bei einer Monstera oder einfach trauermücken oder tribse? Wir finden gemeinsam die Lösing </p>",
+        "primary_label": "Sortiment entdecken",
+        "primary_link": "shopify://collections/all",
+        "secondary_label": "bekannte Probleme durchsuchen",
         "secondary_link": "shopify://pages/individuelles-substrat"
       }
     },
@@ -99,12 +68,12 @@
         "collection_DamgpF": {
           "type": "collection",
           "settings": {
-            "collection": "smartgrow",
-            "image": "shopify://shop_images/orientier-dich-an-den-pflanzgef-en-und-substratbestandteilen-bildern.png",
-            "title": "Anzucht & Wurzelbildung",
-            "copy": "Eine erfolgreiche Anzucht beginnt mit passenden Bedingungen. Anzuchtsubstrat, gleichmäßige Feuchtigkeit und Wärme fördern die Keimung und kräftige Wurzeln",
-            "cta_label": "direkt starten",
-            "fallback_link": "shopify://blogs/leafers-nice2know-blog/leafers-substrate-nice2know",
+            "collection": "shopify://collections/fertige-substratmischungen",
+            "image": "shopify://shop_images/331B5F5C-EB8E-4BF9-A7FF-4720053D40E5.png",
+            "title": "abgestimmte Substrate",
+            "copy": "Fertige Mischungen als klarer Startpunkt für unterschiedliche Wurzelräume, Standorte und Gießroutinen.",
+            "cta_label": "Substrat wählen",
+            "fallback_link": "shopify://collections/fertige-substratmischungen",
             "fallback_title": "Premium Substrate",
             "fallback_copy": "Ausgewogene Basismischungen für stabile Wurzeln, kontrollierte Feuchtigkeit und eine dauerhaft lockere Struktur."
           }
@@ -112,11 +81,11 @@
         "collection_UHGiWz": {
           "type": "collection",
           "settings": {
-            "collection": "substrate-verbesserer",
-            "title": "Das passende Substrat",
-            "copy": "Sobald die ersten Wurzeln wachsen, braucht jede Pflanze die richtige Grundlage. Luftige, strukturstabile Mischungen versorgen die Wurzeln mit Wasser und Sauerstoff.",
-            "cta_label": "Substrat finden",
-            "fallback_link": "shopify://collections/substrate-verbesserer",
+            "collection": "substrate-zusatze",
+            "title": "hochwertige Substratzusätze",
+            "copy": "Komponenten für eine gezielte Veränderung von Luftführung, Drainage, Wasserspeicherung oder Struktur.",
+            "cta_label": "Zusatz wählen",
+            "fallback_link": "shopify://collections/substrate-zusatze",
             "fallback_title": "Substratzusätze",
             "fallback_copy": "Gezielte Komponenten für mehr Luft, Drainage, Wasserspeicherung oder Struktur – passend zur Pflanze dosierbar."
           }
@@ -124,11 +93,10 @@
         "collection_yV9NCk": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "image": "shopify://shop_images/9D2F7D50-6655-4DAC-8887-298F2C877A0D.png",
-            "title": "Topf & Bewässerung",
-            "copy": "Topfgröße, Drainage und Bewässerung müssen zusammenpassen. Das richtige Pflanzgefäß schützt vor Staunässe und unterstützt eine gleichmäßige Versorgung.",
-            "cta_label": "Anbau upgraden",
+            "collection": "leafers-gartenschuppen",
+            "title": "moderne Pflanzgefäße",
+            "copy": "",
+            "cta_label": "Pflanzgefäße kennenlernen",
             "fallback_link": "shopify://collections/leafers-gartenschuppen",
             "fallback_title": "Pflanzgefäße",
             "fallback_copy": "Gefäße, die Wurzelraum, Wasserführung und Alltagstauglichkeit zusammenbringen."
@@ -137,14 +105,13 @@
         "collection_BVLyhU": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "image": "shopify://shop_images/orientier-dich-an-den-pflanzgef-en-und-substratbestandteilen-bildern.png",
-            "title": "Hilfsmittel & Ergänzungen",
-            "copy": "Licht, Temperatur und Luftfeuchtigkeit bestimmen, wie kräftig eine Pflanze wächst. Smarte Grow-Hilfen schaffen auch zu Hause verlässlich gute Bedingungen.",
-            "cta_label": "Basics nicht vergessen",
+            "collection": "smartgrow",
+            "title": "Zubehör & Smarte Ergänzungen",
+            "copy": "Praktische Helfer für Anzucht, Beleuchtung, Gießen und Kontrolle.\nNach konkretem Einsatz geordnet.",
+            "cta_label": "Basics hinzufügen",
             "fallback_link": "shopify://collections/smartgrow",
-            "fallback_title": "Hilfsmittel & Hilfen ergänzen",
-            "fallback_copy": "Licht, Temperatur und Luftfeuchtigkeit bestimmen, wie kräftig eine Pflanze wächst. Smarte Grow-Hilfen schaffen auch zu Hause verlässlich gute Bedingungen."
+            "fallback_title": "SmartGrow & Zubehör",
+            "fallback_copy": "Praktische Helfer für Gießen, Kontrolle und Pflege – sinnvoll ergänzt statt unnötig kompliziert."
           }
         }
       },
@@ -155,93 +122,26 @@
         "collection_BVLyhU"
       ],
       "custom_css": [
-        "h2 {font-size: 30px;}",
-        "p {font-size: 14px;}",
-        "a {justify-content: center; font-size: 17px;}"
+        "section {background: none;}"
       ],
       "name": "Home Kollektionen",
       "settings": {
-        "eyebrow": "Finde dich zurecht bei uns",
-        "heading": "schnelle Lösungen & Anbau Ratgeber",
-        "intro": "<p>Für Neulinge & Interessierte haben wir einen roten Faden gelegt, dem du chronologisch folgen kannst. <br/>Profis & Kenner können direkt zum passenden Produkt springen.</p>"
+        "eyebrow": "LEAFers Pflanzenpflege-System",
+        "heading": "Was braucht deine Pflanze wirklich?",
+        "intro": "<p>Starte mit dem Bedarf deiner Pflanze. Entdecke Substrate, Zusätze, Pflanzgefäße und smartes Zubehör als aufeinander abgestimmtes System.</p>"
       }
     },
-    "featured_collection_VCnp9C": {
+    "bestsellers": {
       "type": "featured-collection",
-      "name": "t:sections.featured_collection.name",
       "settings": {
-        "heading": "",
+        "heading": "Unsere Spezials",
         "heading_preset": "heading",
-        "link_label": "",
-        "collection": "",
+        "link_label": "mehr ->",
+        "collection": "new-arrivals",
         "products_to_show": 4,
         "columns": 4,
         "compact": true
       }
-    },
-    "1786143119f1cbcdb5": {
-      "type": "apps",
-      "blocks": {
-        "section_store_block_space_divide_qpeBdh": {
-          "type": "shopify://apps/section-store/blocks/block-space-divide/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
-          "settings": {
-            "height": 38,
-            "background_color": "rgba(0,0,0,0)",
-            "show_line": true,
-            "line_style": "solid",
-            "line_width": 25,
-            "line_thickness": 1,
-            "line_roundness": 0,
-            "line_color": "#e0e0e0"
-          }
-        },
-        "section_store_block_video_carousel_8BPtKg": {
-          "type": "shopify://apps/section-store/blocks/block-video-carousel/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
-          "settings": {
-            "video_1": "shopify://files/videos/47551-451623797.mp4",
-            "video_2": "shopify://files/videos/instagram-video_34ae078c-ab95-4320-9d44-48b3b3ed5d95.mp4",
-            "video_4": "shopify://files/videos/254112.mp4",
-            "slider_style": "none",
-            "modal_style": "side",
-            "video_autoplay": "true",
-            "play_button_position": "none",
-            "play_button_size": "small",
-            "item_border_style": "none",
-            "item_border_width": 1,
-            "item_border_color": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-            "item_border_radius": 96,
-            "item_padding": 0,
-            "grid_items": "3",
-            "thumbnail_shape": "rectangle",
-            "block_border_style": "none",
-            "block_border_width": 1,
-            "block_border_color": "#d7d7d7",
-            "block_border_radius": 16,
-            "block_bg_color": "",
-            "block_padding_vertical": 8,
-            "block_padding_horizontal": 0
-          }
-        },
-        "section_store_block_space_divide_YaF7j4": {
-          "type": "shopify://apps/section-store/blocks/block-space-divide/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
-          "settings": {
-            "height": 84,
-            "background_color": "rgba(0,0,0,0)",
-            "show_line": true,
-            "line_style": "solid",
-            "line_width": 70,
-            "line_thickness": 1,
-            "line_roundness": 0,
-            "line_color": "#e0e0e0"
-          }
-        }
-      },
-      "block_order": [
-        "section_store_block_space_divide_qpeBdh",
-        "section_store_block_video_carousel_8BPtKg",
-        "section_store_block_space_divide_YaF7j4"
-      ],
-      "settings": {}
     },
     "trust": {
       "type": "trust-bar",
@@ -287,14 +187,30 @@
       ],
       "settings": {}
     },
+    "categories": {
+      "type": "category-grid",
+      "settings": {
+        "heading": "Alle Bereiche entdecken",
+        "automatic": true,
+        "automatic_limit": 5
+      }
+    },
     "brand_story": {
       "type": "brand-story",
-      "custom_css": [
-        "h2 {font-size: 35px;}",
-        "p {font-size: 15px;}"
-      ],
       "settings": {
-        "link": "shopify://pages/faq"
+        "link": "shopify://pages/individuelles-substrat"
+      }
+    },
+    "highlights": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "Anzucht & SmartGrow",
+        "heading_preset": "highlights",
+        "link_label": "SmartGrow vollständig ansehen",
+        "collection": "shopify://collections/smartgrow",
+        "products_to_show": 6,
+        "columns": 6,
+        "compact": true
       }
     },
     "starter": {
@@ -329,7 +245,7 @@
           "settings": {
             "type": "exotics",
             "title": "Mix gezielt ergänzen",
-            "link": "shopify://collections/substrate-verbesserer"
+            "link": "shopify://collections/substrate-zusatze"
           }
         }
       },

@@ -9,12 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-collection",
-      "settings": {
-        "show_type_filters": true
-      }
-    },
     "trust_bar_wKpxUq": {
       "type": "trust-bar",
       "blocks": {
