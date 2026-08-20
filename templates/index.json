@@ -9,6 +9,31 @@
  */
 {
   "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "shipping": {
+          "type": "benefit",
+          "settings": {
+            "icon": "shipping",
+            "heading": "Übersichtlich auswählen",
+            "text": "Kollektionen nach Pflanzenbedarf"
+          }
+        },
+        "quality": {
+          "type": "benefit",
+          "settings": {
+            "icon": "quality",
+            "heading": "Praxisnah erklärt",
+            "text": "Funktion, Varianten und Anwendung im Blick"
+          }
+        },
+        "natural": {
+          "type": "benefit",
+          "settings": {
+            "icon": "natural",
+            "heading": "Als System gedacht",
+            "text": "Substrat, Gefäß und Zubehör kombinieren"
     "1786554575a46b016e": {
       "type": "apps",
       "blocks": {
@@ -81,11 +106,11 @@
         "collection_UHGiWz": {
           "type": "collection",
           "settings": {
-            "collection": "substrate-zusatze",
+            "collection": "substrate-verbesserer",
             "title": "hochwertige Substratzusätze",
             "copy": "Komponenten für eine gezielte Veränderung von Luftführung, Drainage, Wasserspeicherung oder Struktur.",
             "cta_label": "Zusatz wählen",
-            "fallback_link": "shopify://collections/substrate-zusatze",
+            "fallback_link": "shopify://collections/substrate-verbesserer",
             "fallback_title": "Substratzusätze",
             "fallback_copy": "Gezielte Komponenten für mehr Luft, Drainage, Wasserspeicherung oder Struktur – passend zur Pflanze dosierbar."
           }
@@ -245,7 +270,7 @@
           "settings": {
             "type": "exotics",
             "title": "Mix gezielt ergänzen",
-            "link": "shopify://collections/substrate-zusatze"
+            "link": "shopify://collections/substrate-verbesserer"
           }
         }
       },
