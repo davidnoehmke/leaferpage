@@ -11,9 +11,16 @@
   "sections": {
     "main": {
       "type": "main-product",
+      "custom_css": [
+        "h1 {font-size: 31px; text-align: center; padding: 10px}"
+      ],
       "settings": {
         "show_description": true
       }
+    },
+    "variant_guide": {
+      "type": "product-variant-description",
+      "settings": {}
     },
     "recipe": {
       "type": "product-recipe",
@@ -81,6 +88,18 @@
         "heading": "Passt perfekt dazu",
         "collection": "substrate-verbesserer"
       }
+    "product_cross_sell_dPUR8N": {
+      "type": "product-cross-sell",
+      "name": "Cross-Selling",
+      "settings": {
+        "heading": "Passt perfekt dazu",
+        "collection": ""
+      }
+    },
+    "collection_seo_copy_gRwYXf": {
+      "type": "collection-seo-copy",
+      "name": "SEO-Kollektionstext",
+      "settings": {}
     }
   },
   "order": [
@@ -88,5 +107,9 @@
     "recipe",
     "configurator",
     "cross_sell"
+    "variant_guide",
+    "recipe",
+    "product_cross_sell_dPUR8N",
+    "collection_seo_copy_gRwYXf"
   ]
 }

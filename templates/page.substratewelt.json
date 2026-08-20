@@ -9,122 +9,524 @@
  */
 {
   "sections": {
-    "configurator": {
-      "type": "substrate-configurator",
+    "obstgenerator_zDjGB9": {
+      "type": "obstgenerator",
       "blocks": {
-        "bark": {
-          "type": "ingredient",
+        "variety_jh4b6V": {
+          "type": "variety",
           "settings": {
-            "name": "Pinienrinde",
-            "function": "Grobe Struktur und Luftführung",
-            "default_percentage": 30
+            "variant_title": "Trauben - Pinot Noir",
+            "badge": "Keltertraube",
+            "heading": "Pinot-Noir-Fruchttyp",
+            "botanical_name": "Vitis vinifera",
+            "description": "<p>Ein langfristiges Weinreben-Projekt mit kräftigem Kletterwuchs. Aus dem Saatgut wächst eine genetisch eigenständige Rebe – nicht automatisch eine sortenechte Pinot-Noir-Pflanze.</p>",
+            "prep": "Kühle Vorbehandlung",
+            "location": "Sonnig mit Rankhilfe",
+            "level": "Geduldiges Projekt"
           }
         },
-        "pumice": {
-          "type": "ingredient",
+        "variety_nNaMEn": {
+          "type": "variety",
           "settings": {
-            "name": "Bims",
-            "function": "Poren, Drainage und Wasserspeicher",
-            "default_percentage": 25
+            "variant_title": "Trauben - weiße Riesentraube",
+            "badge": "Helle Traube",
+            "heading": "Weiße Riesentraube",
+            "botanical_name": "Vitis vinifera",
+            "description": "<p>Eine wüchsige Weinreben-Idee für sonnige Plätze und stabile Rankhilfen. Fruchtfarbe, Größe und Geschmack können bei einer Anzucht aus Samen variieren.</p>",
+            "prep": "Kühle Vorbehandlung",
+            "location": "Sonnig und rankend",
+            "level": "Langfristig"
           }
         },
-        "perlite": {
-          "type": "ingredient",
+        "variety_nLdEPC": {
+          "type": "variety",
           "settings": {
-            "name": "Perlite",
-            "function": "Leichtigkeit und zusätzliche Luftporen",
-            "default_percentage": 20
+            "variant_title": "Maracuja - Passi Flora",
+            "badge": "Tropischer Kletterer",
+            "heading": "Maracuja",
+            "botanical_name": "Passiflora edulis",
+            "description": "<p>Schnellwachsende Kletterpflanze mit markantem Laub und exotischem Charakter. Ideal für einen hellen, warmen Start und später mit ausreichend Platz zum Ranken.</p>",
+            "prep": "Warm und gleichmäßig feucht",
+            "location": "Sehr hell mit Rankhilfe",
+            "level": "Tropisches Projekt"
           }
         },
-        "coco": {
-          "type": "ingredient",
+        "variety_NLMpmH": {
+          "type": "variety",
           "settings": {
-            "name": "Kokos",
-            "function": "Gleichmäßiger Feuchtepuffer",
-            "default_percentage": 25
+            "variant_title": "Zitronenbaum",
+            "badge": "Zitruspflanze",
+            "heading": "Zitronenbaum",
+            "botanical_name": "Citrus limon",
+            "description": "<p>Ein immergrünes Zitrusprojekt für helle Standorte. Die Keimlinge entwickeln sich individuell; bis zu einer möglichen Blüte oder Frucht ist viel Geduld nötig.</p>",
+            "prep": "Warm und hell",
+            "location": "Hell, später frostfrei",
+            "level": "Ruhiges Langzeitprojekt"
+          }
+        },
+        "variety_Rbm84J": {
+          "type": "variety",
+          "settings": {
+            "variant_title": "Apfelbaum - Pink Lady",
+            "badge": "Apfelprojekt",
+            "heading": "Apfel aus Pink-Lady-Frucht",
+            "botanical_name": "Malus domestica",
+            "description": "<p>Ein robustes Langzeitprojekt vom Kern bis zum eigenen Sämlingsbaum. Der daraus wachsende Apfelbaum ist genetisch neu und trägt nicht automatisch Pink-Lady-Äpfel.</p>",
+            "prep": "Kühle Vorbehandlung",
+            "location": "Später sonnig im Freien",
+            "level": "Für Geduldige"
+          }
+        },
+        "included_Hb6wkK": {
+          "type": "included",
+          "settings": {
+            "heading": "Deine gewählte Saatgutvariante",
+            "text": "<p>Ein Saatgutbeutel der im Produktformular ausgewählten Obstart. Die jeweilige Füllmenge steht an der Variante beziehungsweise auf der Verpackung.</p>"
+          }
+        },
+        "included_TDGPQe": {
+          "type": "included",
+          "settings": {
+            "heading": "Artgerechter Start",
+            "text": "<p>Die Übersicht zeigt dir, ob deine Auswahl Wärme oder zunächst eine kühle Vorbehandlung benötigt.</p>"
+          }
+        },
+        "included_jQm9bp": {
+          "type": "included",
+          "settings": {
+            "heading": "Ehrliche Erwartungen",
+            "text": "<p>Klare Hinweise zu genetischer Vielfalt, Keimdauer und möglicher Fruchtbildung statt unrealistischer Ernteversprechen.</p>"
+          }
+        },
+        "included_JKPKRk": {
+          "type": "included",
+          "settings": {
+            "heading": "Passend erweiterbar",
+            "text": "<p>Mit Anzuchttopf, luftigem Seed Mix, feinem Sprüher und Rankhilfe lässt sich dein Setup gezielt ergänzen.</p>"
+          }
+        },
+        "step_XE9LXB": {
+          "type": "step",
+          "settings": {
+            "heading": "Saatgut vorbereiten",
+            "text": "<p>Orientiere dich an der gewählten Art. Entferne mögliche Fruchtreste und nutze nur sauberes Saatgut für die weitere Vorbehandlung.</p>"
+          }
+        },
+        "step_G9M7ta": {
+          "type": "step",
+          "settings": {
+            "heading": "Warmstart oder Kühlphase",
+            "text": "<p>Maracuja und Zitrone starten warm. Apfel und Weinrebe benötigen für einen natürlichen Keimimpuls meist zunächst eine kontrollierte kühle, feuchte Phase.</p>"
+          }
+        },
+        "step_Enf4f3": {
+          "type": "step",
+          "settings": {
+            "heading": "Luftig aussäen",
+            "text": "<p>Setze das Saatgut in ein feines, strukturstabiles Anzuchtmedium. Halte es gleichmäßig leicht feucht, aber niemals dauerhaft nass.</p>"
+          }
+        },
+        "step_Fk3hD4": {
+          "type": "step",
+          "settings": {
+            "heading": "Beobachten und umtopfen",
+            "text": "<p>Sorge nach der Keimung für viel Licht. Topfe erst um, wenn der Jungtrieb stabil ist und sich ein belastbares Wurzelsystem gebildet hat.</p>"
+          }
+        },
+        "benefit_eGdWEM": {
+          "type": "benefit",
+          "settings": {
+            "heading": "Wachstum von Anfang an",
+            "text": "<p>Du lernst deine Pflanze nicht erst als fertige Jungpflanze kennen, sondern begleitest jeden Entwicklungsschritt selbst.</p>"
+          }
+        },
+        "benefit_AMHqVq": {
+          "type": "benefit",
+          "settings": {
+            "heading": "Tropisch oder winterhart",
+            "text": "<p>Die Auswahl verbindet exotische Kletter- und Zitruspflanzen mit Apfel- und Weinrebenprojekten für draußen.</p>"
+          }
+        },
+        "benefit_m6zLFj": {
+          "type": "benefit",
+          "settings": {
+            "heading": "Ein Produkt, klare Varianten",
+            "text": "<p>Alle Obstsorten bleiben übersichtlich in einem Variantenprodukt gebündelt, statt den Shop mit Einzelartikeln zu überladen.</p>"
+          }
+        },
+        "benefit_hrPLJp": {
+          "type": "benefit",
+          "settings": {
+            "heading": "Ohne falsches Ernteversprechen",
+            "text": "<p>Die Section erklärt offen, dass Sämlinge genetisch variieren und Fruchtbildung Zeit, passende Bedingungen und Geduld braucht.</p>"
+          }
+        },
+        "faq_TpxHNL": {
+          "type": "faq",
+          "settings": {
+            "question": "Wächst aus dem Saatgut genau dieselbe Obstsorte?",
+            "answer": "<p>Nein. Durch Bestäubung und Samenbildung entsteht eine neue genetische Kombination. Ein Sämling aus einer Pink-Lady-Frucht ist daher kein sortenechter Pink-Lady-Baum; Gleiches gilt für benannte Weintrauben. Wuchs und spätere Früchte können deutlich abweichen.</p>"
+          }
+        },
+        "faq_jmyLMq": {
+          "type": "faq",
+          "settings": {
+            "question": "Wie lange dauert die Keimung?",
+            "answer": "<p>Das hängt von Art, Saatgut, Vorbehandlung, Temperatur und Feuchtigkeit ab. Manche Samen reagieren zügig, andere erst nach einer längeren Ruhe- oder Kühlphase. Eine feste Keimzeit oder Keimquote kann bei Naturprodukten nicht zugesichert werden.</p>"
+          }
+        },
+        "faq_DTCmxj": {
+          "type": "faq",
+          "settings": {
+            "question": "Brauchen alle Sorten eine Kühlphase?",
+            "answer": "<p>Nein. Maracuja und Zitrone werden warm angezogen. Apfel- und Traubensaat benötigen für einen zuverlässigen Keimimpuls in der Regel eine feuchte kühle Vorbehandlung. Beachte immer die sortenspezifischen Hinweise.</p>"
+          }
+        },
+        "faq_azkDmz": {
+          "type": "faq",
+          "settings": {
+            "question": "Kann ich die Pflanzen dauerhaft in der Wohnung halten?",
+            "answer": "<p>Die Anzucht kann geschützt und hell im Haus beginnen. Maracuja und Zitrone brauchen dauerhaft Wärme beziehungsweise einen frostfreien Winterplatz. Apfel und Weinrebe entwickeln sich langfristig im Freien am besten.</p>"
+          }
+        },
+        "faq_cEeFdx": {
+          "type": "faq",
+          "settings": {
+            "question": "Ist das Saatgut zum Verzehr geeignet?",
+            "answer": "<p>Nein. Das angebotene Saatgut ist ausschließlich zur Aussaat bestimmt und nicht als Lebensmittel vorgesehen. Bewahre es außerhalb der Reichweite kleiner Kinder und Haustiere auf.</p>"
+          }
+        },
+        "faq_E8qX8W": {
+          "type": "faq",
+          "settings": {
+            "question": "Ist eine spätere Ernte garantiert?",
+            "answer": "<p>Nein. Ob und wann eine Pflanze blüht oder Früchte trägt, hängt unter anderem von Genetik, Alter, Standort, Bestäubung, Pflege und Klima ab. Im Mittelpunkt steht das Anzucht- und Pflanzenprojekt.</p>"
           }
         }
       },
       "block_order": [
-        "bark",
-        "pumice",
-        "perlite",
-        "coco"
+        "variety_jh4b6V",
+        "variety_nNaMEn",
+        "variety_nLdEPC",
+        "variety_NLMpmH",
+        "variety_Rbm84J",
+        "included_Hb6wkK",
+        "included_TDGPQe",
+        "included_jQm9bp",
+        "included_JKPKRk",
+        "step_XE9LXB",
+        "step_G9M7ta",
+        "step_Enf4f3",
+        "step_Fk3hD4",
+        "benefit_eGdWEM",
+        "benefit_AMHqVq",
+        "benefit_m6zLFj",
+        "benefit_hrPLJp",
+        "faq_TpxHNL",
+        "faq_jmyLMq",
+        "faq_DTCmxj",
+        "faq_azkDmz",
+        "faq_cEeFdx",
+        "faq_E8qX8W"
       ],
+      "disabled": true,
+      "name": "LEAFer Obstsaatgut",
       "settings": {
-        "show_on_pages": true,
-        "show_on_all_products": true
+        "product": "obstsaatgut",
+        "image": "shopify://shop_images/weitere.png",
+        "image_alt": "Obstsaatgut und junge Obstpflanzen für die Anzucht",
+        "image_note": "Abbildung beispielhaft. Wuchs und Erscheinungsbild entwickeln sich bei jeder Pflanze individuell.",
+        "eyebrow": "LEAFerservice · Obstsaatgut",
+        "heading": "Obst aus Samen. <em>Von Anfang an deins.</em>",
+        "intro": "<p>Wähle zwischen Maracuja, Zitrone, Apfel und zwei Traubenformen und begleite deine eigene Obstpflanze vom ersten Keim bis zum kräftigen Jungtrieb. Ein langfristiges Pflanzenprojekt für alle, die Wachstum wirklich erleben möchten.</p>",
+        "trust_aria_label": "Produktmerkmale",
+        "trust_1": "5 Obstideen",
+        "trust_2": "Anzuchtwissen inklusive",
+        "trust_3": "Für langfristige Pflanzenprojekte",
+        "product_label": "Deine Auswahl",
+        "price_label": "Preis",
+        "variant_legend": "Obstsorte wählen",
+        "quantity_label": "Menge",
+        "quantity_minus_label": "Menge um eins reduzieren",
+        "quantity_plus_label": "Menge um eins erhöhen",
+        "add_to_cart_label": "In den Warenkorb",
+        "available_label": "Verfügbar · Versand nach aktueller Shopangabe",
+        "sold_out_label": "Derzeit nicht verfügbar",
+        "empty_title": "Produkt im Theme-Editor auswählen",
+        "empty_text": "Wähle das Variantenprodukt „Obstsaatgut“, damit Preis, Bestand und Warenkorb funktionieren.",
+        "varieties_eyebrow": "Fünf Wege zum eigenen Obstprojekt",
+        "varieties_heading": "Welche Pflanze möchtest du wachsen sehen?",
+        "varieties_intro": "<p>Jede Art bringt ihren eigenen Rhythmus mit. Tropische Samen mögen Wärme, Apfel und Weinrebe profitieren von einer kühlen Vorbehandlung. Wähle nach Standort, Geduld und Pflanzenziel.</p>",
+        "select_cue": "Auswählen",
+        "prep_label": "Start",
+        "location_label": "Später",
+        "level_label": "Projekt",
+        "notice_aria_label": "Wichtiger Hinweis zur Sortenechtheit",
+        "notice_heading": "Aus Samen entsteht ein Unikat – keine Sortenkopie",
+        "notice_text": "<p>Obstpflanzen aus Samen sind genetisch eigenständig. Namen wie „Pinot Noir“ oder „Pink Lady“ beschreiben die Herkunft beziehungsweise den Fruchttyp des Saatguts; Wuchs, Blüte und spätere Früchte können von der Mutterpflanze abweichen. Eine bestimmte Fruchtqualität oder Ernte wird nicht zugesichert.</p>",
+        "included_eyebrow": "Klar statt überladen",
+        "included_heading": "Was du für deinen Start bekommst",
+        "included_intro": "<p>Du wählst genau die Obstidee, die zu deinem Platz und deiner Geduld passt. Die Section verbindet Auswahl, Erwartungsmanagement und Anzuchtwissen an einem Ort.</p>",
+        "steps_eyebrow": "Vom Saatkorn zum Jungtrieb",
+        "steps_heading": "So beginnt dein Obstprojekt",
+        "steps_intro": "<p>Die genaue Keimdauer ist naturbedingt verschieden. Entscheidend sind die passende Vorbehandlung, ein luftiges Anzuchtmedium und gleichmäßige Bedingungen ohne Staunässe.</p>",
+        "benefits_eyebrow": "Für neugierige Pflanzenmenschen",
+        "benefits_heading": "Mehr als nur ein Saatbeutel",
+        "faq_eyebrow": "Gut zu wissen",
+        "faq_heading": "Fragen vor der Aussaat",
+        "faq_intro": "<p>Obstsaatgut ist ein Naturprodukt und kein fertiger Obstbaum. Diese Antworten setzen realistische Erwartungen und helfen beim richtigen Start.</p>",
+        "closing_eyebrow": "Bereit für den ersten Keim?",
+        "closing_heading": "Wähle dein Obstprojekt.",
+        "closing_text": "<p>Maracuja, Zitrone, Apfel oder Weinrebe: Entscheide dich für die Pflanze, deren Entwicklung du von Anfang an begleiten möchtest.</p>",
+        "closing_button": "Zur Sortenauswahl",
+        "background": "#f4f1e9",
+        "surface": "#fffdf8",
+        "text_color": "#203126",
+        "muted_color": "#637066",
+        "accent": "#56704e",
+        "accent_contrast": "#ffffff",
+        "border_color": "#dcd9cf",
+        "radius": 20,
+        "max_width": 1400,
+        "padding_y": 72
       }
     },
-    "grow_creator": {
+    "substrate_world_XmFjWQ": {
+      "type": "substrate-world",
+      "blocks": {
+        "heading_M6fFGV": {
+          "type": "heading",
+          "settings": {
+            "eyebrow": "Spezialmischungen",
+            "heading": "Fertig abgestimmt, trotzdem nachvollziehbar",
+            "text": "<p>Wähle eine Mischung als verlässliche Basis. Die Rezeptur zeigt dir, warum sie zur jeweiligen Pflanzengruppe passt.</p>",
+            "columns": "3"
+          }
+        },
+        "mixture_8QKek7": {
+          "type": "mixture",
+          "settings": {
+            "product": "leafer-tropical-mix",
+            "image_alt": "",
+            "badge": "Spezialmischung",
+            "title": "Tropical Mix",
+            "claim": "Luftig und feuchtepuffernd für tropische Zimmerpflanzen",
+            "ratio": "Pinienrinde · Lava · Bims · Perlite · Kokos",
+            "text": "",
+            "show_price": true,
+            "button_label": "Mischung ansehen",
+            "link": ""
+          }
+        },
+        "mixture_6BkkMV": {
+          "type": "mixture",
+          "settings": {
+            "product": "leafer-alocasia-mix",
+            "image_alt": "",
+            "badge": "Spezialmischung",
+            "title": "Aroid Mix",
+            "claim": "Grobe Wurzelstruktur für Monstera, Philodendron und Alocasia",
+            "ratio": "Pinienrinde · Bims · Perlite · Kokos",
+            "text": "",
+            "show_price": true,
+            "button_label": "Mischung ansehen",
+            "link": ""
+          }
+        },
+        "mixture_tGXPN3": {
+          "type": "mixture",
+          "settings": {
+            "product": "leafer-palm-green-mix",
+            "image_alt": "",
+            "badge": "Spezialmischung",
+            "title": "{{ block.settings.product.title }}",
+            "claim": "Schnelle Drainage für Kakteen und Sukkulenten",
+            "ratio": "Lava · Bims · Perlite · Blähton",
+            "text": "",
+            "show_price": true,
+            "button_label": "Mischung ansehen",
+            "link": ""
+          }
+        },
+        "heading_YQXwBn": {
+          "type": "heading",
+          "settings": {
+            "eyebrow": "Bestandteile",
+            "heading": "Baue deine eigene Rezeptur",
+            "text": "<p>Kombiniere mineralische und organische Komponenten gezielt nach Luftführung, Wasserspeicherung und Standfestigkeit.</p>",
+            "columns": "4"
+          }
+        },
+        "ingredient_GFLHCk": {
+          "type": "ingredient",
+          "settings": {
+            "product": "",
+            "image_alt": "",
+            "badge": "Substratbestandteil",
+            "title": "Pinienrinde",
+            "claim": "Grobe organische Struktur",
+            "ratio": "Startbereich: 20–60 Vol.-%",
+            "text": "",
+            "show_price": true,
+            "button_label": "Bestandteil ansehen",
+            "link": ""
+          }
+        },
+        "ingredient_mnCTYX": {
+          "type": "ingredient",
+          "settings": {
+            "product": "",
+            "image_alt": "",
+            "badge": "Substratbestandteil",
+            "title": "Bims",
+            "claim": "Poröse, dauerhafte Mineralstruktur",
+            "ratio": "Startbereich: 15–40 Vol.-%",
+            "text": "",
+            "show_price": true,
+            "button_label": "Bestandteil ansehen",
+            "link": ""
+          }
+        },
+        "ingredient_rTnyEb": {
+          "type": "ingredient",
+          "settings": {
+            "product": "",
+            "image_alt": "",
+            "badge": "Substratbestandteil",
+            "title": "Perlite",
+            "claim": "Leichtigkeit und zusätzliche Luftporen",
+            "ratio": "Startbereich: 10–35 Vol.-%",
+            "text": "",
+            "show_price": true,
+            "button_label": "Bestandteil ansehen",
+            "link": ""
+          }
+        },
+        "ingredient_3mrLRt": {
+          "type": "ingredient",
+          "settings": {
+            "product": "",
+            "image_alt": "",
+            "badge": "Substratbestandteil",
+            "title": "Lava",
+            "claim": "Drainage und Standfestigkeit",
+            "ratio": "Startbereich: 15–40 Vol.-%",
+            "text": "",
+            "show_price": true,
+            "button_label": "Bestandteil ansehen",
+            "link": ""
+          }
+        },
+        "faq_enFUfY": {
+          "type": "faq",
+          "settings": {
+            "question": "Kann ich die Mischverhältnisse verändern?",
+            "answer": "<p>Ja. Die Rezepturen sind Startpunkte. Passe sie an Pflanzenart, Topf, Standort und deine Gießroutine an.</p>"
+          }
+        },
+        "faq_Jfrkan": {
+          "type": "faq",
+          "settings": {
+            "question": "Welche Mischung passt zu meiner Pflanze?",
+            "answer": "<p>Tropische Aroids profitieren meist von einer groben, luftigen Struktur. Sukkulenten und Kakteen benötigen einen höheren Mineralanteil und besonders schnelle Drainage.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_M6fFGV",
+        "mixture_8QKek7",
+        "mixture_6BkkMV",
+        "mixture_tGXPN3",
+        "heading_YQXwBn",
+        "ingredient_GFLHCk",
+        "ingredient_mnCTYX",
+        "ingredient_rTnyEb",
+        "ingredient_3mrLRt",
+        "faq_enFUfY",
+        "faq_Jfrkan"
+      ],
+      "custom_css": [
+        ".substrate-world__title {font-family: cortana; font-size: 50px;}",
+        ".substrate-world__card-media {}"
+      ],
+      "name": "LEAFer Substratwelt",
+      "settings": {
+        "hero_image": "shopify://shop_images/20587884-FE99-4A1A-B914-EA451C3BAFA7_b1e270cc-e2a0-47f8-8435-150c565769af.png",
+        "hero_alt": "LEAFerservice Substratmischungen und natürliche Bestandteile",
+        "eyebrow": "Mischen. Verstehen. Wachsen lassen.",
+        "heading": "Die Kraft von Pflanzen entsteht durch natürliche Strukturen, robuste Wurzeln und biochemische Prozesse.",
+        "intro": "<p>Starte mit einer erprobten Spezialmischung oder baue dein Substrat aus einzelnen Bestandteilen selbst auf. Jede Rezeptur bleibt transparent und anpassbar.</p>",
+        "button_label": "Mischungen entdecken",
+        "button_link": "shopify://pages/individuelles-substrat",
+        "text_alignment": "left",
+        "overlay": 90,
+        "hero_height": 540,
+        "content_heading": "Deine Pflanze gibt die Richtung vor",
+        "content_text": "<p>Wurzeln brauchen je nach Pflanze unterschiedlich viel Luft, Feuchtigkeit und Halt. Wir zeigen dir, welche Aufgabe jeder Bestandteil erfüllt.</p>",
+        "color_scheme": "soft",
+        "padding_top": 56,
+        "padding_bottom": 40
+      }
+    },
+    "custom_grow_creator_XiGBAW": {
       "type": "custom-grow-creator",
       "blocks": {
-        "system_aiLhGa": {
-          "type": "system",
-          "settings": {
-            "product": "leafer-pot",
-            "title": "",
-            "badge": "Topfsystem",
-            "explanation": "",
-            "variant_label": "Größe und Ausführung",
-            "image_alt": "",
-            "video_placeholder": "Produktvideo im Theme-Editor zuordnen"
-          }
-        },
-        "fabric_pot": {
-          "type": "system",
-          "settings": {
-            "product": "gronest-stofftopf-pflanzsack",
-            "title": "{{ block.settings.product.title }}",
-            "badge": "{{ block.settings.product.metafields.leafer.usp_1.value }}",
-            "explanation": "<p>Die luftdurchlässige Topfwand unterstützt Sauerstoffaustausch und schnellen Wasserablauf. Ideal, wenn du Gießintervalle aktiv kontrollieren möchtest.</p>",
-            "variant_label": "Größe und Ausführung",
-            "image_alt": "",
-            "video_placeholder": "Produktvideo im Theme-Editor zuordnen"
-          }
-        },
-        "self_watering": {
+        "system_ARBfL9": {
           "type": "system",
           "settings": {
             "product": "growpro-stofftopf-mit-untersetzer",
+            "title": "{{ block.settings.product.title }}",
+            "badge": "A{{ block.settings.product.metafields.leafer.water_storage.value }}",
+            "explanation": "<p>Die luftdurchlässige Topfwand unterstützt Sauerstoffaustausch und schnellen Wasserablauf. Ideal, wenn du Gießintervalle aktiv kontrollieren möchtest.</p>",
+            "variant_label": "Größe und Ausführung",
+            "image_alt": "",
+            "video": "shopify://files/videos/254112.mp4",
+            "video_placeholder": "Produktvideo im Theme-Editor zuordnen"
+          }
+        },
+        "system_QiqHgm": {
+          "type": "system",
+          "settings": {
+            "product": "lechuza-classico-color",
             "title": "Eigenbewässerung mit Reservoir",
             "badge": "Konstante Versorgung",
             "explanation": "<p>Ein Wasserreservoir kann die Versorgung gleichmäßiger machen. Besonders praktisch bei größeren Pflanzen oder unregelmäßigen Gießintervallen.</p>",
             "variant_label": "Größe und Ausführung",
             "image_alt": "",
+            "video": "shopify://files/videos/47551-451623797.mp4",
             "video_placeholder": "Produktvideo im Theme-Editor zuordnen"
           }
         },
-        "saucer": {
+        "addon_YAYpmL": {
           "type": "addon",
           "settings": {
-            "product": "kokosstab-1",
-            "title": "",
-            "explanation": ""
-          }
-        },
-        "support": {
-          "type": "addon",
-          "settings": {
-            "product": "kokos-quelltabletten",
+            "product": "garden-highpro-ghp-profan-clip-ventilator-20-cm-12-w",
             "title": "{{ block.settings.product.title }}",
             "explanation": ""
           }
         },
-        "meter": {
+        "addon_DfYGj8": {
           "type": "addon",
           "settings": {
-            "product": "leafer-rock-cubes",
-            "title": "",
-            "explanation": ""
+            "product": "kokosstab-1",
+            "title": "Rankhilfe",
+            "explanation": "Gibt kletternden Aroids Halt und unterstützt einen geordneten Wuchs."
           }
         },
-        "light": {
+        "addon_6QK7x3": {
           "type": "addon",
           "settings": {
-            "product": "leaferseeddial™-dosier-sahelfer-fur-feines-saatgut",
-            "title": "",
-            "explanation": ""
+            "product": "leaferrootmist™-fein-spruher-fur-keimlinge-300-ml",
+            "title": "Feuchtigkeitsmesser",
+            "explanation": "Hilft dabei, den richtigen Gießzeitpunkt besser einzuschätzen."
+          }
+        },
+        "addon_EirpLx": {
+          "type": "addon",
+          "settings": {
+            "product": "vivosun-anzucht-heizmatte",
+            "title": "Pflanzenlicht",
+            "explanation": "Ergänzt fehlendes Tageslicht an dunkleren Standorten."
           }
         }
       },
@@ -136,12 +538,23 @@
         "support",
         "meter",
         "light"
+        "system_ARBfL9",
+        "system_QiqHgm",
+        "addon_YAYpmL",
+        "addon_DfYGj8",
+        "addon_6QK7x3",
+        "addon_EirpLx"
       ],
+      "custom_css": [
+        ".grow-creator__layout {background: none;}"
+      ],
+      "name": "LEAFers CustomGrowCreator",
       "settings": {
         "eyebrow": "LEAFers CustomGrowCreator",
         "heading": "Aus einzelnen Entscheidungen wird dein Grow-Setup",
         "intro": "<p>Kombiniere deine individuelle Substratrezeptur mit einem passenden Topfsystem und sinnvollen Erweiterungen. Jede Auswahl wird erklärt – du behältst jederzeit die Kontrolle.</p>",
         "mix_product": "leafer-tropical-mix",
+        "mix_product": "substrat",
         "step_mix_heading": "Rezeptur und Menge übernehmen",
         "step_mix_text": "Die oben per Slider eingestellte Rezeptur wird automatisch mit deiner Bestellung gespeichert.",
         "size_label": "Gesamtmenge auswählen",
@@ -164,6 +577,8 @@
         "fineprint": "Alle ausgewählten Produkte werden als einzelne Positionen in den Warenkorb gelegt. Deine Rezeptur bleibt an der Substratposition gespeichert.",
         "padding_top": 40,
         "padding_bottom": 40
+        "padding_top": 80,
+        "padding_bottom": 72
       }
     },
     "collection_seo_copy_Ld7pVR": {
@@ -176,5 +591,8 @@
     "configurator",
     "grow_creator",
     "collection_seo_copy_Ld7pVR"
+    "obstgenerator_zDjGB9",
+    "substrate_world_XmFjWQ",
+    "custom_grow_creator_XiGBAW"
   ]
 }
