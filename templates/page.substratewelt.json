@@ -445,22 +445,27 @@
         "faq_enFUfY",
         "faq_Jfrkan"
       ],
+      "custom_css": [
+        ".substrate-world__title {font-family: cortana; font-size: 50px;}",
+        ".substrate-world__card-media {}"
+      ],
       "name": "LEAFer Substratwelt",
       "settings": {
+        "hero_image": "shopify://shop_images/20587884-FE99-4A1A-B914-EA451C3BAFA7_b1e270cc-e2a0-47f8-8435-150c565769af.png",
         "hero_alt": "LEAFerservice Substratmischungen und natürliche Bestandteile",
         "eyebrow": "Mischen. Verstehen. Wachsen lassen.",
-        "heading": "Substrate, die zu deiner Pflanze passen",
+        "heading": "Die Kraft von Pflanzen entsteht durch natürliche Strukturen, robuste Wurzeln und biochemische Prozesse.",
         "intro": "<p>Starte mit einer erprobten Spezialmischung oder baue dein Substrat aus einzelnen Bestandteilen selbst auf. Jede Rezeptur bleibt transparent und anpassbar.</p>",
         "button_label": "Mischungen entdecken",
-        "button_link": "",
+        "button_link": "shopify://pages/individuelles-substrat",
         "text_alignment": "left",
-        "overlay": 55,
-        "hero_height": 680,
+        "overlay": 90,
+        "hero_height": 540,
         "content_heading": "Deine Pflanze gibt die Richtung vor",
-        "content_text": "<p>Wurzeln brauchen je nach Pflanzenart unterschiedlich viel Luft, Feuchtigkeit und Halt. Deshalb zeigen wir nicht nur fertige Mischungen, sondern auch, welche Aufgabe jeder Bestandteil übernimmt.</p>",
-        "color_scheme": "default",
-        "padding_top": 72,
-        "padding_bottom": 88
+        "content_text": "<p>Wurzeln brauchen je nach Pflanze unterschiedlich viel Luft, Feuchtigkeit und Halt. Wir zeigen dir, welche Aufgabe jeder Bestandteil erfüllt.</p>",
+        "color_scheme": "soft",
+        "padding_top": 56,
+        "padding_bottom": 40
       }
     },
     "custom_grow_creator_XiGBAW": {
@@ -526,6 +531,13 @@
         }
       },
       "block_order": [
+        "system_aiLhGa",
+        "fabric_pot",
+        "self_watering",
+        "saucer",
+        "support",
+        "meter",
+        "light"
         "system_ARBfL9",
         "system_QiqHgm",
         "addon_YAYpmL",
@@ -534,13 +546,14 @@
         "addon_EirpLx"
       ],
       "custom_css": [
-        ".grow-creator__layout{background: none}"
+        ".grow-creator__layout {background: none;}"
       ],
       "name": "LEAFers CustomGrowCreator",
       "settings": {
         "eyebrow": "LEAFers CustomGrowCreator",
         "heading": "Aus einzelnen Entscheidungen wird dein Grow-Setup",
         "intro": "<p>Kombiniere deine individuelle Substratrezeptur mit einem passenden Topfsystem und sinnvollen Erweiterungen. Jede Auswahl wird erklärt – du behältst jederzeit die Kontrolle.</p>",
+        "mix_product": "leafer-tropical-mix",
         "mix_product": "substrat",
         "step_mix_heading": "Rezeptur und Menge übernehmen",
         "step_mix_text": "Die oben per Slider eingestellte Rezeptur wird automatisch mit deiner Bestellung gespeichert.",
@@ -550,8 +563,8 @@
         "step_system_heading": "Topfsystem auswählen",
         "step_system_text": "Wähle einen atmungsaktiven Stofftopf oder ein System mit Wasserreservoir – passend zu Standort und Gießroutine.",
         "system_label": "Stofftopf oder Eigenbewässerung",
-        "system_placeholder": "Topfsystem auswählen …",
-        "step_addons_heading": "Setup sinnvoll erweitern",
+        "system_placeholder": "Gefäßdesign festlegen …",
+        "step_addons_heading": "perfekte letzte Ergänzungen",
         "step_addons_text": "Ergänze nur, was dein Projekt wirklich braucht – zum Beispiel Rankhilfe, Untersetzer, Messgerät oder Pflanzenlicht.",
         "summary_eyebrow": "Dein Setup",
         "summary_heading": "Bereit zum Wachsen",
@@ -562,12 +575,22 @@
         "valid_message": "Dein individuelles Setup wurde hinzugefügt.",
         "recipe_missing": "Die Substratanteile müssen zusammen genau 100 % ergeben.",
         "fineprint": "Alle ausgewählten Produkte werden als einzelne Positionen in den Warenkorb gelegt. Deine Rezeptur bleibt an der Substratposition gespeichert.",
+        "padding_top": 40,
+        "padding_bottom": 40
         "padding_top": 80,
         "padding_bottom": 72
       }
+    },
+    "collection_seo_copy_Ld7pVR": {
+      "type": "collection-seo-copy",
+      "name": "SEO-Kollektionstext",
+      "settings": {}
     }
   },
   "order": [
+    "configurator",
+    "grow_creator",
+    "collection_seo_copy_Ld7pVR"
     "obstgenerator_zDjGB9",
     "substrate_world_XmFjWQ",
     "custom_grow_creator_XiGBAW"

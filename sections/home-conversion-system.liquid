@@ -1,0 +1,411 @@
+{% liquid
+  assign featured_product = section.settings.featured_product
+  assign selected_variant = featured_product.selected_or_first_available_variant
+
+  assign catalog_id = featured_product.metafields.leafer_catalog.catalog_id.value
+  assign catalog_subtitle = featured_product.metafields.leafer_catalog.subtitle.value
+  assign catalog_brand = featured_product.metafields.leafer_catalog.brand.value
+  assign product_world = featured_product.metafields.leafer_catalog.product_world.value
+  assign product_category = featured_product.metafields.leafer_catalog.category.value
+  assign product_subcategory = featured_product.metafields.leafer_catalog.subcategory.value
+  assign product_priority = featured_product.metafields.leafer_catalog.priority.value
+  assign product_material = featured_product.metafields.leafer_catalog.material.value
+  assign product_color = featured_product.metafields.leafer_catalog.color.value
+
+  assign is_peat_free = featured_product.metafields.leafer_properties.peat_free.value
+  assign is_natural = featured_product.metafields.leafer_properties.natural.value
+  assign is_mineral = featured_product.metafields.leafer_properties.mineral.value
+  assign is_organic = featured_product.metafields.leafer_properties.organic.value
+  assign is_reusable = featured_product.metafields.leafer_properties.reusable.value
+  assign ph_value = featured_product.metafields.leafer_properties.ph_value.value
+
+  assign product_hero_title = featured_product.metafields.leafer_content.hero_title.value | default: featured_product.title
+  assign product_hero_subtitle = featured_product.metafields.leafer_content.hero_subtitle.value | default: catalog_subtitle
+  assign product_hero_cta = featured_product.metafields.leafer_content.hero_cta.value | default: section.settings.product_cta_fallback
+  assign short_description = featured_product.metafields.leafer_content.short_description.value | default: featured_product.description | strip_html | truncate: 180
+
+  assign usp_1 = featured_product.metafields.leafer_usps.usp_1.value
+  assign usp_2 = featured_product.metafields.leafer_usps.usp_2.value
+  assign usp_3 = featured_product.metafields.leafer_usps.usp_3.value
+  assign usp_4 = featured_product.metafields.leafer_usps.usp_4.value
+  assign icon_1 = featured_product.metafields.leafer_usps.icon_1.value
+  assign icon_2 = featured_product.metafields.leafer_usps.icon_2.value
+  assign icon_3 = featured_product.metafields.leafer_usps.icon_3.value
+  assign icon_4 = featured_product.metafields.leafer_usps.icon_4.value
+
+  assign aeration = featured_product.metafields.leafer_performance.aeration.value
+  assign drainage = featured_product.metafields.leafer_performance.drainage.value
+  assign water_storage = featured_product.metafields.leafer_performance.water_storage.value
+  assign structural_stability = featured_product.metafields.leafer_performance.structural_stability.value
+  assign nutrient_storage = featured_product.metafields.leafer_performance.nutrient_storage.value
+
+  assign focus_keyword = featured_product.metafields.leafer_usage.focus_keyword.value
+  assign keywords = featured_product.metafields.leafer_usage.keywords.value
+  assign mix_ratio = featured_product.metafields.leafer_usage.mix_ratio.value
+  assign ideal_for = featured_product.metafields.leafer_usage.ideal_for.value
+  assign application = featured_product.metafields.leafer_usage.application.value
+
+  assign solution_3 = featured_product.metafields.leafer_solutions.solution_3.value
+  assign solution_4 = featured_product.metafields.leafer_solutions.solution_4.value
+
+  assign product_image_alt = featured_product.featured_image.alt | default: product_hero_title | default: featured_product.title
+  assign product_price = featured_product.price | money
+  assign product_available = featured_product.available
+  assign product_url = featured_product.url
+
+  assign primary_link = section.settings.primary_link | default: routes.all_products_collection_url
+  assign seo_intro = section.settings.intro
+%}
+
+<section
+  class="home-conversion-system"
+  data-section-id="{{ section.id }}"
+  {% if catalog_id != blank %}data-catalog-id="{{ catalog_id | escape }}"{% endif %}
+  {% if product_priority != blank %}data-product-priority="{{ product_priority | escape }}"{% endif %}
+>
+  <div class="page-width home-conversion-system__hero">
+    <div class="home-conversion-system__copy">
+      {% if section.settings.eyebrow != blank %}
+        <p class="home-conversion-system__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {% endif %}
+
+      <h1>{{ section.settings.heading | escape }}</h1>
+
+      {% if seo_intro != blank %}
+        <div class="home-conversion-system__intro rte">{{ seo_intro }}</div>
+      {% endif %}
+
+      <div class="home-conversion-system__actions">
+        {% if section.settings.primary_label != blank %}
+          <a class="button" href="{{ primary_link }}">{{ section.settings.primary_label | escape }}</a>
+        {% endif %}
+        {% if section.settings.secondary_label != blank and section.settings.secondary_link != blank %}
+          <a class="button button--secondary" href="{{ section.settings.secondary_link }}">{{ section.settings.secondary_label | escape }}</a>
+        {% endif %}
+      </div>
+
+      <ul class="home-conversion-system__trust" aria-label="{{ section.settings.trust_label | escape }}">
+        {% if section.settings.trust_1 != blank %}<li>{{ section.settings.trust_1 | escape }}</li>{% endif %}
+        {% if section.settings.trust_2 != blank %}<li>{{ section.settings.trust_2 | escape }}</li>{% endif %}
+        {% if section.settings.trust_3 != blank %}<li>{{ section.settings.trust_3 | escape }}</li>{% endif %}
+      </ul>
+    </div>
+
+    <div class="home-conversion-system__feature" aria-label="{{ section.settings.featured_label | escape }}">
+      {% if featured_product != blank %}
+        <a class="home-conversion-system__feature-media" href="{{ product_url }}" aria-label="{{ featured_product.title | escape }} ansehen">
+          {% if featured_product.featured_image != blank %}
+            {{
+              featured_product.featured_image
+              | image_url: width: 1200
+              | image_tag:
+                widths: '420, 640, 900, 1200',
+                sizes: '(min-width: 900px) 42vw, 92vw',
+                loading: 'eager',
+                fetchpriority: 'high',
+                alt: product_image_alt
+            }}
+          {% else %}
+            {{ 'product-1' | placeholder_svg_tag: 'home-conversion-system__placeholder' }}
+          {% endif %}
+        </a>
+
+        <div class="home-conversion-system__feature-copy">
+          <div class="home-conversion-system__meta-line">
+            {% if catalog_brand != blank %}<span>{{ catalog_brand | escape }}</span>{% endif %}
+            {% if product_world != blank %}<span>{{ product_world | escape }}</span>{% endif %}
+            {% if product_priority != blank %}<span>{{ product_priority | escape }}</span>{% endif %}
+          </div>
+
+          <p class="home-conversion-system__feature-kicker">
+            {{ section.settings.featured_label | escape }}
+            {% if focus_keyword != blank %}<span>· {{ focus_keyword | escape }}</span>{% endif %}
+          </p>
+          <h2>{{ product_hero_title | escape }}</h2>
+
+          {% if product_hero_subtitle != blank %}
+            <p class="home-conversion-system__feature-subtitle">{{ product_hero_subtitle | escape }}</p>
+          {% endif %}
+
+          {% if short_description != blank %}
+            <p class="home-conversion-system__feature-description">{{ short_description | strip_html | escape }}</p>
+          {% endif %}
+
+          <div class="home-conversion-system__buy-row">
+            <div>
+              <span class="home-conversion-system__price-label">{% if featured_product.price_varies %}Ab{% else %}Preis{% endif %}</span>
+              <strong>{{ product_price }}</strong>
+              <span class="home-conversion-system__availability{% unless product_available %} is-unavailable{% endunless %}">
+                {% if product_available %}Verfügbar{% else %}Derzeit nicht verfügbar{% endif %}
+              </span>
+            </div>
+            <a class="button" href="{{ product_url }}">
+              {% if product_available %}{{ product_hero_cta | escape }}{% else %}Produkt ansehen{% endif %}
+            </a>
+          </div>
+        </div>
+      {% else %}
+        <div class="home-conversion-system__empty">
+          <h2>Produkt-Spotlight auswählen</h2>
+          <p>Wähle im Theme Editor ein Kernprodukt. Die Section liest anschließend automatisch alle gepflegten LEAFERSERVICE-Metafelder aus.</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if featured_product != blank %}
+    <div class="page-width home-conversion-system__decision">
+      <header class="home-conversion-system__decision-header">
+        <div>
+          <p class="home-conversion-system__eyebrow">{{ section.settings.decision_eyebrow | escape }}</p>
+          <h2>{{ section.settings.decision_heading | escape }}</h2>
+        </div>
+        {% if product_category != blank or product_subcategory != blank %}
+          <p class="home-conversion-system__taxonomy">
+            {% if product_category != blank %}{{ product_category | escape }}{% endif %}
+            {% if product_category != blank and product_subcategory != blank %}<span aria-hidden="true"> / </span>{% endif %}
+            {% if product_subcategory != blank %}{{ product_subcategory | escape }}{% endif %}
+          </p>
+        {% endif %}
+      </header>
+
+      {% if usp_1 != blank or usp_2 != blank or usp_3 != blank or usp_4 != blank %}
+        <div class="home-conversion-system__usp-grid" role="list" aria-label="Produktvorteile">
+          {% if usp_1 != blank %}<div class="home-conversion-system__usp" role="listitem"><span aria-hidden="true">{{ icon_1 | default: '✓' }}</span><strong>{{ usp_1 | escape }}</strong></div>{% endif %}
+          {% if usp_2 != blank %}<div class="home-conversion-system__usp" role="listitem"><span aria-hidden="true">{{ icon_2 | default: '✓' }}</span><strong>{{ usp_2 | escape }}</strong></div>{% endif %}
+          {% if usp_3 != blank %}<div class="home-conversion-system__usp" role="listitem"><span aria-hidden="true">{{ icon_3 | default: '✓' }}</span><strong>{{ usp_3 | escape }}</strong></div>{% endif %}
+          {% if usp_4 != blank %}<div class="home-conversion-system__usp" role="listitem"><span aria-hidden="true">{{ icon_4 | default: '✓' }}</span><strong>{{ usp_4 | escape }}</strong></div>{% endif %}
+        </div>
+      {% endif %}
+
+      <div class="home-conversion-system__decision-grid">
+        <article class="home-conversion-system__panel">
+          <p class="home-conversion-system__panel-kicker">Eigenschaften</p>
+          <h3>So verhält sich das Material</h3>
+          <div class="home-conversion-system__meters">
+            {% if aeration != blank %}
+              <div class="home-conversion-system__meter"><span>Belüftung</span><meter min="0" max="5" value="{{ aeration }}">{{ aeration }} von 5</meter><strong>{{ aeration }}/5</strong></div>
+            {% endif %}
+            {% if drainage != blank %}
+              <div class="home-conversion-system__meter"><span>Drainage</span><meter min="0" max="5" value="{{ drainage }}">{{ drainage }} von 5</meter><strong>{{ drainage }}/5</strong></div>
+            {% endif %}
+            {% if water_storage != blank %}
+              <div class="home-conversion-system__meter"><span>Wasserspeicherung</span><meter min="0" max="5" value="{{ water_storage }}">{{ water_storage }} von 5</meter><strong>{{ water_storage }}/5</strong></div>
+            {% endif %}
+            {% if structural_stability != blank %}
+              <div class="home-conversion-system__meter"><span>Strukturstabilität</span><meter min="0" max="5" value="{{ structural_stability }}">{{ structural_stability }} von 5</meter><strong>{{ structural_stability }}/5</strong></div>
+            {% endif %}
+            {% if nutrient_storage != blank %}
+              <div class="home-conversion-system__meter"><span>Nährstoffspeicherung</span><meter min="0" max="5" value="{{ nutrient_storage }}">{{ nutrient_storage }} von 5</meter><strong>{{ nutrient_storage }}/5</strong></div>
+            {% endif %}
+          </div>
+        </article>
+
+        <article class="home-conversion-system__panel home-conversion-system__panel--use">
+          <p class="home-conversion-system__panel-kicker">Anwendung</p>
+          <h3>Passt es zu deinem Setup?</h3>
+
+          {% if ideal_for != blank %}
+            <div class="home-conversion-system__data-group">
+              <strong>Ideal für</strong>
+              <ul class="home-conversion-system__chips">
+                {% for item in ideal_for limit: 6 %}<li>{{ item | escape }}</li>{% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+
+          {% if mix_ratio != blank %}
+            <p class="home-conversion-system__fact"><strong>Mischanteil</strong><span>{{ mix_ratio | escape }}</span></p>
+          {% endif %}
+          {% if application != blank %}
+            <p class="home-conversion-system__fact"><strong>Anwendung</strong><span>{{ application | escape }}</span></p>
+          {% endif %}
+          {% if solution_3 != blank %}
+            <p class="home-conversion-system__fact"><strong>Lösung</strong><span>{{ solution_3 | escape }}</span></p>
+          {% endif %}
+          {% if solution_4 != blank %}
+            <p class="home-conversion-system__fact"><strong>Ergänzend</strong><span>{{ solution_4 | escape }}</span></p>
+          {% endif %}
+        </article>
+
+        <article class="home-conversion-system__panel home-conversion-system__panel--facts">
+          <p class="home-conversion-system__panel-kicker">Produktdaten</p>
+          <h3>Nachvollziehbar statt vage</h3>
+
+          <dl class="home-conversion-system__facts">
+            {% if catalog_brand != blank %}<div><dt>Marke</dt><dd>{{ catalog_brand | escape }}</dd></div>{% endif %}
+            {% if product_world != blank %}<div><dt>Produktwelt</dt><dd>{{ product_world | escape }}</dd></div>{% endif %}
+            {% if product_material != blank %}<div><dt>Material</dt><dd>{{ product_material | escape }}</dd></div>{% endif %}
+            {% if product_color != blank %}<div><dt>Farbe</dt><dd>{{ product_color | escape }}</dd></div>{% endif %}
+            {% if ph_value != blank %}<div><dt>pH-Eigenschaft</dt><dd>{{ ph_value | escape }}</dd></div>{% endif %}
+          </dl>
+
+          {% if is_peat_free or is_natural or is_mineral or is_organic or is_reusable %}
+            <ul class="home-conversion-system__property-list" aria-label="Produkteigenschaften">
+              {% if is_peat_free %}<li>Torffrei</li>{% endif %}
+              {% if is_natural %}<li>Natürlich</li>{% endif %}
+              {% if is_mineral %}<li>Mineralisch</li>{% endif %}
+              {% if is_organic %}<li>Organisch</li>{% endif %}
+              {% if is_reusable %}<li>Wiederverwendbar</li>{% endif %}
+            </ul>
+          {% endif %}
+        </article>
+      </div>
+
+      {% if keywords != blank %}
+        <div class="home-conversion-system__topics" aria-label="Verwandte Themen">
+          <span>Verwandte Themen</span>
+          <ul>
+            {% for keyword in keywords limit: 6 %}<li>{{ keyword | escape }}</li>{% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if request.page_type == 'index' %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": {{ shop.name | json }},
+        "url": {{ shop.url | append: routes.root_url | json }},
+        "inLanguage": {{ request.locale.iso_code | json }}
+      }
+    </script>
+  {% endif %}
+</section>
+
+{% stylesheet %}
+  .home-conversion-system { position: relative; overflow: clip; padding-block: clamp(1.2rem, 3vw, 2.5rem) var(--space-section); background: radial-gradient(circle at 82% 16%, color-mix(in srgb, var(--accent-soft), transparent 28%), transparent 31%), var(--background); }
+  .home-conversion-system__hero { min-height: min(780px, calc(100svh - 100px)); display: grid; grid-template-columns: minmax(0, .92fr) minmax(420px, .78fr); gap: clamp(2rem, 6vw, 7rem); align-items: center; padding-block: clamp(2.5rem, 7vw, 6.5rem); }
+  .home-conversion-system__copy { max-width: 790px; }
+  .home-conversion-system__eyebrow, .home-conversion-system__panel-kicker, .home-conversion-system__feature-kicker { margin: 0 0 .8rem; color: var(--accent); font-size: .72rem; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+  .home-conversion-system__copy h1 { max-width: 880px; margin: 0; font-size: clamp(3.2rem, 6.8vw, 7.1rem); line-height: .9; letter-spacing: -.065em; }
+  .home-conversion-system__intro { max-width: 690px; margin-top: 1.65rem; color: color-mix(in srgb, var(--text), transparent 18%); font-size: clamp(1.05rem, 1.6vw, 1.28rem); }
+  .home-conversion-system__actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+  .home-conversion-system__trust { display: flex; flex-wrap: wrap; gap: .65rem 1.35rem; margin: 2rem 0 0; padding: 1.2rem 0 0; border-top: 1px solid var(--border); list-style: none; color: var(--muted); font-size: .78rem; }
+  .home-conversion-system__trust li::before { content: '✓'; margin-right: .45rem; color: var(--accent); font-weight: 900; }
+
+  .home-conversion-system__feature { min-width: 0; border: 1px solid color-mix(in srgb, var(--accent), transparent 78%); border-radius: var(--radius-large); overflow: hidden; background: color-mix(in srgb, var(--surface), var(--background) 18%); box-shadow: var(--shadow-soft); }
+  .home-conversion-system__feature-media { display: block; aspect-ratio: 1.12 / 1; padding: clamp(1rem, 3vw, 2.4rem); overflow: hidden; background: #f5f2eb; }
+  .home-conversion-system__feature-media img, .home-conversion-system__placeholder { width: 100%; height: 100%; object-fit: contain; transition: transform .45s var(--ease-out); }
+  .home-conversion-system__feature-copy { padding: clamp(1.35rem, 3vw, 2.4rem); }
+  .home-conversion-system__meta-line { display: flex; flex-wrap: wrap; gap: .4rem .75rem; margin-bottom: .8rem; color: var(--muted); font-size: .67rem; font-weight: 700; }
+  .home-conversion-system__meta-line span + span::before { content: '·'; margin-right: .75rem; }
+  .home-conversion-system__feature-kicker span { color: var(--muted); font-weight: 700; }
+  .home-conversion-system__feature h2 { margin: 0; font-size: clamp(2rem, 3.6vw, 3.8rem); line-height: .98; letter-spacing: -.045em; }
+  .home-conversion-system__feature-subtitle { margin: .8rem 0 0; color: var(--text); font-weight: 750; }
+  .home-conversion-system__feature-description { margin: .7rem 0 0; color: var(--muted); }
+  .home-conversion-system__buy-row { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border); }
+  .home-conversion-system__buy-row > div { display: grid; gap: .12rem; }
+  .home-conversion-system__price-label { color: var(--muted); font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; }
+  .home-conversion-system__buy-row strong { font-size: 1.35rem; line-height: 1.1; }
+  .home-conversion-system__availability { color: var(--accent); font-size: .72rem; font-weight: 750; }
+  .home-conversion-system__availability.is-unavailable { color: var(--muted); }
+  .home-conversion-system__empty { padding: clamp(2rem, 5vw, 5rem); }
+  .home-conversion-system__empty h2 { margin-top: 0; }
+
+  .home-conversion-system__decision { padding-top: clamp(2rem, 5vw, 5rem); }
+  .home-conversion-system__decision-header { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 1.4rem; }
+  .home-conversion-system__decision-header h2 { max-width: 790px; margin: 0; font-size: clamp(2.1rem, 4.4vw, 4.8rem); line-height: .95; letter-spacing: -.05em; }
+  .home-conversion-system__taxonomy { max-width: 430px; margin: 0; color: var(--muted); font-size: .78rem; text-align: right; }
+  .home-conversion-system__usp-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; margin-block: 1.5rem 1rem; }
+  .home-conversion-system__usp { min-width: 0; min-height: 112px; padding: 1.1rem; border: 1px solid var(--border); border-radius: var(--radius); display: flex; flex-direction: column; justify-content: space-between; gap: 1rem; background: color-mix(in srgb, var(--surface), var(--background) 42%); }
+  .home-conversion-system__usp > span { font-size: 1.4rem; }
+  .home-conversion-system__usp strong { font-size: .88rem; }
+
+  .home-conversion-system__decision-grid { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 1rem; }
+  .home-conversion-system__panel { min-width: 0; padding: clamp(1.35rem, 2.8vw, 2.2rem); border: 1px solid var(--border); border-radius: var(--radius-large); background: color-mix(in srgb, var(--surface), var(--background) 22%); }
+  .home-conversion-system__panel h3 { margin: 0 0 1.4rem; font-size: clamp(1.45rem, 2.2vw, 2.1rem); line-height: 1; }
+  .home-conversion-system__meters { display: grid; gap: .8rem; }
+  .home-conversion-system__meter { display: grid; grid-template-columns: minmax(120px, .9fr) minmax(120px, 1fr) auto; gap: .75rem; align-items: center; font-size: .76rem; }
+  .home-conversion-system__meter meter { width: 100%; height: .62rem; border: 0; border-radius: 999px; background: var(--border); }
+  .home-conversion-system__meter meter::-webkit-meter-bar { border: 0; border-radius: 999px; background: var(--border); }
+  .home-conversion-system__meter meter::-webkit-meter-optimum-value { border-radius: 999px; background: var(--accent); }
+  .home-conversion-system__meter meter::-moz-meter-bar { border-radius: 999px; background: var(--accent); }
+  .home-conversion-system__meter strong { color: var(--accent); font-size: .72rem; }
+  .home-conversion-system__data-group > strong { display: block; margin-bottom: .6rem; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; }
+  .home-conversion-system__chips, .home-conversion-system__property-list, .home-conversion-system__topics ul { display: flex; flex-wrap: wrap; gap: .45rem; margin: 0; padding: 0; list-style: none; }
+  .home-conversion-system__chips li, .home-conversion-system__property-list li, .home-conversion-system__topics li { padding: .42rem .65rem; border: 1px solid var(--border); border-radius: 999px; color: var(--text); font-size: .7rem; background: var(--background); }
+  .home-conversion-system__fact { display: grid; grid-template-columns: 100px 1fr; gap: 1rem; margin: 1rem 0 0; padding-top: 1rem; border-top: 1px solid var(--border); font-size: .8rem; }
+  .home-conversion-system__fact strong { color: var(--text); }
+  .home-conversion-system__fact span { color: var(--muted); }
+  .home-conversion-system__facts { margin: 0; }
+  .home-conversion-system__facts > div { display: grid; grid-template-columns: minmax(92px, .7fr) minmax(0, 1.3fr); gap: 1rem; padding-block: .65rem; border-bottom: 1px solid var(--border); }
+  .home-conversion-system__facts dt { color: var(--muted); font-size: .72rem; }
+  .home-conversion-system__facts dd { margin: 0; font-size: .78rem; font-weight: 750; text-align: right; }
+  .home-conversion-system__property-list { margin-top: 1rem; }
+  .home-conversion-system__topics { display: flex; align-items: center; gap: 1rem; margin-top: 1rem; padding: 1rem 0; border-top: 1px solid var(--border); color: var(--muted); font-size: .72rem; }
+
+  @media (hover: hover) and (pointer: fine) {
+    .home-conversion-system__feature-media:hover img { transform: scale(1.035); }
+  }
+
+  @media (max-width: 1050px) {
+    .home-conversion-system__hero { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .home-conversion-system__decision-grid { grid-template-columns: 1fr 1fr; }
+    .home-conversion-system__panel:first-child { grid-column: 1 / -1; }
+  }
+
+  @media (max-width: 800px) {
+    .home-conversion-system { padding-top: 0; }
+    .home-conversion-system__hero { min-height: auto; grid-template-columns: 1fr; padding-block: 2.5rem 3.5rem; }
+    .home-conversion-system__copy h1 { font-size: clamp(2.75rem, 12.5vw, 5.2rem); }
+    .home-conversion-system__feature { max-width: 650px; }
+    .home-conversion-system__feature-media { aspect-ratio: 1 / .78; }
+    .home-conversion-system__decision-header { align-items: start; flex-direction: column; gap: .8rem; }
+    .home-conversion-system__taxonomy { text-align: left; }
+    .home-conversion-system__usp-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .home-conversion-system__decision-grid { grid-template-columns: 1fr; }
+    .home-conversion-system__panel:first-child { grid-column: auto; }
+  }
+
+  @media (max-width: 520px) {
+    .home-conversion-system__actions { display: grid; grid-template-columns: 1fr; }
+    .home-conversion-system__actions .button { width: 100%; }
+    .home-conversion-system__buy-row { align-items: stretch; flex-direction: column; }
+    .home-conversion-system__buy-row .button { width: 100%; }
+    .home-conversion-system__usp-grid { gap: .55rem; }
+    .home-conversion-system__usp { min-height: 105px; padding: .9rem; }
+    .home-conversion-system__meter { grid-template-columns: 1fr auto; }
+    .home-conversion-system__meter meter { grid-column: 1 / -1; grid-row: 2; }
+    .home-conversion-system__fact { grid-template-columns: 1fr; gap: .35rem; }
+    .home-conversion-system__topics { align-items: flex-start; flex-direction: column; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .home-conversion-system__feature-media img { transition: none; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Home Conversion System",
+  "tag": "section",
+  "class": "section-home-conversion-system",
+  "settings": [
+    { "type": "product", "id": "featured_product", "label": "Kernprodukt für Metafeld-Spotlight", "info": "Alle gepflegten LEAFERSERVICE-Produktmetafelder werden automatisch gelesen. Leere Werte werden ausgelassen." },
+    { "type": "text", "id": "eyebrow", "label": "Kicker", "default": "LEAFERSERVICE PFLANZENPFLEGE-SYSTEM" },
+    { "type": "text", "id": "heading", "label": "SEO-H1", "default": "Substrate, Zusätze & Pflanzzubehör für gesunde Wurzeln" },
+    { "type": "richtext", "id": "intro", "label": "SEO-Einleitung", "default": "<p>Statt Produkte nur nebeneinanderzustellen, ordnen wir Pflanzenpflege nach ihrer Aufgabe: Wurzelraum verstehen, Substrat passend aufbauen und nur das Zubehör ergänzen, das im Alltag wirklich hilft.</p>" },
+    { "type": "text", "id": "primary_label", "label": "Primärer CTA", "default": "Sortiment entdecken" },
+    { "type": "url", "id": "primary_link", "label": "Primärer Link", "info": "Bleibt das Feld leer, führt der Button zur Übersicht aller Produkte." },
+    { "type": "text", "id": "secondary_label", "label": "Sekundärer CTA", "default": "Substrat konfigurieren" },
+    { "type": "url", "id": "secondary_link", "label": "Sekundärer Link" },
+    { "type": "text", "id": "featured_label", "label": "Produkt-Spotlight Kicker", "default": "Aus dem Kernsortiment" },
+    { "type": "text", "id": "product_cta_fallback", "label": "Fallback Produkt-CTA", "default": "Produkt ansehen" },
+    { "type": "text", "id": "decision_eyebrow", "label": "Entscheidungshilfe Kicker", "default": "Entscheidungshilfe" },
+    { "type": "text", "id": "decision_heading", "label": "Entscheidungshilfe Überschrift", "default": "Nicht mehr Produkte. Bessere Entscheidungen." },
+    { "type": "text", "id": "trust_label", "label": "Barrierefreie Bezeichnung Trust-Zeile", "default": "Warum bei LEAFERSERVICE einkaufen" },
+    { "type": "text", "id": "trust_1", "label": "Trust 1", "default": "Klare Produktdaten statt leere Versprechen" },
+    { "type": "text", "id": "trust_2", "label": "Trust 2", "default": "Substrat, Gefäß und Pflege als System" },
+    { "type": "text", "id": "trust_3", "label": "Trust 3", "default": "Preis und Verfügbarkeit direkt am Produkt" }
+  ],
+  "presets": [
+    {
+      "name": "Home Conversion System"
+    }
+  ]
+}
+{% endschema %}
