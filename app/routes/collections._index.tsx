@@ -3,41 +3,38 @@ import type {Route} from './+types/collections._index';
 import {getPaginationVariables, Image} from '@shopify/hydrogen';
 import type {CollectionFragment} from 'storefrontapi.generated';
 import {PaginatedResourceSection} from '~/components/PaginatedResourceSection';
+import {Breadcrumbs} from '~/components/Breadcrumbs';
+
+export const meta: Route.MetaFunction = () => {
+  return [
+    {title: 'Sortiment & Produktwelten | LEAFerservice'},
+    {
+      name: 'description',
+      content:
+        'Entdecke Substrate, Pflanzgefäße, Beleuchtung, Pflanzen und Zubehör nach Produktwelt geordnet.',
+    },
+  ];
+};
 
 export async function loader(args: Route.LoaderArgs) {
-  // Start fetching non-critical data without blocking time to first byte
   const deferredData = loadDeferredData(args);
-
-  // Await the critical data required to render initial state of the page
   const criticalData = await loadCriticalData(args);
 
   return {...deferredData, ...criticalData};
 }
 
-/**
- * Load data necessary for rendering content above the fold. This is the critical data
- * needed to render the page. If it's unavailable, the whole page should 400 or 500 error.
- */
 async function loadCriticalData({context, request}: Route.LoaderArgs) {
   const paginationVariables = getPaginationVariables(request, {
-    pageBy: 4,
+    pageBy: 8,
   });
 
-  const [{collections}] = await Promise.all([
-    context.storefront.query(COLLECTIONS_QUERY, {
-      variables: paginationVariables,
-    }),
-    // Add other queries here, so that they are loaded in parallel
-  ]);
+  const {collections} = await context.storefront.query(COLLECTIONS_QUERY, {
+    variables: paginationVariables,
+  });
 
   return {collections};
 }
 
-/**
- * Load data for rendering content below the fold. This data is deferred and will be
- * fetched after the initial page load. If it's unavailable, the page should still 200.
- * Make sure to not throw any errors here, as it will cause the page to 500.
- */
 function loadDeferredData({context}: Route.LoaderArgs) {
   return {};
 }
@@ -46,8 +43,24 @@ export default function Collections() {
   const {collections} = useLoaderData<typeof loader>();
 
   return (
-    <div className="collections">
-      <h1>Collections</h1>
+    <div className="page-shell collections">
+      <Breadcrumbs
+        items={[
+          {label: 'Start', to: '/'},
+          {label: 'Sortiment'},
+        ]}
+      />
+
+      <header className="page-intro">
+        <p className="page-eyebrow">Produktwelten</p>
+        <h1>Vom Projekt zur passenden Lösung.</h1>
+        <p className="page-lead">
+          Starte mit einer Produktwelt und gehe anschließend gezielt tiefer.
+          So bleiben Substrate, Gefäße, Pflanzen, Licht und Zubehör auch bei
+          wachsendem Sortiment schnell erfassbar.
+        </p>
+      </header>
+
       <PaginatedResourceSection<CollectionFragment>
         connection={collections}
         resourcesClassName="collections-grid"
@@ -74,20 +87,35 @@ function CollectionItem({
   return (
     <Link
       className="collection-item"
-      key={collection.id}
       to={`/collections/${collection.handle}`}
       prefetch="intent"
     >
-      {collection?.image && (
-        <Image
-          alt={collection.image.altText || collection.title}
-          aspectRatio="1/1"
-          data={collection.image}
-          loading={index < 3 ? 'eager' : undefined}
-          sizes="(min-width: 45em) 400px, 100vw"
-        />
+      {collection.image ? (
+        <div className="collection-item-media">
+          <Image
+            alt={collection.image.altText || collection.title}
+            aspectRatio="4/3"
+            data={collection.image}
+            loading={index < 3 ? 'eager' : undefined}
+            sizes="(min-width: 70em) 360px, (min-width: 45em) 45vw, 92vw"
+          />
+        </div>
+      ) : (
+        <div className="collection-item-media collection-item-fallback" aria-hidden="true">
+          LEAFER
+        </div>
       )}
-      <h5>{collection.title}</h5>
+
+      <div className="collection-item-copy">
+        <span className="collection-item-label">Produktwelt</span>
+        <h2>{collection.title}</h2>
+        {collection.description ? (
+          <p>{collection.description}</p>
+        ) : (
+          <p>Produkte, Empfehlungen und passende Ergänzungen entdecken.</p>
+        )}
+        <span className="text-link">Entdecken →</span>
+      </div>
     </Link>
   );
 }
@@ -97,6 +125,7 @@ const COLLECTIONS_QUERY = `#graphql
     id
     title
     handle
+    description
     image {
       id
       url
