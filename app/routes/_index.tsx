@@ -200,9 +200,8 @@ function ConfiguratorPreview({
           <p className="leafer-eyebrow">Konfigurator</p>
           <h2>Vom Pflanzenprojekt zum passenden Setup.</h2>
           <p>
-            Der erste Headless-Schritt ist vorbereitet: Kundinnen und Kunden
-            koennen sich durch Pflanze, Topf, Substrat und Add-ons klicken. Die
-            Produktbasis kommt aus Shopify.
+            Wähle Pflanzengruppe und Projektgröße. Daraus entsteht ein übersichtlicher
+            Weg zu Substrat, Gefäß und passenden Ergänzungen.
           </p>
         </div>
 
@@ -224,8 +223,8 @@ function ConfiguratorPreview({
               <details open>
                 <summary>Empfohlenes System</summary>
                 <p>
-                  Strukturstarkes Substrat, luftiger Topf und Add-ons nach
-                  Bedarf. Spaeter wird dieser Block ueber Metafelder gesteuert.
+                  Strukturstarkes Substrat, passendes Gefäß und Ergänzungen nach
+                  tatsächlichem Bedarf.
                 </p>
               </details>
               <details>
