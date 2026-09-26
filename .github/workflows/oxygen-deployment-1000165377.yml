@@ -2,7 +2,7 @@ name: Storefront 1000165377
 on: [push]
 
 permissions:
-  contents: read
+  contents: write
   deployments: write
 
 jobs:
@@ -25,15 +25,24 @@ jobs:
           node --version
           npm --version
 
-      - name: Install dependencies
+      - name: Generate reproducible lockfile
         run: npm install --package-lock-only --ignore-scripts
 
-      - name: Emit generated lockfile
+      - name: Commit lockfile when missing
         shell: bash
         run: |
-          echo "__LOCKFILE_JSON_BEGIN__"
-          cat package-lock.json
-          echo "__LOCKFILE_JSON_END__"
+          set -euo pipefail
+          if git ls-files --error-unmatch package-lock.json >/dev/null 2>&1 && git diff --quiet -- package-lock.json; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          git commit -m "Add reproducible npm lockfile for Hydrogen builds"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Build and Publish to Oxygen
         run: npx shopify hydrogen deploy
