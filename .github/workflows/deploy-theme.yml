@@ -12,30 +12,39 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-      
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "${GITHUB_SHA}"
+          git checkout --detach FETCH_HEAD
+
+      - name: Verify Node.js runtime
+        run: |
+          node --version
+          npm --version
+
       - name: Install Shopify CLI
         run: npm install -g @shopify/cli@latest
-      
+
       - name: Deploy theme to Shopify
         env:
           SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
           SHOPIFY_STORE: ${{ secrets.SHOPIFY_STORE }}
+          SHOPIFY_THEME_ID: ${{ secrets.SHOPIFY_THEME_ID }}
         run: |
-          shopify theme push --store=$SHOPIFY_STORE --theme=${{ secrets.SHOPIFY_THEME_ID }} --force
-      
+          shopify theme push --store="$SHOPIFY_STORE" --theme="$SHOPIFY_THEME_ID" --force
+
       - name: Theme Check Validation
         run: |
           npm install -g @shopify/theme@latest
           shopify theme check
-      
+
       - name: Deployment Success
-        run: echo "✅ Theme deployed successfully to ${{ secrets.SHOPIFY_STORE }}"
+        env:
+          SHOPIFY_STORE: ${{ secrets.SHOPIFY_STORE }}
+        run: echo "Theme deployed successfully to $SHOPIFY_STORE"
