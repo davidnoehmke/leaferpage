@@ -28,6 +28,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Emit generated lockfile
+        shell: bash
+        run: |
+          echo "__LOCKFILE_BEGIN__"
+          gzip -c package-lock.json | base64 -w0
+          echo
+          echo "__LOCKFILE_END__"
+
       - name: Build and Publish to Oxygen
         run: npx shopify hydrogen deploy
         env:
