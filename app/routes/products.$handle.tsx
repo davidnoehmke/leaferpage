@@ -11,32 +11,39 @@ import {
 import {ProductPrice} from '~/components/ProductPrice';
 import {ProductImage} from '~/components/ProductImage';
 import {ProductForm} from '~/components/ProductForm';
+import {Breadcrumbs} from '~/components/Breadcrumbs';
 import {redirectIfHandleIsLocalized} from '~/lib/redirect';
 
 export const meta: Route.MetaFunction = ({data}) => {
+  const product = data?.product;
+
   return [
-    {title: `Hydrogen | ${data?.product.title ?? ''}`},
+    {title: `${product?.seo?.title || product?.title || 'Produkt'} | LEAFerservice`},
+    ...(product?.seo?.description || product?.description
+      ? [
+          {
+            name: 'description',
+            content: (product.seo?.description || product.description).slice(
+              0,
+              155,
+            ),
+          },
+        ]
+      : []),
     {
       rel: 'canonical',
-      href: `/products/${data?.product.handle}`,
+      href: `/products/${product?.handle}`,
     },
   ];
 };
 
 export async function loader(args: Route.LoaderArgs) {
-  // Start fetching non-critical data without blocking time to first byte
   const deferredData = loadDeferredData(args);
-
-  // Await the critical data required to render initial state of the page
   const criticalData = await loadCriticalData(args);
 
   return {...deferredData, ...criticalData};
 }
 
-/**
- * Load data necessary for rendering content above the fold. This is the critical data
- * needed to render the page. If it's unavailable, the whole page should 400 or 500 error.
- */
 async function loadCriticalData({context, params, request}: Route.LoaderArgs) {
   const {handle} = params;
   const {storefront} = context;
@@ -45,96 +52,135 @@ async function loadCriticalData({context, params, request}: Route.LoaderArgs) {
     throw new Error('Expected product handle to be defined');
   }
 
-  const [{product}] = await Promise.all([
-    storefront.query(PRODUCT_QUERY, {
-      variables: {handle, selectedOptions: getSelectedProductOptions(request)},
-    }),
-    // Add other queries here, so that they are loaded in parallel
-  ]);
+  const {product} = await storefront.query(PRODUCT_QUERY, {
+    variables: {handle, selectedOptions: getSelectedProductOptions(request)},
+  });
 
   if (!product?.id) {
     throw new Response(null, {status: 404});
   }
 
-  // The API handle might be localized, so redirect to the localized handle
   redirectIfHandleIsLocalized(request, {handle, data: product});
 
-  return {
-    product,
-  };
+  return {product};
 }
 
-/**
- * Load data for rendering content below the fold. This data is deferred and will be
- * fetched after the initial page load. If it's unavailable, the page should still 200.
- * Make sure to not throw any errors here, as it will cause the page to 500.
- */
 function loadDeferredData({context, params}: Route.LoaderArgs) {
-  // Put any API calls that is not critical to be available on first page render
-  // For example: product reviews, product recommendations, social feeds.
-
   return {};
 }
 
 export default function Product() {
   const {product} = useLoaderData<typeof loader>();
 
-  // Optimistically selects a variant with given available variant information
   const selectedVariant = useOptimisticVariant(
     product.selectedOrFirstAvailableVariant,
     getAdjacentAndFirstAvailableVariants(product),
   );
 
-  // Sets the search param to the selected variant without navigation
-  // only when no search params are set in the url
   useSelectedOptionInUrlParam(selectedVariant.selectedOptions);
 
-  // Get the product options array
   const productOptions = getProductOptions({
     ...product,
     selectedOrFirstAvailableVariant: selectedVariant,
   });
 
-  const {title, descriptionHtml} = product;
+  const collection = product.collections.nodes[0] ?? null;
+  const eyebrow = [product.vendor, product.productType]
+    .filter(Boolean)
+    .join(' · ');
 
   return (
-    <div className="product">
-      <ProductImage image={selectedVariant?.image} />
-      <div className="product-main">
-        <h1>{title}</h1>
-        <ProductPrice
-          price={selectedVariant?.price}
-          compareAtPrice={selectedVariant?.compareAtPrice}
-        />
-        <br />
-        <ProductForm
-          productOptions={productOptions}
-          selectedVariant={selectedVariant}
-        />
-        <br />
-        <br />
-        <p>
-          <strong>Description</strong>
-        </p>
-        <br />
-        <div dangerouslySetInnerHTML={{__html: descriptionHtml}} />
-        <br />
-      </div>
-      <Analytics.ProductView
-        data={{
-          products: [
-            {
-              id: product.id,
-              title: product.title,
-              price: selectedVariant?.price.amount || '0',
-              vendor: product.vendor,
-              variantId: selectedVariant?.id || '',
-              variantTitle: selectedVariant?.title || '',
-              quantity: 1,
-            },
-          ],
-        }}
+    <div className="page-shell product-page">
+      <Breadcrumbs
+        items={[
+          {label: 'Start', to: '/'},
+          {label: 'Sortiment', to: '/collections'},
+          ...(collection
+            ? [
+                {
+                  label: collection.title,
+                  to: `/collections/${collection.handle}`,
+                },
+              ]
+            : []),
+          {label: product.title},
+        ]}
       />
+
+      <div className="product">
+        <div className="product-media-column">
+          <ProductImage image={selectedVariant?.image} />
+        </div>
+
+        <div className="product-main">
+          {eyebrow ? <p className="page-eyebrow">{eyebrow}</p> : null}
+          <h1>{product.title}</h1>
+
+          <div className="product-price-block">
+            <ProductPrice
+              price={selectedVariant?.price}
+              compareAtPrice={selectedVariant?.compareAtPrice}
+            />
+          </div>
+
+          <div className="product-purchase">
+            <ProductForm
+              productOptions={productOptions}
+              selectedVariant={selectedVariant}
+            />
+          </div>
+
+          <div className="product-information">
+            <details open>
+              <summary>Produktdetails</summary>
+              <div
+                className="product-description rich-text"
+                dangerouslySetInnerHTML={{__html: product.descriptionHtml}}
+              />
+            </details>
+
+            <details>
+              <summary>Einordnung</summary>
+              <dl className="product-facts">
+                {product.productType ? (
+                  <>
+                    <dt>Produktart</dt>
+                    <dd>{product.productType}</dd>
+                  </>
+                ) : null}
+                {product.vendor ? (
+                  <>
+                    <dt>Marke</dt>
+                    <dd>{product.vendor}</dd>
+                  </>
+                ) : null}
+                {selectedVariant?.sku ? (
+                  <>
+                    <dt>SKU</dt>
+                    <dd>{selectedVariant.sku}</dd>
+                  </>
+                ) : null}
+              </dl>
+            </details>
+          </div>
+        </div>
+
+        <Analytics.ProductView
+          data={{
+            products: [
+              {
+                id: product.id,
+                title: product.title,
+                price: selectedVariant?.price.amount || '0',
+                vendor: product.vendor,
+                variantId: selectedVariant?.id || '',
+                variantTitle: selectedVariant?.title || '',
+                quantity: 1,
+              },
+            ],
+          }}
+        />
+      </div>
     </div>
   );
 }
@@ -181,9 +227,17 @@ const PRODUCT_FRAGMENT = `#graphql
     id
     title
     vendor
+    productType
     handle
     descriptionHtml
     description
+    collections(first: 1) {
+      nodes {
+        id
+        title
+        handle
+      }
+    }
     encodedVariantExistence
     encodedVariantAvailability
     options {
