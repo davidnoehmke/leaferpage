@@ -4,43 +4,42 @@ import {getPaginationVariables, Analytics} from '@shopify/hydrogen';
 import {PaginatedResourceSection} from '~/components/PaginatedResourceSection';
 import {redirectIfHandleIsLocalized} from '~/lib/redirect';
 import {ProductItem} from '~/components/ProductItem';
+import {Breadcrumbs} from '~/components/Breadcrumbs';
 import type {ProductItemFragment} from 'storefrontapi.generated';
 
 export const meta: Route.MetaFunction = ({data}) => {
-  return [{title: `Hydrogen | ${data?.collection.title ?? ''} Collection`}];
+  const title = data?.collection.title ?? 'Kollektion';
+  const description = data?.collection.description;
+
+  return [
+    {title: `${title} | LEAFerservice`},
+    ...(description
+      ? [{name: 'description', content: description.slice(0, 155)}]
+      : []),
+  ];
 };
 
 export async function loader(args: Route.LoaderArgs) {
-  // Start fetching non-critical data without blocking time to first byte
   const deferredData = loadDeferredData(args);
-
-  // Await the critical data required to render initial state of the page
   const criticalData = await loadCriticalData(args);
 
   return {...deferredData, ...criticalData};
 }
 
-/**
- * Load data necessary for rendering content above the fold. This is the critical data
- * needed to render the page. If it's unavailable, the whole page should 400 or 500 error.
- */
 async function loadCriticalData({context, params, request}: Route.LoaderArgs) {
   const {handle} = params;
   const {storefront} = context;
   const paginationVariables = getPaginationVariables(request, {
-    pageBy: 8,
+    pageBy: 12,
   });
 
   if (!handle) {
     throw redirect('/collections');
   }
 
-  const [{collection}] = await Promise.all([
-    storefront.query(COLLECTION_QUERY, {
-      variables: {handle, ...paginationVariables},
-      // Add other queries here, so that they are loaded in parallel
-    }),
-  ]);
+  const {collection} = await storefront.query(COLLECTION_QUERY, {
+    variables: {handle, ...paginationVariables},
+  });
 
   if (!collection) {
     throw new Response(`Collection ${handle} not found`, {
@@ -48,19 +47,11 @@ async function loadCriticalData({context, params, request}: Route.LoaderArgs) {
     });
   }
 
-  // The API handle might be localized, so redirect to the localized handle
   redirectIfHandleIsLocalized(request, {handle, data: collection});
 
-  return {
-    collection,
-  };
+  return {collection};
 }
 
-/**
- * Load data for rendering content below the fold. This data is deferred and will be
- * fetched after the initial page load. If it's unavailable, the page should still 200.
- * Make sure to not throw any errors here, as it will cause the page to 500.
- */
 function loadDeferredData({context}: Route.LoaderArgs) {
   return {};
 }
@@ -69,21 +60,59 @@ export default function Collection() {
   const {collection} = useLoaderData<typeof loader>();
 
   return (
-    <div className="collection">
-      <h1>{collection.title}</h1>
-      <p className="collection-description">{collection.description}</p>
-      <PaginatedResourceSection<ProductItemFragment>
-        connection={collection.products}
-        resourcesClassName="products-grid"
-      >
-        {({node: product, index}) => (
-          <ProductItem
-            key={product.id}
-            product={product}
-            loading={index < 8 ? 'eager' : undefined}
-          />
+    <div className="page-shell collection">
+      <Breadcrumbs
+        items={[
+          {label: 'Start', to: '/'},
+          {label: 'Sortiment', to: '/collections'},
+          {label: collection.title},
+        ]}
+      />
+
+      <header className="page-intro collection-intro">
+        <div>
+          <p className="page-eyebrow">Produktwelt</p>
+          <h1>{collection.title}</h1>
+        </div>
+        {collection.description ? (
+          <p className="page-lead">{collection.description}</p>
+        ) : (
+          <p className="page-lead">
+            Entdecke passende Produkte und kombiniere sie zu einem stimmigen
+            Setup.
+          </p>
         )}
-      </PaginatedResourceSection>
+      </header>
+
+      <div className="section-divider" aria-hidden="true" />
+
+      <section className="collection-products" aria-labelledby="collection-products-heading">
+        <div className="section-heading-row">
+          <div>
+            <p className="page-eyebrow">Auswahl</p>
+            <h2 id="collection-products-heading">Produkte in dieser Welt</h2>
+          </div>
+          <a className="text-link" href="#collection-products-grid">
+            Direkt zur Auswahl ↓
+          </a>
+        </div>
+
+        <div id="collection-products-grid">
+          <PaginatedResourceSection<ProductItemFragment>
+            connection={collection.products}
+            resourcesClassName="products-grid"
+          >
+            {({node: product, index}) => (
+              <ProductItem
+                key={product.id}
+                product={product}
+                loading={index < 6 ? 'eager' : undefined}
+              />
+            )}
+          </PaginatedResourceSection>
+        </div>
+      </section>
+
       <Analytics.CollectionView
         data={{
           collection: {
@@ -105,6 +134,7 @@ const PRODUCT_ITEM_FRAGMENT = `#graphql
     id
     handle
     title
+    vendor
     featuredImage {
       id
       altText
@@ -123,7 +153,6 @@ const PRODUCT_ITEM_FRAGMENT = `#graphql
   }
 ` as const;
 
-// NOTE: https://shopify.dev/docs/api/storefront/2022-04/objects/collection
 const COLLECTION_QUERY = `#graphql
   ${PRODUCT_ITEM_FRAGMENT}
   query Collection(
