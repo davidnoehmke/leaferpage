@@ -24,17 +24,26 @@ export function Header({
   publicStoreDomain,
 }: HeaderProps) {
   const {shop, menu} = header;
+
   return (
     <header className="header">
-      <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
+      <NavLink
+        className="header-brand"
+        prefetch="intent"
+        to="/"
+        style={activeLinkStyle}
+        end
+      >
         <strong>{shop.name || 'LEAFerservice'}</strong>
       </NavLink>
+
       <HeaderMenu
         menu={menu}
         viewport="desktop"
         primaryDomainUrl={header.shop.primaryDomain.url}
         publicStoreDomain={publicStoreDomain}
       />
+
       <HeaderCtas isLoggedIn={isLoggedIn} cart={cart} />
     </header>
   );
@@ -53,46 +62,95 @@ export function HeaderMenu({
 }) {
   const className = `header-menu-${viewport}`;
   const {close} = useAside();
+  const items = (menu || FALLBACK_HEADER_MENU).items;
 
   return (
-    <nav className={className} role="navigation">
-      {viewport === 'mobile' && (
-        <NavLink
-          end
-          onClick={close}
-          prefetch="intent"
-          style={activeLinkStyle}
-          to="/"
-        >
-          Start
-        </NavLink>
-      )}
-      {(menu || FALLBACK_HEADER_MENU).items.map((item) => {
-        if (!item.url) return null;
+    <nav className={className} aria-label={viewport === 'mobile' ? 'Mobile Navigation' : 'Hauptnavigation'}>
+      <ul className="header-menu-list">
+        {viewport === 'mobile' && (
+          <li>
+            <NavLink
+              end
+              onClick={close}
+              prefetch="intent"
+              style={activeLinkStyle}
+              to="/"
+            >
+              Start
+            </NavLink>
+          </li>
+        )}
 
-        // if the url is internal, we strip the domain
-        const url =
-          item.url.includes('myshopify.com') ||
-          item.url.includes(publicStoreDomain) ||
-          item.url.includes(primaryDomainUrl)
-            ? new URL(item.url).pathname
-            : item.url;
-        return (
-          <NavLink
-            className="header-menu-item"
-            end
-            key={item.id}
-            onClick={close}
-            prefetch="intent"
-            style={activeLinkStyle}
-            to={url}
-          >
-            {item.title}
-          </NavLink>
-        );
-      })}
+        {items.map((item) => {
+          if (!item.url) return null;
+
+          const url = resolveMenuUrl(
+            item.url,
+            primaryDomainUrl,
+            publicStoreDomain,
+          );
+          const children = item.items || [];
+
+          return (
+            <li
+              className={children.length ? 'header-menu-group has-children' : 'header-menu-group'}
+              key={item.id}
+            >
+              <NavLink
+                className="header-menu-item"
+                end
+                onClick={viewport === 'mobile' ? close : undefined}
+                prefetch="intent"
+                style={activeLinkStyle}
+                to={url}
+              >
+                {item.title}
+              </NavLink>
+
+              {children.length > 0 && (
+                <ul className="header-submenu">
+                  {children.map((child) => {
+                    if (!child.url) return null;
+                    const childUrl = resolveMenuUrl(
+                      child.url,
+                      primaryDomainUrl,
+                      publicStoreDomain,
+                    );
+
+                    return (
+                      <li key={child.id}>
+                        <NavLink
+                          onClick={viewport === 'mobile' ? close : undefined}
+                          prefetch="intent"
+                          style={activeLinkStyle}
+                          to={childUrl}
+                        >
+                          {child.title}
+                        </NavLink>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+            </li>
+          );
+        })}
+      </ul>
     </nav>
   );
+}
+
+function resolveMenuUrl(
+  itemUrl: string,
+  primaryDomainUrl: string,
+  publicStoreDomain: string,
+) {
+  const isInternal =
+    itemUrl.includes('myshopify.com') ||
+    itemUrl.includes(publicStoreDomain) ||
+    itemUrl.includes(primaryDomainUrl);
+
+  return isInternal ? new URL(itemUrl).pathname : itemUrl;
 }
 
 function HeaderCtas({
@@ -100,12 +158,17 @@ function HeaderCtas({
   cart,
 }: Pick<HeaderProps, 'isLoggedIn' | 'cart'>) {
   return (
-    <nav className="header-ctas" role="navigation">
+    <nav className="header-ctas" aria-label="Shop Funktionen">
       <HeaderMenuMobileToggle />
-      <NavLink prefetch="intent" to="/account" style={activeLinkStyle}>
+      <NavLink
+        className="header-cta-link header-account-link"
+        prefetch="intent"
+        to="/account"
+        style={activeLinkStyle}
+      >
         <Suspense fallback="Login">
           <Await resolve={isLoggedIn} errorElement="Login">
-            {(isLoggedIn) => (isLoggedIn ? 'Konto' : 'Login')}
+            {(loggedIn) => (loggedIn ? 'Konto' : 'Login')}
           </Await>
         </Suspense>
       </NavLink>
@@ -117,20 +180,29 @@ function HeaderCtas({
 
 function HeaderMenuMobileToggle() {
   const {open} = useAside();
+
   return (
     <button
+      aria-label="Menü öffnen"
       className="header-menu-mobile-toggle reset"
       onClick={() => open('mobile')}
+      type="button"
     >
-      <h3>☰</h3>
+      <span aria-hidden="true">☰</span>
     </button>
   );
 }
 
 function SearchToggle() {
   const {open} = useAside();
+
   return (
-    <button className="reset" onClick={() => open('search')}>
+    <button
+      aria-label="Suche öffnen"
+      className="reset header-search-toggle"
+      onClick={() => open('search')}
+      type="button"
+    >
       Suche
     </button>
   );
@@ -142,9 +214,10 @@ function CartBadge({count}: {count: number}) {
 
   return (
     <a
+      className="header-cart-link"
       href="/cart"
-      onClick={(e) => {
-        e.preventDefault();
+      onClick={(event) => {
+        event.preventDefault();
         open('cart');
         publish('cart_viewed', {
           cart,
@@ -154,7 +227,10 @@ function CartBadge({count}: {count: number}) {
         } as CartViewPayload);
       }}
     >
-      Warenkorb <span aria-label={`Artikel: ${count}`}>{count}</span>
+      <span>Warenkorb</span>
+      <span className="header-cart-count" aria-label={`Artikel im Warenkorb: ${count}`}>
+        {count}
+      </span>
     </a>
   );
 }
@@ -172,6 +248,7 @@ function CartToggle({cart}: Pick<HeaderProps, 'cart'>) {
 function CartBanner() {
   const originalCart = useAsyncValue() as CartApiQueryFragment | null;
   const cart = useOptimisticCart(originalCart);
+
   return <CartBadge count={cart?.totalQuantity ?? 0} />;
 }
 
@@ -209,7 +286,7 @@ const FALLBACK_HEADER_MENU = {
       id: 'gid://shopify/MenuItem/461609599032',
       resourceId: 'gid://shopify/Page/92591030328',
       tags: [],
-      title: 'Ueber LEAFerservice',
+      title: 'Über LEAFerservice',
       type: 'PAGE',
       url: '/pages/about',
       items: [],
@@ -225,7 +302,7 @@ function activeLinkStyle({
   isPending: boolean;
 }) {
   return {
-    fontWeight: isActive ? 'bold' : undefined,
-    color: isPending ? 'grey' : 'black',
+    fontWeight: isActive ? 700 : undefined,
+    opacity: isPending ? 0.55 : 1,
   };
 }
