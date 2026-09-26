@@ -65,11 +65,11 @@ type HomepageQuery = {
 
 export const meta: Route.MetaFunction = () => {
   return [
-    {title: 'LEAFerservice | Headless Pflanzen-Konfigurator'},
+    {title: 'Substrat-Konfigurator, Pflanzen & Zubehör | LEAFerservice'},
     {
       name: 'description',
       content:
-        'Pflanze waehlen, passendes Substrat- und Topfset konfigurieren und LEAFerservice-Produkte direkt im Headless Shopify Shop kaufen.',
+        'Pflanze auswählen, passendes Substrat- und Topfset konfigurieren und Pflanzen, Licht sowie Zubehör direkt bei LEAFerservice finden.',
     },
   ];
 };
@@ -130,7 +130,7 @@ function Hero({product}: {product: HomepageProduct | null}) {
     <section className="leafer-hero">
       <div className="leafer-wrap leafer-hero-grid">
         <div className="leafer-hero-copy">
-          <p className="leafer-eyebrow">Headless Shopify fuer Pflanzen-Systeme</p>
+          <p className="leafer-eyebrow">Pflanzen-Systeme statt Einzelteile</p>
           <h1>Pflanze waehlen. Setup bekommen. Besser wachsen.</h1>
           <p className="leafer-lead">
             LEAFerservice fuehrt Kundinnen und Kunden von der Pflanze zum
@@ -146,9 +146,9 @@ function Hero({product}: {product: HomepageProduct | null}) {
             </a>
           </div>
           <div className="leafer-trust">
-            <span>Mineralisch & strukturstark</span>
-            <span>Metafelder-ready</span>
-            <span>Direkt mit Shopify Cart</span>
+            <span>Passend kombiniert</span>
+            <span>Klare Anwendung</span>
+            <span>Direkt bestellbar</span>
           </div>
         </div>
 
@@ -170,12 +170,12 @@ function Hero({product}: {product: HomepageProduct | null}) {
             )}
           </div>
           <div className="leafer-hero-card">
-            <span>Live aus Shopify</span>
+            <span>Empfohlen</span>
             <strong>{product?.title ?? 'LEAFerservice Sortiment'}</strong>
             {product ? (
               <Money data={product.priceRange.minVariantPrice} />
             ) : (
-              <small>Produkte verbinden, sobald der Shop-Link aktiv ist.</small>
+              <small>Sortiment entdecken und passend kombinieren.</small>
             )}
           </div>
         </Link>
@@ -198,7 +198,7 @@ function ConfiguratorPreview({
       <div className="leafer-wrap">
         <div className="leafer-section-head">
           <p className="leafer-eyebrow">Konfigurator</p>
-          <h2>Vom Pflanzenproblem zum fertigen Warenkorb.</h2>
+          <h2>Vom Pflanzenprojekt zum passenden Setup.</h2>
           <p>
             Der erste Headless-Schritt ist vorbereitet: Kundinnen und Kunden
             koennen sich durch Pflanze, Topf, Substrat und Add-ons klicken. Die
@@ -414,8 +414,8 @@ function KnowledgeSection() {
     <section className="leafer-section leafer-knowledge">
       <div className="leafer-wrap leafer-knowledge-grid">
         <div>
-          <p className="leafer-eyebrow">SEO & Beratung</p>
-          <h2>Problemloesungen werden zu Produktwegen.</h2>
+          <p className="leafer-eyebrow">Wissen & Beratung</p>
+          <h2>Wissen führt direkt zur passenden Lösung.</h2>
         </div>
         <div className="leafer-knowledge-list">
           <Link to="/blogs/journal/braune-flecken-alocasia" prefetch="intent">
@@ -425,7 +425,7 @@ function KnowledgeSection() {
             Passendes Substrat nach Pflanzengruppe finden
           </Link>
           <Link to="/pages/leafers-konfigurator" prefetch="intent">
-            Konfigurator spaeter als eigene Seite ausbauen
+            Zum Substrat-Konfigurator
           </Link>
         </div>
       </div>
