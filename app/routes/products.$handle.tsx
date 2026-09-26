@@ -16,17 +16,15 @@ import {redirectIfHandleIsLocalized} from '~/lib/redirect';
 
 export const meta: Route.MetaFunction = ({data}) => {
   const product = data?.product;
+  const description = product?.seo?.description || product?.description;
 
   return [
     {title: `${product?.seo?.title || product?.title || 'Produkt'} | LEAFerservice`},
-    ...(product?.seo?.description || product?.description
+    ...(description
       ? [
           {
             name: 'description',
-            content: (product.seo?.description || product.description).slice(
-              0,
-              155,
-            ),
+            content: description.slice(0, 155),
           },
         ]
       : []),
